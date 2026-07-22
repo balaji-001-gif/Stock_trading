@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "autoname": "format: CC-{fund_master}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "calendar_section",
+  "fund_master",
+  "compliance_type",
+  "description",
+  "column_break_cal",
+  "due_date",
+  "reminder_days",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "calendar_section",
+   "fieldtype": "Section Break",
+   "label": "Calendar Entry"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master"
+  },
+  {
+   "fieldname": "compliance_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Compliance Type",
+   "options": "\nSEBI Filing\nRBI Filing\nPFRDA Filing\nIRDAI Filing\nFATCA/CRS\nAML Review\nAudit\nBoard Meeting\nOther"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_cal",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "reminder_days",
+   "fieldtype": "Int",
+   "label": "Reminder Days Before"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nOpen\nCompleted\nOverdue\nWaived"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Compliance Calendar",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Compliance Calendar",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "autoname": "format: SC-{parent_document}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "subscription_section",
+  "parent_subscription",
+  "fund_master",
+  "share_class",
+  "column_break_sub",
+  "amount",
+  "units",
+  "nav_applicable",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "subscription_section",
+   "fieldtype": "Section Break",
+   "label": "Subscription Detail"
+  },
+  {
+   "fieldname": "parent_subscription",
+   "fieldtype": "Data",
+   "label": "Parent Subscription"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fund Master",
+   "options": "Fund Master"
+  },
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "label": "Share Class",
+   "options": "Share Class"
+  },
+  {
+   "fieldname": "column_break_sub",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "units",
+   "fieldtype": "Float",
+   "label": "Units"
+  },
+  {
+   "fieldname": "nav_applicable",
+   "fieldtype": "Currency",
+   "label": "NAV Applicable",
+   "precision": 4
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Subscription Child",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

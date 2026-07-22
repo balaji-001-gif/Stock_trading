@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "autoname": "format: MOD-{module_code}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "module_section",
+  "module_name",
+  "module_code",
+  "vertical",
+  "column_break_mod",
+  "description",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "module_section",
+   "fieldtype": "Section Break",
+   "label": "Module Details"
+  },
+  {
+   "fieldname": "module_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Module Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "module_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Module Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "vertical",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Vertical",
+   "options": "\nMutual Funds/CIS\nPMS\nAIF (Cat I/II/III)\nHedge Funds\nPrivate Equity\nVenture Capital\nBonds & NCDs\nReal Estate/REITs\nStock Broking\nFamily Office\nPension/NPS\nAdvisor (RIA/MFD)"
+  },
+  {
+   "fieldname": "column_break_mod",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nActive\nDevelopment\nPlanned\nDeprecated"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Investment Module",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Investment Module",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

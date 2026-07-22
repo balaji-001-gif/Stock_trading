@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "autoname": "format: CTB-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "base_details_section",
+  "parent_doctype",
+  "parent_document",
+  "line_number",
+  "column_break_base",
+  "is_active",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "base_details_section",
+   "fieldtype": "Section Break",
+   "label": "Base Details"
+  },
+  {
+   "fieldname": "parent_doctype",
+   "fieldtype": "Data",
+   "label": "Parent DocType"
+  },
+  {
+   "fieldname": "parent_document",
+   "fieldtype": "Dynamic Link",
+   "label": "Parent Document",
+   "options": "parent_doctype"
+  },
+  {
+   "fieldname": "line_number",
+   "fieldtype": "Int",
+   "label": "Line Number"
+  },
+  {
+   "fieldname": "column_break_base",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Child Table Base",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

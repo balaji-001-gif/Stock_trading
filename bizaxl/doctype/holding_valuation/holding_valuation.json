@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "autoname": "format: HV-{holding}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "valuation_section",
+  "holding",
+  "fund_master",
+  "security_id",
+  "valuation_date",
+  "column_break_val",
+  "market_price",
+  "cost_price",
+  "market_value",
+  "valuation_method",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "valuation_section",
+   "fieldtype": "Section Break",
+   "label": "Valuation"
+  },
+  {
+   "fieldname": "holding",
+   "fieldtype": "Link",
+   "label": "Holding",
+   "options": "Holdings Register"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "label": "Fund Master",
+   "options": "Fund Master"
+  },
+  {
+   "fieldname": "security_id",
+   "fieldtype": "Data",
+   "label": "Security ID"
+  },
+  {
+   "fieldname": "valuation_date",
+   "fieldtype": "Date",
+   "label": "Valuation Date"
+  },
+  {
+   "fieldname": "column_break_val",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "market_price",
+   "fieldtype": "Currency",
+   "label": "Market Price"
+  },
+  {
+   "fieldname": "cost_price",
+   "fieldtype": "Currency",
+   "label": "Cost Price"
+  },
+  {
+   "fieldname": "market_value",
+   "fieldtype": "Currency",
+   "label": "Market Value"
+  },
+  {
+   "fieldname": "valuation_method",
+   "fieldtype": "Select",
+   "label": "Valuation Method",
+   "options": "\nMark-to-Market\nFair Value\nCost Method\nNAV Based"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Holding Valuation",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Holding Valuation",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
