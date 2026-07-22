@@ -1,0 +1,277 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: COMM-{fund_series}-{investor}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "commitment_section",
+  "investor",
+  "fund_master",
+  "fund_series",
+  "commitment_date",
+  "column_break_1",
+  "commitment_amount",
+  "commitment_type",
+  "status",
+  "drawdown_details_section",
+  "total_called",
+  "total_paid",
+  "total_outstanding",
+  "column_break_draw",
+  "remaining_commitment",
+  "commitment_fulfilled_percentage",
+  "last_drawdown_date",
+  "terms_section",
+  "commitment_period_start",
+  "commitment_period_end",
+  "capital_call_notice_days",
+  "column_break_terms",
+  "interest_on_late_payment",
+  "default_penalty_rate",
+  "commitment_letter_ref",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "commitment_section",
+   "fieldtype": "Section Break",
+   "label": "Commitment Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "fund_series",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Series",
+   "options": "Fund Series",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "commitment_date",
+   "fieldtype": "Date",
+   "label": "Commitment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commitment_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Commitment Amount",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commitment_type",
+   "fieldtype": "Select",
+   "label": "Commitment Type",
+   "options": "\nCapital Commitment\nAdvisory Commitment\nSide Letter\nCo-Investment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nPending\nActive\nFully Drawn\nDefaulted\nClosed\nTransferred",
+   "reqd": 1
+  },
+  {
+   "fieldname": "drawdown_details_section",
+   "fieldtype": "Section Break",
+   "label": "Drawdown Summary"
+  },
+  {
+   "fieldname": "total_called",
+   "fieldtype": "Currency",
+   "label": "Total Called",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_paid",
+   "fieldtype": "Currency",
+   "label": "Total Paid",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_outstanding",
+   "fieldtype": "Currency",
+   "label": "Outstanding",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_draw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remaining_commitment",
+   "fieldtype": "Currency",
+   "label": "Remaining Commitment",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "commitment_fulfilled_percentage",
+   "fieldtype": "Percent",
+   "label": "Fulfilled (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_drawdown_date",
+   "fieldtype": "Date",
+   "label": "Last Drawdown Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "terms_section",
+   "fieldtype": "Section Break",
+   "label": "Terms"
+  },
+  {
+   "fieldname": "commitment_period_start",
+   "fieldtype": "Date",
+   "label": "Commitment Period Start"
+  },
+  {
+   "fieldname": "commitment_period_end",
+   "fieldtype": "Date",
+   "label": "Commitment Period End"
+  },
+  {
+   "fieldname": "capital_call_notice_days",
+   "fieldtype": "Int",
+   "label": "Capital Call Notice (Days)",
+   "default": "10"
+  },
+  {
+   "fieldname": "column_break_terms",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "interest_on_late_payment",
+   "fieldtype": "Percent",
+   "label": "Interest on Late Payment (%)"
+  },
+  {
+   "fieldname": "default_penalty_rate",
+   "fieldtype": "Percent",
+   "label": "Default Penalty Rate (%)"
+  },
+  {
+   "fieldname": "commitment_letter_ref",
+   "fieldtype": "Data",
+   "label": "Commitment Letter Reference"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Commitment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Commitment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,251 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: SUCC-{family_office}-{plan_type}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "plan_details_section",
+  "family_office",
+  "plan_name",
+  "plan_type",
+  "plan_status",
+  "column_break_dtl",
+  "effective_date",
+  "last_review_date",
+  "next_review_date",
+  "legal_section",
+  "will_reference",
+  "will_date",
+  "will_location",
+  "trust_reference",
+  "column_break_leg",
+  "trust_deed_date",
+  "trust_type",
+  "trustees",
+  "beneficiaries",
+  "estate_section",
+  "estimated_estate_value",
+  "executor_name",
+  "successor_name",
+  "column_break_est",
+  "nominee_details",
+  "asset_distribution_plan",
+  "documents_section",
+  "documents_uploaded",
+  "legal_advisor_name",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "plan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Plan Details"
+  },
+  {
+   "fieldname": "family_office",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Family Office",
+   "options": "Family Office Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_type",
+   "fieldtype": "Select",
+   "label": "Plan Type",
+   "options": "\nWill / Testament\nTrust Deed\nEstate Plan\nSuccession Plan\nNomination Plan\nGeneration Skip Plan\nFamily Constitution\nPower of Attorney"
+  },
+  {
+   "fieldname": "plan_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nExecuted\nUnder Review\nUpdated\nSuperseded"
+  },
+  {
+   "fieldname": "column_break_dtl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Effective Date"
+  },
+  {
+   "fieldname": "last_review_date",
+   "fieldtype": "Date",
+   "label": "Last Review Date"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  },
+  {
+   "fieldname": "legal_section",
+   "fieldtype": "Section Break",
+   "label": "Legal"
+  },
+  {
+   "fieldname": "will_reference",
+   "fieldtype": "Data",
+   "label": "Will Reference / Number"
+  },
+  {
+   "fieldname": "will_date",
+   "fieldtype": "Date",
+   "label": "Will Date"
+  },
+  {
+   "fieldname": "will_location",
+   "fieldtype": "Data",
+   "label": "Will Location"
+  },
+  {
+   "fieldname": "trust_reference",
+   "fieldtype": "Data",
+   "label": "Trust Reference"
+  },
+  {
+   "fieldname": "column_break_leg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "trust_deed_date",
+   "fieldtype": "Date",
+   "label": "Trust Deed Date"
+  },
+  {
+   "fieldname": "trust_type",
+   "fieldtype": "Select",
+   "label": "Trust Type",
+   "options": "\nRevocable Living Trust\nIrrevocable Trust\nCharitable Trust\nEducation Trust\nSpousal Trust\nGeneration Skipping Trust\nDiscretionary Trust"
+  },
+  {
+   "fieldname": "trustees",
+   "fieldtype": "Small Text",
+   "label": "Trustees"
+  },
+  {
+   "fieldname": "beneficiaries",
+   "fieldtype": "Small Text",
+   "label": "Beneficiaries"
+  },
+  {
+   "fieldname": "estate_section",
+   "fieldtype": "Section Break",
+   "label": "Estate"
+  },
+  {
+   "fieldname": "estimated_estate_value",
+   "fieldtype": "Currency",
+   "label": "Estimated Estate Value"
+  },
+  {
+   "fieldname": "executor_name",
+   "fieldtype": "Data",
+   "label": "Executor Name"
+  },
+  {
+   "fieldname": "successor_name",
+   "fieldtype": "Data",
+   "label": "Successor Name"
+  },
+  {
+   "fieldname": "column_break_est",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nominee_details",
+   "fieldtype": "Small Text",
+   "label": "Nominee Details"
+  },
+  {
+   "fieldname": "asset_distribution_plan",
+   "fieldtype": "Text Editor",
+   "label": "Asset Distribution Plan"
+  },
+  {
+   "fieldname": "documents_section",
+   "fieldtype": "Section Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "documents_uploaded",
+   "fieldtype": "Small Text",
+   "label": "Documents Uploaded"
+  },
+  {
+   "fieldname": "legal_advisor_name",
+   "fieldtype": "Data",
+   "label": "Legal Advisor Name"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Succession Plan",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Succession Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Compliance Officer"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,316 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: CAP-{investor}-{fund_master}-{statement_date}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "statement_details_section",
+  "investor",
+  "fund_master",
+  "share_class",
+  "statement_date",
+  "column_break_1",
+  "statement_type",
+  "period_from",
+  "period_to",
+  "status",
+  "capital_activity_section",
+  "opening_capital",
+  "contributions",
+  "distributions",
+  "column_break_cap",
+  "accrued_income",
+  "unrealized_pnl",
+  "realized_pnl",
+  "closing_capital",
+  "returns_section",
+  "total_return",
+  "return_percentage",
+  "irr",
+  "column_break_ret",
+  "since_inception_return",
+  "benchmark_return",
+  "excess_return",
+  "details_section",
+  "capital_call_activity",
+  "distribution_activity",
+  "fee_activity",
+  "column_break_det",
+  "subscription_activity",
+  "redemption_activity",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "statement_details_section",
+   "fieldtype": "Section Break",
+   "label": "Statement Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "label": "Share Class",
+   "options": "Share Class"
+  },
+  {
+   "fieldname": "statement_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Statement Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "statement_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Statement Type",
+   "options": "\nMonthly\nQuarterly\nHalf-Yearly\nAnnual\nOn Demand\nFinal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_from",
+   "fieldtype": "Date",
+   "label": "Period From"
+  },
+  {
+   "fieldname": "period_to",
+   "fieldtype": "Date",
+   "label": "Period To"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nGenerated\nSent to Investor\nAcknowledged\nArchived"
+  },
+  {
+   "fieldname": "capital_activity_section",
+   "fieldtype": "Section Break",
+   "label": "Capital Activity"
+  },
+  {
+   "fieldname": "opening_capital",
+   "fieldtype": "Currency",
+   "label": "Opening Capital",
+   "options": "currency"
+  },
+  {
+   "fieldname": "contributions",
+   "fieldtype": "Currency",
+   "label": "Contributions (Period)",
+   "options": "currency"
+  },
+  {
+   "fieldname": "distributions",
+   "fieldtype": "Currency",
+   "label": "Distributions (Period)",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_cap",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accrued_income",
+   "fieldtype": "Currency",
+   "label": "Accrued Income",
+   "options": "currency"
+  },
+  {
+   "fieldname": "unrealized_pnl",
+   "fieldtype": "Currency",
+   "label": "Unrealized P&L",
+   "options": "currency"
+  },
+  {
+   "fieldname": "realized_pnl",
+   "fieldtype": "Currency",
+   "label": "Realized P&L",
+   "options": "currency"
+  },
+  {
+   "fieldname": "closing_capital",
+   "fieldtype": "Currency",
+   "label": "Closing Capital",
+   "options": "currency"
+  },
+  {
+   "fieldname": "returns_section",
+   "fieldtype": "Section Break",
+   "label": "Returns"
+  },
+  {
+   "fieldname": "total_return",
+   "fieldtype": "Currency",
+   "label": "Total Return",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "return_percentage",
+   "fieldtype": "Percent",
+   "label": "Return (%)",
+   "precision": 2
+  },
+  {
+   "fieldname": "irr",
+   "fieldtype": "Percent",
+   "label": "IRR (%)",
+   "precision": 2
+  },
+  {
+   "fieldname": "column_break_ret",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "since_inception_return",
+   "fieldtype": "Percent",
+   "label": "Return Since Inception (%)",
+   "precision": 2
+  },
+  {
+   "fieldname": "benchmark_return",
+   "fieldtype": "Percent",
+   "label": "Benchmark Return (%)",
+   "precision": 2
+  },
+  {
+   "fieldname": "excess_return",
+   "fieldtype": "Percent",
+   "label": "Excess Return (%)",
+   "precision": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Activity Breakdown"
+  },
+  {
+   "fieldname": "capital_call_activity",
+   "fieldtype": "Small Text",
+   "label": "Capital Call Activity"
+  },
+  {
+   "fieldname": "distribution_activity",
+   "fieldtype": "Small Text",
+   "label": "Distribution Activity"
+  },
+  {
+   "fieldname": "fee_activity",
+   "fieldtype": "Small Text",
+   "label": "Fee Activity"
+  },
+  {
+   "fieldname": "column_break_det",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subscription_activity",
+   "fieldtype": "Small Text",
+   "label": "Subscription Activity"
+  },
+  {
+   "fieldname": "redemption_activity",
+   "fieldtype": "Small Text",
+   "label": "Redemption Activity"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Capital Account Statement",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Capital Account Statement",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor (Self-Service)",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

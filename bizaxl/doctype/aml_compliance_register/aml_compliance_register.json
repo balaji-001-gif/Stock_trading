@@ -1,0 +1,305 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: AMLC-{fund_master}-{investor}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "case_details_section",
+  "investor",
+  "fund_master",
+  "case_type",
+  "case_status",
+  "column_break_1",
+  "opened_date",
+  "opened_by",
+  "priority",
+  "last_review_date",
+  "risk_assessment_section",
+  "initial_risk_score",
+  "current_risk_score",
+  "risk_level",
+  "column_break_risk",
+  "risk_factors",
+  "ed_applied",
+  "ed_review_date",
+  "monitoring_section",
+  "transaction_monitoring",
+  "suspicious_transactions",
+  "sar_filed",
+  "column_break_mon",
+  "fiu_ind_reference",
+  "sar_date",
+  "sar_details",
+  "resolution_section",
+  "resolution_status",
+  "resolved_date",
+  "resolved_by",
+  "column_break_res",
+  "closure_notes",
+  "reopened_date",
+  "reopened_reason",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "case_details_section",
+   "fieldtype": "Section Break",
+   "label": "Case Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "label": "Fund Master",
+   "options": "Fund Master"
+  },
+  {
+   "fieldname": "case_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Case Type",
+   "options": "\nPEP Screening\nSanctions Match\nAdverse Media\nSuspicious Transaction\nHigh Risk Jurisdiction\nEnhanced Due Diligence\nPeriodic Review\nTrigger Event\nFIU-IND Reporting",
+   "reqd": 1
+  },
+  {
+   "fieldname": "case_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Case Status",
+   "options": "\nOpen\nUnder Review\nEnhanced Monitoring\nPending Closure\nClosed - No Action\nClosed - Warning Issued\nClosed - Account Restricted\nClosed - Account Closed\nEscalated to MLRO\nReported to FIU-IND",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "opened_date",
+   "fieldtype": "Date",
+   "label": "Opened Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "opened_by",
+   "fieldtype": "Link",
+   "label": "Opened By",
+   "options": "User"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "last_review_date",
+   "fieldtype": "Date",
+   "label": "Last Review Date"
+  },
+  {
+   "fieldname": "risk_assessment_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Assessment"
+  },
+  {
+   "fieldname": "initial_risk_score",
+   "fieldtype": "Int",
+   "label": "Initial Risk Score"
+  },
+  {
+   "fieldname": "current_risk_score",
+   "fieldtype": "Int",
+   "label": "Current Risk Score"
+  },
+  {
+   "fieldname": "risk_level",
+   "fieldtype": "Select",
+   "label": "Risk Level",
+   "options": "\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "column_break_risk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "risk_factors",
+   "fieldtype": "Small Text",
+   "label": "Risk Factors"
+  },
+  {
+   "fieldname": "ed_applied",
+   "fieldtype": "Check",
+   "label": "Enhanced Due Diligence Applied"
+  },
+  {
+   "fieldname": "ed_review_date",
+   "fieldtype": "Date",
+   "label": "ED Review Date"
+  },
+  {
+   "fieldname": "monitoring_section",
+   "fieldtype": "Section Break",
+   "label": "Monitoring & Reporting"
+  },
+  {
+   "fieldname": "transaction_monitoring",
+   "fieldtype": "Select",
+   "label": "Transaction Monitoring",
+   "options": "\nStandard\nEnhanced\nReal-time\nPeriodic"
+  },
+  {
+   "fieldname": "suspicious_transactions",
+   "fieldtype": "Int",
+   "label": "Suspicious Transactions Flagged"
+  },
+  {
+   "fieldname": "sar_filed",
+   "fieldtype": "Check",
+   "label": "SAR Filed with FIU-IND"
+  },
+  {
+   "fieldname": "column_break_mon",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fiu_ind_reference",
+   "fieldtype": "Data",
+   "label": "FIU-IND Reference Number"
+  },
+  {
+   "fieldname": "sar_date",
+   "fieldtype": "Date",
+   "label": "SAR Filing Date"
+  },
+  {
+   "fieldname": "sar_details",
+   "fieldtype": "Small Text",
+   "label": "SAR Details"
+  },
+  {
+   "fieldname": "resolution_section",
+   "fieldtype": "Section Break",
+   "label": "Resolution"
+  },
+  {
+   "fieldname": "resolution_status",
+   "fieldtype": "Select",
+   "label": "Resolution Status",
+   "options": "\nUnresolved\nPartially Resolved\nResolved\nEscalated"
+  },
+  {
+   "fieldname": "resolved_date",
+   "fieldtype": "Date",
+   "label": "Resolution Date"
+  },
+  {
+   "fieldname": "resolved_by",
+   "fieldtype": "Link",
+   "label": "Resolved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_res",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "closure_notes",
+   "fieldtype": "Small Text",
+   "label": "Closure Notes"
+  },
+  {
+   "fieldname": "reopened_date",
+   "fieldtype": "Date",
+   "label": "Reopened Date"
+  },
+  {
+   "fieldname": "reopened_reason",
+   "fieldtype": "Small Text",
+   "label": "Reopened Reason"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "AML Compliance Register",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Compliance & Regulatory",
+ "name": "AML Compliance Register",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

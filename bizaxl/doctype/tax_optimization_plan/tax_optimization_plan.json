@@ -1,0 +1,238 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: TAX-{family_office}-{fiscal_year}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "plan_details_section",
+  "family_office",
+  "plan_name",
+  "fiscal_year",
+  "plan_type",
+  "column_break_dtl",
+  "status",
+  "review_date",
+  "advisor_name",
+  "tax_strategy_section",
+  "stcg_realized",
+  "ltcg_realized",
+  "stcg_booked",
+  "ltcg_booked",
+  "column_break_tax",
+  "total_tax_liability",
+  "estimated_savings",
+  "tax_harvesting_section",
+  "harvest_opportunities",
+  "harvested_losses",
+  "carried_forward_losses",
+  "column_break_hst",
+  "grandfathering_applied",
+  "grandfathering_fmv_date",
+  "actions_section",
+  "recommended_actions",
+  "actions_taken",
+  "column_break_act",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "plan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Plan Details"
+  },
+  {
+   "fieldname": "family_office",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Family Office",
+   "options": "Family Office Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Data",
+   "label": "Fiscal Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_type",
+   "fieldtype": "Select",
+   "label": "Plan Type",
+   "options": "\nAnnual Tax Plan\nTax-Loss Harvesting\nCapital Gains Optimization\nEstate Tax Planning\nGift Tax Planning\nAdvance Tax Planning\nGrandfathering Analysis\nComprehensive Review"
+  },
+  {
+   "fieldname": "column_break_dtl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nIn Progress\nImplemented\nUnder Review\nCompleted"
+  },
+  {
+   "fieldname": "review_date",
+   "fieldtype": "Date",
+   "label": "Review Date"
+  },
+  {
+   "fieldname": "advisor_name",
+   "fieldtype": "Data",
+   "label": "Advisor / CA Name"
+  },
+  {
+   "fieldname": "tax_strategy_section",
+   "fieldtype": "Section Break",
+   "label": "Tax Strategy"
+  },
+  {
+   "fieldname": "stcg_realized",
+   "fieldtype": "Currency",
+   "label": "STCG Realized",
+   "description": "Short-Term Capital Gains (held < 12mo for equity, < 36mo for debt)"
+  },
+  {
+   "fieldname": "ltcg_realized",
+   "fieldtype": "Currency",
+   "label": "LTCG Realized",
+   "description": "Long-Term Capital Gains"
+  },
+  {
+   "fieldname": "stcg_booked",
+   "fieldtype": "Currency",
+   "label": "STCG Booked (Unrealized)"
+  },
+  {
+   "fieldname": "ltcg_booked",
+   "fieldtype": "Currency",
+   "label": "LTCG Booked (Unrealized)"
+  },
+  {
+   "fieldname": "column_break_tax",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_tax_liability",
+   "fieldtype": "Currency",
+   "label": "Total Tax Liability (Estimated)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "estimated_savings",
+   "fieldtype": "Currency",
+   "label": "Estimated Savings Through Planning"
+  },
+  {
+   "fieldname": "tax_harvesting_section",
+   "fieldtype": "Section Break",
+   "label": "Tax-Loss Harvesting"
+  },
+  {
+   "fieldname": "harvest_opportunities",
+   "fieldtype": "Currency",
+   "label": "Harvest Opportunities Identified"
+  },
+  {
+   "fieldname": "harvested_losses",
+   "fieldtype": "Currency",
+   "label": "Losses Harvested"
+  },
+  {
+   "fieldname": "carried_forward_losses",
+   "fieldtype": "Currency",
+   "label": "Carried Forward Losses"
+  },
+  {
+   "fieldname": "column_break_hst",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grandfathering_applied",
+   "fieldtype": "Check",
+   "label": "Grandfathering Applied",
+   "description": "Grandfathering as of Jan 31, 2018 for equity investments"
+  },
+  {
+   "fieldname": "grandfathering_fmv_date",
+   "fieldtype": "Date",
+   "label": "Grandfathering FMV Date",
+   "description": "Fair Market Value as of Jan 31, 2018"
+  },
+  {
+   "fieldname": "actions_section",
+   "fieldtype": "Section Break",
+   "label": "Actions"
+  },
+  {
+   "fieldname": "recommended_actions",
+   "fieldtype": "Text Editor",
+   "label": "Recommended Actions"
+  },
+  {
+   "fieldname": "actions_taken",
+   "fieldtype": "Small Text",
+   "label": "Actions Taken"
+  },
+  {
+   "fieldname": "column_break_act",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Tax Optimization Plan",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Tax Optimization Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

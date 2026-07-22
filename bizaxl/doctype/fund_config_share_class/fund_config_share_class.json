@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "share_class",
+  "class_type",
+  "nav",
+  "expense_ratio",
+  "status",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Share Class",
+   "options": "Share Class",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "share_class.class_type",
+   "fieldname": "class_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "share_class.nav",
+   "fieldname": "nav",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "NAV",
+   "options": "currency",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "share_class.expense_ratio",
+   "fieldname": "expense_ratio",
+   "fieldtype": "Percent",
+   "label": "Expense Ratio",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "share_class.status",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Fund Config Share Class",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

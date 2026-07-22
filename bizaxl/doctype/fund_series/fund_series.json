@@ -1,0 +1,384 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: {fund_master}-{series_code}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "series_details_section",
+  "fund_master",
+  "share_class",
+  "series_name",
+  "series_code",
+  "series_type",
+  "column_break_1",
+  "status",
+  "open_date",
+  "close_date",
+  "series_corpus_target",
+  "series_corpus_committed",
+  "capital_calls_section",
+  "total_capital_call",
+  "total_capital_call_percentage",
+  "capital_call_frequency",
+  "column_break_capital",
+  "minimum_commitment",
+  "maximum_commitment",
+  "commitment_period_days",
+  "investment_period_section",
+  "investment_period_start",
+  "investment_period_end",
+  "extended_investment_period",
+  "column_break_inv",
+  "duration_years",
+  "liquidation_period",
+  "extension_option",
+  "financials_section",
+  "target_irr",
+  "target_moic",
+  "realized_irr",
+  "column_break_fin",
+  "management_fee_rate",
+  "carried_interest_rate",
+  "hurdle_rate",
+  "distribution_section",
+  "distribution_preference",
+  "return_of_capital_first",
+  "preferred_return",
+  "column_break_dist",
+  "gp_catchup_percentage",
+  "lp_split_percentage",
+  "gp_split_percentage",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "series_details_section",
+   "fieldtype": "Section Break",
+   "label": "Series Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "label": "Share Class",
+   "options": "Share Class"
+  },
+  {
+   "fieldname": "series_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Series Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "series_code",
+   "fieldtype": "Data",
+   "label": "Series Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "series_type",
+   "fieldtype": "Select",
+   "label": "Series Type",
+   "options": "\nClosed End\nInterval\nRolling\nEvergreen\nDrawdown Based"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nDraft\nOpen for Investment\nClosed for Investment\nFully Committed\nInvesting\nFully Invested\nRealization\nLiquidated\nExtended",
+   "reqd": 1
+  },
+  {
+   "fieldname": "open_date",
+   "fieldtype": "Date",
+   "label": "Open Date"
+  },
+  {
+   "fieldname": "close_date",
+   "fieldtype": "Date",
+   "label": "Close Date"
+  },
+  {
+   "fieldname": "series_corpus_target",
+   "fieldtype": "Currency",
+   "label": "Corpus Target",
+   "options": "currency"
+  },
+  {
+   "fieldname": "series_corpus_committed",
+   "fieldtype": "Currency",
+   "label": "Committed Corpus",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "capital_calls_section",
+   "fieldtype": "Section Break",
+   "label": "Capital Calls"
+  },
+  {
+   "fieldname": "total_capital_call",
+   "fieldtype": "Currency",
+   "label": "Total Capital Called",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_capital_call_percentage",
+   "fieldtype": "Percent",
+   "label": "Total Capital Called (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "capital_call_frequency",
+   "fieldtype": "Select",
+   "label": "Capital Call Frequency",
+   "options": "\nMonthly\nQuarterly\nHalf-Yearly\nAd-hoc"
+  },
+  {
+   "fieldname": "column_break_capital",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "minimum_commitment",
+   "fieldtype": "Currency",
+   "label": "Minimum Commitment",
+   "options": "currency"
+  },
+  {
+   "fieldname": "maximum_commitment",
+   "fieldtype": "Currency",
+   "label": "Maximum Commitment",
+   "options": "currency"
+  },
+  {
+   "fieldname": "commitment_period_days",
+   "fieldtype": "Int",
+   "label": "Commitment Period (Days)"
+  },
+  {
+   "fieldname": "investment_period_section",
+   "fieldtype": "Section Break",
+   "label": "Investment Period"
+  },
+  {
+   "fieldname": "investment_period_start",
+   "fieldtype": "Date",
+   "label": "Investment Period Start"
+  },
+  {
+   "fieldname": "investment_period_end",
+   "fieldtype": "Date",
+   "label": "Investment Period End"
+  },
+  {
+   "fieldname": "extended_investment_period",
+   "fieldtype": "Date",
+   "label": "Extended Investment Period"
+  },
+  {
+   "fieldname": "column_break_inv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "duration_years",
+   "fieldtype": "Int",
+   "label": "Duration (Years)"
+  },
+  {
+   "fieldname": "liquidation_period",
+   "fieldtype": "Int",
+   "label": "Liquidation Period (Days)"
+  },
+  {
+   "fieldname": "extension_option",
+   "fieldtype": "Select",
+   "label": "Extension Option",
+   "options": "\nNo Extension\n1 Year\n2 Years\n3 Years\nInvestor Consent Required"
+  },
+  {
+   "fieldname": "financials_section",
+   "fieldtype": "Section Break",
+   "label": "Financials"
+  },
+  {
+   "fieldname": "target_irr",
+   "fieldtype": "Percent",
+   "label": "Target IRR (%)"
+  },
+  {
+   "fieldname": "target_moic",
+   "fieldtype": "Float",
+   "label": "Target MOIC",
+   "precision": 2
+  },
+  {
+   "fieldname": "realized_irr",
+   "fieldtype": "Percent",
+   "label": "Realized IRR (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fin",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "management_fee_rate",
+   "fieldtype": "Percent",
+   "label": "Management Fee Rate (%)"
+  },
+  {
+   "fieldname": "carried_interest_rate",
+   "fieldtype": "Percent",
+   "label": "Carried Interest Rate (%)"
+  },
+  {
+   "fieldname": "hurdle_rate",
+   "fieldtype": "Percent",
+   "label": "Hurdle Rate (%)"
+  },
+  {
+   "fieldname": "distribution_section",
+   "fieldtype": "Section Break",
+   "label": "Distribution Waterfall"
+  },
+  {
+   "fieldname": "distribution_preference",
+   "fieldtype": "Select",
+   "label": "Distribution Preference",
+   "options": "\nAmerican Waterfall\nEuropean Waterfall\nDeal-by-Deal\nTotal Return"
+  },
+  {
+   "fieldname": "return_of_capital_first",
+   "fieldtype": "Check",
+   "label": "Return of Capital First"
+  },
+  {
+   "fieldname": "preferred_return",
+   "fieldtype": "Percent",
+   "label": "Preferred Return (%)"
+  },
+  {
+   "fieldname": "column_break_dist",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gp_catchup_percentage",
+   "fieldtype": "Percent",
+   "label": "GP Catch-up (%)"
+  },
+  {
+   "fieldname": "lp_split_percentage",
+   "fieldtype": "Percent",
+   "label": "LP Split (%)",
+   "default": "80"
+  },
+  {
+   "fieldname": "gp_split_percentage",
+   "fieldtype": "Percent",
+   "label": "GP Split (%)",
+   "default": "20"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fund Series",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Fund Series",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

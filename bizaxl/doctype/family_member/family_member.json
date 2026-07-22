@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "autoname": "format: FM-{family_office}-{member_name}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "member_name",
+  "entity_type",
+  "relationship",
+  "generation",
+  "column_break_1",
+  "date_of_birth",
+  "percentage_ownership",
+  "entity_reference",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "entity_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Entity Type",
+   "options": "\nIndividual\nHUF (Hindu Undivided Family)\nPrivate Trust\nPublic Trust\nPrivate Company\nLLP\nPartnership Firm\nFoundation\nNGO\nNRI Entity\nForeign Entity"
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Relationship",
+   "options": "\nPrincipal\nSpouse\nChild\nGrandchild\nParent\nSibling\nTrust (Beneficiary)\nTrust (Trustee)\nCompany (Director)\nOther"
+  },
+  {
+   "fieldname": "generation",
+   "fieldtype": "Int",
+   "label": "Generation",
+   "description": "1 = Founder/Principal, 2 = Children, 3 = Grandchildren"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "percentage_ownership",
+   "fieldtype": "Percent",
+   "label": "Ownership %"
+  },
+  {
+   "fieldname": "entity_reference",
+   "fieldtype": "Data",
+   "label": "Entity Reference",
+   "description": "Reference identifier for this entity (e.g., PAN, Trust registration no., CIN)"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Family Member",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

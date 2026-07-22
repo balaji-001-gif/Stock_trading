@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fee_structure",
+  "fee_type",
+  "fee_rate",
+  "fee_frequency",
+  "status",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "fee_structure",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fee Structure",
+   "options": "Fee Structure",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "fee_structure.fee_type",
+   "fieldname": "fee_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fee Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "fee_structure.management_fee_rate",
+   "fieldname": "fee_rate",
+   "fieldtype": "Percent",
+   "label": "Fee Rate",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "fee_structure.management_fee_frequency",
+   "fieldname": "fee_frequency",
+   "fieldtype": "Data",
+   "label": "Fee Frequency",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "fee_structure.status",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Fund Config Fee",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: CORR-{investor}-{correspondence_type}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "correspondence_section",
+  "investor",
+  "correspondence_type",
+  "trigger_event",
+  "subject",
+  "column_break_1",
+  "sent_date",
+  "status",
+  "channel",
+  "delivery_status",
+  "content_section",
+  "body_text",
+  "attachments",
+  "column_break_content",
+  "sent_by",
+  "error_log",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "correspondence_section",
+   "fieldtype": "Section Break",
+   "label": "Correspondence"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "correspondence_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "\nWelcome Letter\nSubscription Confirmation\nRedemption Confirmation\nAllotment Advice\nCapital Call Notice\nDrawdown Notice\nDistribution Notice\nDividend Advice\nNAV Alert\nStatement Available\nKYC Reminder\nCompliance Notice\nTax Statement Available\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trigger_event",
+   "fieldtype": "Select",
+   "label": "Trigger Event",
+   "options": "\nManual\nOn Subscription\nOn Redemption\nOn Allotment\nOn NAV Publication\nOn Period End\nOn KYC Update\nOn Compliance Event"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sent_date",
+   "fieldtype": "Datetime",
+   "label": "Sent Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nQueued\nSent\nFailed\nOpened"
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Select",
+   "label": "Channel",
+   "options": "\nEmail\nSMS\nWhatsApp\nPortal Notification\nPost"
+  },
+  {
+   "fieldname": "delivery_status",
+   "fieldtype": "Select",
+   "label": "Delivery Status",
+   "options": "\nPending\nDelivered\nBounced\nFailed\nRead"
+  },
+  {
+   "fieldname": "content_section",
+   "fieldtype": "Section Break",
+   "label": "Content"
+  },
+  {
+   "fieldname": "body_text",
+   "fieldtype": "Text Editor",
+   "label": "Body"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "column_break_content",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sent_by",
+   "fieldtype": "Link",
+   "label": "Sent By",
+   "options": "User"
+  },
+  {
+   "fieldname": "error_log",
+   "fieldtype": "Code",
+   "label": "Error Log"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Auto Correspondence",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Auto Correspondence",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

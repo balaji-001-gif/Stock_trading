@@ -1,0 +1,291 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: FATCA-{fund_master}-{fiscal_year}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "filing_details_section",
+  "fund_master",
+  "filing_type",
+  "fiscal_year",
+  "reporting_period",
+  "column_break_1",
+  "total_accounts",
+  "reportable_accounts",
+  "us_accounts",
+  "status",
+  "declaration_section",
+  "due_date",
+  "filing_date",
+  "filing_portal",
+  "column_break_decl",
+  "filing_reference",
+  "acknowledgment_no",
+  "filed_by",
+  "summary_section",
+  "total_balance_usd",
+  "total_balance_inr",
+  "non_consenting_accounts",
+  "column_break_summary",
+  "dormant_accounts",
+  "corrected_filings",
+  "nil_report",
+  "compliance_section",
+  "form_61b_filed",
+  "fatca_xml_generated",
+  "crs_xml_generated",
+  "column_break_comp",
+  "tax_identification_numbers",
+  "countries_reported",
+  "notes",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "filing_details_section",
+   "fieldtype": "Section Break",
+   "label": "Filing Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "filing_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Filing Type",
+   "options": "\nFATCA (US)\nCRS (OECD)\nBoth FATCA + CRS\nForm 61B (India)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fiscal Year (e.g., 2025-26)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reporting_period",
+   "fieldtype": "Data",
+   "label": "Reporting Period"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_accounts",
+   "fieldtype": "Int",
+   "label": "Total Accounts Reviewed"
+  },
+  {
+   "fieldname": "reportable_accounts",
+   "fieldtype": "Int",
+   "label": "Reportable Accounts"
+  },
+  {
+   "fieldname": "us_accounts",
+   "fieldtype": "Int",
+   "label": "US Reportable Accounts"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nData Collection\nXML Generated\nFiled\nAcknowledged\nAmended"
+  },
+  {
+   "fieldname": "declaration_section",
+   "fieldtype": "Section Break",
+   "label": "Declaration & Filing"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "filing_date",
+   "fieldtype": "Date",
+   "label": "Filing Date"
+  },
+  {
+   "fieldname": "filing_portal",
+   "fieldtype": "Select",
+   "label": "Filing Portal",
+   "options": "\nIncome Tax Portal\nIRS FATCA Portal\nOECD CRS Portal\nManual Submission"
+  },
+  {
+   "fieldname": "column_break_decl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "filing_reference",
+   "fieldtype": "Data",
+   "label": "Filing Reference"
+  },
+  {
+   "fieldname": "acknowledgment_no",
+   "fieldtype": "Data",
+   "label": "Acknowledgment Number"
+  },
+  {
+   "fieldname": "filed_by",
+   "fieldtype": "Link",
+   "label": "Filed By",
+   "options": "User"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Account Summary"
+  },
+  {
+   "fieldname": "total_balance_usd",
+   "fieldtype": "Currency",
+   "label": "Total Balance (USD)",
+   "options": "currency"
+  },
+  {
+   "fieldname": "total_balance_inr",
+   "fieldtype": "Currency",
+   "label": "Total Balance (INR)",
+   "options": "currency"
+  },
+  {
+   "fieldname": "non_consenting_accounts",
+   "fieldtype": "Int",
+   "label": "Non-Consenting Accounts"
+  },
+  {
+   "fieldname": "column_break_summary",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dormant_accounts",
+   "fieldtype": "Int",
+   "label": "Dormant Accounts"
+  },
+  {
+   "fieldname": "corrected_filings",
+   "fieldtype": "Int",
+   "label": "Corrected/Amended Filings"
+  },
+  {
+   "fieldname": "nil_report",
+   "fieldtype": "Check",
+   "label": "Nil Report (No Reportable Accounts)"
+  },
+  {
+   "fieldname": "compliance_section",
+   "fieldtype": "Section Break",
+   "label": "Compliance"
+  },
+  {
+   "fieldname": "form_61b_filed",
+   "fieldtype": "Check",
+   "label": "Form 61B Filed"
+  },
+  {
+   "fieldname": "fatca_xml_generated",
+   "fieldtype": "Check",
+   "label": "FATCA XML Generated"
+  },
+  {
+   "fieldname": "crs_xml_generated",
+   "fieldtype": "Check",
+   "label": "CRS XML Generated"
+  },
+  {
+   "fieldname": "column_break_comp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_identification_numbers",
+   "fieldtype": "Int",
+   "label": "TINs Collected"
+  },
+  {
+   "fieldname": "countries_reported",
+   "fieldtype": "Data",
+   "label": "Countries Reported"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "FATCA/CRS Filing",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Compliance & Regulatory",
+ "name": "FATCA/CRS Filing",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

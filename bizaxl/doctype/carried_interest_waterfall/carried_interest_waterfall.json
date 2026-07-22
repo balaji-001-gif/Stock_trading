@@ -1,0 +1,291 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: CARRY-{fund_master}-{waterfall_date}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "waterfall_details_section",
+  "fund_master",
+  "fund_series",
+  "waterfall_date",
+  "waterfall_type",
+  "column_break_1",
+  "total_distributable",
+  "total_committed_capital",
+  "status",
+  "tier_structure_section",
+  "waterfall_tiers",
+  "calculation_summary_section",
+  "return_of_capital",
+  "preferred_return_amount",
+  "catch_up_amount",
+  "column_break_summary",
+  "lp_carry_amount",
+  "gp_carry_amount",
+  "total_distributed",
+  "remaining_for_distribution",
+  "metrics_section",
+  "gross_irr",
+  "net_irr_to_lps",
+  "moic",
+  "column_break_metrics",
+  "total_profits",
+  "gp_share_percentage",
+  "lp_share_percentage",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "waterfall_details_section",
+   "fieldtype": "Section Break",
+   "label": "Waterfall Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fund_series",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fund Series",
+   "options": "Fund Series"
+  },
+  {
+   "fieldname": "waterfall_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Waterfall Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "waterfall_type",
+   "fieldtype": "Select",
+   "label": "Waterfall Type",
+   "options": "\nEuropean (Total Return)\nAmerican (Deal-by-Deal)\nWhole Fund\nBlind Pool",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_distributable",
+   "fieldtype": "Currency",
+   "label": "Total Distributable Amount",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_committed_capital",
+   "fieldtype": "Currency",
+   "label": "Total Committed Capital",
+   "options": "currency"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nCalculated\nApproved\nDistributed\nClosed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tier_structure_section",
+   "fieldtype": "Section Break",
+   "label": "Waterfall Tiers"
+  },
+  {
+   "fieldname": "waterfall_tiers",
+   "fieldtype": "Table",
+   "label": "Waterfall Tiers",
+   "options": "Waterfall Tier"
+  },
+  {
+   "fieldname": "calculation_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Calculation Summary"
+  },
+  {
+   "fieldname": "return_of_capital",
+   "fieldtype": "Currency",
+   "label": "Return of Capital (LP)",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "preferred_return_amount",
+   "fieldtype": "Currency",
+   "label": "Preferred Return (LP)",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "catch_up_amount",
+   "fieldtype": "Currency",
+   "label": "Catch-up (GP)",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_summary",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lp_carry_amount",
+   "fieldtype": "Currency",
+   "label": "LP Carry (80%)",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gp_carry_amount",
+   "fieldtype": "Currency",
+   "label": "GP Carry (20%)",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_distributed",
+   "fieldtype": "Currency",
+   "label": "Total Distributed",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remaining_for_distribution",
+   "fieldtype": "Currency",
+   "label": "Remaining for Distribution",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "metrics_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Metrics"
+  },
+  {
+   "fieldname": "gross_irr",
+   "fieldtype": "Percent",
+   "label": "Gross IRR (%)",
+   "precision": 2
+  },
+  {
+   "fieldname": "net_irr_to_lps",
+   "fieldtype": "Percent",
+   "label": "Net IRR to LPs (%)",
+   "precision": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "moic",
+   "fieldtype": "Float",
+   "label": "MOIC",
+   "precision": 2
+  },
+  {
+   "fieldname": "column_break_metrics",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_profits",
+   "fieldtype": "Currency",
+   "label": "Total Profits",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gp_share_percentage",
+   "fieldtype": "Percent",
+   "label": "GP Share (%)",
+   "default": "20"
+  },
+  {
+   "fieldname": "lp_share_percentage",
+   "fieldtype": "Percent",
+   "label": "LP Share (%)",
+   "default": "80"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Carried Interest Waterfall",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Carried Interest Waterfall",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

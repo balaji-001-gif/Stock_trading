@@ -1,0 +1,318 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: AML-{investor}-{screening_type}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "screening_section",
+  "investor",
+  "screening_type",
+  "screening_status",
+  "screening_date",
+  "column_break_1",
+  "screening_reference",
+  "screening_method",
+  "screening_trigger",
+  "risk_section",
+  "risk_score",
+  "risk_level",
+  "risk_factors",
+  "column_break_risk",
+  "country_risk",
+  "entity_risk",
+  "transaction_risk",
+  "checks_section",
+  "pep_check",
+  "pep_details",
+  "ofac_check",
+  "ofac_details",
+  "column_break_checks",
+  "sanctions_check",
+  "sanctions_details",
+  "adverse_media_check",
+  "adverse_media_details",
+  "review_section",
+  "review_status",
+  "reviewed_by",
+  "review_date",
+  "column_break_rev",
+  "review_notes",
+  "action_taken",
+  "next_review_date",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "screening_section",
+   "fieldtype": "Section Break",
+   "label": "Screening Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "screening_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Screening Type",
+   "options": "\nInitial Onboarding\nPeriodic Review\nTrigger-Based\nEnhanced Due Diligence\nEvent Based\nExit Screening",
+   "reqd": 1
+  },
+  {
+   "fieldname": "screening_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Screening Status",
+   "options": "\nPending\nIn Progress\nCleared\nFlagged\nEscalated\nReview Required",
+   "reqd": 1
+  },
+  {
+   "fieldname": "screening_date",
+   "fieldtype": "Date",
+   "label": "Screening Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "screening_reference",
+   "fieldtype": "Data",
+   "label": "Screening Reference ID"
+  },
+  {
+   "fieldname": "screening_method",
+   "fieldtype": "Select",
+   "label": "Screening Method",
+   "options": "\nAutomated API\nManual Review\nThird-Party Service\nGovernment Database\nInternal List"
+  },
+  {
+   "fieldname": "screening_trigger",
+   "fieldtype": "Select",
+   "label": "Screening Trigger",
+   "options": "\nNew Onboarding\nPeriodic Review\nHigh-Risk Transaction\nAdverse Media Alert\nRegulatory Requirement\nManual Request"
+  },
+  {
+   "fieldname": "risk_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Assessment"
+  },
+  {
+   "fieldname": "risk_score",
+   "fieldtype": "Int",
+   "label": "Risk Score (0-100)"
+  },
+  {
+   "fieldname": "risk_level",
+   "fieldtype": "Select",
+   "label": "Risk Level",
+   "options": "\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "risk_factors",
+   "fieldtype": "Small Text",
+   "label": "Risk Factors"
+  },
+  {
+   "fieldname": "column_break_risk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "country_risk",
+   "fieldtype": "Select",
+   "label": "Country Risk",
+   "options": "\nLow\nMedium\nHigh\nFATF Grey List\nFATF Black List"
+  },
+  {
+   "fieldname": "entity_risk",
+   "fieldtype": "Select",
+   "label": "Entity Risk",
+   "options": "\nLow\nMedium\nHigh"
+  },
+  {
+   "fieldname": "transaction_risk",
+   "fieldtype": "Select",
+   "label": "Transaction Risk",
+   "options": "\nLow\nMedium\nHigh"
+  },
+  {
+   "fieldname": "checks_section",
+   "fieldtype": "Section Break",
+   "label": "Screening Checks"
+  },
+  {
+   "fieldname": "pep_check",
+   "fieldtype": "Select",
+   "label": "PEP (Politically Exposed Person)",
+   "options": "\nClear\nMatch Found\nPending Review\nNot Applicable"
+  },
+  {
+   "fieldname": "pep_details",
+   "fieldtype": "Small Text",
+   "label": "PEP Details"
+  },
+  {
+   "fieldname": "ofac_check",
+   "fieldtype": "Select",
+   "label": "OFAC Sanctions",
+   "options": "\nClear\nMatch Found\nPending Review\nNot Applicable"
+  },
+  {
+   "fieldname": "ofac_details",
+   "fieldtype": "Small Text",
+   "label": "OFAC Details"
+  },
+  {
+   "fieldname": "column_break_checks",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sanctions_check",
+   "fieldtype": "Select",
+   "label": "UN / EU Sanctions",
+   "options": "\nClear\nMatch Found\nPending Review\nNot Applicable"
+  },
+  {
+   "fieldname": "sanctions_details",
+   "fieldtype": "Small Text",
+   "label": "Sanctions Details"
+  },
+  {
+   "fieldname": "adverse_media_check",
+   "fieldtype": "Select",
+   "label": "Adverse Media",
+   "options": "\nClear\nMatch Found\nPending Review\nNot Applicable"
+  },
+  {
+   "fieldname": "adverse_media_details",
+   "fieldtype": "Small Text",
+   "label": "Adverse Media Details"
+  },
+  {
+   "fieldname": "review_section",
+   "fieldtype": "Section Break",
+   "label": "Review & Decision"
+  },
+  {
+   "fieldname": "review_status",
+   "fieldtype": "Select",
+   "label": "Review Status",
+   "options": "\nNot Reviewed\nUnder Review\nCleared - Low Risk\nCleared - Medium Risk\nEnhanced Monitoring\nRestricted\nRejected\nEscalated to MLRO"
+  },
+  {
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "Reviewed By",
+   "options": "User"
+  },
+  {
+   "fieldname": "review_date",
+   "fieldtype": "Date",
+   "label": "Review Date"
+  },
+  {
+   "fieldname": "column_break_rev",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "review_notes",
+   "fieldtype": "Text Editor",
+   "label": "Review Notes"
+  },
+  {
+   "fieldname": "action_taken",
+   "fieldtype": "Select",
+   "label": "Action Taken",
+   "options": "\nNo Action Required\nEnhanced Due Diligence\nAccount Monitoring\nTransaction Restrictions\nAccount Suspension\nSuspicious Activity Report (SAR)\nFIU-IND Reporting"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "AML Screening",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "AML Screening",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

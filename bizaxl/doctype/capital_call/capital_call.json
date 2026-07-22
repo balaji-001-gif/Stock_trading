@@ -1,0 +1,244 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: CALL-{fund_series}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "call_details_section",
+  "fund_master",
+  "fund_series",
+  "call_date",
+  "due_date",
+  "column_break_1",
+  "call_percentage",
+  "total_call_amount",
+  "total_received_amount",
+  "status",
+  "call_details_table_section",
+  "call_details",
+  "summary_section",
+  "total_investors",
+  "total_responded",
+  "collection_rate",
+  "column_break_summary",
+  "defaults_count",
+  "late_payments_count",
+  "notes",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "call_details_section",
+   "fieldtype": "Section Break",
+   "label": "Capital Call Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "fund_series",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Series",
+   "options": "Fund Series",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "call_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Call Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "call_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Call Percentage",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_call_amount",
+   "fieldtype": "Currency",
+   "label": "Total Call Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_received_amount",
+   "fieldtype": "Currency",
+   "label": "Total Received",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nDraft\nSent\nIn Progress\nFully Collected\nPartially Collected\nClosed\nOverdue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "call_details_table_section",
+   "fieldtype": "Section Break",
+   "label": "Investor Call Details"
+  },
+  {
+   "fieldname": "call_details",
+   "fieldtype": "Table",
+   "label": "Call Details",
+   "options": "Call Detail Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "total_investors",
+   "fieldtype": "Int",
+   "label": "Total Investors",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_responded",
+   "fieldtype": "Int",
+   "label": "Total Responded",
+   "read_only": 1
+  },
+  {
+   "fieldname": "collection_rate",
+   "fieldtype": "Percent",
+   "label": "Collection Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_summary",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "defaults_count",
+   "fieldtype": "Int",
+   "label": "Defaults",
+   "read_only": 1
+  },
+  {
+   "fieldname": "late_payments_count",
+   "fieldtype": "Int",
+   "label": "Late Payments",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Capital Call",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Capital Call",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

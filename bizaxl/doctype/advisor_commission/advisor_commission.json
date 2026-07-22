@@ -1,0 +1,217 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: COMM-{advisor}-{commission_type}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "commission_section",
+  "advisor",
+  "commission_type",
+  "commission_date",
+  "fund_master",
+  "column_break_com",
+  "investor",
+  "arn_code",
+  "status",
+  "amount_section",
+  "aum_for_period",
+  "commission_rate",
+  "commission_amount",
+  "trail_percentage",
+  "column_break_amt",
+  "gross_commission",
+  "tds_deducted",
+  "net_commission",
+  "settlement_section",
+  "settlement_date",
+  "settlement_ref",
+  "paid",
+  "column_break_set",
+  "payment_date",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "commission_section",
+   "fieldtype": "Section Break",
+   "label": "Commission Details"
+  },
+  {
+   "fieldname": "advisor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Advisor",
+   "options": "Advisor Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commission_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Commission Type",
+   "options": "\nUpfront Commission\nTrail Commission\nRenewal Commission\nNFO Commission\nSwitch Commission\nSTP Commission\nAdvisory Fee\nRevenue Share"
+  },
+  {
+   "fieldname": "commission_date",
+   "fieldtype": "Date",
+   "label": "Commission Date"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "label": "Fund / Scheme",
+   "options": "Fund Master"
+  },
+  {
+   "fieldname": "column_break_com",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "label": "Investor",
+   "options": "Investor Profile"
+  },
+  {
+   "fieldname": "arn_code",
+   "fieldtype": "Data",
+   "label": "ARN Code"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nCalculated\nApproved\nDisbursed\nClawed Back"
+  },
+  {
+   "fieldname": "amount_section",
+   "fieldtype": "Section Break",
+   "label": "Amount Breakdown"
+  },
+  {
+   "fieldname": "aum_for_period",
+   "fieldtype": "Currency",
+   "label": "AUM for Period"
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Percent",
+   "label": "Commission Rate"
+  },
+  {
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount"
+  },
+  {
+   "fieldname": "trail_percentage",
+   "fieldtype": "Percent",
+   "label": "Trail %"
+  },
+  {
+   "fieldname": "column_break_amt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gross_commission",
+   "fieldtype": "Currency",
+   "label": "Gross Commission"
+  },
+  {
+   "fieldname": "tds_deducted",
+   "fieldtype": "Currency",
+   "label": "TDS Deducted"
+  },
+  {
+   "fieldname": "net_commission",
+   "fieldtype": "Currency",
+   "label": "Net Commission",
+   "read_only": 1
+  },
+  {
+   "fieldname": "settlement_section",
+   "fieldtype": "Section Break",
+   "label": "Settlement"
+  },
+  {
+   "fieldname": "settlement_date",
+   "fieldtype": "Date",
+   "label": "Settlement Date"
+  },
+  {
+   "fieldname": "settlement_ref",
+   "fieldtype": "Data",
+   "label": "Settlement Reference"
+  },
+  {
+   "fieldname": "paid",
+   "fieldtype": "Check",
+   "label": "Paid"
+  },
+  {
+   "fieldname": "column_break_set",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Advisor Commission",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Advisor Commission",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Advisor (RIA/MFD)",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

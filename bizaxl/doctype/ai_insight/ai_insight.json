@@ -1,0 +1,237 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: AI-{insight_category}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "insight_section",
+  "fund_master",
+  "investor",
+  "insight_category",
+  "insight_type",
+  "column_break_hdr",
+  "generated_date",
+  "status",
+  "priority",
+  "source",
+  "analysis_section",
+  "title",
+  "summary",
+  "analysis_detail",
+  "column_break_anl",
+  "confidence_score",
+  "impact_score",
+  "urgency",
+  "recommendation_section",
+  "recommendation",
+  "recommended_action",
+  "column_break_rec",
+  "action_taken",
+  "action_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "insight_section",
+   "fieldtype": "Section Break",
+   "label": "Insight"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Investor",
+   "options": "Investor Profile"
+  },
+  {
+   "fieldname": "insight_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Category",
+   "options": "\nPortfolio Health\nRisk Alert\nOpportunity\nPerformance Insight\nTax Optimization\nRebalancing\nCompliance Alert\nTrend Analysis\nCustom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "insight_type",
+   "fieldtype": "Select",
+   "label": "Insight Type",
+   "options": "\nAutomated Analysis\nPattern Detection\nAnomaly Detection\nPredictive\nPrescriptive\nComparative\nRegulatory Change\nNews/Market Driven"
+  },
+  {
+   "fieldname": "column_break_hdr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "generated_date",
+   "fieldtype": "Datetime",
+   "label": "Generated Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nNew\nReviewed\nActioned\nDismissed"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority",
+   "options": "\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "\nAI Engine\nRule-Based\nManual Entry\nExternal Feed\nIntegrated System"
+  },
+  {
+   "fieldname": "analysis_section",
+   "fieldtype": "Section Break",
+   "label": "Analysis"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Small Text",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "analysis_detail",
+   "fieldtype": "Text Editor",
+   "label": "Detailed Analysis"
+  },
+  {
+   "fieldname": "column_break_anl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "confidence_score",
+   "fieldtype": "Percent",
+   "label": "Confidence Score"
+  },
+  {
+   "fieldname": "impact_score",
+   "fieldtype": "Percent",
+   "label": "Impact Score"
+  },
+  {
+   "fieldname": "urgency",
+   "fieldtype": "Select",
+   "label": "Urgency",
+   "options": "\nToday\nThis Week\nThis Month\nThis Quarter\nLow Priority"
+  },
+  {
+   "fieldname": "recommendation_section",
+   "fieldtype": "Section Break",
+   "label": "Recommendation"
+  },
+  {
+   "fieldname": "recommendation",
+   "fieldtype": "Small Text",
+   "label": "Recommendation"
+  },
+  {
+   "fieldname": "recommended_action",
+   "fieldtype": "Select",
+   "label": "Recommended Action",
+   "options": "\nReview Only\nRebalance Portfolio\nAdjust Allocation\nTax Harvest\nIncrease Exposure\nReduce Exposure\nHold Position\nCompliance Action\nContact Investor"
+  },
+  {
+   "fieldname": "column_break_rec",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "action_taken",
+   "fieldtype": "Small Text",
+   "label": "Action Taken"
+  },
+  {
+   "fieldname": "action_date",
+   "fieldtype": "Datetime",
+   "label": "Action Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "AI Insight",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "AI Insight",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

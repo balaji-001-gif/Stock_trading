@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "from_days",
+  "to_days",
+  "exit_load_percentage",
+  "exit_load_type",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "from_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "From Days",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "To Days",
+   "reqd": 1
+  },
+  {
+   "fieldname": "exit_load_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Exit Load (%)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "exit_load_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Exit Load Type",
+   "options": "\nStandard Exit Load\nContingent Deferred\nNo Load",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Exit Load Detail",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

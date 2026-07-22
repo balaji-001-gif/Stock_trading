@@ -1,0 +1,293 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: SEBI-{report_type}-{fund_master}-{report_date}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "report_details_section",
+  "fund_master",
+  "report_type",
+  "report_category",
+  "regulatory_body",
+  "column_break_1",
+  "report_date",
+  "period_covered",
+  "filing_deadline",
+  "status",
+  "content_section",
+  "report_title",
+  "report_summary",
+  "report_data_json",
+  "column_break_content",
+  "key_findings",
+  "discrepancies_found",
+  "auditor_remarks",
+  "filing_section",
+  "filing_portal",
+  "filing_reference",
+  "filing_date",
+  "column_break_file",
+  "filed_by",
+  "acknowledgment_number",
+  "payment_reference",
+  "attachments_section",
+  "report_file",
+  "supporting_documents",
+  "column_break_att",
+  "board_pack_included",
+  "board_meeting_date",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "report_details_section",
+   "fieldtype": "Section Break",
+   "label": "Report Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "report_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Report Type",
+   "options": "\nMF Monthly Portfolio Disclosure\nMF Half-yearly SID/SAI Update\nMF Annual Report\nAIF Annex VI Quarterly\nAIF Annual Audit Report\nPMS Quarterly Client Report\nPMS Monthly AUM Disclosure\nREIT Quarterly Report\nInvIT Quarterly Report\nIA Half-yearly Compliance\nFII/FPI Monthly Report\nSCORES Complaint Status\nSEBI Inspection Report\nBoard Pack for Trustee Meeting\nAnnual Compliance Certificate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "report_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Report Category",
+   "options": "\nMutual Fund\nAIF\nPMS\nREIT\nInvIT\nInvestment Adviser\nBroker\nFPI\nOther"
+  },
+  {
+   "fieldname": "regulatory_body",
+   "fieldtype": "Select",
+   "label": "Regulatory Body",
+   "options": "\nSEBI\nRBI\nPFRDA\nIRDAI\nAMFI\nNSE\nBSE\nROC/MCA\nIncome Tax",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "report_date",
+   "fieldtype": "Date",
+   "label": "Report Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_covered",
+   "fieldtype": "Data",
+   "label": "Period Covered (e.g., Q1 FY26)"
+  },
+  {
+   "fieldname": "filing_deadline",
+   "fieldtype": "Date",
+   "label": "Filing Deadline"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nDraft\nIn Progress\nFiled\nAcknowledged\nOverdue\nAmended",
+   "reqd": 1
+  },
+  {
+   "fieldname": "content_section",
+   "fieldtype": "Section Break",
+   "label": "Report Content"
+  },
+  {
+   "fieldname": "report_title",
+   "fieldtype": "Data",
+   "label": "Report Title"
+  },
+  {
+   "fieldname": "report_summary",
+   "fieldtype": "Text Editor",
+   "label": "Report Summary"
+  },
+  {
+   "fieldname": "report_data_json",
+   "fieldtype": "Code",
+   "label": "Report Data (JSON)",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "column_break_content",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "key_findings",
+   "fieldtype": "Small Text",
+   "label": "Key Findings"
+  },
+  {
+   "fieldname": "discrepancies_found",
+   "fieldtype": "Small Text",
+   "label": "Discrepancies Found"
+  },
+  {
+   "fieldname": "auditor_remarks",
+   "fieldtype": "Small Text",
+   "label": "Auditor Remarks"
+  },
+  {
+   "fieldname": "filing_section",
+   "fieldtype": "Section Break",
+   "label": "Filing Details"
+  },
+  {
+   "fieldname": "filing_portal",
+   "fieldtype": "Select",
+   "label": "Filing Portal",
+   "options": "\nSEBI Portal\nAMFI Portal\nNSE/BSE Portal\nRBI Portal\nMCA21 Portal\nIncome Tax Portal\nEmail"
+  },
+  {
+   "fieldname": "filing_reference",
+   "fieldtype": "Data",
+   "label": "Filing Reference Number"
+  },
+  {
+   "fieldname": "filing_date",
+   "fieldtype": "Date",
+   "label": "Filing Date"
+  },
+  {
+   "fieldname": "column_break_file",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "filed_by",
+   "fieldtype": "Link",
+   "label": "Filed By",
+   "options": "User"
+  },
+  {
+   "fieldname": "acknowledgment_number",
+   "fieldtype": "Data",
+   "label": "Acknowledgment Number"
+  },
+  {
+   "fieldname": "payment_reference",
+   "fieldtype": "Data",
+   "label": "Payment Reference"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "report_file",
+   "fieldtype": "Attach",
+   "label": "Report File (PDF)"
+  },
+  {
+   "fieldname": "supporting_documents",
+   "fieldtype": "Attach",
+   "label": "Supporting Documents"
+  },
+  {
+   "fieldname": "column_break_att",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "board_pack_included",
+   "fieldtype": "Check",
+   "label": "Included in Board Pack"
+  },
+  {
+   "fieldname": "board_meeting_date",
+   "fieldtype": "Date",
+   "label": "Board Meeting Date"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SEBI Report",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Compliance & Regulatory",
+ "name": "SEBI Report",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

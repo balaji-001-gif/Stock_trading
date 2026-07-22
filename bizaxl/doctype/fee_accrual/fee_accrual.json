@@ -1,0 +1,331 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: FEEAC-{fund_master}-{fee_type}-{period_start}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "accrual_details_section",
+  "fund_master",
+  "share_class",
+  "fee_structure",
+  "fee_type",
+  "column_break_1",
+  "period_start",
+  "period_end",
+  "accrual_date",
+  "status",
+  "calculation_section",
+  "aum_for_period",
+  "fee_rate",
+  "days_in_period",
+  "total_days",
+  "column_break_calc",
+  "gross_fee_amount",
+  "waiver_percentage",
+  "waiver_amount",
+  "net_fee_amount",
+  "accrual_breakdown_section",
+  "management_fee_component",
+  "performance_fee_component",
+  "carried_interest_component",
+  "column_break_breakdown",
+  "service_fee_component",
+  "other_fees_component",
+  "total_accrued",
+  "accounting_section",
+  "accrual_method",
+  "journal_entry_reference",
+  "posted_to_gl",
+  "column_break_acct",
+  "reversed",
+  "reversal_date",
+  "reversal_reason",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "accrual_details_section",
+   "fieldtype": "Section Break",
+   "label": "Accrual Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Share Class",
+   "options": "Share Class"
+  },
+  {
+   "fieldname": "fee_structure",
+   "fieldtype": "Link",
+   "label": "Fee Structure",
+   "options": "Fee Structure"
+  },
+  {
+   "fieldname": "fee_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Fee Type",
+   "options": "\nManagement Fee\nPerformance Fee\nCarried Interest\nEntry Load\nExit Load\nDistribution Fee\nService Fee\nAdvisory Fee\nCustodian Fee\nAudit Fee\nLegal Fee\nRegistration Fee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "period_start",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Period Start",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_end",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Period End",
+   "reqd": 1
+  },
+  {
+   "fieldname": "accrual_date",
+   "fieldtype": "Date",
+   "label": "Accrual Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nAccrued\nInvoiced\nPaid\nReversed\nWritten Off",
+   "reqd": 1
+  },
+  {
+   "fieldname": "calculation_section",
+   "fieldtype": "Section Break",
+   "label": "Calculation"
+  },
+  {
+   "fieldname": "aum_for_period",
+   "fieldtype": "Currency",
+   "label": "AUM for Period",
+   "options": "currency"
+  },
+  {
+   "fieldname": "fee_rate",
+   "fieldtype": "Percent",
+   "label": "Fee Rate (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "days_in_period",
+   "fieldtype": "Int",
+   "label": "Days in Period"
+  },
+  {
+   "fieldname": "total_days",
+   "fieldtype": "Int",
+   "label": "Total Days (Annual Basis)",
+   "default": "365"
+  },
+  {
+   "fieldname": "column_break_calc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gross_fee_amount",
+   "fieldtype": "Currency",
+   "label": "Gross Fee Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "waiver_percentage",
+   "fieldtype": "Percent",
+   "label": "Waiver (%)"
+  },
+  {
+   "fieldname": "waiver_amount",
+   "fieldtype": "Currency",
+   "label": "Waiver Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_fee_amount",
+   "fieldtype": "Currency",
+   "label": "Net Fee Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "accrual_breakdown_section",
+   "fieldtype": "Section Break",
+   "label": "Accrual Breakdown"
+  },
+  {
+   "fieldname": "management_fee_component",
+   "fieldtype": "Currency",
+   "label": "Management Fee Component",
+   "options": "currency"
+  },
+  {
+   "fieldname": "performance_fee_component",
+   "fieldtype": "Currency",
+   "label": "Performance Fee Component",
+   "options": "currency"
+  },
+  {
+   "fieldname": "carried_interest_component",
+   "fieldtype": "Currency",
+   "label": "Carried Interest Component",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_breakdown",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_fee_component",
+   "fieldtype": "Currency",
+   "label": "Service Fee Component",
+   "options": "currency"
+  },
+  {
+   "fieldname": "other_fees_component",
+   "fieldtype": "Currency",
+   "label": "Other Fees Component",
+   "options": "currency"
+  },
+  {
+   "fieldname": "total_accrued",
+   "fieldtype": "Currency",
+   "label": "Total Accrued",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "accounting_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting"
+  },
+  {
+   "fieldname": "accrual_method",
+   "fieldtype": "Select",
+   "label": "Accrual Method",
+   "options": "\nDaily Accrual\nPeriod Accrual\nIn Arrears\nIn Advance\nAt Maturity"
+  },
+  {
+   "fieldname": "journal_entry_reference",
+   "fieldtype": "Data",
+   "label": "Journal Entry Reference"
+  },
+  {
+   "fieldname": "posted_to_gl",
+   "fieldtype": "Check",
+   "label": "Posted to General Ledger"
+  },
+  {
+   "fieldname": "column_break_acct",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reversed",
+   "fieldtype": "Check",
+   "label": "Reversed"
+  },
+  {
+   "fieldname": "reversal_date",
+   "fieldtype": "Date",
+   "label": "Reversal Date"
+  },
+  {
+   "fieldname": "reversal_reason",
+   "fieldtype": "Small Text",
+   "label": "Reversal Reason"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fee Accrual",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Fee Accrual",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

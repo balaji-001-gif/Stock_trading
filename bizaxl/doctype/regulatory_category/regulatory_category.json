@@ -1,0 +1,340 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:category_code",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "regulatory_details_section",
+  "regulatory_body",
+  "category_name",
+  "category_code",
+  "category_description",
+  "column_break_1",
+  "fund_type_applicable",
+  "status",
+  "effective_from",
+  "effective_to",
+  "registration_section",
+  "registration_required",
+  "registration_number_format",
+  "registration_validity_years",
+  "renewal_reminder_days",
+  "column_break_reg",
+  "compliance_filing_frequency",
+  "compliance_form_reference",
+  "filing_deadline_days",
+  "prescribed_fees",
+  "requirements_section",
+  "minimum_corpus",
+  "minimum_investor_count",
+  "maximum_investor_count",
+  "minimum_investment_per_investor",
+  "column_break_req",
+  "maximum_aum",
+  "leverage_limit_percentage",
+  "concentration_limit_percentage",
+  "eligible_investors",
+  "reporting_section",
+  "reporting_frequency",
+  "reporting_format",
+  "reporting_portal_url",
+  "column_break_rpt",
+  "audit_required",
+  "audit_frequency",
+  "last_audit_date",
+  "next_audit_date",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "regulatory_details_section",
+   "fieldtype": "Section Break",
+   "label": "Regulatory Details"
+  },
+  {
+   "fieldname": "regulatory_body",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Regulatory Body",
+   "options": "\nSEBI\nRBI\nPFRDA\nIRDAI\nROC/MCA\nAMFI\nNSE\nBSE",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Category Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category_code",
+   "fieldtype": "Data",
+   "label": "Category Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "category_description",
+   "fieldtype": "Small Text",
+   "label": "Category Description"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fund_type_applicable",
+   "fieldtype": "Select",
+   "label": "Applicable Fund Type",
+   "options": "\nMutual Fund\nPMS\nAIF Category I\nAIF Category II\nAIF Category III\nPrivate Equity\nVenture Capital\nREIT\nInvIT\nBond Fund\nPension Fund\nAdvisory"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nActive\nInactive\nUnder Review\nSuperseded",
+   "reqd": 1
+  },
+  {
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "label": "Effective From"
+  },
+  {
+   "fieldname": "effective_to",
+   "fieldtype": "Date",
+   "label": "Effective To"
+  },
+  {
+   "fieldname": "registration_section",
+   "fieldtype": "Section Break",
+   "label": "Registration Requirements"
+  },
+  {
+   "fieldname": "registration_required",
+   "fieldtype": "Check",
+   "label": "Registration Required"
+  },
+  {
+   "fieldname": "registration_number_format",
+   "fieldtype": "Data",
+   "label": "Registration Number Format (e.g., SEBI/MF/XXX/YYYY)"
+  },
+  {
+   "fieldname": "registration_validity_years",
+   "fieldtype": "Int",
+   "label": "Registration Validity (Years)"
+  },
+  {
+   "fieldname": "renewal_reminder_days",
+   "fieldtype": "Int",
+   "label": "Renewal Reminder (Days Before)"
+  },
+  {
+   "fieldname": "column_break_reg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "compliance_filing_frequency",
+   "fieldtype": "Select",
+   "label": "Compliance Filing Frequency",
+   "options": "\nMonthly\nQuarterly\nHalf-Yearly\nAnnual\nAd-hoc"
+  },
+  {
+   "fieldname": "compliance_form_reference",
+   "fieldtype": "Data",
+   "label": "Compliance Form/Schedule Reference"
+  },
+  {
+   "fieldname": "filing_deadline_days",
+   "fieldtype": "Int",
+   "label": "Filing Deadline (Days from Period End)"
+  },
+  {
+   "fieldname": "prescribed_fees",
+   "fieldtype": "Currency",
+   "label": "Prescribed Fees",
+   "options": "currency"
+  },
+  {
+   "fieldname": "requirements_section",
+   "fieldtype": "Section Break",
+   "label": "Regulatory Requirements"
+  },
+  {
+   "fieldname": "minimum_corpus",
+   "fieldtype": "Currency",
+   "label": "Minimum Corpus Required",
+   "options": "currency"
+  },
+  {
+   "fieldname": "minimum_investor_count",
+   "fieldtype": "Int",
+   "label": "Minimum Investor Count"
+  },
+  {
+   "fieldname": "maximum_investor_count",
+   "fieldtype": "Int",
+   "label": "Maximum Investor Count"
+  },
+  {
+   "fieldname": "minimum_investment_per_investor",
+   "fieldtype": "Currency",
+   "label": "Minimum Investment per Investor",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_req",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maximum_aum",
+   "fieldtype": "Currency",
+   "label": "Maximum AUM",
+   "options": "currency"
+  },
+  {
+   "fieldname": "leverage_limit_percentage",
+   "fieldtype": "Percent",
+   "label": "Leverage Limit (%)"
+  },
+  {
+   "fieldname": "concentration_limit_percentage",
+   "fieldtype": "Percent",
+   "label": "Concentration Limit (%)"
+  },
+  {
+   "fieldname": "eligible_investors",
+   "fieldtype": "Small Text",
+   "label": "Eligible Investors"
+  },
+  {
+   "fieldname": "reporting_section",
+   "fieldtype": "Section Break",
+   "label": "Reporting Requirements"
+  },
+  {
+   "fieldname": "reporting_frequency",
+   "fieldtype": "Select",
+   "label": "Reporting Frequency",
+   "options": "\nDaily\nWeekly\nMonthly\nQuarterly\nHalf-Yearly\nAnnual"
+  },
+  {
+   "fieldname": "reporting_format",
+   "fieldtype": "Select",
+   "label": "Reporting Format",
+   "options": "\nPDF\nXML\nCSV\nExcel\nAPI Based\nWeb Portal"
+  },
+  {
+   "fieldname": "reporting_portal_url",
+   "fieldtype": "Data",
+   "label": "Reporting Portal URL"
+  },
+  {
+   "fieldname": "column_break_rpt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "audit_required",
+   "fieldtype": "Check",
+   "label": "Audit Required"
+  },
+  {
+   "fieldname": "audit_frequency",
+   "fieldtype": "Select",
+   "label": "Audit Frequency",
+   "options": "\nAnnually\nHalf-Yearly\nQuarterly"
+  },
+  {
+   "fieldname": "last_audit_date",
+   "fieldtype": "Date",
+   "label": "Last Audit Date"
+  },
+  {
+   "fieldname": "next_audit_date",
+   "fieldtype": "Date",
+   "label": "Next Audit Date"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Regulatory Category",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Fund Master",
+   "link_fieldname": "regulatory_category"
+  }
+ ],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Regulatory Category",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

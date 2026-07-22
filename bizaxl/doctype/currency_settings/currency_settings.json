@@ -1,0 +1,250 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: {base_currency}-{target_currency}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "currency_config_section",
+  "fund_master",
+  "base_currency",
+  "target_currency",
+  "exchange_rate",
+  "exchange_rate_date",
+  "column_break_1",
+  "rate_source",
+  "rate_type",
+  "auto_update",
+  "rate_feed_url",
+  "conversion_section",
+  "conversion_method",
+  "rounding_method",
+  "rounding_precision",
+  "column_break_conv",
+  "minimum_transfer_amount",
+  "maximum_transfer_amount",
+  "fx_impact_threshold",
+  "fx_performance_attribution",
+  "validity_section",
+  "valid_from",
+  "valid_to",
+  "status",
+  "column_break_val",
+  "last_verified_date",
+  "verified_by",
+  "notes",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "currency_config_section",
+   "fieldtype": "Section Break",
+   "label": "Currency Configuration"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master"
+  },
+  {
+   "fieldname": "base_currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Base Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Exchange Rate",
+   "precision": 6,
+   "reqd": 1
+  },
+  {
+   "fieldname": "exchange_rate_date",
+   "fieldtype": "Date",
+   "label": "Exchange Rate Date"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rate_source",
+   "fieldtype": "Select",
+   "label": "Rate Source",
+   "options": "\nRBI Reference Rate\nBloomberg\nReuters\nGoogle Finance\nManual\nInternal Feed"
+  },
+  {
+   "fieldname": "rate_type",
+   "fieldtype": "Select",
+   "label": "Rate Type",
+   "options": "\nSpot Rate\nForward Rate\nSWAP Rate\nHistorical Rate"
+  },
+  {
+   "fieldname": "auto_update",
+   "fieldtype": "Check",
+   "label": "Auto-Update Rate"
+  },
+  {
+   "fieldname": "rate_feed_url",
+   "fieldtype": "Data",
+   "label": "Rate Feed URL/API"
+  },
+  {
+   "fieldname": "conversion_section",
+   "fieldtype": "Section Break",
+   "label": "Conversion Settings"
+  },
+  {
+   "fieldname": "conversion_method",
+   "fieldtype": "Select",
+   "label": "Conversion Method",
+   "options": "\nDirect Quote\nIndirect Quote\nCross Rate"
+  },
+  {
+   "fieldname": "rounding_method",
+   "fieldtype": "Select",
+   "label": "Rounding Method",
+   "options": "\nStandard Rounding\nFloor\nCeil\nTruncate\nBanker's Rounding"
+  },
+  {
+   "fieldname": "rounding_precision",
+   "fieldtype": "Int",
+   "label": "Rounding Precision (Decimals)",
+   "default": "2"
+  },
+  {
+   "fieldname": "column_break_conv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "minimum_transfer_amount",
+   "fieldtype": "Currency",
+   "label": "Minimum Transfer Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "maximum_transfer_amount",
+   "fieldtype": "Currency",
+   "label": "Maximum Transfer Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "fx_impact_threshold",
+   "fieldtype": "Percent",
+   "label": "FX Impact Threshold (%)"
+  },
+  {
+   "fieldname": "fx_performance_attribution",
+   "fieldtype": "Check",
+   "label": "Include in FX Performance Attribution"
+  },
+  {
+   "fieldname": "validity_section",
+   "fieldtype": "Section Break",
+   "label": "Validity"
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "label": "Valid From"
+  },
+  {
+   "fieldname": "valid_to",
+   "fieldtype": "Date",
+   "label": "Valid To"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nActive\nInactive\nHistorical\nPending Verification"
+  },
+  {
+   "fieldname": "column_break_val",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_verified_date",
+   "fieldtype": "Date",
+   "label": "Last Verified Date"
+  },
+  {
+   "fieldname": "verified_by",
+   "fieldtype": "Link",
+   "label": "Verified By",
+   "options": "User"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Currency Settings",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Currency Settings",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,311 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: LOT-{holding}-{lot_type}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "lot_details_section",
+  "holding",
+  "fund_master",
+  "security_id",
+  "lot_type",
+  "column_break_1",
+  "lot_date",
+  "lot_reference",
+  "status",
+  "quantity_section",
+  "original_quantity",
+  "remaining_quantity",
+  "sold_quantity",
+  "column_break_qty",
+  "unit_cost",
+  "total_cost",
+  "total_sale_value",
+  "realized_pnl",
+  "realized_pnl_percentage",
+  "purchase_section",
+  "purchase_order_ref",
+  "purchase_price",
+  "brokerage",
+  "column_break_pur",
+  "settlement_date",
+  "trade_date",
+  "exchange_reference",
+  "classification_section",
+  "cost_basis_method",
+  "tax_lot_status",
+  "holding_period_days",
+  "column_break_class",
+  "short_term",
+  "long_term",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "lot_details_section",
+   "fieldtype": "Section Break",
+   "label": "Lot Details"
+  },
+  {
+   "fieldname": "holding",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Holding",
+   "options": "Holdings Register",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "label": "Fund Master",
+   "options": "Fund Master"
+  },
+  {
+   "fieldname": "security_id",
+   "fieldtype": "Data",
+   "label": "Security ID"
+  },
+  {
+   "fieldname": "lot_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Lot Type",
+   "options": "\nPurchase\nBonus\nSplit\nDividend Reinvestment\nTransfer In\nCorporate Action Adjust",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lot_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Lot Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lot_reference",
+   "fieldtype": "Data",
+   "label": "Lot Reference"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nOpen\nPartially Closed\nClosed\nAdjusted",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantity_section",
+   "fieldtype": "Section Break",
+   "label": "Quantity & Cost"
+  },
+  {
+   "fieldname": "original_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Original Quantity",
+   "precision": 4,
+   "reqd": 1
+  },
+  {
+   "fieldname": "remaining_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Remaining Quantity",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fieldname": "sold_quantity",
+   "fieldtype": "Float",
+   "label": "Sold Quantity",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_qty",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit_cost",
+   "fieldtype": "Currency",
+   "label": "Unit Cost",
+   "options": "currency",
+   "precision": 4,
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_sale_value",
+   "fieldtype": "Currency",
+   "label": "Total Sale Value",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "realized_pnl",
+   "fieldtype": "Currency",
+   "label": "Realized P&L",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "realized_pnl_percentage",
+   "fieldtype": "Percent",
+   "label": "Realized P&L (%)",
+   "precision": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "purchase_section",
+   "fieldtype": "Section Break",
+   "label": "Purchase Details"
+  },
+  {
+   "fieldname": "purchase_order_ref",
+   "fieldtype": "Data",
+   "label": "Purchase Order Ref"
+  },
+  {
+   "fieldname": "purchase_price",
+   "fieldtype": "Currency",
+   "label": "Purchase Price",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "brokerage",
+   "fieldtype": "Currency",
+   "label": "Brokerage / Fees",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_pur",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "settlement_date",
+   "fieldtype": "Date",
+   "label": "Settlement Date"
+  },
+  {
+   "fieldname": "trade_date",
+   "fieldtype": "Date",
+   "label": "Trade Date"
+  },
+  {
+   "fieldname": "exchange_reference",
+   "fieldtype": "Data",
+   "label": "Exchange Reference"
+  },
+  {
+   "fieldname": "classification_section",
+   "fieldtype": "Section Break",
+   "label": "Classification"
+  },
+  {
+   "fieldname": "cost_basis_method",
+   "fieldtype": "Select",
+   "label": "Cost Basis Method",
+   "options": "\nFIFO\nLIFO\nHIFO\nWeighted Average\nSpecific ID"
+  },
+  {
+   "fieldname": "tax_lot_status",
+   "fieldtype": "Select",
+   "label": "Tax Lot Status",
+   "options": "\nShort Term\nLong Term\nMixed"
+  },
+  {
+   "fieldname": "holding_period_days",
+   "fieldtype": "Int",
+   "label": "Holding Period (Days)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_class",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "short_term",
+   "fieldtype": "Check",
+   "label": "Short Term (STCG)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "long_term",
+   "fieldtype": "Check",
+   "label": "Long Term (LTCG)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Lot Tracking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Lot Tracking",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

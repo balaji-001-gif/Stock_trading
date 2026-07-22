@@ -1,0 +1,275 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: TDS-{fund_master}-{investor}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tds_details_section",
+  "fund_master",
+  "investor",
+  "transaction_type",
+  "transaction_reference",
+  "column_break_1",
+  "tds_date",
+  "tds_section_code",
+  "status",
+  "calculation_section",
+  "gross_amount",
+  "tds_rate",
+  "surcharge_rate",
+  "cess_rate",
+  "column_break_calc",
+  "tds_amount",
+  "surcharge_amount",
+  "education_cess",
+  "total_tds",
+  "net_amount",
+  "filing_section",
+  "filed_to_income_tax",
+  "form_16a_generated",
+  "form_16a_date",
+  "column_break_file",
+  "challan_reference",
+  "bsr_code",
+  "challan_date",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "tds_details_section",
+   "fieldtype": "Section Break",
+   "label": "TDS Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "label": "Investor / Payee",
+   "options": "Investor Profile"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Transaction Type",
+   "options": "\nManagement Fee\nPerformance Fee\nCarried Interest\nDividend Distribution\nInterest Payment\nRedemption\nAdvisory Fee\nCommission\nOther Income",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transaction_reference",
+   "fieldtype": "Data",
+   "label": "Transaction Reference"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tds_date",
+   "fieldtype": "Date",
+   "label": "TDS Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tds_section_code",
+   "fieldtype": "Select",
+   "label": "TDS Section Code",
+   "options": "\n194 - Dividend\n194A - Interest\n194B - Lottery\n194C - Contract\n194H - Commission\n194I - Rent\n194J - Professional Fees\n194K - Mutual Fund\n194LA - Compensation\n194M - Other\n196D - FII/FPI\nOther"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nComputed\nTDS Deducted\nFiled\nForm 16A Issued"
+  },
+  {
+   "fieldname": "calculation_section",
+   "fieldtype": "Section Break",
+   "label": "Calculation"
+  },
+  {
+   "fieldname": "gross_amount",
+   "fieldtype": "Currency",
+   "label": "Gross Amount",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tds_rate",
+   "fieldtype": "Percent",
+   "label": "TDS Rate (%)"
+  },
+  {
+   "fieldname": "surcharge_rate",
+   "fieldtype": "Percent",
+   "label": "Surcharge Rate (%)"
+  },
+  {
+   "fieldname": "cess_rate",
+   "fieldtype": "Percent",
+   "label": "Education Cess (%)",
+   "default": "4"
+  },
+  {
+   "fieldname": "column_break_calc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tds_amount",
+   "fieldtype": "Currency",
+   "label": "TDS Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "surcharge_amount",
+   "fieldtype": "Currency",
+   "label": "Surcharge Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "education_cess",
+   "fieldtype": "Currency",
+   "label": "Education Cess",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_tds",
+   "fieldtype": "Currency",
+   "label": "Total TDS Deducted",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_amount",
+   "fieldtype": "Currency",
+   "label": "Net Amount Payable",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "filing_section",
+   "fieldtype": "Section Break",
+   "label": "Filing"
+  },
+  {
+   "fieldname": "filed_to_income_tax",
+   "fieldtype": "Check",
+   "label": "Filed to Income Tax"
+  },
+  {
+   "fieldname": "form_16a_generated",
+   "fieldtype": "Check",
+   "label": "Form 16A Generated"
+  },
+  {
+   "fieldname": "form_16a_date",
+   "fieldtype": "Date",
+   "label": "Form 16A Date"
+  },
+  {
+   "fieldname": "column_break_file",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "challan_reference",
+   "fieldtype": "Data",
+   "label": "Challan Reference / CIN"
+  },
+  {
+   "fieldname": "bsr_code",
+   "fieldtype": "Data",
+   "label": "BSR Code"
+  },
+  {
+   "fieldname": "challan_date",
+   "fieldtype": "Date",
+   "label": "Challan Date"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "TDS Computation",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "TDS Computation",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

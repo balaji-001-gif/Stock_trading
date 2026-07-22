@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "investor",
+  "commitment",
+  "committed_amount",
+  "call_amount",
+  "paid_amount",
+  "payment_date",
+  "status",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commitment",
+   "fieldtype": "Link",
+   "label": "Commitment",
+   "options": "Commitment"
+  },
+  {
+   "fetch_from": "commitment.commitment_amount",
+   "fieldname": "committed_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Committed Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "call_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Call Amount",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nPending\nPaid\nLate\nDefaulted\nWaived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Call Detail Item",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

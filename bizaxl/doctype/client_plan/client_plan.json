@@ -1,0 +1,297 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: PLAN-{advisor}-{client_name}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "client_section",
+  "advisor",
+  "client_name",
+  "client_investor",
+  "email",
+  "mobile",
+  "column_break_cli",
+  "risk_profile",
+  "investment_horizon",
+  "ips_reference",
+  "status",
+  "goal_section",
+  "goal_type",
+  "goal_description",
+  "goal_amount",
+  "target_date",
+  "column_break_goal",
+  "monthly_sip_required",
+  "lump_sum_required",
+  "current_savings",
+  "projected_shortfall",
+  "portfolio_section",
+  "model_portfolio",
+  "recommended_allocation",
+  "total_invested",
+  "current_value",
+  "column_break_prt",
+  "sip_amount",
+  "sip_frequency",
+  "last_rebalance_date",
+  "proposal_section",
+  "proposal_generated",
+  "proposal_pdf",
+  "proposal_date",
+  "column_break_prop",
+  "proposal_accepted",
+  "acceptance_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "client_section",
+   "fieldtype": "Section Break",
+   "label": "Client Details"
+  },
+  {
+   "fieldname": "advisor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Advisor",
+   "options": "Advisor Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_investor",
+   "fieldtype": "Link",
+   "label": "Linked Investor Profile",
+   "options": "Investor Profile"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "column_break_cli",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "risk_profile",
+   "fieldtype": "Select",
+   "label": "Risk Profile",
+   "options": "\nConservative\nModerately Conservative\nModerate\nModerately Aggressive\nAggressive"
+  },
+  {
+   "fieldname": "investment_horizon",
+   "fieldtype": "Select",
+   "label": "Investment Horizon",
+   "options": "\nShort Term (< 1 Year)\nMedium Term (1-3 Years)\nLong Term (3-7 Years)\nVery Long Term (7+ Years)"
+  },
+  {
+   "fieldname": "ips_reference",
+   "fieldtype": "Data",
+   "label": "IPS Reference"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nLead\nProposal Sent\nActive\nSuspended\nClosed"
+  },
+  {
+   "fieldname": "goal_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Goals"
+  },
+  {
+   "fieldname": "goal_type",
+   "fieldtype": "Select",
+   "label": "Goal Type",
+   "options": "\nRetirement Planning\nChild Education\nChild Marriage\nHome Purchase\nWealth Accumulation\nTax Saving\nIncome Generation\nEmergency Fund\nTravel / Lifestyle\nBusiness Setup\nOther"
+  },
+  {
+   "fieldname": "goal_description",
+   "fieldtype": "Small Text",
+   "label": "Goal Description"
+  },
+  {
+   "fieldname": "goal_amount",
+   "fieldtype": "Currency",
+   "label": "Target Goal Amount"
+  },
+  {
+   "fieldname": "target_date",
+   "fieldtype": "Date",
+   "label": "Target Date"
+  },
+  {
+   "fieldname": "column_break_goal",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monthly_sip_required",
+   "fieldtype": "Currency",
+   "label": "Monthly SIP Required"
+  },
+  {
+   "fieldname": "lump_sum_required",
+   "fieldtype": "Currency",
+   "label": "Lump Sum Required"
+  },
+  {
+   "fieldname": "current_savings",
+   "fieldtype": "Currency",
+   "label": "Current Savings"
+  },
+  {
+   "fieldname": "projected_shortfall",
+   "fieldtype": "Currency",
+   "label": "Projected Shortfall",
+   "read_only": 1
+  },
+  {
+   "fieldname": "portfolio_section",
+   "fieldtype": "Section Break",
+   "label": "Portfolio"
+  },
+  {
+   "fieldname": "model_portfolio",
+   "fieldtype": "Select",
+   "label": "Model Portfolio",
+   "options": "\nConservative (20:80 Equity:Debt)\nBalanced (50:50)\nGrowth (70:30)\nAggressive Growth (85:15)\nEquity Focused (100:0)\nCustom"
+  },
+  {
+   "fieldname": "recommended_allocation",
+   "fieldtype": "Small Text",
+   "label": "Recommended Allocation"
+  },
+  {
+   "fieldname": "total_invested",
+   "fieldtype": "Currency",
+   "label": "Total Invested"
+  },
+  {
+   "fieldname": "current_value",
+   "fieldtype": "Currency",
+   "label": "Current Portfolio Value"
+  },
+  {
+   "fieldname": "column_break_prt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sip_amount",
+   "fieldtype": "Currency",
+   "label": "Monthly SIP Amount"
+  },
+  {
+   "fieldname": "sip_frequency",
+   "fieldtype": "Select",
+   "label": "SIP Frequency",
+   "options": "\nMonthly\nQuarterly\nHalf-Yearly\nYearly"
+  },
+  {
+   "fieldname": "last_rebalance_date",
+   "fieldtype": "Date",
+   "label": "Last Rebalance Date"
+  },
+  {
+   "fieldname": "proposal_section",
+   "fieldtype": "Section Break",
+   "label": "Proposal"
+  },
+  {
+   "fieldname": "proposal_generated",
+   "fieldtype": "Check",
+   "label": "Proposal Generated"
+  },
+  {
+   "fieldname": "proposal_pdf",
+   "fieldtype": "Attach",
+   "label": "Proposal PDF"
+  },
+  {
+   "fieldname": "proposal_date",
+   "fieldtype": "Date",
+   "label": "Proposal Date"
+  },
+  {
+   "fieldname": "column_break_prop",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "proposal_accepted",
+   "fieldtype": "Check",
+   "label": "Proposal Accepted"
+  },
+  {
+   "fieldname": "acceptance_date",
+   "fieldtype": "Date",
+   "label": "Acceptance Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Client Plan",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Client Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Advisor (RIA/MFD)",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Investor Relations"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

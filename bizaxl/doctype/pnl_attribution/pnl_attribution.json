@@ -1,0 +1,332 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: PNL-{fund_master}-{security_id}-{pnl_date}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "pnl_details_section",
+  "fund_master",
+  "security_id",
+  "security_name",
+  "security_type",
+  "column_break_1",
+  "holding",
+  "lot",
+  "transaction_type",
+  "pnl_date",
+  "pnl_type",
+  "transaction_section",
+  "quantity",
+  "sale_price",
+  "cost_price",
+  "column_break_txn",
+  "brokerage",
+  "taxes",
+  "other_charges",
+  "pnl_calculation_section",
+  "gross_realized_pnl",
+  "net_realized_pnl",
+  "unrealized_pnl",
+  "column_break_calc",
+  "cost_basis_method",
+  "currency",
+  "fx_pnl",
+  "classification_section",
+  "sector",
+  "holding_period_days",
+  "short_term",
+  "column_break_class",
+  "long_term",
+  "tax_status",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "pnl_details_section",
+   "fieldtype": "Section Break",
+   "label": "P&L Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "security_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Security ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "security_name",
+   "fieldtype": "Data",
+   "label": "Security Name"
+  },
+  {
+   "fieldname": "security_type",
+   "fieldtype": "Select",
+   "label": "Security Type",
+   "options": "\nEquity\nDebt\nDerivative\nETF\nMutual Fund\nOther"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "holding",
+   "fieldtype": "Link",
+   "label": "Holding",
+   "options": "Holdings Register"
+  },
+  {
+   "fieldname": "lot",
+   "fieldtype": "Link",
+   "label": "Lot",
+   "options": "Lot Tracking"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Transaction Type",
+   "options": "\nSales\nRedemption\nMaturity\nCorporate Action\nDividend\nInterest\nFee\nFX Revaluation\nMark-to-Market",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pnl_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "P&L Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pnl_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "P&L Type",
+   "options": "\nRealized\nUnrealized\nBoth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transaction_section",
+   "fieldtype": "Section Break",
+   "label": "Transaction Details"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Quantity",
+   "precision": 4
+  },
+  {
+   "fieldname": "sale_price",
+   "fieldtype": "Currency",
+   "label": "Sale/Exit Price",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "cost_price",
+   "fieldtype": "Currency",
+   "label": "Cost/Acquisition Price",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "column_break_txn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "brokerage",
+   "fieldtype": "Currency",
+   "label": "Brokerage",
+   "options": "currency"
+  },
+  {
+   "fieldname": "taxes",
+   "fieldtype": "Currency",
+   "label": "Taxes (STT/GST)",
+   "options": "currency"
+  },
+  {
+   "fieldname": "other_charges",
+   "fieldtype": "Currency",
+   "label": "Other Charges",
+   "options": "currency"
+  },
+  {
+   "fieldname": "pnl_calculation_section",
+   "fieldtype": "Section Break",
+   "label": "P&L Calculation"
+  },
+  {
+   "fieldname": "gross_realized_pnl",
+   "fieldtype": "Currency",
+   "label": "Gross Realized P&L",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_realized_pnl",
+   "fieldtype": "Currency",
+   "label": "Net Realized P&L",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unrealized_pnl",
+   "fieldtype": "Currency",
+   "label": "Unrealized P&L",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_calc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost_basis_method",
+   "fieldtype": "Select",
+   "label": "Cost Basis Method",
+   "options": "\nFIFO\nLIFO\nHIFO\nWeighted Average\nSpecific ID"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "default": "INR"
+  },
+  {
+   "fieldname": "fx_pnl",
+   "fieldtype": "Currency",
+   "label": "FX P&L Component",
+   "options": "currency"
+  },
+  {
+   "fieldname": "classification_section",
+   "fieldtype": "Section Break",
+   "label": "Classification"
+  },
+  {
+   "fieldname": "sector",
+   "fieldtype": "Data",
+   "label": "Sector"
+  },
+  {
+   "fieldname": "holding_period_days",
+   "fieldtype": "Int",
+   "label": "Holding Period (Days)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "short_term",
+   "fieldtype": "Check",
+   "label": "Short Term (STCG)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_class",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "long_term",
+   "fieldtype": "Check",
+   "label": "Long Term (LTCG)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tax_status",
+   "fieldtype": "Select",
+   "label": "Tax Status",
+   "options": "\nTaxable\nExempt\nDeferred\nNot Applicable"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "P&L Attribution",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "P&L Attribution",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tax Advisor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

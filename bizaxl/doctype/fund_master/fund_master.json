@@ -1,0 +1,464 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:fund_code",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fund_details_section",
+  "fund_name",
+  "fund_code",
+  "fund_type",
+  "fund_category",
+  "sub_category",
+  "legal_structure",
+  "column_break_1",
+  "fund_status",
+  "inception_date",
+  "close_date",
+  "tenure_years",
+  "currency",
+  "base_currency",
+  "sebi_section",
+  "sebi_registration_number",
+  "sebi_registration_date",
+  "amfi_code",
+  "isin",
+  "column_break_sebi",
+  "trustee_name",
+  "custodian_name",
+  "rta_name",
+  "auditor_name",
+  "fund_management_section",
+  "fund_manager",
+  "portfolio_manager",
+  "investment_advisor",
+  "column_break_mgmt",
+  "aum_current",
+  "aum_date",
+  "minimum_investment",
+  "maximum_investment",
+  "pricing_section",
+  "nav_frequency",
+  "nav_cutoff_time",
+  "valuation_agency",
+  "column_break_pricing",
+  "entry_load_percentage",
+  "exit_load_matrix",
+  "lock_in_period_days",
+  "description_section",
+  "investment_objective",
+  "investment_strategy",
+  "risk_level",
+  "benchmark_index",
+  "amfi_section",
+  "amfi_category",
+  "scheme_type",
+  "scheme_plan",
+  "scheme_sub_option",
+  "references_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "fund_details_section",
+   "fieldtype": "Section Break",
+   "label": "Fund Details"
+  },
+  {
+   "fieldname": "fund_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fund Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "fund_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fund Code",
+   "no_copy": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "fund_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Type",
+   "options": "Mutual Fund\nPMS\nAIF Category I\nAIF Category II\nAIF Category III\nPrivate Equity\nVenture Capital\nHedge Fund\nREIT\nInvIT\nBond Fund\nReal Estate Fund\nPension Fund\nFamily Office\nAdvisory",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fund_category",
+   "fieldtype": "Select",
+   "label": "Fund Category",
+   "options": "Open Ended\nClose Ended\nInterval\nETF\nIndex Fund\nFund of Funds\nPMS Discretionary\nPMS Non-Discretionary\nPMS Advisory"
+  },
+  {
+   "fieldname": "sub_category",
+   "fieldtype": "Select",
+   "label": "Sub Category",
+   "options": "\nEquity\nDebt\nHybrid\nLiquid\nMoney Market\nELSS\nSectoral\nThematic\nValue\nGrowth\nBalanced\nAggressive\nConservative\nUnlisted\nInfrastructure\nSME\nSocial Impact"
+  },
+  {
+   "fieldname": "legal_structure",
+   "fieldtype": "Select",
+   "label": "Legal Structure",
+   "options": "\nTrust\nBody Corporate\nLLP\nPartnership\nCompany\nAOP\nHUF"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fund_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Status",
+   "options": "Draft\nRegistration Pending\nActive\nSuspended\nClosed\nLiquidated\nUnder Audit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inception_date",
+   "fieldtype": "Date",
+   "label": "Inception Date"
+  },
+  {
+   "fieldname": "close_date",
+   "fieldtype": "Date",
+   "label": "Close Date (if close-ended)"
+  },
+  {
+   "fieldname": "tenure_years",
+   "fieldtype": "Int",
+   "label": "Tenure (Years)"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Reporting Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "base_currency",
+   "fieldtype": "Link",
+   "label": "Base Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "sebi_section",
+   "fieldtype": "Section Break",
+   "label": "SEBI Registration & Regulator"
+  },
+  {
+   "fieldname": "sebi_registration_number",
+   "fieldtype": "Data",
+   "label": "SEBI Registration Number"
+  },
+  {
+   "fieldname": "sebi_registration_date",
+   "fieldtype": "Date",
+   "label": "SEBI Registration Date"
+  },
+  {
+   "fieldname": "amfi_code",
+   "fieldtype": "Data",
+   "label": "AMFI Code"
+  },
+  {
+   "fieldname": "isin",
+   "fieldtype": "Data",
+   "label": "ISIN"
+  },
+  {
+   "fieldname": "column_break_sebi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "trustee_name",
+   "fieldtype": "Data",
+   "label": "Trustee Name"
+  },
+  {
+   "fieldname": "custodian_name",
+   "fieldtype": "Data",
+   "label": "Custodian Name"
+  },
+  {
+   "fieldname": "rta_name",
+   "fieldtype": "Data",
+   "label": "RTA (Registrar & Transfer Agent)"
+  },
+  {
+   "fieldname": "auditor_name",
+   "fieldtype": "Data",
+   "label": "Auditor Name"
+  },
+  {
+   "fieldname": "fund_management_section",
+   "fieldtype": "Section Break",
+   "label": "Fund Management"
+  },
+  {
+   "fieldname": "fund_manager",
+   "fieldtype": "Link",
+   "label": "Fund Manager",
+   "options": "User"
+  },
+  {
+   "fieldname": "portfolio_manager",
+   "fieldtype": "Link",
+   "label": "Portfolio Manager",
+   "options": "User"
+  },
+  {
+   "fieldname": "investment_advisor",
+   "fieldtype": "Link",
+   "label": "Investment Advisor",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_mgmt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "aum_current",
+   "fieldtype": "Currency",
+   "label": "Current AUM",
+   "options": "currency"
+  },
+  {
+   "fieldname": "aum_date",
+   "fieldtype": "Date",
+   "label": "AUM as of Date"
+  },
+  {
+   "fieldname": "minimum_investment",
+   "fieldtype": "Currency",
+   "label": "Minimum Investment",
+   "options": "currency"
+  },
+  {
+   "fieldname": "maximum_investment",
+   "fieldtype": "Currency",
+   "label": "Maximum Investment",
+   "options": "currency"
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing & NAV"
+  },
+  {
+   "fieldname": "nav_frequency",
+   "fieldtype": "Select",
+   "label": "NAV Frequency",
+   "options": "Daily\nWeekly\nMonthly\nQuarterly\nYearly\nPerpetual"
+  },
+  {
+   "fieldname": "nav_cutoff_time",
+   "fieldtype": "Time",
+   "label": "NAV Cut-off Time"
+  },
+  {
+   "fieldname": "valuation_agency",
+   "fieldtype": "Data",
+   "label": "Valuation Agency"
+  },
+  {
+   "fieldname": "column_break_pricing",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entry_load_percentage",
+   "fieldtype": "Percent",
+   "label": "Entry Load (%)"
+  },
+  {
+   "fieldname": "exit_load_matrix",
+   "fieldtype": "Table",
+   "label": "Exit Load Matrix",
+   "options": "Exit Load Detail"
+  },
+  {
+   "fieldname": "lock_in_period_days",
+   "fieldtype": "Int",
+   "label": "Lock-in Period (Days)"
+  },
+  {
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description & Strategy"
+  },
+  {
+   "fieldname": "investment_objective",
+   "fieldtype": "Text Editor",
+   "label": "Investment Objective"
+  },
+  {
+   "fieldname": "investment_strategy",
+   "fieldtype": "Text Editor",
+   "label": "Investment Strategy"
+  },
+  {
+   "fieldname": "risk_level",
+   "fieldtype": "Select",
+   "label": "Risk Level",
+   "options": "Very Low\nLow\nModerately Low\nModerate\nModerately High\nHigh\nVery High"
+  },
+  {
+   "fieldname": "benchmark_index",
+   "fieldtype": "Data",
+   "label": "Benchmark Index"
+  },
+  {
+   "fieldname": "amfi_section",
+   "fieldtype": "Section Break",
+   "label": "AMFI Classification (MF)"
+  },
+  {
+   "fieldname": "amfi_category",
+   "fieldtype": "Data",
+   "label": "AMFI Category"
+  },
+  {
+   "fieldname": "scheme_type",
+   "fieldtype": "Select",
+   "label": "Scheme Type",
+   "options": "\nGrowth\nDividend\nDividend Reinvestment\nBonus\nIDCW\nIDCW Reinvestment"
+  },
+  {
+   "fieldname": "scheme_plan",
+   "fieldtype": "Select",
+   "label": "Scheme Plan",
+   "options": "\nDirect\nRegular\nInstitutional\nRetail"
+  },
+  {
+   "fieldname": "scheme_sub_option",
+   "fieldtype": "Data",
+   "label": "Scheme Sub Option"
+  },
+  {
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fund Master",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Share Class",
+   "link_fieldname": "fund_master"
+  },
+  {
+   "link_doctype": "Fund Series",
+   "link_fieldname": "fund_master"
+  },
+  {
+   "link_doctype": "Fee Structure",
+   "link_fieldname": "fund_master"
+  },
+  {
+   "link_doctype": "Fund Configuration",
+   "link_fieldname": "fund_master"
+  }
+ ],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Fund Master",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Officer",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

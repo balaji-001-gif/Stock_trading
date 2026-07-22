@@ -1,0 +1,264 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: NAVP-{fund_master}-{period_type}-{period_start_date}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "period_section",
+  "fund_master",
+  "share_class",
+  "period_type",
+  "period_start_date",
+  "period_end_date",
+  "column_break_1",
+  "period_status",
+  "nav_at_start",
+  "nav_at_end",
+  "period_return",
+  "returns_section",
+  "period_return_percentage",
+  "annualized_return",
+  "benchmark_return",
+  "column_break_ret",
+  "excess_return",
+  "sharpe_ratio",
+  "volatility",
+  "details_section",
+  "total_aum_start",
+  "total_aum_end",
+  "units_start",
+  "units_end",
+  "column_break_det",
+  "subscriptions_in_period",
+  "redemptions_in_period",
+  "distributions_in_period",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "period_section",
+   "fieldtype": "Section Break",
+   "label": "Period Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Share Class",
+   "options": "Share Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Period Type",
+   "options": "\nDaily\nWeekly\nMonthly\nQuarterly\nHalf-Yearly\nYearly\nCustom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_start_date",
+   "fieldtype": "Date",
+   "label": "Period Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_end_date",
+   "fieldtype": "Date",
+   "label": "Period End Date"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "period_status",
+   "fieldtype": "Select",
+   "label": "Period Status",
+   "options": "\nOpen\nClosed\nCalculated\nVerified"
+  },
+  {
+   "fieldname": "nav_at_start",
+   "fieldtype": "Currency",
+   "label": "NAV at Period Start",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "nav_at_end",
+   "fieldtype": "Currency",
+   "label": "NAV at Period End",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "period_return",
+   "fieldtype": "Currency",
+   "label": "Period Return",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "returns_section",
+   "fieldtype": "Section Break",
+   "label": "Returns & Analytics"
+  },
+  {
+   "fieldname": "period_return_percentage",
+   "fieldtype": "Percent",
+   "label": "Period Return (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "annualized_return",
+   "fieldtype": "Percent",
+   "label": "Annualized Return (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "benchmark_return",
+   "fieldtype": "Percent",
+   "label": "Benchmark Return (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "column_break_ret",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "excess_return",
+   "fieldtype": "Percent",
+   "label": "Excess Return (%)",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fieldname": "sharpe_ratio",
+   "fieldtype": "Float",
+   "label": "Sharpe Ratio",
+   "precision": 4
+  },
+  {
+   "fieldname": "volatility",
+   "fieldtype": "Percent",
+   "label": "Volatility (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Period Details"
+  },
+  {
+   "fieldname": "total_aum_start",
+   "fieldtype": "Currency",
+   "label": "Total AUM at Start",
+   "options": "currency"
+  },
+  {
+   "fieldname": "total_aum_end",
+   "fieldtype": "Currency",
+   "label": "Total AUM at End",
+   "options": "currency"
+  },
+  {
+   "fieldname": "units_start",
+   "fieldtype": "Float",
+   "label": "Units at Start",
+   "precision": 4
+  },
+  {
+   "fieldname": "units_end",
+   "fieldtype": "Float",
+   "label": "Units at End",
+   "precision": 4
+  },
+  {
+   "fieldname": "column_break_det",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subscriptions_in_period",
+   "fieldtype": "Currency",
+   "label": "Subscriptions in Period",
+   "options": "currency"
+  },
+  {
+   "fieldname": "redemptions_in_period",
+   "fieldtype": "Currency",
+   "label": "Redemptions in Period",
+   "options": "currency"
+  },
+  {
+   "fieldname": "distributions_in_period",
+   "fieldtype": "Currency",
+   "label": "Distributions in Period",
+   "options": "currency"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "NAV Period",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "NAV Period",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

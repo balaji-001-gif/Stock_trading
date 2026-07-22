@@ -1,0 +1,378 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: RISK-{investor}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "assessment_section",
+  "investor",
+  "assessment_date",
+  "assessed_by",
+  "assessment_method",
+  "column_break_1",
+  "risk_score",
+  "risk_level",
+  "risk_category",
+  "valid_until",
+  "score_breakdown_section",
+  "investment_knowledge",
+  "investment_experience",
+  "risk_appetite",
+  "investment_horizon",
+  "column_break_score",
+  "income_stability",
+  "loss_tolerance",
+  "liquidity_needs",
+  "derived_risk_score",
+  "questionnaire_section",
+  "questionnaire_template",
+  "responses_json",
+  "column_break_qs",
+  "total_questions",
+  "answered_questions",
+  "completion_percentage",
+  "classification_section",
+  "suggested_portfolio_type",
+  "suggested_asset_allocation",
+  "max_equity_exposure",
+  "column_break_class",
+  "max_debt_exposure",
+  "suggested_funds",
+  "restricted_investments",
+  "approval_section",
+  "approval_status",
+  "approved_by",
+  "approval_date",
+  "column_break_appr",
+  "approval_notes",
+  "next_reassessment_date",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "assessment_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Assessment"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "assessment_date",
+   "fieldtype": "Date",
+   "label": "Assessment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assessed_by",
+   "fieldtype": "Link",
+   "label": "Assessed By",
+   "options": "User"
+  },
+  {
+   "fieldname": "assessment_method",
+   "fieldtype": "Select",
+   "label": "Assessment Method",
+   "options": "\nOnline Questionnaire\nIn-Person Interview\nPhone Assessment\nVideo Call\nAdvisor Assessed\nSystem Calculated"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "risk_score",
+   "fieldtype": "Int",
+   "label": "Risk Score (0-100)"
+  },
+  {
+   "fieldname": "risk_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Risk Level",
+   "options": "\nVery Low\nLow\nModerately Low\nModerate\nModerately High\nHigh\nVery High",
+   "reqd": 1
+  },
+  {
+   "fieldname": "risk_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Risk Category",
+   "options": "\nConservative\nModerately Conservative\nBalanced\nModerately Aggressive\nAggressive"
+  },
+  {
+   "fieldname": "valid_until",
+   "fieldtype": "Date",
+   "label": "Valid Until"
+  },
+  {
+   "fieldname": "score_breakdown_section",
+   "fieldtype": "Section Break",
+   "label": "Score Breakdown"
+  },
+  {
+   "fieldname": "investment_knowledge",
+   "fieldtype": "Select",
+   "label": "Investment Knowledge",
+   "options": "\nNone\nLimited\nBasic\nGood\nAdvanced\nExpert"
+  },
+  {
+   "fieldname": "investment_experience",
+   "fieldtype": "Select",
+   "label": "Investment Experience",
+   "options": "\nLess than 1 Year\n1-3 Years\n3-5 Years\n5-10 Years\n10+ Years"
+  },
+  {
+   "fieldname": "risk_appetite",
+   "fieldtype": "Select",
+   "label": "Risk Appetite",
+   "options": "\nAvoid Risk\nLow Risk Tolerance\nModerate Risk Tolerance\nHigh Risk Tolerance\nVery High Risk Tolerance"
+  },
+  {
+   "fieldname": "investment_horizon",
+   "fieldtype": "Select",
+   "label": "Investment Horizon",
+   "options": "\nShort Term (< 1 Year)\nMedium Term (1-3 Years)\nLong Term (3-7 Years)\nVery Long Term (7+ Years)"
+  },
+  {
+   "fieldname": "column_break_score",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "income_stability",
+   "fieldtype": "Select",
+   "label": "Income Stability",
+   "options": "\nVery Unstable\nUnstable\nStable\nVery Stable\nRetired"
+  },
+  {
+   "fieldname": "loss_tolerance",
+   "fieldtype": "Select",
+   "label": "Loss Tolerance",
+   "options": "\nCannot Accept Any Loss\nUp to 5% Loss\nUp to 10% Loss\nUp to 20% Loss\nAbove 20% Loss"
+  },
+  {
+   "fieldname": "liquidity_needs",
+   "fieldtype": "Select",
+   "label": "Liquidity Needs",
+   "options": "\nVery High (Need access within 3 months)\nHigh (Need access within 6 months)\nModerate (Need access within 1 year)\nLow (1-3 years)\nVery Low (3+ years)"
+  },
+  {
+   "fieldname": "derived_risk_score",
+   "fieldtype": "Int",
+   "label": "Derived Risk Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "questionnaire_section",
+   "fieldtype": "Section Break",
+   "label": "Questionnaire Responses"
+  },
+  {
+   "fieldname": "questionnaire_template",
+   "fieldtype": "Data",
+   "label": "Questionnaire Template Used"
+  },
+  {
+   "fieldname": "responses_json",
+   "fieldtype": "Code",
+   "label": "Responses (JSON)",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "column_break_qs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_questions",
+   "fieldtype": "Int",
+   "label": "Total Questions"
+  },
+  {
+   "fieldname": "answered_questions",
+   "fieldtype": "Int",
+   "label": "Answered Questions"
+  },
+  {
+   "fieldname": "completion_percentage",
+   "fieldtype": "Percent",
+   "label": "Completion",
+   "read_only": 1
+  },
+  {
+   "fieldname": "classification_section",
+   "fieldtype": "Section Break",
+   "label": "Suggested Classification"
+  },
+  {
+   "fieldname": "suggested_portfolio_type",
+   "fieldtype": "Select",
+   "label": "Suggested Portfolio Type",
+   "options": "\nCapital Preservation\nIncome\nBalanced\nGrowth\nAggressive Growth"
+  },
+  {
+   "fieldname": "suggested_asset_allocation",
+   "fieldtype": "Small Text",
+   "label": "Suggested Asset Allocation"
+  },
+  {
+   "fieldname": "max_equity_exposure",
+   "fieldtype": "Percent",
+   "label": "Max Equity Exposure (%)"
+  },
+  {
+   "fieldname": "column_break_class",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "max_debt_exposure",
+   "fieldtype": "Percent",
+   "label": "Max Debt Exposure (%)"
+  },
+  {
+   "fieldname": "suggested_funds",
+   "fieldtype": "Small Text",
+   "label": "Suggested Funds / Schemes"
+  },
+  {
+   "fieldname": "restricted_investments",
+   "fieldtype": "Small Text",
+   "label": "Restricted Investments"
+  },
+  {
+   "fieldname": "approval_section",
+   "fieldtype": "Section Break",
+   "label": "Approval & Validity"
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "\nPending\nApproved\nRejected\nExpired\nRe-assessment Required"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "column_break_appr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approval_notes",
+   "fieldtype": "Small Text",
+   "label": "Approval Notes"
+  },
+  {
+   "fieldname": "next_reassessment_date",
+   "fieldtype": "Date",
+   "label": "Next Re-assessment Date"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Risk Profile",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Risk Profile",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Advisor (RIA/MFD)",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

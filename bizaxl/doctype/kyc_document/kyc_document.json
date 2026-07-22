@@ -1,0 +1,390 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: KYC-{investor}-{document_type}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "document_section",
+  "investor",
+  "document_type",
+  "document_number",
+  "document_category",
+  "column_break_1",
+  "issuing_authority",
+  "date_of_issue",
+  "date_of_expiry",
+  "place_of_issue",
+  "verification_section",
+  "verification_status",
+  "verified_by",
+  "verification_date",
+  "verification_method",
+  "column_break_vfy",
+  "verification_notes",
+  "rejection_reason",
+  "verification_reference",
+  "ekyc_section",
+  "ekyc_mode",
+  "ekyc_reference",
+  "ekyc_consent",
+  "column_break_ekyc",
+  "ekyc_agent",
+  "ekyc_session_id",
+  "ekyc_completed_at",
+  "ckyc_section",
+  "ckyc_number",
+  "ckyc_last_fetched",
+  "ckyc_data",
+  "column_break_ckyc",
+  "kra_name",
+  "kra_reference",
+  "document_files_section",
+  "document_front",
+  "document_back",
+  "column_break_doc",
+  "selfie_image",
+  "additional_documents",
+  "aml_section",
+  "aml_screening_status",
+  "aml_screening_date",
+  "aml_risk_score",
+  "column_break_aml",
+  "pep_check",
+  "sanctions_check",
+  "aml_notes",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "document_section",
+   "fieldtype": "Section Break",
+   "label": "Document Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Document Type",
+   "options": "\nPAN Card\nAadhaar Card\nPassport\nVoter ID\nDriving License\nBank Statement\nSalary Slip\nIT Return\nProof of Address\nProof of Identity\nForm 16\nGST Certificate\nIncorporation Certificate\nPartnership Deed\nTrust Deed\nOthers",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document Number"
+  },
+  {
+   "fieldname": "document_category",
+   "fieldtype": "Select",
+   "label": "Document Category",
+   "options": "\nProof of Identity (POI)\nProof of Address (POA)\nProof of Income\nProof of Business\nOthers"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "issuing_authority",
+   "fieldtype": "Data",
+   "label": "Issuing Authority"
+  },
+  {
+   "fieldname": "date_of_issue",
+   "fieldtype": "Date",
+   "label": "Date of Issue"
+  },
+  {
+   "fieldname": "date_of_expiry",
+   "fieldtype": "Date",
+   "label": "Date of Expiry"
+  },
+  {
+   "fieldname": "place_of_issue",
+   "fieldtype": "Data",
+   "label": "Place of Issue"
+  },
+  {
+   "fieldname": "verification_section",
+   "fieldtype": "Section Break",
+   "label": "Verification"
+  },
+  {
+   "fieldname": "verification_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Verification Status",
+   "options": "\nPending\nIn Progress\nVerified\nRejected\nExpired\nNot Required",
+   "reqd": 1
+  },
+  {
+   "fieldname": "verified_by",
+   "fieldtype": "Link",
+   "label": "Verified By",
+   "options": "User"
+  },
+  {
+   "fieldname": "verification_date",
+   "fieldtype": "Date",
+   "label": "Verification Date"
+  },
+  {
+   "fieldname": "verification_method",
+   "fieldtype": "Select",
+   "label": "Verification Method",
+   "options": "\nManual\neKYC (Aadhaar OTP)\nVideo KYC\nDigiLocker\nCKYC\nKRA Check\nAPI Based"
+  },
+  {
+   "fieldname": "column_break_vfy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "verification_notes",
+   "fieldtype": "Small Text",
+   "label": "Verification Notes"
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejection Reason"
+  },
+  {
+   "fieldname": "verification_reference",
+   "fieldtype": "Data",
+   "label": "Verification Reference ID"
+  },
+  {
+   "fieldname": "ekyc_section",
+   "fieldtype": "Section Break",
+   "label": "eKYC Details",
+   "depends_on": "eval:doc.verification_method=='eKYC (Aadhaar OTP)'"
+  },
+  {
+   "fieldname": "ekyc_mode",
+   "fieldtype": "Select",
+   "label": "eKYC Mode",
+   "options": "\nAadhaar OTP\nAadhaar Biometric\nOffline XML\nDigiLocker\nVideo KYC"
+  },
+  {
+   "fieldname": "ekyc_reference",
+   "fieldtype": "Data",
+   "label": "eKYC Reference Number"
+  },
+  {
+   "fieldname": "ekyc_consent",
+   "fieldtype": "Check",
+   "label": "eKYC Consent Obtained"
+  },
+  {
+   "fieldname": "column_break_ekyc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ekyc_agent",
+   "fieldtype": "Data",
+   "label": "eKYC Agent"
+  },
+  {
+   "fieldname": "ekyc_session_id",
+   "fieldtype": "Data",
+   "label": "eKYC Session ID"
+  },
+  {
+   "fieldname": "ekyc_completed_at",
+   "fieldtype": "Datetime",
+   "label": "eKYC Completed At"
+  },
+  {
+   "fieldname": "ckyc_section",
+   "fieldtype": "Section Break",
+   "label": "CKYC Details"
+  },
+  {
+   "fieldname": "ckyc_number",
+   "fieldtype": "Data",
+   "label": "CKYC Number"
+  },
+  {
+   "fieldname": "ckyc_last_fetched",
+   "fieldtype": "Date",
+   "label": "CKYC Last Fetched"
+  },
+  {
+   "fieldname": "ckyc_data",
+   "fieldtype": "Code",
+   "label": "CKYC Data (JSON)",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "column_break_ckyc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kra_name",
+   "fieldtype": "Select",
+   "label": "KRA Name",
+   "options": "\nCAMS KRA\nKarvy KRA\nNDML KRA\nCDSL Ventures\nOthers"
+  },
+  {
+   "fieldname": "kra_reference",
+   "fieldtype": "Data",
+   "label": "KRA Reference Number"
+  },
+  {
+   "fieldname": "document_files_section",
+   "fieldtype": "Section Break",
+   "label": "Document Files"
+  },
+  {
+   "fieldname": "document_front",
+   "fieldtype": "Attach Image",
+   "label": "Document Front Image"
+  },
+  {
+   "fieldname": "document_back",
+   "fieldtype": "Attach Image",
+   "label": "Document Back Image"
+  },
+  {
+   "fieldname": "column_break_doc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "selfie_image",
+   "fieldtype": "Attach Image",
+   "label": "Selfie / Live Photo"
+  },
+  {
+   "fieldname": "additional_documents",
+   "fieldtype": "Attach",
+   "label": "Additional Documents"
+  },
+  {
+   "fieldname": "aml_section",
+   "fieldtype": "Section Break",
+   "label": "AML Screening"
+  },
+  {
+   "fieldname": "aml_screening_status",
+   "fieldtype": "Select",
+   "label": "AML Screening Status",
+   "options": "\nNot Screened\nPending\nCleared\nFlagged\nReview Required"
+  },
+  {
+   "fieldname": "aml_screening_date",
+   "fieldtype": "Date",
+   "label": "AML Screening Date"
+  },
+  {
+   "fieldname": "aml_risk_score",
+   "fieldtype": "Select",
+   "label": "AML Risk Score",
+   "options": "\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "column_break_aml",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pep_check",
+   "fieldtype": "Check",
+   "label": "PEP (Politically Exposed Person)"
+  },
+  {
+   "fieldname": "sanctions_check",
+   "fieldtype": "Check",
+   "label": "Sanctions List Match"
+  },
+  {
+   "fieldname": "aml_notes",
+   "fieldtype": "Small Text",
+   "label": "AML Notes"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "KYC Document",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "KYC Document",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

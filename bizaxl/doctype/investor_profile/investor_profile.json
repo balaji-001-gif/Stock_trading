@@ -1,0 +1,595 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:pan_number",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_details_section",
+  "first_name",
+  "last_name",
+  "date_of_birth",
+  "gender",
+  "nationality",
+  "column_break_personal",
+  "marital_status",
+  "occupation",
+  "employer_name",
+  "designation",
+  "identity_section",
+  "pan_number",
+  "aadhaar_number",
+  "ckyc_number",
+  "ckyc_verified",
+  "column_break_identity",
+  "passport_number",
+  "voter_id",
+  "driving_license",
+  "contact_section",
+  "email",
+  "mobile_number",
+  "phone_number",
+  "column_break_contact",
+  "address_line_1",
+  "address_line_2",
+  "city",
+  "state",
+  "pincode",
+  "country",
+  "classification_section",
+  "investor_category",
+  "investor_type",
+  "investor_sub_type",
+  "column_break_class",
+  "risk_profile_link",
+  "kyc_status",
+  "kyc_completed_date",
+  "financial_section",
+  "annual_income_range",
+  "net_worth",
+  "net_worth_date",
+  "source_of_funds",
+  "column_break_fin",
+  "bank_name",
+  "bank_account_number",
+  "ifsc_code",
+  "demat_account_number",
+  "dp_name",
+  "dp_id",
+  "fatca_section",
+  "tax_residency_country_1",
+  "tin_number_1",
+  "tax_residency_country_2",
+  "tin_number_2",
+  "column_break_fatca",
+  "fatca_status",
+  "fatca_declaration_date",
+  "us_person",
+  "us_tin_number",
+  "nominee_section",
+  "nominee_name",
+  "nominee_relationship",
+  "nominee_dob",
+  "column_break_nominee",
+  "nominee_percentage",
+  "nominee_guardian_name",
+  "nominee_guardian_relation",
+  "reference_section",
+  "fund_master",
+  "advisor",
+  "column_break_ref",
+  "status",
+  "onboarding_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "personal_details_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Details"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale\nOther\nPrefer Not to Say"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality"
+  },
+  {
+   "fieldname": "column_break_personal",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "\nSingle\nMarried\nDivorced\nWidowed"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Select",
+   "label": "Occupation",
+   "options": "\nSalaried\nSelf-Employed Professional\nBusiness Owner\nRetired\nStudent\nHomemaker\nOthers"
+  },
+  {
+   "fieldname": "employer_name",
+   "fieldtype": "Data",
+   "label": "Employer Name"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "identity_section",
+   "fieldtype": "Section Break",
+   "label": "Identity Documents"
+  },
+  {
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PAN Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "aadhaar_number",
+   "fieldtype": "Data",
+   "label": "Aadhaar Number"
+  },
+  {
+   "fieldname": "ckyc_number",
+   "fieldtype": "Data",
+   "label": "CKYC Number"
+  },
+  {
+   "fieldname": "ckyc_verified",
+   "fieldtype": "Check",
+   "label": "CKYC Verified",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_identity",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "passport_number",
+   "fieldtype": "Data",
+   "label": "Passport Number"
+  },
+  {
+   "fieldname": "voter_id",
+   "fieldtype": "Data",
+   "label": "Voter ID"
+  },
+  {
+   "fieldname": "driving_license",
+   "fieldtype": "Data",
+   "label": "Driving License"
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_contact",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address Line 1"
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country",
+   "default": "India"
+  },
+  {
+   "fieldname": "classification_section",
+   "fieldtype": "Section Break",
+   "label": "Investor Classification"
+  },
+  {
+   "fieldname": "investor_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor Category",
+   "options": "\nRetail Individual\nHigh Net Worth (HNI)\nQualified Institutional Buyer (QIB)\nNon-Resident Indian (NRI)\nForeign Portfolio Investor (FPI)\nForeign Direct Investor (FDI)\nInstitutional Investor\nFamily Office\nTrust\nCorporate\nPartnership Firm\nHUF\nOthers",
+   "reqd": 1
+  },
+  {
+   "fieldname": "investor_type",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Investor Type",
+   "options": "\nIndividual\nHUF\nTrust\nCorporate\nPartnership\nAOP\nBOI\nOthers",
+   "reqd": 1
+  },
+  {
+   "fieldname": "investor_sub_type",
+   "fieldtype": "Data",
+   "label": "Investor Sub Type"
+  },
+  {
+   "fieldname": "column_break_class",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "risk_profile_link",
+   "fieldtype": "Link",
+   "label": "Risk Profile",
+   "options": "Risk Profile",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kyc_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "KYC Status",
+   "options": "\nNot Started\nPending\nIn Progress\nVerified\nRejected\nHold\nExpired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kyc_completed_date",
+   "fieldtype": "Date",
+   "label": "KYC Completed Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "financial_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Details"
+  },
+  {
+   "fieldname": "annual_income_range",
+   "fieldtype": "Select",
+   "label": "Annual Income Range",
+   "options": "\nBelow Rs. 5 Lakhs\nRs. 5-10 Lakhs\nRs. 10-25 Lakhs\nRs. 25-50 Lakhs\nRs. 50 Lakhs - 1 Crore\nRs. 1-5 Crores\nAbove Rs. 5 Crores"
+  },
+  {
+   "fieldname": "net_worth",
+   "fieldtype": "Currency",
+   "label": "Net Worth",
+   "options": "currency"
+  },
+  {
+   "fieldname": "net_worth_date",
+   "fieldtype": "Date",
+   "label": "Net Worth as of Date"
+  },
+  {
+   "fieldname": "source_of_funds",
+   "fieldtype": "Small Text",
+   "label": "Source of Funds"
+  },
+  {
+   "fieldname": "column_break_fin",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "bank_account_number",
+   "fieldtype": "Data",
+   "label": "Bank Account Number"
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code"
+  },
+  {
+   "fieldname": "demat_account_number",
+   "fieldtype": "Data",
+   "label": "Demat Account Number (BO ID)"
+  },
+  {
+   "fieldname": "dp_name",
+   "fieldtype": "Data",
+   "label": "Depository Participant Name"
+  },
+  {
+   "fieldname": "dp_id",
+   "fieldtype": "Data",
+   "label": "DP ID"
+  },
+  {
+   "fieldname": "fatca_section",
+   "fieldtype": "Section Break",
+   "label": "FATCA / CRS Declaration"
+  },
+  {
+   "fieldname": "tax_residency_country_1",
+   "fieldtype": "Data",
+   "label": "Tax Residency Country 1",
+   "default": "India"
+  },
+  {
+   "fieldname": "tin_number_1",
+   "fieldtype": "Data",
+   "label": "TIN / PAN Number 1"
+  },
+  {
+   "fieldname": "tax_residency_country_2",
+   "fieldtype": "Data",
+   "label": "Tax Residency Country 2 (if any)"
+  },
+  {
+   "fieldname": "tin_number_2",
+   "fieldtype": "Data",
+   "label": "TIN Number 2"
+  },
+  {
+   "fieldname": "column_break_fatca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fatca_status",
+   "fieldtype": "Select",
+   "label": "FATCA Status",
+   "options": "\nPending\nDeclaration Received\nFiled with IT dept\nNot Applicable"
+  },
+  {
+   "fieldname": "fatca_declaration_date",
+   "fieldtype": "Date",
+   "label": "FATCA Declaration Date"
+  },
+  {
+   "fieldname": "us_person",
+   "fieldtype": "Check",
+   "label": "US Person (Green Card / Citizenship)"
+  },
+  {
+   "fieldname": "us_tin_number",
+   "fieldtype": "Data",
+   "label": "US TIN / SSN (if applicable)"
+  },
+  {
+   "fieldname": "nominee_section",
+   "fieldtype": "Section Break",
+   "label": "Nominee Details"
+  },
+  {
+   "fieldname": "nominee_name",
+   "fieldtype": "Data",
+   "label": "Nominee Name"
+  },
+  {
+   "fieldname": "nominee_relationship",
+   "fieldtype": "Select",
+   "label": "Relationship",
+   "options": "\nSpouse\nSon\nDaughter\nFather\nMother\nBrother\nSister\nGrandparent\nOther"
+  },
+  {
+   "fieldname": "nominee_dob",
+   "fieldtype": "Date",
+   "label": "Nominee Date of Birth"
+  },
+  {
+   "fieldname": "column_break_nominee",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nominee_percentage",
+   "fieldtype": "Percent",
+   "label": "Nominee Allocation (%)"
+  },
+  {
+   "fieldname": "nominee_guardian_name",
+   "fieldtype": "Data",
+   "label": "Guardian Name (if minor)"
+  },
+  {
+   "fieldname": "nominee_guardian_relation",
+   "fieldtype": "Data",
+   "label": "Guardian Relationship"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master"
+  },
+  {
+   "fieldname": "advisor",
+   "fieldtype": "Link",
+   "label": "Advisor / Referral",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_ref",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nActive\nInactive\nSuspended\nClosed\nDormant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "onboarding_date",
+   "fieldtype": "Date",
+   "label": "Onboarding Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Investor Profile",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "KYC Document",
+   "link_fieldname": "investor"
+  },
+  {
+   "link_doctype": "AML Screening",
+   "link_fieldname": "investor"
+  },
+  {
+   "link_doctype": "Risk Profile",
+   "link_fieldname": "investor"
+  },
+ ],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Investor Profile",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Advisor (RIA/MFD)",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,200 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: PFM-{pfm_code}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "pfm_details_section",
+  "pfm_name",
+  "pfm_code",
+  "pfm_short_name",
+  "column_break_dtl",
+  "status",
+  "registration_date",
+  "sebi_registration",
+  "contact_section",
+  "contact_person",
+  "email",
+  "phone",
+  "column_break_con",
+  "website",
+  "address",
+  "scheme_section",
+  "scheme_e",
+  "scheme_c",
+  "scheme_g",
+  "column_break_sch",
+  "scheme_a",
+  "scheme_tier_ii",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "pfm_details_section",
+   "fieldtype": "Section Break",
+   "label": "PFM Details"
+  },
+  {
+   "fieldname": "pfm_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PFM Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pfm_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PFM Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "pfm_short_name",
+   "fieldtype": "Data",
+   "label": "Short Name"
+  },
+  {
+   "fieldname": "column_break_dtl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nActive\nSuspended\nTerminated"
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration Date"
+  },
+  {
+   "fieldname": "sebi_registration",
+   "fieldtype": "Data",
+   "label": "SEBI Registration No."
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "column_break_con",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "scheme_section",
+   "fieldtype": "Section Break",
+   "label": "Scheme Details"
+  },
+  {
+   "fieldname": "scheme_e",
+   "fieldtype": "Data",
+   "label": "Scheme E (Equity)"
+  },
+  {
+   "fieldname": "scheme_c",
+   "fieldtype": "Data",
+   "label": "Scheme C (Corporate Debt)"
+  },
+  {
+   "fieldname": "scheme_g",
+   "fieldtype": "Data",
+   "label": "Scheme G (Government Securities)"
+  },
+  {
+   "fieldname": "column_break_sch",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scheme_a",
+   "fieldtype": "Data",
+   "label": "Scheme A (Alternate Investment)"
+  },
+  {
+   "fieldname": "scheme_tier_ii",
+   "fieldtype": "Data",
+   "label": "Tier II Scheme"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Pension Fund Manager",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Pension Fund Manager",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Fund Accountant"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

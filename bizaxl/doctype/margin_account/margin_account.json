@@ -1,0 +1,275 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: MGN-{trading_account}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "margin_section",
+  "trading_account",
+  "client_code",
+  "margin_date",
+  "margin_type",
+  "column_break_mgn",
+  "status",
+  "segment",
+  "exchange",
+  "margin_breakdown_section",
+  "available_margin",
+  "span_margin",
+  "exposure_margin",
+  "total_margin_required",
+  "column_break_brk",
+  "mtf_available",
+  "mtf_used",
+  "mtf_limit",
+  "pledge_section",
+  "pledged_securities_value",
+  "cash_margin",
+  "collateral_value",
+  "column_break_plg",
+  "available_pledge",
+  "re_pledge_value",
+  "risk_section",
+  "peak_margin",
+  "margin_shortfall",
+  "shortfall_percentage",
+  "column_break_rsk",
+  "var_based_check",
+  "auto_square_off",
+  "last_square_off_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "margin_section",
+   "fieldtype": "Section Break",
+   "label": "Margin Details"
+  },
+  {
+   "fieldname": "trading_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Trading Account",
+   "options": "Trading Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_code",
+   "fieldtype": "Data",
+   "label": "Client Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "margin_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Margin Date"
+  },
+  {
+   "fieldname": "margin_type",
+   "fieldtype": "Select",
+   "label": "Margin Type",
+   "options": "\nInitial Margin\nMaintenance Margin\nPeak Margin\nAdditional Margin"
+  },
+  {
+   "fieldname": "column_break_mgn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nAdequate\nShortfall\nAlert\nSquare-Off Initiated"
+  },
+  {
+   "fieldname": "segment",
+   "fieldtype": "Select",
+   "label": "Segment",
+   "options": "\nEquity Cash\nEquity F&O\nCurrency\nCommodity"
+  },
+  {
+   "fieldname": "exchange",
+   "fieldtype": "Select",
+   "label": "Exchange",
+   "options": "\nNSE\nBSE\nMCX"
+  },
+  {
+   "fieldname": "margin_breakdown_section",
+   "fieldtype": "Section Break",
+   "label": "Margin Breakdown"
+  },
+  {
+   "fieldname": "available_margin",
+   "fieldtype": "Currency",
+   "label": "Available Margin"
+  },
+  {
+   "fieldname": "span_margin",
+   "fieldtype": "Currency",
+   "label": "SPAN Margin (F&O)",
+   "description": "Standard Portfolio Analysis of Risk margin for derivative positions"
+  },
+  {
+   "fieldname": "exposure_margin",
+   "fieldtype": "Currency",
+   "label": "Exposure Margin"
+  },
+  {
+   "fieldname": "total_margin_required",
+   "fieldtype": "Currency",
+   "label": "Total Margin Required",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_brk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mtf_available",
+   "fieldtype": "Currency",
+   "label": "MTF Available"
+  },
+  {
+   "fieldname": "mtf_used",
+   "fieldtype": "Currency",
+   "label": "MTF Used"
+  },
+  {
+   "fieldname": "mtf_limit",
+   "fieldtype": "Currency",
+   "label": "MTF Limit"
+  },
+  {
+   "fieldname": "pledge_section",
+   "fieldtype": "Section Break",
+   "label": "Pledge & Collateral"
+  },
+  {
+   "fieldname": "pledged_securities_value",
+   "fieldtype": "Currency",
+   "label": "Pledged Securities Value"
+  },
+  {
+   "fieldname": "cash_margin",
+   "fieldtype": "Currency",
+   "label": "Cash Margin"
+  },
+  {
+   "fieldname": "collateral_value",
+   "fieldtype": "Currency",
+   "label": "Total Collateral Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_plg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "available_pledge",
+   "fieldtype": "Currency",
+   "label": "Available Pledge"
+  },
+  {
+   "fieldname": "re_pledge_value",
+   "fieldtype": "Currency",
+   "label": "Re-Pledge Value"
+  },
+  {
+   "fieldname": "risk_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Monitoring"
+  },
+  {
+   "fieldname": "peak_margin",
+   "fieldtype": "Currency",
+   "label": "Peak Margin",
+   "description": "Highest margin utilized during the day"
+  },
+  {
+   "fieldname": "margin_shortfall",
+   "fieldtype": "Currency",
+   "label": "Margin Shortfall",
+   "read_only": 1
+  },
+  {
+   "fieldname": "shortfall_percentage",
+   "fieldtype": "Percent",
+   "label": "Shortfall %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rsk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "var_based_check",
+   "fieldtype": "Check",
+   "label": "VaR Check Passed"
+  },
+  {
+   "fieldname": "auto_square_off",
+   "fieldtype": "Check",
+   "label": "Auto Square-Off Triggered"
+  },
+  {
+   "fieldname": "last_square_off_date",
+   "fieldtype": "Date",
+   "label": "Last Square-Off Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Margin Account",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Margin Account",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Dealer / Trader"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

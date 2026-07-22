@@ -1,0 +1,277 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: TRD-{account_type}-{client_code}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "account_section",
+  "investor",
+  "client_code",
+  "account_type",
+  "trading_account_number",
+  "column_break_acc",
+  "demat_account_number",
+  "dp_name",
+  "dp_id",
+  "status",
+  "segments_section",
+  "segment_equity",
+  "segment_fno",
+  "segment_currency",
+  "segment_commodity",
+  "column_break_seg",
+  "segment_mf",
+  "segment_ipo",
+  "segment_debt",
+  "kyc_section",
+  "kyc_status",
+  "ipv_status",
+  "ipv_date",
+  "column_break_kyc",
+  "rdd_signed",
+  "ddpi_executed",
+  "poa_executed",
+  "limits_section",
+  "exposure_limit",
+  "margin_type",
+  "mtf_enabled",
+  "column_break_lim",
+  "intraday_multipler",
+  "delivery_multipler",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "account_section",
+   "fieldtype": "Section Break",
+   "label": "Account Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "account_type",
+   "fieldtype": "Select",
+   "label": "Account Type",
+   "options": "\nIndividual\nJoint\nCorporate\nNRI\nFII"
+  },
+  {
+   "fieldname": "trading_account_number",
+   "fieldtype": "Data",
+   "label": "Trading Account No."
+  },
+  {
+   "fieldname": "column_break_acc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "demat_account_number",
+   "fieldtype": "Data",
+   "label": "Demat Account No."
+  },
+  {
+   "fieldname": "dp_name",
+   "fieldtype": "Select",
+   "label": "DP Name",
+   "options": "\nNSDL\nCDSL\nOther"
+  },
+  {
+   "fieldname": "dp_id",
+   "fieldtype": "Data",
+   "label": "DP ID"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nActive\nInactive\nSuspended\nClosed"
+  },
+  {
+   "fieldname": "segments_section",
+   "fieldtype": "Section Break",
+   "label": "Segments"
+  },
+  {
+   "fieldname": "segment_equity",
+   "fieldtype": "Check",
+   "label": "Equity (Cash)"
+  },
+  {
+   "fieldname": "segment_fno",
+   "fieldtype": "Check",
+   "label": "F&O (Derivatives)"
+  },
+  {
+   "fieldname": "segment_currency",
+   "fieldtype": "Check",
+   "label": "Currency Derivatives"
+  },
+  {
+   "fieldname": "segment_commodity",
+   "fieldtype": "Check",
+   "label": "Commodity Derivatives"
+  },
+  {
+   "fieldname": "column_break_seg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "segment_mf",
+   "fieldtype": "Check",
+   "label": "Mutual Funds"
+  },
+  {
+   "fieldname": "segment_ipo",
+   "fieldtype": "Check",
+   "label": "IPO"
+  },
+  {
+   "fieldname": "segment_debt",
+   "fieldtype": "Check",
+   "label": "Debt"
+  },
+  {
+   "fieldname": "kyc_section",
+   "fieldtype": "Section Break",
+   "label": "KYC & Compliance"
+  },
+  {
+   "fieldname": "kyc_status",
+   "fieldtype": "Select",
+   "label": "KYC Status",
+   "options": "\nPending\nVerified\nRejected\nExpired"
+  },
+  {
+   "fieldname": "ipv_status",
+   "fieldtype": "Select",
+   "label": "IPV Status",
+   "options": "\nPending\nCompleted\nNot Required"
+  },
+  {
+   "fieldname": "ipv_date",
+   "fieldtype": "Date",
+   "label": "IPV Date"
+  },
+  {
+   "fieldname": "column_break_kyc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rdd_signed",
+   "fieldtype": "Check",
+   "label": "RDD Signed"
+  },
+  {
+   "fieldname": "ddpi_executed",
+   "fieldtype": "Check",
+   "label": "DDPI Executed"
+  },
+  {
+   "fieldname": "poa_executed",
+   "fieldtype": "Check",
+   "label": "PoA Executed"
+  },
+  {
+   "fieldname": "limits_section",
+   "fieldtype": "Section Break",
+   "label": "Limits"
+  },
+  {
+   "fieldname": "exposure_limit",
+   "fieldtype": "Currency",
+   "label": "Exposure Limit"
+  },
+  {
+   "fieldname": "margin_type",
+   "fieldtype": "Select",
+   "label": "Margin Type",
+   "options": "\nCash (Delivery)\nIntraday Only\nMTF (Margin Trade)\nCover Order"
+  },
+  {
+   "fieldname": "mtf_enabled",
+   "fieldtype": "Check",
+   "label": "MTF Enabled"
+  },
+  {
+   "fieldname": "column_break_lim",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "intraday_multipler",
+   "fieldtype": "Float",
+   "label": "Intraday Multiplier",
+   "description": "e.g., 5 means 5x margin for intraday"
+  },
+  {
+   "fieldname": "delivery_multipler",
+   "fieldtype": "Float",
+   "label": "Delivery Multiplier"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Trading Account",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Trading Account",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dealer / Trader",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Risk Officer"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

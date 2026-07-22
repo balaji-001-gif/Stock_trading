@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Frappe / Bench
+sites/
+node_modules/
+public/
+*.js.map
+*.css.map
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+*.env
+
+# Logs
+*.log
+/logs/
+
+# Uploads
+/private/files/
+/public/files/

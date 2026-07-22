@@ -1,0 +1,262 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: AUDIT-NAV-{fund_master}-{nav_date}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "audit_section",
+  "fund_master",
+  "share_class",
+  "nav_history",
+  "nav_date",
+  "column_break_1",
+  "audit_type",
+  "status",
+  "timestamp",
+  "changes_section",
+  "nav_before",
+  "nav_after",
+  "change_percentage",
+  "column_break_chg",
+  "aum_before",
+  "aum_after",
+  "units_outstanding_before",
+  "units_outstanding_after",
+  "details_section",
+  "calculated_by",
+  "calculation_time",
+  "approved_by",
+  "column_break_det",
+  "approval_time",
+  "reason_for_change",
+  "comments",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "audit_section",
+   "fieldtype": "Section Break",
+   "label": "Audit Record"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Share Class",
+   "options": "Share Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nav_history",
+   "fieldtype": "Link",
+   "label": "NAV History Reference",
+   "options": "NAV History"
+  },
+  {
+   "fieldname": "nav_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "NAV Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "audit_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Audit Type",
+   "options": "\nNAV Calculation\nNAV Correction\nNAV Recalculation\nNAV Approval\nPeriodic Review\nAudit Adjustment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPending\nApproved\nRejected\nNeeds Review",
+   "reqd": 1
+  },
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "label": "Timestamp",
+   "read_only": 1
+  },
+  {
+   "fieldname": "changes_section",
+   "fieldtype": "Section Break",
+   "label": "NAV Changes"
+  },
+  {
+   "fieldname": "nav_before",
+   "fieldtype": "Currency",
+   "label": "NAV Before",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "nav_after",
+   "fieldtype": "Currency",
+   "label": "NAV After",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "change_percentage",
+   "fieldtype": "Percent",
+   "label": "Change (%)",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_chg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "aum_before",
+   "fieldtype": "Currency",
+   "label": "AUM Before",
+   "options": "currency"
+  },
+  {
+   "fieldname": "aum_after",
+   "fieldtype": "Currency",
+   "label": "AUM After",
+   "options": "currency"
+  },
+  {
+   "fieldname": "units_outstanding_before",
+   "fieldtype": "Float",
+   "label": "Units Outstanding Before",
+   "precision": 4
+  },
+  {
+   "fieldname": "units_outstanding_after",
+   "fieldtype": "Float",
+   "label": "Units Outstanding After",
+   "precision": 4
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "calculated_by",
+   "fieldtype": "Link",
+   "label": "Calculated By",
+   "options": "User"
+  },
+  {
+   "fieldname": "calculation_time",
+   "fieldtype": "Datetime",
+   "label": "Calculation Time"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_det",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approval_time",
+   "fieldtype": "Datetime",
+   "label": "Approval Time"
+  },
+  {
+   "fieldname": "reason_for_change",
+   "fieldtype": "Small Text",
+   "label": "Reason for Change"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "NAV Audit Trail",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "NAV Audit Trail",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

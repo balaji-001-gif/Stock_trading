@@ -1,0 +1,344 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: RISK-{fund_master}-{calculation_date}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "risk_config_section",
+  "fund_master",
+  "calculation_date",
+  "risk_model",
+  "lookback_period",
+  "column_break_cfg",
+  "status",
+  "confidence_level",
+  "currency",
+  "notes",
+  "return_risk_section",
+  "portfolio_return",
+  "portfolio_volatility",
+  "benchmark_return",
+  "benchmark_volatility",
+  "column_break_rr",
+  "risk_free_rate",
+  "tracking_error",
+  "information_ratio",
+  "downside_deviation",
+  "risk_metrics_section",
+  "sharpe_ratio",
+  "sortino_ratio",
+  "alpha",
+  "beta",
+  "column_break_mt",
+  "r_squared",
+  "standard_deviation",
+  "var_95",
+  "var_99",
+  "stress_test_section",
+  "max_drawdown",
+  "max_drawdown_period",
+  "worst_day_return",
+  "worst_month_return",
+  "column_break_st",
+  "best_day_return",
+  "best_month_return",
+  "positive_months",
+  "negative_months",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "risk_config_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Configuration"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "calculation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Calculation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "risk_model",
+   "fieldtype": "Select",
+   "label": "Risk Model",
+   "options": "\nCAPM\nFama-French 3-Factor\nCarhart 4-Factor\nHistorical Simulation\nMonte Carlo"
+  },
+  {
+   "fieldname": "lookback_period",
+   "fieldtype": "Select",
+   "label": "Lookback Period",
+   "options": "\n1 Month\n3 Months\n6 Months\n1 Year\n3 Years\n5 Years\nSince Inception"
+  },
+  {
+   "fieldname": "column_break_cfg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nCalculated\nApproved"
+  },
+  {
+   "fieldname": "confidence_level",
+   "fieldtype": "Select",
+   "label": "Confidence Level",
+   "options": "\n95%\n99%\n99.5%"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "return_risk_section",
+   "fieldtype": "Section Break",
+   "label": "Return & Risk"
+  },
+  {
+   "fieldname": "portfolio_return",
+   "fieldtype": "Percent",
+   "label": "Portfolio Return (%)"
+  },
+  {
+   "fieldname": "portfolio_volatility",
+   "fieldtype": "Percent",
+   "label": "Portfolio Volatility (%)"
+  },
+  {
+   "fieldname": "benchmark_return",
+   "fieldtype": "Percent",
+   "label": "Benchmark Return (%)"
+  },
+  {
+   "fieldname": "benchmark_volatility",
+   "fieldtype": "Percent",
+   "label": "Benchmark Volatility (%)"
+  },
+  {
+   "fieldname": "column_break_rr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "risk_free_rate",
+   "fieldtype": "Percent",
+   "label": "Risk-Free Rate (%)"
+  },
+  {
+   "fieldname": "tracking_error",
+   "fieldtype": "Percent",
+   "label": "Tracking Error (%)"
+  },
+  {
+   "fieldname": "information_ratio",
+   "fieldtype": "Float",
+   "label": "Information Ratio",
+   "precision": 4
+  },
+  {
+   "fieldname": "downside_deviation",
+   "fieldtype": "Percent",
+   "label": "Downside Deviation (%)"
+  },
+  {
+   "fieldname": "risk_metrics_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Metrics"
+  },
+  {
+   "fieldname": "sharpe_ratio",
+   "fieldtype": "Float",
+   "label": "Sharpe Ratio",
+   "precision": 4
+  },
+  {
+   "fieldname": "sortino_ratio",
+   "fieldtype": "Float",
+   "label": "Sortino Ratio",
+   "precision": 4
+  },
+  {
+   "fieldname": "alpha",
+   "fieldtype": "Percent",
+   "label": "Alpha (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "beta",
+   "fieldtype": "Float",
+   "label": "Beta",
+   "precision": 4
+  },
+  {
+   "fieldname": "column_break_mt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "r_squared",
+   "fieldtype": "Percent",
+   "label": "R-Squared (%)"
+  },
+  {
+   "fieldname": "standard_deviation",
+   "fieldtype": "Percent",
+   "label": "Standard Deviation (%)"
+  },
+  {
+   "fieldname": "var_95",
+   "fieldtype": "Percent",
+   "label": "VaR (95%)",
+   "description": "Value at Risk at 95% confidence"
+  },
+  {
+   "fieldname": "var_99",
+   "fieldtype": "Percent",
+   "label": "VaR (99%)",
+   "description": "Value at Risk at 99% confidence"
+  },
+  {
+   "fieldname": "stress_test_section",
+   "fieldtype": "Section Break",
+   "label": "Stress Tests"
+  },
+  {
+   "fieldname": "max_drawdown",
+   "fieldtype": "Percent",
+   "label": "Max Drawdown (%)"
+  },
+  {
+   "fieldname": "max_drawdown_period",
+   "fieldtype": "Data",
+   "label": "Max Drawdown Period"
+  },
+  {
+   "fieldname": "worst_day_return",
+   "fieldtype": "Percent",
+   "label": "Worst Day Return (%)"
+  },
+  {
+   "fieldname": "worst_month_return",
+   "fieldtype": "Percent",
+   "label": "Worst Month Return (%)"
+  },
+  {
+   "fieldname": "column_break_st",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "best_day_return",
+   "fieldtype": "Percent",
+   "label": "Best Day Return (%)"
+  },
+  {
+   "fieldname": "best_month_return",
+   "fieldtype": "Percent",
+   "label": "Best Month Return (%)"
+  },
+  {
+   "fieldname": "positive_months",
+   "fieldtype": "Int",
+   "label": "Positive Months"
+  },
+  {
+   "fieldname": "negative_months",
+   "fieldtype": "Int",
+   "label": "Negative Months"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Risk Analytics",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Risk Analytics",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,265 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: ADV-{registration_type}-{arn_or_ria_number}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "advisor_section",
+  "advisor_name",
+  "registration_type",
+  "arn_number",
+  "ria_number",
+  "column_break_adv",
+  "euin_number",
+  "status",
+  "registration_date",
+  "valid_until",
+  "contact_section",
+  "email",
+  "mobile",
+  "website",
+  "column_break_con",
+  "address",
+  "city",
+  "pincode",
+  "certification_section",
+  "nism_certificate",
+  "nism_valid_until",
+  "nism_qualified",
+  "column_break_cert",
+  "cpe_credit",
+  "last_cpe_completed",
+  "business_section",
+  "total_aum",
+  "total_clients",
+  "total_arn_income",
+  "column_break_biz",
+  "primary_platform",
+  "bse_starmf_code",
+  "nse_nmf_code",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "advisor_section",
+   "fieldtype": "Section Break",
+   "label": "Advisor Details"
+  },
+  {
+   "fieldname": "advisor_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Advisor Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registration_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Registration Type",
+   "options": "\nRIA (SEBI Registered Investment Adviser)\nMFD (AMFI Registered Mutual Fund Distributor)\nBoth RIA + MFD\nCorporate RIA\nCorporate MFD"
+  },
+  {
+   "fieldname": "arn_number",
+   "fieldtype": "Data",
+   "label": "ARN Number (AMFI)"
+  },
+  {
+   "fieldname": "ria_number",
+   "fieldtype": "Data",
+   "label": "SEBI IA Registration No.",
+   "description": "SEBI registered investment adviser number"
+  },
+  {
+   "fieldname": "column_break_adv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "euin_number",
+   "fieldtype": "Data",
+   "label": "EUIN Number",
+   "description": "Employee Unique Identification Number for sub-brokers"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nActive\nSuspended\nExpired\nUnder Review"
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration Date"
+  },
+  {
+   "fieldname": "valid_until",
+   "fieldtype": "Date",
+   "label": "Valid Until"
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "column_break_con",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "certification_section",
+   "fieldtype": "Section Break",
+   "label": "Certification"
+  },
+  {
+   "fieldname": "nism_certificate",
+   "fieldtype": "Data",
+   "label": "NISM Certificate No."
+  },
+  {
+   "fieldname": "nism_valid_until",
+   "fieldtype": "Date",
+   "label": "NISM Valid Until"
+  },
+  {
+   "fieldname": "nism_qualified",
+   "fieldtype": "Check",
+   "label": "NISM Qualified"
+  },
+  {
+   "fieldname": "column_break_cert",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cpe_credit",
+   "fieldtype": "Int",
+   "label": "CPE Credits This Cycle"
+  },
+  {
+   "fieldname": "last_cpe_completed",
+   "fieldtype": "Date",
+   "label": "Last CPE Completed"
+  },
+  {
+   "fieldname": "business_section",
+   "fieldtype": "Section Break",
+   "label": "Business"
+  },
+  {
+   "fieldname": "total_aum",
+   "fieldtype": "Currency",
+   "label": "Total AUM"
+  },
+  {
+   "fieldname": "total_clients",
+   "fieldtype": "Int",
+   "label": "Total Clients",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_arn_income",
+   "fieldtype": "Currency",
+   "label": "Total ARN Income"
+  },
+  {
+   "fieldname": "column_break_biz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "primary_platform",
+   "fieldtype": "Select",
+   "label": "Primary Platform",
+   "options": "\nBSE StarMF\nNSE NMF II\nBoth\nOther"
+  },
+  {
+   "fieldname": "bse_starmf_code",
+   "fieldtype": "Data",
+   "label": "BSE StarMF Code"
+  },
+  {
+   "fieldname": "nse_nmf_code",
+   "fieldtype": "Data",
+   "label": "NSE NMF II Code"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Advisor Profile",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Advisor Profile",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Advisor (RIA/MFD)",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

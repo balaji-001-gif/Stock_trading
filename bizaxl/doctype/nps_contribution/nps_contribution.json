@@ -1,0 +1,268 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: NPS-CONT-{nps_subscriber}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contribution_section",
+  "nps_subscriber",
+  "contribution_date",
+  "contribution_type",
+  "pran_number",
+  "column_break_con",
+  "account_type",
+  "contribution_mode",
+  "status",
+  "amount_section",
+  "contribution_amount",
+  "employee_contribution",
+  "employer_contribution",
+  "total_contribution",
+  "column_break_amt",
+  "scheme_e_percentage",
+  "scheme_c_percentage",
+  "scheme_g_percentage",
+  "scheme_a_percentage",
+  "allocation_section",
+  "nav_fetch_date",
+  "units_allocated",
+  "applicable_nav",
+  "total_invested",
+  "column_break_all",
+  "pfm_e_units",
+  "pfm_c_units",
+  "pfm_g_units",
+  "pfm_a_units",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "contribution_section",
+   "fieldtype": "Section Break",
+   "label": "Contribution Details"
+  },
+  {
+   "fieldname": "nps_subscriber",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "NPS Subscriber",
+   "options": "NPS Subscriber",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contribution_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Contribution Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contribution_type",
+   "fieldtype": "Select",
+   "label": "Contribution Type",
+   "options": "\nRegular\nAdditional\nVoluntary\nTransfer In"
+  },
+  {
+   "fieldname": "pran_number",
+   "fieldtype": "Data",
+   "label": "PRAN Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_con",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_type",
+   "fieldtype": "Select",
+   "label": "Account Type",
+   "options": "\nTier I (Pension)\nTier II (Savings)"
+  },
+  {
+   "fieldname": "contribution_mode",
+   "fieldtype": "Select",
+   "label": "Contribution Mode",
+   "options": "\nMonthly\nQuarterly\nHalf-Yearly\nYearly\nOne-Time"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nPending\nAllocated\nFailed"
+  },
+  {
+   "fieldname": "amount_section",
+   "fieldtype": "Section Break",
+   "label": "Amount Breakdown"
+  },
+  {
+   "fieldname": "contribution_amount",
+   "fieldtype": "Currency",
+   "label": "Contribution Amount"
+  },
+  {
+   "fieldname": "employee_contribution",
+   "fieldtype": "Currency",
+   "label": "Employee Contribution"
+  },
+  {
+   "fieldname": "employer_contribution",
+   "fieldtype": "Currency",
+   "label": "Employer Contribution"
+  },
+  {
+   "fieldname": "total_contribution",
+   "fieldtype": "Currency",
+   "label": "Total Contribution",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_amt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scheme_e_percentage",
+   "fieldtype": "Percent",
+   "label": "Scheme E % (Equity)"
+  },
+  {
+   "fieldname": "scheme_c_percentage",
+   "fieldtype": "Percent",
+   "label": "Scheme C % (Corporate Debt)"
+  },
+  {
+   "fieldname": "scheme_g_percentage",
+   "fieldtype": "Percent",
+   "label": "Scheme G % (Govt. Securities)"
+  },
+  {
+   "fieldname": "scheme_a_percentage",
+   "fieldtype": "Percent",
+   "label": "Scheme A % (Alternate)"
+  },
+  {
+   "fieldname": "allocation_section",
+   "fieldtype": "Section Break",
+   "label": "NAV Allocation"
+  },
+  {
+   "fieldname": "nav_fetch_date",
+   "fieldtype": "Date",
+   "label": "NAV Fetch Date"
+  },
+  {
+   "fieldname": "units_allocated",
+   "fieldtype": "Float",
+   "label": "Total Units Allocated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_invested",
+   "fieldtype": "Currency",
+   "label": "Total Invested",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_all",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nav_e",
+   "fieldtype": "Currency",
+   "label": "Scheme E NAV",
+   "precision": 4
+  },
+  {
+   "fieldname": "pfm_e_units",
+   "fieldtype": "Float",
+   "label": "Scheme E Units",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nav_c",
+   "fieldtype": "Currency",
+   "label": "Scheme C NAV",
+   "precision": 4
+  },
+  {
+   "fieldname": "pfm_c_units",
+   "fieldtype": "Float",
+   "label": "Scheme C Units",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nav_g",
+   "fieldtype": "Currency",
+   "label": "Scheme G NAV",
+   "precision": 4
+  },
+  {
+   "fieldname": "pfm_g_units",
+   "fieldtype": "Float",
+   "label": "Scheme G Units",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nav_a",
+   "fieldtype": "Currency",
+   "label": "Scheme A NAV",
+   "precision": 4
+  },
+  {
+   "fieldname": "pfm_a_units",
+   "fieldtype": "Float",
+   "label": "Scheme A Units",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "NPS Contribution",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "NPS Contribution",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

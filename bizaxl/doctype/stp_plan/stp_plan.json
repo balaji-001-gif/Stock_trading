@@ -1,0 +1,206 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: STP-{investor}-{from_fund}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "stp_details_section",
+  "investor",
+  "from_fund",
+  "from_share_class",
+  "to_fund",
+  "to_share_class",
+  "column_break_1",
+  "transfer_type",
+  "transfer_amount",
+  "transfer_frequency",
+  "stp_day",
+  "schedule_section",
+  "start_date",
+  "end_date",
+  "next_stp_date",
+  "column_break_sch",
+  "last_stp_date",
+  "total_transferred",
+  "status",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "stp_details_section",
+   "fieldtype": "Section Break",
+   "label": "STP Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_fund",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "From Fund (Source)",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_share_class",
+   "fieldtype": "Link",
+   "label": "From Share Class",
+   "options": "Share Class"
+  },
+  {
+   "fieldname": "to_fund",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "To Fund (Target)",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_share_class",
+   "fieldtype": "Link",
+   "label": "To Share Class",
+   "options": "Share Class"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transfer_type",
+   "fieldtype": "Select",
+   "label": "Transfer Type",
+   "options": "\nFixed Amount\nCapital Appreciation\nUnit Based"
+  },
+  {
+   "fieldname": "transfer_amount",
+   "fieldtype": "Currency",
+   "label": "Transfer Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "transfer_frequency",
+   "fieldtype": "Select",
+   "label": "Transfer Frequency",
+   "options": "\nDaily\nWeekly\nMonthly\nQuarterly"
+  },
+  {
+   "fieldname": "stp_day",
+   "fieldtype": "Select",
+   "label": "STP Day",
+   "options": "\n1\n5\n10\n15\n20\n25\n28"
+  },
+  {
+   "fieldname": "schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Schedule"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "next_stp_date",
+   "fieldtype": "Date",
+   "label": "Next STP Date"
+  },
+  {
+   "fieldname": "column_break_sch",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_stp_date",
+   "fieldtype": "Date",
+   "label": "Last STP Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_transferred",
+   "fieldtype": "Currency",
+   "label": "Total Transferred",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nActive\nPaused\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "STP Plan",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "STP Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

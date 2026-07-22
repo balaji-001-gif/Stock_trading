@@ -1,0 +1,357 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: NAV-{fund_master}-{nav_date}-{share_class}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "nav_details_section",
+  "fund_master",
+  "share_class",
+  "nav_date",
+  "nav_type",
+  "column_break_1",
+  "nav",
+  "previous_nav",
+  "nav_change",
+  "nav_change_percentage",
+  "valuation_section",
+  "total_aum",
+  "units_outstanding",
+  "nav_per_unit",
+  "column_break_val",
+  "total_assets",
+  "total_liabilities",
+  "net_assets",
+  "composition_section",
+  "equity_value",
+  "debt_value",
+  "cash_equivalents",
+  "column_break_comp",
+  "other_assets",
+  "accrued_income",
+  "accrued_expenses",
+  "calculation_section",
+  "calculated_by",
+  "calculation_method",
+  "calculation_time",
+  "column_break_calc",
+  "verified_by",
+  "verification_time",
+  "published",
+  "notes_section",
+  "notes",
+  "adjustments_reason",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "nav_details_section",
+   "fieldtype": "Section Break",
+   "label": "NAV Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Share Class",
+   "options": "Share Class",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "nav_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "NAV Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nav_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "NAV Type",
+   "options": "\nDaily\nWeekly\nMonthly\nQuarterly\nYearly\nAd-hoc\nRevaluation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nav",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "NAV",
+   "options": "currency",
+   "precision": 4,
+   "reqd": 1
+  },
+  {
+   "fieldname": "previous_nav",
+   "fieldtype": "Currency",
+   "label": "Previous NAV",
+   "options": "currency",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fieldname": "nav_change",
+   "fieldtype": "Currency",
+   "label": "NAV Change",
+   "options": "currency",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fieldname": "nav_change_percentage",
+   "fieldtype": "Percent",
+   "label": "NAV Change (%)",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fieldname": "valuation_section",
+   "fieldtype": "Section Break",
+   "label": "Valuation Summary"
+  },
+  {
+   "fieldname": "total_aum",
+   "fieldtype": "Currency",
+   "label": "Total AUM",
+   "options": "currency"
+  },
+  {
+   "fieldname": "units_outstanding",
+   "fieldtype": "Float",
+   "label": "Units Outstanding",
+   "precision": 4
+  },
+  {
+   "fieldname": "nav_per_unit",
+   "fieldtype": "Currency",
+   "label": "NAV per Unit",
+   "options": "currency",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_val",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_assets",
+   "fieldtype": "Currency",
+   "label": "Total Assets",
+   "options": "currency"
+  },
+  {
+   "fieldname": "total_liabilities",
+   "fieldtype": "Currency",
+   "label": "Total Liabilities",
+   "options": "currency"
+  },
+  {
+   "fieldname": "net_assets",
+   "fieldtype": "Currency",
+   "label": "Net Assets",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "composition_section",
+   "fieldtype": "Section Break",
+   "label": "Portfolio Composition"
+  },
+  {
+   "fieldname": "equity_value",
+   "fieldtype": "Currency",
+   "label": "Equity Value",
+   "options": "currency"
+  },
+  {
+   "fieldname": "debt_value",
+   "fieldtype": "Currency",
+   "label": "Debt Value",
+   "options": "currency"
+  },
+  {
+   "fieldname": "cash_equivalents",
+   "fieldtype": "Currency",
+   "label": "Cash & Equivalents",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_comp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_assets",
+   "fieldtype": "Currency",
+   "label": "Other Assets",
+   "options": "currency"
+  },
+  {
+   "fieldname": "accrued_income",
+   "fieldtype": "Currency",
+   "label": "Accrued Income",
+   "options": "currency"
+  },
+  {
+   "fieldname": "accrued_expenses",
+   "fieldtype": "Currency",
+   "label": "Accrued Expenses",
+   "options": "currency"
+  },
+  {
+   "fieldname": "calculation_section",
+   "fieldtype": "Section Break",
+   "label": "Calculation Info"
+  },
+  {
+   "fieldname": "calculated_by",
+   "fieldtype": "Link",
+   "label": "Calculated By",
+   "options": "User"
+  },
+  {
+   "fieldname": "calculation_method",
+   "fieldtype": "Select",
+   "label": "Calculation Method",
+   "options": "\nAutomated\nManual\nSemi-Automated\nSystem Generated"
+  },
+  {
+   "fieldname": "calculation_time",
+   "fieldtype": "Datetime",
+   "label": "Calculation Time"
+  },
+  {
+   "fieldname": "column_break_calc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "verified_by",
+   "fieldtype": "Link",
+   "label": "Verified By",
+   "options": "User"
+  },
+  {
+   "fieldname": "verification_time",
+   "fieldtype": "Datetime",
+   "label": "Verification Time"
+  },
+  {
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published to AMFI/Portal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "adjustments_reason",
+   "fieldtype": "Small Text",
+   "label": "Adjustments/Rationale"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "NAV History",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "NAV Audit Trail",
+   "link_fieldname": "nav_history"
+  }
+ ],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "NAV History",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

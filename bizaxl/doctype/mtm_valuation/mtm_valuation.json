@@ -1,0 +1,328 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: MTM-{fund_master}-{security_id}-{valuation_date}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "valuation_details_section",
+  "fund_master",
+  "security_id",
+  "security_name",
+  "security_type",
+  "column_break_1",
+  "valuation_date",
+  "quantity",
+  "cost_price",
+  "market_price",
+  "pricing_section",
+  "valuation_method",
+  "price_source",
+  "is_active",
+  "column_break_price",
+  "price_date",
+  "price_time",
+  "currency",
+  "pnl_section",
+  "market_value",
+  "cost_value",
+  "unrealized_pnl",
+  "unrealized_pnl_percentage",
+  "column_break_pnl",
+  "day_change",
+  "day_change_percentage",
+  "total_return",
+  "accrued_interest",
+  "verification_section",
+  "verified_by",
+  "verification_date",
+  "verification_status",
+  "column_break_ver",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "valuation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Valuation Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "security_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Security ID (ISIN/Ticker)",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "security_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Security Name"
+  },
+  {
+   "fieldname": "security_type",
+   "fieldtype": "Select",
+   "label": "Security Type",
+   "options": "\nEquity\nDebt\nGovernment Security\nMoney Market\nETF\nMutual Fund\nDerivative\nREIT\nInvIT\nReal Estate\nPrivate Equity\nUnlisted Equity\nBond\nNCD\nFixed Deposit\nGold\nCommodity\nCurrency\nOther"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "valuation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Valuation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Quantity",
+   "precision": 4
+  },
+  {
+   "fieldname": "cost_price",
+   "fieldtype": "Currency",
+   "label": "Cost Price (Avg)",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "market_price",
+   "fieldtype": "Currency",
+   "label": "Market Price",
+   "options": "currency",
+   "precision": 4,
+   "reqd": 1
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing Details"
+  },
+  {
+   "fieldname": "valuation_method",
+   "fieldtype": "Select",
+   "label": "Valuation Method",
+   "options": "\nMark-to-Market (Quoted)\nFair Value (FVTPL)\nAmortized Cost\nCost Method (Unlisted)\nIPEV Guidelines\nDCF Method\nComparable Company\nNAV Method\nExternal Valuer"
+  },
+  {
+   "fieldname": "price_source",
+   "fieldtype": "Select",
+   "label": "Price Source",
+   "options": "\nNSE\nBSE\nBloomberg\nReuters\nICRA\nCRISIL\nAMFI\nInternal\nExternal Valuer\nCounterparty"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active Holding",
+   "default": "1"
+  },
+  {
+   "fieldname": "column_break_price",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "price_date",
+   "fieldtype": "Date",
+   "label": "Price Date"
+  },
+  {
+   "fieldname": "price_time",
+   "fieldtype": "Time",
+   "label": "Price Time"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "default": "INR"
+  },
+  {
+   "fieldname": "pnl_section",
+   "fieldtype": "Section Break",
+   "label": "P&L Attribution"
+  },
+  {
+   "fieldname": "market_value",
+   "fieldtype": "Currency",
+   "label": "Market Value",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_value",
+   "fieldtype": "Currency",
+   "label": "Cost Value",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unrealized_pnl",
+   "fieldtype": "Currency",
+   "label": "Unrealized P&L",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unrealized_pnl_percentage",
+   "fieldtype": "Percent",
+   "label": "Unrealized P&L (%)",
+   "precision": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_pnl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "day_change",
+   "fieldtype": "Currency",
+   "label": "Day Change",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "day_change_percentage",
+   "fieldtype": "Percent",
+   "label": "Day Change (%)",
+   "precision": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_return",
+   "fieldtype": "Percent",
+   "label": "Total Return (%)",
+   "precision": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "accrued_interest",
+   "fieldtype": "Currency",
+   "label": "Accrued Interest (Debt)",
+   "options": "currency"
+  },
+  {
+   "fieldname": "verification_section",
+   "fieldtype": "Section Break",
+   "label": "Verification"
+  },
+  {
+   "fieldname": "verified_by",
+   "fieldtype": "Link",
+   "label": "Verified By",
+   "options": "User"
+  },
+  {
+   "fieldname": "verification_date",
+   "fieldtype": "Date",
+   "label": "Verification Date"
+  },
+  {
+   "fieldname": "verification_status",
+   "fieldtype": "Select",
+   "label": "Verification Status",
+   "options": "\nPending\nVerified\nDisputed\nReviewed"
+  },
+  {
+   "fieldname": "column_break_ver",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "MTM Valuation",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "MTM Valuation",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Officer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

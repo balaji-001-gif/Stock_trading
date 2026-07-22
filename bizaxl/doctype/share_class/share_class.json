@@ -1,0 +1,339 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: {fund_master}-{class_code}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "share_class_details_section",
+  "fund_master",
+  "class_name",
+  "class_code",
+  "class_type",
+  "plan_type",
+  "isin",
+  "column_break_1",
+  "inception_date",
+  "nav",
+  "nav_date",
+  "nav_frequency",
+  "status",
+  "pricing_section",
+  "entry_load",
+  "exit_load_matrix",
+  "column_break_pricing",
+  "expense_ratio",
+  "ter",
+  "lock_in_period_days",
+  "minimum_investment",
+  "investment_limits_section",
+  "minimum_additional_investment",
+  "minimum_redemption_qty",
+  "minimum_balance",
+  "column_break_limits",
+  "maximum_investment_per_investor",
+  "maximum_holdings",
+  "distribution_section",
+  "dividend_option",
+  "dividend_frequency",
+  "dividend_rate",
+  "column_break_dist",
+  "bonus_option",
+  "sweep_option",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "share_class_details_section",
+   "fieldtype": "Section Break",
+   "label": "Share Class Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "class_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Class Type",
+   "options": "\nGrowth\nDividend\nDividend Reinvestment\nIDCW\nIDCW Reinvestment\nBonus\nInstitutional\nRetail\nDirect\nRegular",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_type",
+   "fieldtype": "Select",
+   "label": "Plan Type",
+   "options": "\nDirect\nRegular\nInstitutional\nRetail\nCorporate"
+  },
+  {
+   "fieldname": "isin",
+   "fieldtype": "Data",
+   "label": "ISIN"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inception_date",
+   "fieldtype": "Date",
+   "label": "Inception Date"
+  },
+  {
+   "fieldname": "nav",
+   "fieldtype": "Currency",
+   "label": "Current NAV",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "nav_date",
+   "fieldtype": "Date",
+   "label": "NAV Date"
+  },
+  {
+   "fieldname": "nav_frequency",
+   "fieldtype": "Select",
+   "label": "NAV Frequency",
+   "options": "\nDaily\nWeekly\nMonthly\nQuarterly"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nActive\nSuspended\nClosed\nMatured"
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing & Loads"
+  },
+  {
+   "fieldname": "entry_load",
+   "fieldtype": "Percent",
+   "label": "Entry Load (%)"
+  },
+  {
+   "fieldname": "exit_load_matrix",
+   "fieldtype": "Table",
+   "label": "Exit Load Matrix",
+   "options": "Exit Load Detail"
+  },
+  {
+   "fieldname": "column_break_pricing",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expense_ratio",
+   "fieldtype": "Percent",
+   "label": "Expense Ratio (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "ter",
+   "fieldtype": "Percent",
+   "label": "Total Expense Ratio (TER) (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "lock_in_period_days",
+   "fieldtype": "Int",
+   "label": "Lock-in Period (Days)"
+  },
+  {
+   "fieldname": "minimum_investment",
+   "fieldtype": "Currency",
+   "label": "Minimum Investment",
+   "options": "currency"
+  },
+  {
+   "fieldname": "investment_limits_section",
+   "fieldtype": "Section Break",
+   "label": "Investment Limits"
+  },
+  {
+   "fieldname": "minimum_additional_investment",
+   "fieldtype": "Currency",
+   "label": "Minimum Additional Investment",
+   "options": "currency"
+  },
+  {
+   "fieldname": "minimum_redemption_qty",
+   "fieldtype": "Currency",
+   "label": "Minimum Redemption Quantity",
+   "options": "currency"
+  },
+  {
+   "fieldname": "minimum_balance",
+   "fieldtype": "Currency",
+   "label": "Minimum Balance",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_limits",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maximum_investment_per_investor",
+   "fieldtype": "Currency",
+   "label": "Max Investment per Investor",
+   "options": "currency"
+  },
+  {
+   "fieldname": "maximum_holdings",
+   "fieldtype": "Int",
+   "label": "Maximum Holdings (Investors)"
+  },
+  {
+   "fieldname": "distribution_section",
+   "fieldtype": "Section Break",
+   "label": "Distribution"
+  },
+  {
+   "fieldname": "dividend_option",
+   "fieldtype": "Select",
+   "label": "Dividend Option",
+   "options": "\nPayout\nReinvestment\nSweep"
+  },
+  {
+   "fieldname": "dividend_frequency",
+   "fieldtype": "Select",
+   "label": "Dividend Frequency",
+   "options": "\nMonthly\nQuarterly\nHalf-Yearly\nAnnual\nAs and When Declared"
+  },
+  {
+   "fieldname": "dividend_rate",
+   "fieldtype": "Percent",
+   "label": "Dividend Rate (%)"
+  },
+  {
+   "fieldname": "column_break_dist",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bonus_option",
+   "fieldtype": "Select",
+   "label": "Bonus Option",
+   "options": "\nAvailable\nNot Available"
+  },
+  {
+   "fieldname": "sweep_option",
+   "fieldtype": "Select",
+   "label": "Sweep Option",
+   "options": "\nAvailable\nNot Available"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Share Class",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Fund Series",
+   "link_fieldname": "share_class"
+  }
+ ],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Share Class",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,268 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: ALLOT-{investor}-{fund_master}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "allotment_section",
+  "investor",
+  "fund_master",
+  "share_class",
+  "subscription_request",
+  "column_break_1",
+  "allotment_date",
+  "units",
+  "nav",
+  "amount",
+  "folio_details_section",
+  "folio_number",
+  "folio_created_date",
+  "amc_code",
+  "column_break_folio",
+  "isin",
+  "settlement_status",
+  "settlement_date",
+  "audit_section",
+  "allotted_by",
+  "allotment_batch",
+  "verification_status",
+  "column_break_audit",
+  "verified_by",
+  "verification_date",
+  "notes",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "allotment_section",
+   "fieldtype": "Section Break",
+   "label": "Allotment Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Share Class",
+   "options": "Share Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subscription_request",
+   "fieldtype": "Link",
+   "label": "Subscription Request",
+   "options": "Subscription Request"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "allotment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Allotment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "units",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Units Allotted",
+   "precision": 4,
+   "reqd": 1
+  },
+  {
+   "fieldname": "nav",
+   "fieldtype": "Currency",
+   "label": "NAV at Allotment",
+   "options": "currency",
+   "precision": 4,
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "folio_details_section",
+   "fieldtype": "Section Break",
+   "label": "Folio Details"
+  },
+  {
+   "fieldname": "folio_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Folio Number",
+   "search_index": 1
+  },
+  {
+   "fieldname": "folio_created_date",
+   "fieldtype": "Date",
+   "label": "Folio Created Date"
+  },
+  {
+   "fieldname": "amc_code",
+   "fieldtype": "Data",
+   "label": "AMC Code"
+  },
+  {
+   "fieldname": "column_break_folio",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "isin",
+   "fieldtype": "Data",
+   "label": "ISIN"
+  },
+  {
+   "fieldname": "settlement_status",
+   "fieldtype": "Select",
+   "label": "Settlement Status",
+   "options": "\nPending\nSettled\nFailed\nIn Progress"
+  },
+  {
+   "fieldname": "settlement_date",
+   "fieldtype": "Date",
+   "label": "Settlement Date"
+  },
+  {
+   "fieldname": "audit_section",
+   "fieldtype": "Section Break",
+   "label": "Audit"
+  },
+  {
+   "fieldname": "allotted_by",
+   "fieldtype": "Link",
+   "label": "Allotted By",
+   "options": "User"
+  },
+  {
+   "fieldname": "allotment_batch",
+   "fieldtype": "Data",
+   "label": "Allotment Batch Reference"
+  },
+  {
+   "fieldname": "verification_status",
+   "fieldtype": "Select",
+   "label": "Verification Status",
+   "options": "\nPending\nVerified\nDiscrepancy Found\nRectified"
+  },
+  {
+   "fieldname": "column_break_audit",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "verified_by",
+   "fieldtype": "Link",
+   "label": "Verified By",
+   "options": "User"
+  },
+  {
+   "fieldname": "verification_date",
+   "fieldtype": "Date",
+   "label": "Verification Date"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Allotment Detail",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Allotment Detail",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

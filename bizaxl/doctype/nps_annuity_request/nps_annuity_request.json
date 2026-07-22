@@ -1,0 +1,267 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: NPS-ANNUITY-{nps_subscriber}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "request_section",
+  "nps_subscriber",
+  "pran_number",
+  "request_type",
+  "request_date",
+  "column_break_req",
+  "status",
+  "subscriber_age",
+  "reason_for_withdrawal",
+  "withdrawal_section",
+  "total_corpus",
+  "lump_sum_percentage",
+  "lump_sum_amount",
+  "annuity_percentage",
+  "column_break_wd",
+  "annuity_amount",
+  "annuity_type",
+  "annuity_frequency",
+  "annuity_provider",
+  "tax_section",
+  "lump_sum_taxable",
+  "tax_on_lump_sum",
+  "column_break_tax",
+  "annuity_taxable",
+  "processing_section",
+  "asp_name",
+  "asp_reference",
+  "annuity_start_date",
+  "column_break_proc",
+  "settlement_date",
+  "death_claim",
+  "nominee_name",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "request_section",
+   "fieldtype": "Section Break",
+   "label": "Request Details"
+  },
+  {
+   "fieldname": "nps_subscriber",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "NPS Subscriber",
+   "options": "NPS Subscriber",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pran_number",
+   "fieldtype": "Data",
+   "label": "PRAN Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "request_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Request Type",
+   "options": "\nPartial Withdrawal (Max 25%)\nExit at 60 (Normal)\nPremature Exit (Before 60)\nDeath Claim\nTransfer Out"
+  },
+  {
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Request Date"
+  },
+  {
+   "fieldname": "column_break_req",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nSubmitted\nApproved\nProcessed\nRejected"
+  },
+  {
+   "fieldname": "subscriber_age",
+   "fieldtype": "Int",
+   "label": "Subscriber Age at Exit"
+  },
+  {
+   "fieldname": "reason_for_withdrawal",
+   "fieldtype": "Small Text",
+   "label": "Reason for Withdrawal"
+  },
+  {
+   "fieldname": "withdrawal_section",
+   "fieldtype": "Section Break",
+   "label": "Withdrawal Details"
+  },
+  {
+   "fieldname": "total_corpus",
+   "fieldtype": "Currency",
+   "label": "Total Corpus"
+  },
+  {
+   "fieldname": "lump_sum_percentage",
+   "fieldtype": "Percent",
+   "label": "Lump Sum %",
+   "description": "Max 60% for normal exit (tax-free), reduced for premature exit"
+  },
+  {
+   "fieldname": "lump_sum_amount",
+   "fieldtype": "Currency",
+   "label": "Lump Sum Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "annuity_percentage",
+   "fieldtype": "Percent",
+   "label": "Annuity %",
+   "description": "Minimum 40% for normal exit (mandatory annuity purchase)"
+  },
+  {
+   "fieldname": "column_break_wd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "annuity_amount",
+   "fieldtype": "Currency",
+   "label": "Annuity Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "annuity_type",
+   "fieldtype": "Select",
+   "label": "Annuity Type",
+   "options": "\nLife Annuity\nLife Annuity with Return of Purchase Price\nJoint Life Annuity\nJoint Life with Return of Purchase Price\nFamily Annuity\nAnnuity for Fixed Term"
+  },
+  {
+   "fieldname": "annuity_frequency",
+   "fieldtype": "Select",
+   "label": "Annuity Frequency",
+   "options": "\nMonthly\nQuarterly\nHalf-Yearly\nYearly"
+  },
+  {
+   "fieldname": "annuity_provider",
+   "fieldtype": "Data",
+   "label": "Annuity Service Provider (ASP)"
+  },
+  {
+   "fieldname": "tax_section",
+   "fieldtype": "Section Break",
+   "label": "Tax Treatment"
+  },
+  {
+   "fieldname": "lump_sum_taxable",
+   "fieldtype": "Currency",
+   "label": "Lump Sum Taxable Amount"
+  },
+  {
+   "fieldname": "tax_on_lump_sum",
+   "fieldtype": "Currency",
+   "label": "Tax on Lump Sum"
+  },
+  {
+   "fieldname": "column_break_tax",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "annuity_taxable",
+   "fieldtype": "Currency",
+   "label": "Annuity Taxable Amount"
+  },
+  {
+   "fieldname": "processing_section",
+   "fieldtype": "Section Break",
+   "label": "Processing"
+  },
+  {
+   "fieldname": "asp_name",
+   "fieldtype": "Data",
+   "label": "ASP Name"
+  },
+  {
+   "fieldname": "asp_reference",
+   "fieldtype": "Data",
+   "label": "ASP Reference No."
+  },
+  {
+   "fieldname": "annuity_start_date",
+   "fieldtype": "Date",
+   "label": "Annuity Start Date"
+  },
+  {
+   "fieldname": "column_break_proc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "settlement_date",
+   "fieldtype": "Date",
+   "label": "Settlement Date"
+  },
+  {
+   "fieldname": "death_claim",
+   "fieldtype": "Check",
+   "label": "Death Claim"
+  },
+  {
+   "fieldname": "nominee_name",
+   "fieldtype": "Data",
+   "label": "Nominee Name"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "NPS Annuity Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "NPS Annuity Request",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Auditor"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

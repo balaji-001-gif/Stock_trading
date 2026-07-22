@@ -1,0 +1,237 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: MIS-{report_category}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "report_config_section",
+  "report_name",
+  "report_category",
+  "report_type",
+  "report_format",
+  "column_break_cfg",
+  "fund_master",
+  "frequency",
+  "status",
+  "schedule_section",
+  "schedule_enabled",
+  "schedule_frequency",
+  "next_run_date",
+  "column_break_sch",
+  "last_run_date",
+  "last_run_by",
+  "output_section",
+  "report_output",
+  "generated_on",
+  "column_break_out",
+  "parameters_json",
+  "error_log",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "report_config_section",
+   "fieldtype": "Section Break",
+   "label": "Report Configuration"
+  },
+  {
+   "fieldname": "report_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Report Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "report_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Report Category",
+   "options": "\nFund Performance\nInvestor Reporting\nRegulatory Compliance\nRisk & Analytics\nFee & Income\nPortfolio Holdings\nTax Reporting\nAdvisor Dashboard\nCustom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "report_type",
+   "fieldtype": "Select",
+   "label": "Report Type",
+   "options": "\nSummary\nDetailed\nComparative\nGraphical\nExport Only\nDashboard Widget"
+  },
+  {
+   "fieldname": "report_format",
+   "fieldtype": "Select",
+   "label": "Output Format",
+   "options": "\nPDF\nExcel\nCSV\nHTML\nJSON\nDashboard"
+  },
+  {
+   "fieldname": "column_break_cfg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "label": "Frequency",
+   "options": "\nOne-Time\nDaily\nWeekly\nMonthly\nQuarterly\nHalf-Yearly\nYearly\nOn-Demand"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nScheduled\nGenerated\nFailed"
+  },
+  {
+   "fieldname": "schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Schedule"
+  },
+  {
+   "fieldname": "schedule_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Auto-Schedule"
+  },
+  {
+   "fieldname": "schedule_frequency",
+   "fieldtype": "Select",
+   "label": "Schedule Frequency",
+   "options": "\nDaily\nWeekly\nMonthly\nQuarterly\nHalf-Yearly\nYearly"
+  },
+  {
+   "fieldname": "next_run_date",
+   "fieldtype": "Date",
+   "label": "Next Run Date"
+  },
+  {
+   "fieldname": "column_break_sch",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_run_date",
+   "fieldtype": "Datetime",
+   "label": "Last Run Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_run_by",
+   "fieldtype": "Link",
+   "label": "Last Run By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "output_section",
+   "fieldtype": "Section Break",
+   "label": "Output"
+  },
+  {
+   "fieldname": "report_output",
+   "fieldtype": "Code",
+   "label": "Report Output (JSON)",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "generated_on",
+   "fieldtype": "Datetime",
+   "label": "Generated On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_out",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parameters_json",
+   "fieldtype": "Code",
+   "label": "Parameters (JSON)",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "error_log",
+   "fieldtype": "Code",
+   "label": "Error Log",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "MIS Report",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "MIS Report",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

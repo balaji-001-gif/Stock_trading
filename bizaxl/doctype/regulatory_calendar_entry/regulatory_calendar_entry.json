@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "compliance_type",
+  "description",
+  "due_date",
+  "filing_portal",
+  "reminder_days",
+  "status",
+  "completed_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "compliance_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Compliance Type",
+   "options": "\nSEBI Filing\nRBI Filing\nFATCA/CRS Filing\nAML Review\nAudit\nBoard Meeting\nInvestor Report\nNAV Publication\nAnnual Return\nTax Filing",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Due Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "filing_portal",
+   "fieldtype": "Data",
+   "label": "Filing Portal/Form Ref"
+  },
+  {
+   "fieldname": "reminder_days",
+   "fieldtype": "Int",
+   "label": "Reminder Days Before",
+   "default": "7"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nPending\nIn Progress\nCompleted\nOverdue\nWaived"
+  },
+  {
+   "fieldname": "completed_date",
+   "fieldtype": "Date",
+   "label": "Completed Date"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Regulatory Calendar Entry",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

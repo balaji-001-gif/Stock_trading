@@ -1,0 +1,265 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: CA-{fund_master}-{action_type}-{security_id}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "action_details_section",
+  "fund_master",
+  "security_id",
+  "security_name",
+  "action_type",
+  "column_break_1",
+  "announcement_date",
+  "record_date",
+  "ex_date",
+  "payable_date",
+  "status",
+  "terms_section",
+  "ratio_numerator",
+  "ratio_denominator",
+  "ratio_description",
+  "column_break_terms",
+  "new_security_id",
+  "new_security_name",
+  "dividend_amount",
+  "dividend_type",
+  "processing_section",
+  "processed",
+  "processed_date",
+  "processed_by",
+  "column_break_proc",
+  "affected_holdings_count",
+  "pending_holdings_count",
+  "error_log",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "action_details_section",
+   "fieldtype": "Section Break",
+   "label": "Corporate Action Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "security_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Security ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "security_name",
+   "fieldtype": "Data",
+   "label": "Security Name"
+  },
+  {
+   "fieldname": "action_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Action Type",
+   "options": "\nBonus Issue\nStock Split\nReverse Split\nDividend\nRights Issue\nMerger\nAcquisition\nDemerger\nBuyback\nDelisting\nName Change\nFace Value Change",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "announcement_date",
+   "fieldtype": "Date",
+   "label": "Announcement Date"
+  },
+  {
+   "fieldname": "record_date",
+   "fieldtype": "Date",
+   "label": "Record Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ex_date",
+   "fieldtype": "Date",
+   "label": "Ex-Date"
+  },
+  {
+   "fieldname": "payable_date",
+   "fieldtype": "Date",
+   "label": "Payable Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nAnnounced\nApproved\nRecord Date Passed\nProcessing\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "terms_section",
+   "fieldtype": "Section Break",
+   "label": "Terms"
+  },
+  {
+   "fieldname": "ratio_numerator",
+   "fieldtype": "Float",
+   "label": "Ratio Numerator",
+   "precision": 4
+  },
+  {
+   "fieldname": "ratio_denominator",
+   "fieldtype": "Float",
+   "label": "Ratio Denominator",
+   "precision": 4,
+   "default": "1"
+  },
+  {
+   "fieldname": "ratio_description",
+   "fieldtype": "Data",
+   "label": "Ratio Description (e.g., 1:5)"
+  },
+  {
+   "fieldname": "column_break_terms",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "new_security_id",
+   "fieldtype": "Data",
+   "label": "New Security ID (if merger/rename)"
+  },
+  {
+   "fieldname": "new_security_name",
+   "fieldtype": "Data",
+   "label": "New Security Name"
+  },
+  {
+   "fieldname": "dividend_amount",
+   "fieldtype": "Currency",
+   "label": "Dividend Amount per Unit",
+   "options": "currency"
+  },
+  {
+   "fieldname": "dividend_type",
+   "fieldtype": "Select",
+   "label": "Dividend Type",
+   "options": "\nInterim\nFinal\nSpecial\nInterim + Final"
+  },
+  {
+   "fieldname": "processing_section",
+   "fieldtype": "Section Break",
+   "label": "Processing"
+  },
+  {
+   "fieldname": "processed",
+   "fieldtype": "Check",
+   "label": "Processed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "processed_date",
+   "fieldtype": "Date",
+   "label": "Processed Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "processed_by",
+   "fieldtype": "Link",
+   "label": "Processed By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_proc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "affected_holdings_count",
+   "fieldtype": "Int",
+   "label": "Affected Holdings",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pending_holdings_count",
+   "fieldtype": "Int",
+   "label": "Pending Holdings",
+   "read_only": 1
+  },
+  {
+   "fieldname": "error_log",
+   "fieldtype": "Code",
+   "label": "Error Log"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Corporate Actions",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Corporate Actions",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

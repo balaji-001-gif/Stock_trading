@@ -1,0 +1,252 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: BOARD-{fund_master}-{meeting_date}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "meeting_details_section",
+  "fund_master",
+  "meeting_title",
+  "meeting_type",
+  "meeting_date",
+  "column_break_1",
+  "meeting_number",
+  "venue",
+  "status",
+  "prepared_by",
+  "agenda_section",
+  "agenda_items",
+  "documents_section",
+  "documents_included",
+  "minutes_of_previous_meeting",
+  "column_break_doc",
+  "financial_statements",
+  "compliance_reports",
+  "attendance_section",
+  "trustees_present",
+  "directors_present",
+  "invitees",
+  "column_break_att",
+  "minutes_prepared",
+  "minutes_approved_date",
+  "next_meeting_date",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "meeting_details_section",
+   "fieldtype": "Section Break",
+   "label": "Meeting Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meeting_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Meeting Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meeting_type",
+   "fieldtype": "Select",
+   "label": "Meeting Type",
+   "options": "\nTrustee Meeting\nBoard Meeting\nInvestment Committee\nAudit Committee\nCompliance Committee\nShareholder Meeting\nAnnual General Meeting",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meeting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Meeting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meeting_number",
+   "fieldtype": "Data",
+   "label": "Meeting Number"
+  },
+  {
+   "fieldname": "venue",
+   "fieldtype": "Data",
+   "label": "Venue"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nScheduled\nPack Sent\nMeeting Held\nMinutes Pending\nMinutes Approved",
+   "reqd": 1
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Prepared By",
+   "options": "User"
+  },
+  {
+   "fieldname": "agenda_section",
+   "fieldtype": "Section Break",
+   "label": "Agenda"
+  },
+  {
+   "fieldname": "agenda_items",
+   "fieldtype": "Table",
+   "label": "Agenda Items",
+   "options": "Compliance Checklist Item"
+  },
+  {
+   "fieldname": "documents_section",
+   "fieldtype": "Section Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "documents_included",
+   "fieldtype": "Small Text",
+   "label": "Documents Included"
+  },
+  {
+   "fieldname": "minutes_of_previous_meeting",
+   "fieldtype": "Attach",
+   "label": "Minutes of Previous Meeting"
+  },
+  {
+   "fieldname": "column_break_doc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "financial_statements",
+   "fieldtype": "Attach",
+   "label": "Financial Statements"
+  },
+  {
+   "fieldname": "compliance_reports",
+   "fieldtype": "Attach",
+   "label": "Compliance Reports"
+  },
+  {
+   "fieldname": "attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Attendance & Minutes"
+  },
+  {
+   "fieldname": "trustees_present",
+   "fieldtype": "Small Text",
+   "label": "Trustees / Directors Present"
+  },
+  {
+   "fieldname": "directors_present",
+   "fieldtype": "Small Text",
+   "label": "Directors Present"
+  },
+  {
+   "fieldname": "invitees",
+   "fieldtype": "Small Text",
+   "label": "Invitees"
+  },
+  {
+   "fieldname": "column_break_att",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "minutes_prepared",
+   "fieldtype": "Attach",
+   "label": "Minutes of Meeting (PDF)"
+  },
+  {
+   "fieldname": "minutes_approved_date",
+   "fieldtype": "Date",
+   "label": "Minutes Approved Date"
+  },
+  {
+   "fieldname": "next_meeting_date",
+   "fieldtype": "Date",
+   "label": "Next Meeting Date"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Board Pack",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Compliance & Regulatory",
+ "name": "Board Pack",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

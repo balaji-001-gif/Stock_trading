@@ -1,0 +1,230 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: SWP-{investor}-{fund_master}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "swp_details_section",
+  "investor",
+  "fund_master",
+  "share_class",
+  "withdrawal_type",
+  "column_break_1",
+  "withdrawal_amount",
+  "withdrawal_percentage",
+  "swp_frequency",
+  "swp_day",
+  "schedule_section",
+  "start_date",
+  "end_date",
+  "next_swp_date",
+  "column_break_sch",
+  "last_swp_date",
+  "total_withdrawn",
+  "remaining_units",
+  "status_section",
+  "status",
+  "paused_reason",
+  "column_break_sts",
+  "cancellation_reason",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "swp_details_section",
+   "fieldtype": "Section Break",
+   "label": "SWP Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Share Class",
+   "options": "Share Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "withdrawal_type",
+   "fieldtype": "Select",
+   "label": "Withdrawal Type",
+   "options": "\nFixed Amount\nPercentage of AUM\nUnit Based"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "withdrawal_amount",
+   "fieldtype": "Currency",
+   "label": "Withdrawal Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "withdrawal_percentage",
+   "fieldtype": "Percent",
+   "label": "Withdrawal Percentage"
+  },
+  {
+   "fieldname": "swp_frequency",
+   "fieldtype": "Select",
+   "label": "SWP Frequency",
+   "options": "\nMonthly\nQuarterly\nHalf-Yearly\nAnnual"
+  },
+  {
+   "fieldname": "swp_day",
+   "fieldtype": "Select",
+   "label": "SWP Day",
+   "options": "\n1\n5\n10\n15\n20\n25\n28"
+  },
+  {
+   "fieldname": "schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Schedule"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "next_swp_date",
+   "fieldtype": "Date",
+   "label": "Next SWP Date"
+  },
+  {
+   "fieldname": "column_break_sch",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_swp_date",
+   "fieldtype": "Date",
+   "label": "Last SWP Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_withdrawn",
+   "fieldtype": "Currency",
+   "label": "Total Withdrawn",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remaining_units",
+   "fieldtype": "Float",
+   "label": "Remaining Units",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nActive\nPaused\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "paused_reason",
+   "fieldtype": "Small Text",
+   "label": "Pause Reason"
+  },
+  {
+   "fieldname": "column_break_sts",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cancellation_reason",
+   "fieldtype": "Small Text",
+   "label": "Cancellation Reason"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SWP Plan",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "SWP Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

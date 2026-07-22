@@ -1,0 +1,378 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: SUB-{investor}-{fund_master}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "subscription_section",
+  "investor",
+  "fund_master",
+  "share_class",
+  "fund_series",
+  "column_break_1",
+  "subscription_date",
+  "application_date",
+  "cut_off_applied",
+  "submission_channel",
+  "order_details_section",
+  "subscription_type",
+  "investment_amount",
+  "applicable_nav",
+  "column_break_order",
+  "units_allotted",
+  "total_investment",
+  "trade_date",
+  "allotment_section",
+  "allotment_status",
+  "allotment_date",
+  "folio_number",
+  "column_break_allot",
+  "units_before",
+  "units_after",
+  "allotment_reference",
+  "payment_section",
+  "payment_status",
+  "payment_mode",
+  "payment_reference",
+  "column_break_pay",
+  "payment_date",
+  "bank_account",
+  "remarks",
+  "approval_section",
+  "approval_status",
+  "approved_by",
+  "approval_date",
+  "column_break_appr",
+  "rejection_reason",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "subscription_section",
+   "fieldtype": "Section Break",
+   "label": "Subscription Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Share Class",
+   "options": "Share Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fund_series",
+   "fieldtype": "Link",
+   "label": "Fund Series",
+   "options": "Fund Series"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subscription_date",
+   "fieldtype": "Date",
+   "label": "Subscription Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "application_date",
+   "fieldtype": "Date",
+   "label": "Application Date"
+  },
+  {
+   "fieldname": "cut_off_applied",
+   "fieldtype": "Select",
+   "label": "Cut-off Applied",
+   "options": "\nBefore 3 PM (Same Day NAV)\nAfter 3 PM (Next Day NAV)\nBefore 1:30 PM Debt (Same Day NAV)\nN/A"
+  },
+  {
+   "fieldname": "submission_channel",
+   "fieldtype": "Select",
+   "label": "Submission Channel",
+   "options": "\nOnline Portal\nDistributor\nBSE StarMF\nNSE NMF II\nOffline Form\nAPI"
+  },
+  {
+   "fieldname": "order_details_section",
+   "fieldtype": "Section Break",
+   "label": "Order Details"
+  },
+  {
+   "fieldname": "subscription_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Subscription Type",
+   "options": "\nLump Sum\nSIP Installment\nSwitch In\nTransfer In\nDividend Reinvestment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "investment_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Investment Amount",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "applicable_nav",
+   "fieldtype": "Currency",
+   "label": "Applicable NAV",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "column_break_order",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "units_allotted",
+   "fieldtype": "Float",
+   "label": "Units Allotted",
+   "precision": 4
+  },
+  {
+   "fieldname": "total_investment",
+   "fieldtype": "Currency",
+   "label": "Total Investment (incl. loads)",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "trade_date",
+   "fieldtype": "Date",
+   "label": "Trade Date"
+  },
+  {
+   "fieldname": "allotment_section",
+   "fieldtype": "Section Break",
+   "label": "Allotment Details"
+  },
+  {
+   "fieldname": "allotment_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Allotment Status",
+   "options": "\nPending\nAllotted\nPartially Allotted\nRejected\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "allotment_date",
+   "fieldtype": "Date",
+   "label": "Allotment Date"
+  },
+  {
+   "fieldname": "folio_number",
+   "fieldtype": "Data",
+   "label": "Folio Number"
+  },
+  {
+   "fieldname": "column_break_allot",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "units_before",
+   "fieldtype": "Float",
+   "label": "Units Before",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fieldname": "units_after",
+   "fieldtype": "Float",
+   "label": "Units After",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fieldname": "allotment_reference",
+   "fieldtype": "Data",
+   "label": "Allotment Reference"
+  },
+  {
+   "fieldname": "payment_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Details"
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Status",
+   "options": "\nPending\nReceived\nCleared\nRefunded\nFailed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "label": "Payment Mode",
+   "options": "\nBank Transfer\nCheque\nUPI\nNACH Auto Debit\nCredit Card\nDemand Draft"
+  },
+  {
+   "fieldname": "payment_reference",
+   "fieldtype": "Data",
+   "label": "Payment Reference/UTR"
+  },
+  {
+   "fieldname": "column_break_pay",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date"
+  },
+  {
+   "fieldname": "bank_account",
+   "fieldtype": "Data",
+   "label": "Bank Account Used"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "approval_section",
+   "fieldtype": "Section Break",
+   "label": "Approval"
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "\nPending\nApproved\nRejected"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "column_break_appr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejection Reason"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Subscription Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Allotment Detail",
+   "link_fieldname": "subscription_request"
+  }
+ ],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Subscription Request",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Advisor (RIA/MFD)",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

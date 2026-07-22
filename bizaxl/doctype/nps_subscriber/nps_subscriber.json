@@ -1,0 +1,347 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: NPS-{pran_number}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "subscriber_section",
+  "subscriber_name",
+  "pran_number",
+  "date_of_birth",
+  "gender",
+  "column_break_sub",
+  "mobile_number",
+  "email",
+  "pan_number",
+  "aadhaar_number",
+  "account_section",
+  "tier_i_account",
+  "tier_i_status",
+  "tier_ii_account",
+  "tier_ii_status",
+  "column_break_acc",
+  "cra_name",
+  "cra_reference",
+  "pop_name",
+  "scheme_section",
+  "scheme_choice",
+  "active_scheme_e",
+  "active_scheme_c",
+  "active_scheme_g",
+  "column_break_sch",
+  "active_scheme_a",
+  "auto_choice_lifecycle",
+  "pfm_selection",
+  "employment_section",
+  "employment_type",
+  "employer_name",
+  "ddo_code",
+  "column_break_emp",
+  "government_sector",
+  "corporate_nps",
+  "nps_lite",
+  "status_section",
+  "status",
+  "pran_issue_date",
+  "last_contribution_date",
+  "column_break_sts",
+  "total_contributions",
+  "current_pension_corpus",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "subscriber_section",
+   "fieldtype": "Section Break",
+   "label": "Subscriber Information"
+  },
+  {
+   "fieldname": "subscriber_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subscriber Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pran_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PRAN Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale\nOther"
+  },
+  {
+   "fieldname": "column_break_sub",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "label": "PAN Number"
+  },
+  {
+   "fieldname": "aadhaar_number",
+   "fieldtype": "Data",
+   "label": "Aadhaar Number"
+  },
+  {
+   "fieldname": "account_section",
+   "fieldtype": "Section Break",
+   "label": "Account Details"
+  },
+  {
+   "fieldname": "tier_i_account",
+   "fieldtype": "Data",
+   "label": "Tier I Account No."
+  },
+  {
+   "fieldname": "tier_i_status",
+   "fieldtype": "Select",
+   "label": "Tier I Status",
+   "options": "\nActive\nInactive\nSuspended\nClosed"
+  },
+  {
+   "fieldname": "tier_ii_account",
+   "fieldtype": "Data",
+   "label": "Tier II Account No."
+  },
+  {
+   "fieldname": "tier_ii_status",
+   "fieldtype": "Select",
+   "label": "Tier II Status",
+   "options": "\nActive\nInactive\nClosed"
+  },
+  {
+   "fieldname": "column_break_acc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cra_name",
+   "fieldtype": "Select",
+   "label": "CRA Name",
+   "options": "\nNSDL\nKarvy (KFintech)\nOther"
+  },
+  {
+   "fieldname": "cra_reference",
+   "fieldtype": "Data",
+   "label": "CRA Reference ID"
+  },
+  {
+   "fieldname": "pop_name",
+   "fieldtype": "Data",
+   "label": "PoP / PoP-SP Name"
+  },
+  {
+   "fieldname": "scheme_section",
+   "fieldtype": "Section Break",
+   "label": "Scheme Selection"
+  },
+  {
+   "fieldname": "scheme_choice",
+   "fieldtype": "Select",
+   "label": "Scheme Choice",
+   "options": "\nActive Choice\nAuto Choice (Lifecycle)\nDefault"
+  },
+  {
+   "fieldname": "active_scheme_e",
+   "fieldtype": "Link",
+   "label": "Scheme E (Equity)",
+   "options": "Pension Fund Manager"
+  },
+  {
+   "fieldname": "active_scheme_c",
+   "fieldtype": "Link",
+   "label": "Scheme C (Corporate Debt)",
+   "options": "Pension Fund Manager"
+  },
+  {
+   "fieldname": "active_scheme_g",
+   "fieldtype": "Link",
+   "label": "Scheme G (Govt. Securities)",
+   "options": "Pension Fund Manager"
+  },
+  {
+   "fieldname": "column_break_sch",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "active_scheme_a",
+   "fieldtype": "Link",
+   "label": "Scheme A (Alternate)",
+   "options": "Pension Fund Manager"
+  },
+  {
+   "fieldname": "auto_choice_lifecycle",
+   "fieldtype": "Int",
+   "label": "Auto Choice Lifecycle (Age)",
+   "description": "Default lifecycle age for auto choice. At 60, shifts to conservative."
+  },
+  {
+   "fieldname": "pfm_selection",
+   "fieldtype": "Text",
+   "label": "PFM Selection Details"
+  },
+  {
+   "fieldname": "employment_section",
+   "fieldtype": "Section Break",
+   "label": "Employment"
+  },
+  {
+   "fieldname": "employment_type",
+   "fieldtype": "Select",
+   "label": "Employment Type",
+   "options": "\nGovernment (Central)\nGovernment (State)\nCorporate\nPSU\nUnorganized Sector\nSelf-Employed\nNRI"
+  },
+  {
+   "fieldname": "employer_name",
+   "fieldtype": "Data",
+   "label": "Employer Name"
+  },
+  {
+   "fieldname": "ddo_code",
+   "fieldtype": "Data",
+   "label": "DDO Code",
+   "description": "Drawing and Disbursing Officer code for government sector"
+  },
+  {
+   "fieldname": "column_break_emp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "government_sector",
+   "fieldtype": "Check",
+   "label": "Government Sector"
+  },
+  {
+   "fieldname": "corporate_nps",
+   "fieldtype": "Check",
+   "label": "Corporate NPS"
+  },
+  {
+   "fieldname": "nps_lite",
+   "fieldtype": "Check",
+   "label": "NPS Lite / Swavalamban"
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nActive\nInactive\nSuspended\nClosed\nWithdrawn"
+  },
+  {
+   "fieldname": "pran_issue_date",
+   "fieldtype": "Date",
+   "label": "PRAN Issue Date"
+  },
+  {
+   "fieldname": "last_contribution_date",
+   "fieldtype": "Date",
+   "label": "Last Contribution Date"
+  },
+  {
+   "fieldname": "column_break_sts",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_contributions",
+   "fieldtype": "Currency",
+   "label": "Total Contributions"
+  },
+  {
+   "fieldname": "current_pension_corpus",
+   "fieldtype": "Currency",
+   "label": "Current Pension Corpus"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "NPS Subscriber",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "NPS Subscriber",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Auditor"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

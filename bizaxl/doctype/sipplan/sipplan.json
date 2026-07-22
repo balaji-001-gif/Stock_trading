@@ -1,0 +1,312 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: SIP-{investor}-{fund_master}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sip_details_section",
+  "investor",
+  "fund_master",
+  "share_class",
+  "sip_amount",
+  "column_break_1",
+  "sip_frequency",
+  "sip_day",
+  "sip_date",
+  "total_installments",
+  "installments_done",
+  "mandate_section",
+  "mandate_type",
+  "mandate_id",
+  "mandate_status",
+  "column_break_mandate",
+  "bank_name",
+  "bank_account",
+  "ifsc_code",
+  "schedule_section",
+  "start_date",
+  "end_date",
+  "next_sip_date",
+  "column_break_sch",
+  "last_sip_date",
+  "last_sip_status",
+  "total_invested",
+  "status_section",
+  "status",
+  "paused_date",
+  "pause_reason",
+  "column_break_sts",
+  "cancelled_date",
+  "cancellation_reason",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "sip_details_section",
+   "fieldtype": "Section Break",
+   "label": "SIP Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Share Class",
+   "options": "Share Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sip_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "SIP Amount",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sip_frequency",
+   "fieldtype": "Select",
+   "label": "SIP Frequency",
+   "options": "\nDaily\nWeekly\nMonthly\nQuarterly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sip_day",
+   "fieldtype": "Select",
+   "label": "SIP Day",
+   "options": "\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28"
+  },
+  {
+   "fieldname": "sip_date",
+   "fieldtype": "Date",
+   "label": "SIP Date"
+  },
+  {
+   "fieldname": "total_installments",
+   "fieldtype": "Int",
+   "label": "Total Installments"
+  },
+  {
+   "fieldname": "installments_done",
+   "fieldtype": "Int",
+   "label": "Installments Done",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mandate_section",
+   "fieldtype": "Section Break",
+   "label": "Mandate Details"
+  },
+  {
+   "fieldname": "mandate_type",
+   "fieldtype": "Select",
+   "label": "Mandate Type",
+   "options": "\nNACH\nUPI AutoPay\nStanding Instruction\nCheque\nSI (ECS)"
+  },
+  {
+   "fieldname": "mandate_id",
+   "fieldtype": "Data",
+   "label": "Mandate ID / UMRN"
+  },
+  {
+   "fieldname": "mandate_status",
+   "fieldtype": "Select",
+   "label": "Mandate Status",
+   "options": "\nPending\nActive\nSuspended\nCancelled\nExpired"
+  },
+  {
+   "fieldname": "column_break_mandate",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "bank_account",
+   "fieldtype": "Data",
+   "label": "Bank Account Number"
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code"
+  },
+  {
+   "fieldname": "schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Schedule"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "next_sip_date",
+   "fieldtype": "Date",
+   "label": "Next SIP Date"
+  },
+  {
+   "fieldname": "column_break_sch",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_sip_date",
+   "fieldtype": "Date",
+   "label": "Last SIP Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_sip_status",
+   "fieldtype": "Data",
+   "label": "Last SIP Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_invested",
+   "fieldtype": "Currency",
+   "label": "Total Invested",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nActive\nPaused\nCompleted\nCancelled\nFailed"
+  },
+  {
+   "fieldname": "paused_date",
+   "fieldtype": "Date",
+   "label": "Paused Date"
+  },
+  {
+   "fieldname": "pause_reason",
+   "fieldtype": "Small Text",
+   "label": "Pause Reason"
+  },
+  {
+   "fieldname": "column_break_sts",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cancelled_date",
+   "fieldtype": "Date",
+   "label": "Cancelled Date"
+  },
+  {
+   "fieldname": "cancellation_reason",
+   "fieldtype": "Small Text",
+   "label": "Cancellation Reason"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SIP Plan",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "SIP Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

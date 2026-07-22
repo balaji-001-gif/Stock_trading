@@ -1,0 +1,404 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: HLD-{fund_master}-{security_id}-{investor}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "holding_details_section",
+  "fund_master",
+  "investor",
+  "security_id",
+  "security_name",
+  "security_type",
+  "column_break_1",
+  "asset_class",
+  "isin",
+  "ticker_symbol",
+  "exchange",
+  "currency",
+  "quantity_section",
+  "total_quantity",
+  "available_quantity",
+  "pledged_quantity",
+  "column_break_qty",
+  "unit_of_measurement",
+  "holding_date",
+  "status",
+  "valuation_section",
+  "cost_price",
+  "cost_basis_method",
+  "total_cost_value",
+  "column_break_val",
+  "market_price",
+  "market_value",
+  "unrealized_pnl",
+  "returns_section",
+  "total_return",
+  "dividend_income",
+  "interest_income",
+  "column_break_ret",
+  "total_realized_pnl",
+  "total_unrealized_pnl",
+  "last_valuation_date",
+  "classification_section",
+  "sector",
+  "industry",
+  "sub_industry",
+  "column_break_class",
+  "country",
+  "rating",
+  "maturity_date",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "holding_details_section",
+   "fieldtype": "Section Break",
+   "label": "Holding Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile"
+  },
+  {
+   "fieldname": "security_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Security ID",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "security_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Security Name"
+  },
+  {
+   "fieldname": "security_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Security Type",
+   "options": "\nEquity\nDebt\nGovernment Security\nMoney Market\nETF\nMutual Fund Unit\nDerivative\nREIT\nInvIT\nReal Estate\nPrivate Equity\nUnlisted Equity\nBond\nNCD\nFixed Deposit\nGold\nCommodity\nCurrency\nAlternative Investment\nOther"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "asset_class",
+   "fieldtype": "Select",
+   "label": "Asset Class",
+   "options": "\nEquity\nFixed Income\nCash & Equivalents\nReal Estate\nCommodities\nAlternatives\nUnlisted\nDerivatives\nOther"
+  },
+  {
+   "fieldname": "isin",
+   "fieldtype": "Data",
+   "label": "ISIN"
+  },
+  {
+   "fieldname": "ticker_symbol",
+   "fieldtype": "Data",
+   "label": "Ticker Symbol"
+  },
+  {
+   "fieldname": "exchange",
+   "fieldtype": "Data",
+   "label": "Exchange"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "default": "INR"
+  },
+  {
+   "fieldname": "quantity_section",
+   "fieldtype": "Section Break",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "total_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Quantity",
+   "precision": 4
+  },
+  {
+   "fieldname": "available_quantity",
+   "fieldtype": "Float",
+   "label": "Available Quantity",
+   "precision": 4
+  },
+  {
+   "fieldname": "pledged_quantity",
+   "fieldtype": "Float",
+   "label": "Pledged Quantity",
+   "precision": 4
+  },
+  {
+   "fieldname": "column_break_qty",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit_of_measurement",
+   "fieldtype": "Select",
+   "label": "Unit of Measurement",
+   "options": "\nShares\nUnits\nGrams\nSq Ft\nContracts\nNos"
+  },
+  {
+   "fieldname": "holding_date",
+   "fieldtype": "Date",
+   "label": "Holding Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nActive\nPartially Sold\nClosed\nPledged\nFrozen"
+  },
+  {
+   "fieldname": "valuation_section",
+   "fieldtype": "Section Break",
+   "label": "Valuation"
+  },
+  {
+   "fieldname": "cost_price",
+   "fieldtype": "Currency",
+   "label": "Average Cost Price",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "cost_basis_method",
+   "fieldtype": "Select",
+   "label": "Cost Basis Method",
+   "options": "\nFIFO\nLIFO\nHIFO\nAverage Cost\nSpecific Identification\nWeighted Average"
+  },
+  {
+   "fieldname": "total_cost_value",
+   "fieldtype": "Currency",
+   "label": "Total Cost Value",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_val",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "market_price",
+   "fieldtype": "Currency",
+   "label": "Current Market Price",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "market_value",
+   "fieldtype": "Currency",
+   "label": "Market Value",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unrealized_pnl",
+   "fieldtype": "Currency",
+   "label": "Unrealized P&L",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "returns_section",
+   "fieldtype": "Section Break",
+   "label": "Returns"
+  },
+  {
+   "fieldname": "total_return",
+   "fieldtype": "Percent",
+   "label": "Total Return (%)",
+   "precision": 2
+  },
+  {
+   "fieldname": "dividend_income",
+   "fieldtype": "Currency",
+   "label": "Dividend Income",
+   "options": "currency"
+  },
+  {
+   "fieldname": "interest_income",
+   "fieldtype": "Currency",
+   "label": "Interest Income",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_ret",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_realized_pnl",
+   "fieldtype": "Currency",
+   "label": "Total Realized P&L",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_unrealized_pnl",
+   "fieldtype": "Currency",
+   "label": "Total Unrealized P&L",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_valuation_date",
+   "fieldtype": "Date",
+   "label": "Last Valuation Date"
+  },
+  {
+   "fieldname": "classification_section",
+   "fieldtype": "Section Break",
+   "label": "Classification"
+  },
+  {
+   "fieldname": "sector",
+   "fieldtype": "Data",
+   "label": "Sector"
+  },
+  {
+   "fieldname": "industry",
+   "fieldtype": "Data",
+   "label": "Industry"
+  },
+  {
+   "fieldname": "sub_industry",
+   "fieldtype": "Data",
+   "label": "Sub-Industry"
+  },
+  {
+   "fieldname": "column_break_class",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Data",
+   "label": "Credit Rating"
+  },
+  {
+   "fieldname": "maturity_date",
+   "fieldtype": "Date",
+   "label": "Maturity Date (Debt)"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Holdings Register",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Lot Tracking",
+   "link_fieldname": "holding"
+  },
+  {
+   "link_doctype": "P&L Attribution",
+   "link_fieldname": "holding"
+  }
+ ],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Holdings Register",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Officer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,203 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: FO-{family_name}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "family_details_section",
+  "family_name",
+  "family_code",
+  "family_type",
+  "office_type",
+  "column_break_dtl",
+  "principal_name",
+  "status",
+  "total_estimated_wealth",
+  "wealth_as_of_date",
+  "members_section",
+  "family_members",
+  "column_break_mem",
+  "total_members",
+  "generations_tracked",
+  "holdings_section",
+  "holding_structure_notes",
+  "intercompany_transfers",
+  "column_break_hld",
+  "aggregated_portfolio_value",
+  "last_aggregation_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "family_details_section",
+   "fieldtype": "Section Break",
+   "label": "Family Details"
+  },
+  {
+   "fieldname": "family_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Family Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "family_code",
+   "fieldtype": "Data",
+   "label": "Family Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "family_type",
+   "fieldtype": "Select",
+   "label": "Family Type",
+   "options": "\nSingle Family Office (SFO)\nMulti-Family Office (MFO)\nVirtual Family Office"
+  },
+  {
+   "fieldname": "office_type",
+   "fieldtype": "Select",
+   "label": "Office Type",
+   "options": "\nFull Service\nInvestment Only\nConcierge\nHybrid"
+  },
+  {
+   "fieldname": "column_break_dtl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "principal_name",
+   "fieldtype": "Data",
+   "label": "Principal Name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nActive\nPending Setup\nSuspended\nClosed"
+  },
+  {
+   "fieldname": "total_estimated_wealth",
+   "fieldtype": "Currency",
+   "label": "Total Estimated Wealth",
+   "read_only": 1
+  },
+  {
+   "fieldname": "wealth_as_of_date",
+   "fieldtype": "Date",
+   "label": "Wealth As Of Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "members_section",
+   "fieldtype": "Section Break",
+   "label": "Family Members"
+  },
+  {
+   "fieldname": "family_members",
+   "fieldtype": "Table",
+   "label": "Family Members",
+   "options": "Family Member"
+  },
+  {
+   "fieldname": "column_break_mem",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_members",
+   "fieldtype": "Int",
+   "label": "Total Members",
+   "read_only": 1
+  },
+  {
+   "fieldname": "generations_tracked",
+   "fieldtype": "Int",
+   "label": "Generations Tracked",
+   "read_only": 1
+  },
+  {
+   "fieldname": "holdings_section",
+   "fieldtype": "Section Break",
+   "label": "Holdings & Structure"
+  },
+  {
+   "fieldname": "holding_structure_notes",
+   "fieldtype": "Text Editor",
+   "label": "Holding Structure Notes"
+  },
+  {
+   "fieldname": "intercompany_transfers",
+   "fieldtype": "Small Text",
+   "label": "Intercompany Transfers"
+  },
+  {
+   "fieldname": "column_break_hld",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "aggregated_portfolio_value",
+   "fieldtype": "Currency",
+   "label": "Aggregated Portfolio Value"
+  },
+  {
+   "fieldname": "last_aggregation_date",
+   "fieldtype": "Date",
+   "label": "Last Aggregation Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Family Office Master",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Family Office Master",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

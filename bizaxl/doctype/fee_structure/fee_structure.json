@@ -1,0 +1,443 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: {fee_type}-{fund_master}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fee_details_section",
+  "fund_master",
+  "share_class",
+  "fee_type",
+  "fee_name",
+  "fee_category",
+  "column_break_1",
+  "effective_from",
+  "effective_to",
+  "status",
+  "description",
+  "management_fee_section",
+  "management_fee_rate",
+  "management_fee_basis",
+  "management_fee_frequency",
+  "management_fee_waiver",
+  "column_break_mgmt",
+  "management_fee_min",
+  "management_fee_max",
+  "aum_basis",
+  "management_fee_accrual",
+  "performance_fee_section",
+  "performance_fee_model",
+  "performance_fee_rate",
+  "hurdle_rate",
+  "hurdle_type",
+  "high_watermark",
+  "column_break_perf",
+  "catch_up_rate",
+  "catch_up_threshold",
+  "crystallization_frequency",
+  "crystallization_date",
+  "carried_interest_section",
+  "carried_interest_model",
+  "carried_interest_rate",
+  "carried_interest_basis",
+  "preferred_return_rate",
+  "column_break_carry",
+  "lp_share_percentage",
+  "gp_share_percentage",
+  "clawback_provision",
+  "clawback_period_years",
+  "tds_section",
+  "tds_applicable",
+  "tds_rate",
+  "tds_threshold",
+  "tds_section_code",
+  "column_break_tds",
+  "tds_exemption_applicable",
+  "tds_exemption_reference",
+  "tax_withholding_country",
+  "surcharge_applicable",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "fee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Fee Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "label": "Share Class (Optional)",
+   "options": "Share Class"
+  },
+  {
+   "fieldname": "fee_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fee Type",
+   "options": "\nManagement Fee\nPerformance Fee\nCarried Interest\nEntry Load\nExit Load\nDistribution Fee\nService Fee\nAdvisory Fee\nCustodian Fee\nAudit Fee\nLegal Fee\nSetup Fee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fee_name",
+   "fieldtype": "Data",
+   "label": "Fee Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fee_category",
+   "fieldtype": "Select",
+   "label": "Fee Category",
+   "options": "\nFund Level\nShare Class Level\nInvestor Level\nSeries Level"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "label": "Effective From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "effective_to",
+   "fieldtype": "Date",
+   "label": "Effective To"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nActive\nSuspended\nExpired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "management_fee_section",
+   "fieldtype": "Section Break",
+   "label": "Management Fee Configuration",
+   "depends_on": "eval:doc.fee_type=='Management Fee'"
+  },
+  {
+   "fieldname": "management_fee_rate",
+   "fieldtype": "Percent",
+   "label": "Management Fee Rate (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "management_fee_basis",
+   "fieldtype": "Select",
+   "label": "Fee Basis",
+   "options": "\nAUM Based\nFixed Amount\nCommitted Capital\nInvested Capital\nNAV Based"
+  },
+  {
+   "fieldname": "management_fee_frequency",
+   "fieldtype": "Select",
+   "label": "Fee Frequency",
+   "options": "\nMonthly\nQuarterly\nHalf-Yearly\nAnnual"
+  },
+  {
+   "fieldname": "management_fee_waiver",
+   "fieldtype": "Percent",
+   "label": "Fee Waiver (%)"
+  },
+  {
+   "fieldname": "column_break_mgmt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "management_fee_min",
+   "fieldtype": "Currency",
+   "label": "Minimum Fee",
+   "options": "currency"
+  },
+  {
+   "fieldname": "management_fee_max",
+   "fieldtype": "Currency",
+   "label": "Maximum Fee",
+   "options": "currency"
+  },
+  {
+   "fieldname": "aum_basis",
+   "fieldtype": "Select",
+   "label": "AUM Basis",
+   "options": "\nBeginning of Period\nEnd of Period\nAverage\nDaily Average"
+  },
+  {
+   "fieldname": "management_fee_accrual",
+   "fieldtype": "Select",
+   "label": "Accrual Method",
+   "options": "\nDaily Accrual\nPeriod Accrual\nIn Arrears\nIn Advance"
+  },
+  {
+   "fieldname": "performance_fee_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Fee Configuration",
+   "depends_on": "eval:doc.fee_type=='Performance Fee'"
+  },
+  {
+   "fieldname": "performance_fee_model",
+   "fieldtype": "Select",
+   "label": "Performance Fee Model",
+   "options": "\nHigh Watermark\nHurdle Rate\nBenchmark Relative\nTotal Return\nCAGR Based"
+  },
+  {
+   "fieldname": "performance_fee_rate",
+   "fieldtype": "Percent",
+   "label": "Performance Fee Rate (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "hurdle_rate",
+   "fieldtype": "Percent",
+   "label": "Hurdle Rate (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "hurdle_type",
+   "fieldtype": "Select",
+   "label": "Hurdle Type",
+   "options": "\nSoft Hurdle\nHard Hurdle\nNo Hurdle"
+  },
+  {
+   "fieldname": "high_watermark",
+   "fieldtype": "Check",
+   "label": "Apply High Watermark"
+  },
+  {
+   "fieldname": "column_break_perf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "catch_up_rate",
+   "fieldtype": "Percent",
+   "label": "Catch-up Rate (%)"
+  },
+  {
+   "fieldname": "catch_up_threshold",
+   "fieldtype": "Percent",
+   "label": "Catch-up Threshold (%)"
+  },
+  {
+   "fieldname": "crystallization_frequency",
+   "fieldtype": "Select",
+   "label": "Crystallization Frequency",
+   "options": "\nMonthly\nQuarterly\nHalf-Yearly\nAnnual\nOn Realization\nOn Exit"
+  },
+  {
+   "fieldname": "crystallization_date",
+   "fieldtype": "Date",
+   "label": "Next Crystallization Date"
+  },
+  {
+   "fieldname": "carried_interest_section",
+   "fieldtype": "Section Break",
+   "label": "Carried Interest / Waterfall Configuration",
+   "depends_on": "eval:doc.fee_type=='Carried Interest'"
+  },
+  {
+   "fieldname": "carried_interest_model",
+   "fieldtype": "Select",
+   "label": "Carried Interest Model",
+   "options": "\nEuropean Waterfall (Total Return)\nAmerican Waterfall (Deal-by-Deal)\nWhole Fund\nBlind Pool"
+  },
+  {
+   "fieldname": "carried_interest_rate",
+   "fieldtype": "Percent",
+   "label": "Carried Interest Rate (%)",
+   "default": "20",
+   "precision": 4
+  },
+  {
+   "fieldname": "carried_interest_basis",
+   "fieldtype": "Select",
+   "label": "Carried Interest Basis",
+   "options": "\nNet Profit\nGross Profit\nNet of Fees\nExcess Over Hurdle"
+  },
+  {
+   "fieldname": "preferred_return_rate",
+   "fieldtype": "Percent",
+   "label": "Preferred Return Rate (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "column_break_carry",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lp_share_percentage",
+   "fieldtype": "Percent",
+   "label": "LP Share (%)",
+   "default": "80"
+  },
+  {
+   "fieldname": "gp_share_percentage",
+   "fieldtype": "Percent",
+   "label": "GP Share (%)",
+   "default": "20"
+  },
+  {
+   "fieldname": "clawback_provision",
+   "fieldtype": "Check",
+   "label": "Clawback Provision Applicable"
+  },
+  {
+   "fieldname": "clawback_period_years",
+   "fieldtype": "Int",
+   "label": "Clawback Period (Years)"
+  },
+  {
+   "fieldname": "tds_section",
+   "fieldtype": "Section Break",
+   "label": "TDS / Withholding Tax"
+  },
+  {
+   "fieldname": "tds_applicable",
+   "fieldtype": "Check",
+   "label": "TDS Applicable"
+  },
+  {
+   "fieldname": "tds_rate",
+   "fieldtype": "Percent",
+   "label": "TDS Rate (%)"
+  },
+  {
+   "fieldname": "tds_threshold",
+   "fieldtype": "Currency",
+   "label": "TDS Threshold Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "tds_section_code",
+   "fieldtype": "Data",
+   "label": "TDS Section Code (e.g., 194K, 194A)"
+  },
+  {
+   "fieldname": "column_break_tds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tds_exemption_applicable",
+   "fieldtype": "Check",
+   "label": "TDS Exemption Applicable"
+  },
+  {
+   "fieldname": "tds_exemption_reference",
+   "fieldtype": "Data",
+   "label": "TDS Exemption Reference"
+  },
+  {
+   "fieldname": "tax_withholding_country",
+   "fieldtype": "Data",
+   "label": "Tax Withholding Country",
+   "default": "India"
+  },
+  {
+   "fieldname": "surcharge_applicable",
+   "fieldtype": "Check",
+   "label": "Surcharge Applicable"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fee Structure",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Fee Structure",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

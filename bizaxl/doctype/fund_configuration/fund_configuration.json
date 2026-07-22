@@ -1,0 +1,513 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: CFG-{fund_master}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "configuration_details_section",
+  "fund_master",
+  "configuration_name",
+  "configuration_type",
+  "status",
+  "column_break_1",
+  "effective_from",
+  "effective_to",
+  "version",
+  "is_default",
+  "fund_reference_section",
+  "regulatory_category",
+  "base_currency",
+  "reporting_currency",
+  "column_break_fund",
+  "fund_manager",
+  "portfolio_manager",
+  "compliance_officer",
+  "share_classes_section",
+  "share_classes_enabled",
+  "share_classes_table",
+  "column_break_sh",
+  "default_share_class",
+  "series_configuration_section",
+  "series_enabled",
+  "active_series_table",
+  "column_break_ser",
+  "default_series",
+  "fee_configuration_section",
+  "fee_enabled",
+  "active_fee_structures",
+  "column_break_fee",
+  "default_fee_structure",
+  "fee_billing_cycle",
+  "operations_configuration_section",
+  "nav_frequency",
+  "nav_calculation_time",
+  "valuation_agency",
+  "cut_off_time_equity",
+  "cut_off_time_debt",
+  "column_break_ops",
+  "settlement_cycle_equity",
+  "settlement_cycle_debt",
+  "allow_sip",
+  "allow_swp",
+  "allow_stp",
+  "compliance_section",
+  "regulatory_calendar",
+  "compliance_reminder_days",
+  "last_compliance_check",
+  "column_break_comp",
+  "next_compliance_due",
+  "audit_required",
+  "audit_frequency",
+  "communication_section",
+  "investor_portal_enabled",
+  "auto_statements",
+  "statement_frequency",
+  "column_break_comm",
+  "notification_preferences",
+  "reporting_section",
+  "default_dashboard",
+  "report_pack_frequency",
+  "custom_footer",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "configuration_details_section",
+   "fieldtype": "Section Break",
+   "label": "Configuration Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1,
+   "unique": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "configuration_name",
+   "fieldtype": "Data",
+   "label": "Configuration Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "configuration_type",
+   "fieldtype": "Select",
+   "label": "Configuration Type",
+   "options": "\nStandard\nCustom\nTest\nSandbox"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nDraft\nActive\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "label": "Effective From"
+  },
+  {
+   "fieldname": "effective_to",
+   "fieldtype": "Date",
+   "label": "Effective To"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Is Default Configuration"
+  },
+  {
+   "fieldname": "fund_reference_section",
+   "fieldtype": "Section Break",
+   "label": "Fund References"
+  },
+  {
+   "fieldname": "regulatory_category",
+   "fieldtype": "Link",
+   "label": "Regulatory Category",
+   "options": "Regulatory Category"
+  },
+  {
+   "fieldname": "base_currency",
+   "fieldtype": "Link",
+   "label": "Base Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "reporting_currency",
+   "fieldtype": "Link",
+   "label": "Reporting Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_fund",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fund_manager",
+   "fieldtype": "Link",
+   "label": "Fund Manager",
+   "options": "User"
+  },
+  {
+   "fieldname": "portfolio_manager",
+   "fieldtype": "Link",
+   "label": "Portfolio Manager",
+   "options": "User"
+  },
+  {
+   "fieldname": "compliance_officer",
+   "fieldtype": "Link",
+   "label": "Compliance Officer",
+   "options": "User"
+  },
+  {
+   "fieldname": "share_classes_section",
+   "fieldtype": "Section Break",
+   "label": "Share Classes Configuration"
+  },
+  {
+   "fieldname": "share_classes_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Multiple Share Classes",
+   "default": "1"
+  },
+  {
+   "fieldname": "share_classes_table",
+   "fieldtype": "Table",
+   "label": "Active Share Classes",
+   "options": "Fund Config Share Class",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_share_class",
+   "fieldtype": "Link",
+   "label": "Default Share Class",
+   "options": "Share Class"
+  },
+  {
+   "fieldname": "series_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "Series Configuration"
+  },
+  {
+   "fieldname": "series_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Series"
+  },
+  {
+   "fieldname": "active_series_table",
+   "fieldtype": "Table",
+   "label": "Active Series",
+   "options": "Fund Config Series",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ser",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_series",
+   "fieldtype": "Link",
+   "label": "Default Series",
+   "options": "Fund Series"
+  },
+  {
+   "fieldname": "fee_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "Fee Configuration"
+  },
+  {
+   "fieldname": "fee_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Fee Structures",
+   "default": "1"
+  },
+  {
+   "fieldname": "active_fee_structures",
+   "fieldtype": "Table",
+   "label": "Active Fee Structures",
+   "options": "Fund Config Fee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fee",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_fee_structure",
+   "fieldtype": "Link",
+   "label": "Default Fee Structure",
+   "options": "Fee Structure"
+  },
+  {
+   "fieldname": "fee_billing_cycle",
+   "fieldtype": "Select",
+   "label": "Fee Billing Cycle",
+   "options": "\nMonthly\nQuarterly\nHalf-Yearly\nAnnual"
+  },
+  {
+   "fieldname": "operations_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "Operations Configuration"
+  },
+  {
+   "fieldname": "nav_frequency",
+   "fieldtype": "Select",
+   "label": "NAV Frequency",
+   "options": "\nDaily\nWeekly\nMonthly\nQuarterly"
+  },
+  {
+   "fieldname": "nav_calculation_time",
+   "fieldtype": "Time",
+   "label": "NAV Calculation Time"
+  },
+  {
+   "fieldname": "valuation_agency",
+   "fieldtype": "Data",
+   "label": "Valuation Agency"
+  },
+  {
+   "fieldname": "cut_off_time_equity",
+   "fieldtype": "Time",
+   "label": "Cut-off Time (Equity)",
+   "description": "Typically 3:00 PM for equity funds"
+  },
+  {
+   "fieldname": "cut_off_time_debt",
+   "fieldtype": "Time",
+   "label": "Cut-off Time (Debt)",
+   "description": "Typically 1:30 PM for debt funds"
+  },
+  {
+   "fieldname": "column_break_ops",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "settlement_cycle_equity",
+   "fieldtype": "Select",
+   "label": "Settlement Cycle (Equity)",
+   "options": "\nT+0\nT+1\nT+2\nT+3"
+  },
+  {
+   "fieldname": "settlement_cycle_debt",
+   "fieldtype": "Select",
+   "label": "Settlement Cycle (Debt)",
+   "options": "\nT+0\nT+1\nT+2\nT+3"
+  },
+  {
+   "fieldname": "allow_sip",
+   "fieldtype": "Check",
+   "label": "Allow SIP"
+  },
+  {
+   "fieldname": "allow_swp",
+   "fieldtype": "Check",
+   "label": "Allow SWP"
+  },
+  {
+   "fieldname": "allow_stp",
+   "fieldtype": "Check",
+   "label": "Allow STP"
+  },
+  {
+   "fieldname": "compliance_section",
+   "fieldtype": "Section Break",
+   "label": "Compliance Configuration"
+  },
+  {
+   "fieldname": "regulatory_calendar",
+   "fieldtype": "Table",
+   "label": "Regulatory Calendar",
+   "options": "Regulatory Calendar Entry"
+  },
+  {
+   "fieldname": "compliance_reminder_days",
+   "fieldtype": "Int",
+   "label": "Compliance Reminder (Days Before)",
+   "default": "7"
+  },
+  {
+   "fieldname": "last_compliance_check",
+   "fieldtype": "Date",
+   "label": "Last Compliance Check"
+  },
+  {
+   "fieldname": "column_break_comp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_compliance_due",
+   "fieldtype": "Date",
+   "label": "Next Compliance Due"
+  },
+  {
+   "fieldname": "audit_required",
+   "fieldtype": "Check",
+   "label": "Audit Required"
+  },
+  {
+   "fieldname": "audit_frequency",
+   "fieldtype": "Select",
+   "label": "Audit Frequency",
+   "options": "\nQuarterly\nHalf-Yearly\nAnnual"
+  },
+  {
+   "fieldname": "communication_section",
+   "fieldtype": "Section Break",
+   "label": "Communication Configuration"
+  },
+  {
+   "fieldname": "investor_portal_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Investor Portal",
+   "default": "1"
+  },
+  {
+   "fieldname": "auto_statements",
+   "fieldtype": "Check",
+   "label": "Auto-Generate Statements",
+   "default": "1"
+  },
+  {
+   "fieldname": "statement_frequency",
+   "fieldtype": "Select",
+   "label": "Statement Frequency",
+   "options": "\nMonthly\nQuarterly\nHalf-Yearly\nAnnual\nOn Request"
+  },
+  {
+   "fieldname": "column_break_comm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notification_preferences",
+   "fieldtype": "Select",
+   "label": "Notification Preferences",
+   "options": "\nEmail Only\nSMS Only\nEmail + SMS\nWhatsApp\nAll Channels"
+  },
+  {
+   "fieldname": "reporting_section",
+   "fieldtype": "Section Break",
+   "label": "Reporting Configuration"
+  },
+  {
+   "fieldname": "default_dashboard",
+   "fieldtype": "Data",
+   "label": "Default Dashboard"
+  },
+  {
+   "fieldname": "report_pack_frequency",
+   "fieldtype": "Select",
+   "label": "Report Pack Frequency",
+   "options": "\nMonthly\nQuarterly\nHalf-Yearly\nAnnual"
+  },
+  {
+   "fieldname": "custom_footer",
+   "fieldtype": "Small Text",
+   "label": "Custom Footer for Reports"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fund Configuration",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Fund Configuration",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

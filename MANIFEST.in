@@ -1,0 +1,13 @@
+recursive-include bizaxl *.txt
+recursive-include bizaxl *.json
+recursive-include bizaxl *.py
+recursive-include bizaxl *.js
+recursive-include bizaxl *.css
+recursive-include bizaxl *.html
+recursive-include bizaxl *.md
+recursive-include bizaxl *.svg
+recursive-include bizaxl *.png
+recursive-include bizaxl *.ico
+recursive-include bizaxl/public *
+recursive-include bizaxl/templates *
+recursive-include bizaxl/fixtures *

@@ -1,0 +1,362 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: REDM-{investor}-{fund_master}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "redemption_section",
+  "investor",
+  "fund_master",
+  "share_class",
+  "redemption_type",
+  "column_break_1",
+  "request_date",
+  "redemption_date",
+  "cut_off_applied",
+  "redemption_channel",
+  "order_details_section",
+  "redemption_mode",
+  "units_requested",
+  "amount_requested",
+  "column_break_order",
+  "applicable_nav",
+  "units_redeemed",
+  "redemption_amount",
+  "exit_load_section",
+  "exit_load_applicable",
+  "exit_load_percentage",
+  "exit_load_amount",
+  "column_break_exit",
+  "holding_period_days",
+  "net_amount_payable",
+  "tds_deducted",
+  "settlement_section",
+  "settlement_status",
+  "settlement_date",
+  "settlement_amount",
+  "column_break_stlmnt",
+  "bank_account",
+  "payment_reference",
+  "payment_date",
+  "approval_section",
+  "approval_status",
+  "approved_by",
+  "approval_date",
+  "column_break_appr",
+  "rejection_reason",
+  "notes",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "redemption_section",
+   "fieldtype": "Section Break",
+   "label": "Redemption Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Share Class",
+   "options": "Share Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "redemption_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Redemption Type",
+   "options": "\nFull Redemption\nPartial Redemption\nSWP Installment\nSwitch Out\nMaturity Payout",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Request Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "redemption_date",
+   "fieldtype": "Date",
+   "label": "Redemption Date"
+  },
+  {
+   "fieldname": "cut_off_applied",
+   "fieldtype": "Select",
+   "label": "Cut-off Applied",
+   "options": "\nBefore 3 PM (Same Day NAV)\nAfter 3 PM (Next Day NAV)\nN/A"
+  },
+  {
+   "fieldname": "redemption_channel",
+   "fieldtype": "Select",
+   "label": "Redemption Channel",
+   "options": "\nOnline Portal\nDistributor\nBSE StarMF\nNSE NMF II\nOffline Form"
+  },
+  {
+   "fieldname": "order_details_section",
+   "fieldtype": "Section Break",
+   "label": "Order Details"
+  },
+  {
+   "fieldname": "redemption_mode",
+   "fieldtype": "Select",
+   "label": "Redemption Mode",
+   "options": "\nUnits Based\nAmount Based"
+  },
+  {
+   "fieldname": "units_requested",
+   "fieldtype": "Float",
+   "label": "Units Requested",
+   "precision": 4
+  },
+  {
+   "fieldname": "amount_requested",
+   "fieldtype": "Currency",
+   "label": "Amount Requested",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_order",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "applicable_nav",
+   "fieldtype": "Currency",
+   "label": "Applicable NAV",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "units_redeemed",
+   "fieldtype": "Float",
+   "label": "Units Redeemed",
+   "precision": 4
+  },
+  {
+   "fieldname": "redemption_amount",
+   "fieldtype": "Currency",
+   "label": "Redemption Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "exit_load_section",
+   "fieldtype": "Section Break",
+   "label": "Exit Load & TDS"
+  },
+  {
+   "fieldname": "exit_load_applicable",
+   "fieldtype": "Check",
+   "label": "Exit Load Applicable"
+  },
+  {
+   "fieldname": "exit_load_percentage",
+   "fieldtype": "Percent",
+   "label": "Exit Load (%)"
+  },
+  {
+   "fieldname": "exit_load_amount",
+   "fieldtype": "Currency",
+   "label": "Exit Load Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_exit",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "holding_period_days",
+   "fieldtype": "Int",
+   "label": "Holding Period (Days)"
+  },
+  {
+   "fieldname": "net_amount_payable",
+   "fieldtype": "Currency",
+   "label": "Net Amount Payable",
+   "options": "currency"
+  },
+  {
+   "fieldname": "tds_deducted",
+   "fieldtype": "Currency",
+   "label": "TDS Deducted",
+   "options": "currency"
+  },
+  {
+   "fieldname": "settlement_section",
+   "fieldtype": "Section Break",
+   "label": "Settlement"
+  },
+  {
+   "fieldname": "settlement_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Settlement Status",
+   "options": "\nPending\nProcessing\nSettled (T+1)\nSettled (T+2)\nFailed\nCancelled"
+  },
+  {
+   "fieldname": "settlement_date",
+   "fieldtype": "Date",
+   "label": "Settlement Date"
+  },
+  {
+   "fieldname": "settlement_amount",
+   "fieldtype": "Currency",
+   "label": "Settlement Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_stlmnt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_account",
+   "fieldtype": "Data",
+   "label": "Bank Account"
+  },
+  {
+   "fieldname": "payment_reference",
+   "fieldtype": "Data",
+   "label": "Payment Reference"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date"
+  },
+  {
+   "fieldname": "approval_section",
+   "fieldtype": "Section Break",
+   "label": "Approval"
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "\nPending\nApproved\nRejected"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "column_break_appr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejection Reason"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Redemption Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Redemption Request",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

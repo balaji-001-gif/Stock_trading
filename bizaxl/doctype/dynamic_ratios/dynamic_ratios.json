@@ -1,0 +1,247 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: RATIO-{fund_master}-{ratio_type}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "ratio_details_section",
+  "fund_master",
+  "share_class",
+  "ratio_type",
+  "ratio_name",
+  "column_break_1",
+  "effective_from",
+  "effective_to",
+  "status",
+  "ratio_values_section",
+  "ratio_value",
+  "ratio_frequency",
+  "calculation_method",
+  "column_break_val",
+  "min_threshold",
+  "max_threshold",
+  "applicable_on",
+  "application_section",
+  "apply_on_nav",
+  "apply_on_aum",
+  "apply_on_profits",
+  "column_break_app",
+  "apply_on_distributions",
+  "apply_on_fees",
+  "priority_order",
+  "notes_section",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "ratio_details_section",
+   "fieldtype": "Section Break",
+   "label": "Ratio Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "label": "Share Class",
+   "options": "Share Class"
+  },
+  {
+   "fieldname": "ratio_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Ratio Type",
+   "options": "\nExpense Ratio\nTER\nManagement Fee Ratio\nPerformance Fee Ratio\nCarry Ratio\nHurdle Rate\nDistribution Ratio\nAccrual Ratio\nRebalancing Ratio\nLeverage Ratio\nLiquidity Ratio\nTurnover Ratio",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ratio_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ratio Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "label": "Effective From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "effective_to",
+   "fieldtype": "Date",
+   "label": "Effective To"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nActive\nInactive\nPending\nExpired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ratio_values_section",
+   "fieldtype": "Section Break",
+   "label": "Ratio Values"
+  },
+  {
+   "fieldname": "ratio_value",
+   "fieldtype": "Percent",
+   "label": "Ratio Value (%)",
+   "precision": 4,
+   "reqd": 1
+  },
+  {
+   "fieldname": "ratio_frequency",
+   "fieldtype": "Select",
+   "label": "Ratio Frequency",
+   "options": "\nDaily\nMonthly\nQuarterly\nHalf-Yearly\nAnnual"
+  },
+  {
+   "fieldname": "calculation_method",
+   "fieldtype": "Select",
+   "label": "Calculation Method",
+   "options": "\nFlat Percentage\nSlab Based\nTiered\nDynamic (Formula)"
+  },
+  {
+   "fieldname": "column_break_val",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "min_threshold",
+   "fieldtype": "Currency",
+   "label": "Minimum Threshold",
+   "options": "currency"
+  },
+  {
+   "fieldname": "max_threshold",
+   "fieldtype": "Currency",
+   "label": "Maximum Threshold",
+   "options": "currency"
+  },
+  {
+   "fieldname": "applicable_on",
+   "fieldtype": "Select",
+   "label": "Applicable On",
+   "options": "\nDaily NAV\nAUM\nProfits\nDistributions\nFees\nGross Assets\nNet Assets"
+  },
+  {
+   "fieldname": "application_section",
+   "fieldtype": "Section Break",
+   "label": "Application Scope"
+  },
+  {
+   "fieldname": "apply_on_nav",
+   "fieldtype": "Check",
+   "label": "Apply on NAV Calculation"
+  },
+  {
+   "fieldname": "apply_on_aum",
+   "fieldtype": "Check",
+   "label": "Apply on AUM"
+  },
+  {
+   "fieldname": "apply_on_profits",
+   "fieldtype": "Check",
+   "label": "Apply on Profits"
+  },
+  {
+   "fieldname": "column_break_app",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "apply_on_distributions",
+   "fieldtype": "Check",
+   "label": "Apply on Distributions"
+  },
+  {
+   "fieldname": "apply_on_fees",
+   "fieldtype": "Check",
+   "label": "Apply on Fees"
+  },
+  {
+   "fieldname": "priority_order",
+   "fieldtype": "Int",
+   "label": "Priority Order"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Dynamic Ratios",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Dynamic Ratios",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

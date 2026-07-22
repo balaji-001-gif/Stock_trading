@@ -1,0 +1,3 @@
+# List of patches to be applied sequentially
+# Each line is a Python module path to a function
+# Example: bizaxl.patches.v1_0.migrate_fund_data

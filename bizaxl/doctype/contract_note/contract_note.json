@@ -1,0 +1,302 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: CN-{exchange}-{trade_date}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract_section",
+  "trading_account",
+  "client_code",
+  "exchange",
+  "segment",
+  "column_break_con",
+  "trade_date",
+  "settlement_date",
+  "settlement_type",
+  "status",
+  "trade_details_section",
+  "symbol",
+  "instrument_type",
+  "quantity",
+  "trade_price",
+  "column_break_trd",
+  "total_turnover",
+  "buy_value",
+  "sell_value",
+  "net_amount",
+  "charges_section",
+  "brokerage",
+  "brokerage_rate",
+  "stt",
+  "stt_rate",
+  "column_break_chg",
+  "gst",
+  "sebi_fees",
+  "stamp_duty",
+  "other_charges",
+  "summary_section",
+  "total_charges",
+  "net_payable",
+  "settlement_status",
+  "column_break_sum",
+  "pay_in_date",
+  "pay_out_date",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "trading_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Trading Account",
+   "options": "Trading Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_code",
+   "fieldtype": "Data",
+   "label": "Client Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "exchange",
+   "fieldtype": "Select",
+   "label": "Exchange",
+   "options": "\nNSE\nBSE\nMCX\nNCDEX"
+  },
+  {
+   "fieldname": "segment",
+   "fieldtype": "Select",
+   "label": "Segment",
+   "options": "\nEquity Cash\nEquity F&O\nCurrency\nCommodity"
+  },
+  {
+   "fieldname": "column_break_con",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "trade_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Trade Date"
+  },
+  {
+   "fieldname": "settlement_date",
+   "fieldtype": "Date",
+   "label": "Settlement Date"
+  },
+  {
+   "fieldname": "settlement_type",
+   "fieldtype": "Select",
+   "label": "Settlement Type",
+   "options": "\nT+0\nT+1\nT+2\nT+7 (F&O Expiry)"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nGenerated\nSettled\nCancelled"
+  },
+  {
+   "fieldname": "trade_details_section",
+   "fieldtype": "Section Break",
+   "label": "Trade Details"
+  },
+  {
+   "fieldname": "symbol",
+   "fieldtype": "Data",
+   "label": "Symbol"
+  },
+  {
+   "fieldname": "instrument_type",
+   "fieldtype": "Select",
+   "label": "Instrument Type",
+   "options": "\nEquity\nFutures\nOptions\nETF"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "trade_price",
+   "fieldtype": "Currency",
+   "label": "Trade Price"
+  },
+  {
+   "fieldname": "column_break_trd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_turnover",
+   "fieldtype": "Currency",
+   "label": "Total Turnover"
+  },
+  {
+   "fieldname": "buy_value",
+   "fieldtype": "Currency",
+   "label": "Buy Value"
+  },
+  {
+   "fieldname": "sell_value",
+   "fieldtype": "Currency",
+   "label": "Sell Value"
+  },
+  {
+   "fieldname": "net_amount",
+   "fieldtype": "Currency",
+   "label": "Net Amount"
+  },
+  {
+   "fieldname": "charges_section",
+   "fieldtype": "Section Break",
+   "label": "Charges"
+  },
+  {
+   "fieldname": "brokerage",
+   "fieldtype": "Currency",
+   "label": "Brokerage"
+  },
+  {
+   "fieldname": "brokerage_rate",
+   "fieldtype": "Percent",
+   "label": "Brokerage Rate"
+  },
+  {
+   "fieldname": "stt",
+   "fieldtype": "Currency",
+   "label": "STT (Securities Transaction Tax)"
+  },
+  {
+   "fieldname": "stt_rate",
+   "fieldtype": "Percent",
+   "label": "STT Rate"
+  },
+  {
+   "fieldname": "column_break_chg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gst",
+   "fieldtype": "Currency",
+   "label": "GST (18% on Brokerage)"
+  },
+  {
+   "fieldname": "sebi_fees",
+   "fieldtype": "Currency",
+   "label": "SEBI Turnover Fees"
+  },
+  {
+   "fieldname": "stamp_duty",
+   "fieldtype": "Currency",
+   "label": "Stamp Duty"
+  },
+  {
+   "fieldname": "other_charges",
+   "fieldtype": "Currency",
+   "label": "Other Charges"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "total_charges",
+   "fieldtype": "Currency",
+   "label": "Total Charges",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_payable",
+   "fieldtype": "Currency",
+   "label": "Net Payable / Receivable",
+   "read_only": 1
+  },
+  {
+   "fieldname": "settlement_status",
+   "fieldtype": "Select",
+   "label": "Settlement Status",
+   "options": "\nPending\nPay-In\nPay-Out\nCompleted"
+  },
+  {
+   "fieldname": "column_break_sum",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pay_in_date",
+   "fieldtype": "Date",
+   "label": "Pay-In Date"
+  },
+  {
+   "fieldname": "pay_out_date",
+   "fieldtype": "Date",
+   "label": "Pay-Out Date"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Contract Note",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Contract Note",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dealer / Trader",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Auditor"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

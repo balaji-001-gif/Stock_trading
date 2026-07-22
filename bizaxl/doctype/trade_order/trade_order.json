@@ -1,0 +1,305 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: ORD-{exchange}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "order_section",
+  "trading_account",
+  "client_code",
+  "order_date",
+  "order_type",
+  "column_break_ord",
+  "exchange",
+  "segment",
+  "validity",
+  "status",
+  "instrument_section",
+  "symbol",
+  "instrument_type",
+  "series",
+  "expiry_date",
+  "column_break_ins",
+  "strike_price",
+  "option_type",
+  "quantity",
+  "price_details_section",
+  "limit_price",
+  "trigger_price",
+  "square_off_price",
+  "stop_loss_price",
+  "column_break_prc",
+  "filled_quantity",
+  "average_price",
+  "total_turnover",
+  "execution_section",
+  "filled_date",
+  "order_reference",
+  "exchange_order_id",
+  "column_break_exe",
+  "execution_type",
+  "broker_notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "order_section",
+   "fieldtype": "Section Break",
+   "label": "Order Details"
+  },
+  {
+   "fieldname": "trading_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Trading Account",
+   "options": "Trading Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Buy / Sell",
+   "options": "\nBuy\nSell",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_code",
+   "fieldtype": "Data",
+   "label": "Client Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "order_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Order Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "order_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Order Type",
+   "options": "\nMarket\nLimit\nStop Loss (SL)\nStop Loss Market (SL-M)\nAMO (After Market Order)\nGTT (Good Till Triggered)\nCover Order (CO)\nBracket Order (BO)"
+  },
+  {
+   "fieldname": "column_break_ord",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "exchange",
+   "fieldtype": "Select",
+   "label": "Exchange",
+   "options": "\nNSE\nBSE\nNSE F&O\nBSE F&O\nMCX\nNCDEX"
+  },
+  {
+   "fieldname": "segment",
+   "fieldtype": "Select",
+   "label": "Segment",
+   "options": "\nEquity Cash\nEquity F&O\nCurrency\nCommodity\nMutual Fund\nIPO"
+  },
+  {
+   "fieldname": "validity",
+   "fieldtype": "Select",
+   "label": "Validity",
+   "options": "\nDay\nIOC (Immediate or Cancel)\nGTC (Good Till Cancelled)\nGTD (Good Till Date)"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nPending\nOpen\nPartially Filled\nFilled\nCancelled\nRejected\nExpired"
+  },
+  {
+   "fieldname": "instrument_section",
+   "fieldtype": "Section Break",
+   "label": "Instrument"
+  },
+  {
+   "fieldname": "symbol",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Symbol",
+   "reqd": 1
+  },
+  {
+   "fieldname": "instrument_type",
+   "fieldtype": "Select",
+   "label": "Instrument Type",
+   "options": "\nEquity\nIndex\nFutures\nOptions\nETF\nWarrant\nBond\nCommodity"
+  },
+  {
+   "fieldname": "series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "\nEQ\nFO\nMF\nCM\nCD\nCO"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "column_break_ins",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "strike_price",
+   "fieldtype": "Currency",
+   "label": "Strike Price"
+  },
+  {
+   "fieldname": "option_type",
+   "fieldtype": "Select",
+   "label": "Option Type",
+   "options": "\nCE (Call European)\nPE (Put European)\nCA (Call American)\nPA (Put American)"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "price_details_section",
+   "fieldtype": "Section Break",
+   "label": "Price Details"
+  },
+  {
+   "fieldname": "limit_price",
+   "fieldtype": "Currency",
+   "label": "Limit Price"
+  },
+  {
+   "fieldname": "trigger_price",
+   "fieldtype": "Currency",
+   "label": "Trigger Price"
+  },
+  {
+   "fieldname": "square_off_price",
+   "fieldtype": "Currency",
+   "label": "Square Off Price"
+  },
+  {
+   "fieldname": "stop_loss_price",
+   "fieldtype": "Currency",
+   "label": "Stop Loss Price"
+  },
+  {
+   "fieldname": "column_break_prc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "filled_quantity",
+   "fieldtype": "Int",
+   "label": "Filled Quantity"
+  },
+  {
+   "fieldname": "average_price",
+   "fieldtype": "Currency",
+   "label": "Average Fill Price",
+   "precision": 2
+  },
+  {
+   "fieldname": "total_turnover",
+   "fieldtype": "Currency",
+   "label": "Total Turnover",
+   "read_only": 1
+  },
+  {
+   "fieldname": "execution_section",
+   "fieldtype": "Section Break",
+   "label": "Execution"
+  },
+  {
+   "fieldname": "filled_date",
+   "fieldtype": "Datetime",
+   "label": "Filled Date"
+  },
+  {
+   "fieldname": "order_reference",
+   "fieldtype": "Data",
+   "label": "Order Reference"
+  },
+  {
+   "fieldname": "exchange_order_id",
+   "fieldtype": "Data",
+   "label": "Exchange Order ID"
+  },
+  {
+   "fieldname": "column_break_exe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "execution_type",
+   "fieldtype": "Select",
+   "label": "Execution Type",
+   "options": "\nManual\nAutomated\nAlgorithmic\nSmart Order Routing"
+  },
+  {
+   "fieldname": "broker_notes",
+   "fieldtype": "Small Text",
+   "label": "Broker Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Trade Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Trade Order",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dealer / Trader",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Risk Officer"
+  },
+  {
+   "read": 1,
+   "role": "Auditor"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,272 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: CP-{family_office}-{asset_class}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "portfolio_details_section",
+  "family_office",
+  "asset_class",
+  "asset_sub_class",
+  "security_name",
+  "column_break_dtl",
+  "holding_entity",
+  "beneficial_owner",
+  "status",
+  "valuation_section",
+  "total_estimated_value",
+  "cost_basis",
+  "unrealized_gain_loss",
+  "allocation_percentage",
+  "column_break_val",
+  "quantity_or_units",
+  "acquisition_date",
+  "valuation_date",
+  "valuation_method",
+  "income_section",
+  "annual_income",
+  "income_frequency",
+  "last_income_date",
+  "column_break_inc",
+  "yield_percentage",
+  "total_income_ytd",
+  "source_section",
+  "source_type",
+  "source_reference",
+  "last_synced_date",
+  "physical_location",
+  "column_break_src",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "portfolio_details_section",
+   "fieldtype": "Section Break",
+   "label": "Asset Details"
+  },
+  {
+   "fieldname": "family_office",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Family Office",
+   "options": "Family Office Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asset_class",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Asset Class",
+   "options": "\nPublic Equity\nPrivate Equity\nMutual Funds\nFixed Income / Bonds\nFixed Deposits\nReal Estate\nGold & Precious Metals\nArt & Collectibles\nAlternative Investments\nCash & Bank\nInsurance Policies\nNPS / Pension\nEPF / PPF\nLoans Receivable\nOther Assets",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asset_sub_class",
+   "fieldtype": "Data",
+   "label": "Asset Sub-Class"
+  },
+  {
+   "fieldname": "security_name",
+   "fieldtype": "Data",
+   "label": "Asset / Security Name"
+  },
+  {
+   "fieldname": "column_break_dtl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "holding_entity",
+   "fieldtype": "Data",
+   "label": "Holding Entity"
+  },
+  {
+   "fieldname": "beneficial_owner",
+   "fieldtype": "Data",
+   "label": "Beneficial Owner"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nActive\nPartially Disposed\nFully Disposed\nPending Valuation"
+  },
+  {
+   "fieldname": "valuation_section",
+   "fieldtype": "Section Break",
+   "label": "Valuation"
+  },
+  {
+   "fieldname": "total_estimated_value",
+   "fieldtype": "Currency",
+   "label": "Total Estimated Value"
+  },
+  {
+   "fieldname": "cost_basis",
+   "fieldtype": "Currency",
+   "label": "Cost Basis"
+  },
+  {
+   "fieldname": "unrealized_gain_loss",
+   "fieldtype": "Currency",
+   "label": "Unrealized Gain/Loss",
+   "read_only": 1
+  },
+  {
+   "fieldname": "allocation_percentage",
+   "fieldtype": "Percent",
+   "label": "Allocation %"
+  },
+  {
+   "fieldname": "column_break_val",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quantity_or_units",
+   "fieldtype": "Float",
+   "label": "Quantity / Units"
+  },
+  {
+   "fieldname": "acquisition_date",
+   "fieldtype": "Date",
+   "label": "Acquisition Date"
+  },
+  {
+   "fieldname": "valuation_date",
+   "fieldtype": "Date",
+   "label": "Valuation Date"
+  },
+  {
+   "fieldname": "valuation_method",
+   "fieldtype": "Select",
+   "label": "Valuation Method",
+   "options": "\nMarket Price (Quoted)\nNAV (Mutual Fund)\nFair Value (Unquoted)\nCost Method\nExternal Valuation\nIndexed Cost\nBook Value\nEstimated"
+  },
+  {
+   "fieldname": "income_section",
+   "fieldtype": "Section Break",
+   "label": "Income"
+  },
+  {
+   "fieldname": "annual_income",
+   "fieldtype": "Currency",
+   "label": "Annual Income"
+  },
+  {
+   "fieldname": "income_frequency",
+   "fieldtype": "Select",
+   "label": "Income Frequency",
+   "options": "\nMonthly\nQuarterly\nHalf-Yearly\nYearly\nOne-Time\nIrregular"
+  },
+  {
+   "fieldname": "last_income_date",
+   "fieldtype": "Date",
+   "label": "Last Income Date"
+  },
+  {
+   "fieldname": "column_break_inc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "yield_percentage",
+   "fieldtype": "Percent",
+   "label": "Yield %"
+  },
+  {
+   "fieldname": "total_income_ytd",
+   "fieldtype": "Currency",
+   "label": "Total Income YTD"
+  },
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "source_type",
+   "fieldtype": "Select",
+   "label": "Source Type",
+   "options": "\nCAS Import (CDSL/NSDL)\nBroker Import\nMF Import (CAMS/Karvy)\nManual Entry\nAdvisor Upload\nBank Statement\nExternal Aggregator"
+  },
+  {
+   "fieldname": "source_reference",
+   "fieldtype": "Data",
+   "label": "Source Reference"
+  },
+  {
+   "fieldname": "last_synced_date",
+   "fieldtype": "Date",
+   "label": "Last Synced Date"
+  },
+  {
+   "fieldname": "physical_location",
+   "fieldtype": "Data",
+   "label": "Physical Location",
+   "description": "For physical assets like gold, art, property"
+  },
+  {
+   "fieldname": "column_break_src",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Consolidated Portfolio",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Consolidated Portfolio",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Investor Relations"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

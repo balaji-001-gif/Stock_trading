@@ -1,0 +1,313 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: PERF-{fund_master}-{crystallization_date}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "performance_details_section",
+  "fund_master",
+  "share_class",
+  "fee_structure",
+  "crystallization_date",
+  "column_break_1",
+  "calculation_period_start",
+  "calculation_period_end",
+  "status",
+  "returns_section",
+  "fund_return_percentage",
+  "benchmark_return",
+  "hurdle_rate",
+  "column_break_ret",
+  "excess_return",
+  "high_watermark_nav",
+  "current_nav",
+  "fee_calculation_section",
+  "performance_fee_rate",
+  "gross_performance_fee",
+  "high_watermark_adjusted",
+  "column_break_fee",
+  "catch_up_applied",
+  "crystallized_fee",
+  "total_fee_accrued",
+  "metrics_section",
+  "peak_nav",
+  "peak_date",
+  "drawdown_from_peak",
+  "column_break_met",
+  "total_return_since_inception",
+  "annualized_return",
+  "notes",
+  "reference_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "performance_details_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Fee Details"
+  },
+  {
+   "fieldname": "fund_master",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fund Master",
+   "options": "Fund Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "share_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Share Class",
+   "options": "Share Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fee_structure",
+   "fieldtype": "Link",
+   "label": "Fee Structure",
+   "options": "Fee Structure"
+  },
+  {
+   "fieldname": "crystallization_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Crystallization Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "calculation_period_start",
+   "fieldtype": "Date",
+   "label": "Calculation Period Start"
+  },
+  {
+   "fieldname": "calculation_period_end",
+   "fieldtype": "Date",
+   "label": "Calculation Period End"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nCalculated\nCrystallized\nPaid\nReversed"
+  },
+  {
+   "fieldname": "returns_section",
+   "fieldtype": "Section Break",
+   "label": "Returns"
+  },
+  {
+   "fieldname": "fund_return_percentage",
+   "fieldtype": "Percent",
+   "label": "Fund Return (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "benchmark_return",
+   "fieldtype": "Percent",
+   "label": "Benchmark Return (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "hurdle_rate",
+   "fieldtype": "Percent",
+   "label": "Hurdle Rate (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "column_break_ret",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "excess_return",
+   "fieldtype": "Percent",
+   "label": "Excess Return (%)",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fieldname": "high_watermark_nav",
+   "fieldtype": "Currency",
+   "label": "High Watermark NAV",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "current_nav",
+   "fieldtype": "Currency",
+   "label": "Current NAV",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "fee_calculation_section",
+   "fieldtype": "Section Break",
+   "label": "Fee Calculation"
+  },
+  {
+   "fieldname": "performance_fee_rate",
+   "fieldtype": "Percent",
+   "label": "Performance Fee Rate (%)",
+   "precision": 4
+  },
+  {
+   "fieldname": "gross_performance_fee",
+   "fieldtype": "Currency",
+   "label": "Gross Performance Fee",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "high_watermark_adjusted",
+   "fieldtype": "Check",
+   "label": "High Watermark Applied",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fee",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "catch_up_applied",
+   "fieldtype": "Check",
+   "label": "Catch-up Applied"
+  },
+  {
+   "fieldname": "crystallized_fee",
+   "fieldtype": "Currency",
+   "label": "Crystallized Fee",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_fee_accrued",
+   "fieldtype": "Currency",
+   "label": "Total Fee Accrued",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "metrics_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Metrics"
+  },
+  {
+   "fieldname": "peak_nav",
+   "fieldtype": "Currency",
+   "label": "Peak NAV",
+   "options": "currency",
+   "precision": 4
+  },
+  {
+   "fieldname": "peak_date",
+   "fieldtype": "Date",
+   "label": "Peak Date"
+  },
+  {
+   "fieldname": "drawdown_from_peak",
+   "fieldtype": "Percent",
+   "label": "Drawdown from Peak (%)",
+   "precision": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_met",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_return_since_inception",
+   "fieldtype": "Percent",
+   "label": "Total Return Since Inception (%)",
+   "precision": 2
+  },
+  {
+   "fieldname": "annualized_return",
+   "fieldtype": "Percent",
+   "label": "Annualized Return (%)",
+   "precision": 2
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Performance Fee Engine",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Performance Fee Engine",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
