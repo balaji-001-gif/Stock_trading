@@ -19,6 +19,9 @@ Connectors implemented in this file:
 8.  NSDL CRA (NPS) — PRAN registration, contribution upload, allocation, withdrawal
 9.  NACH / UPI AutoPay — eNACH mandate, UPI AutoPay, mandates, debit processing
 10. SMS / WhatsApp / Email — Templated notifications, OTP, bulk alerts
+11. AML / Sanctions Screening — PEP, OFAC, UN sanctions, adverse media, risk scoring
+12. e-Sign / DigiLocker — Aadhaar e-Sign, DigiLocker document fetch, agreement signing
+13. GSTN / TAN / TDS Portal — TDS computation, filing, Form 16A, GST/TAN verification
 """
 
 import frappe
@@ -552,3 +555,114 @@ def get_notification_logs(reference_doctype=None, reference_name=None, channel=N
     """Get notification logs with filters."""
     from bizaxl.bizaxl.doctype.notification_log.notification_log import get_notification_logs as _logs
     return _logs(reference_doctype, reference_name, channel)
+
+
+# =============================================================================
+# SECTION 13: AML / Sanctions Screening
+# =============================================================================
+
+@frappe.whitelist()
+def run_full_aml_screening(investor):
+    """Run full AML screening (PEP + Sanctions + Adverse Media + Risk Score)."""
+    from bizaxl.bizaxl.doctype.aml_screening_request.aml_screening_request import run_full_aml_screening as _screen
+    return _screen(investor)
+
+
+@frappe.whitelist()
+def screen_pep_only(investor):
+    """Screen investor against PEP database only."""
+    from bizaxl.bizaxl.doctype.aml_screening_request.aml_screening_request import screen_pep_only as _pep
+    return _pep(investor)
+
+
+@frappe.whitelist()
+def list_aml_requests(investor=None):
+    """List AML screening requests."""
+    from bizaxl.bizaxl.doctype.aml_screening_request.aml_screening_request import list_aml_requests as _list
+    return _list(investor)
+
+
+# =============================================================================
+# SECTION 14: e-Sign / DigiLocker
+# =============================================================================
+
+@frappe.whitelist()
+def request_esign(investor, document_type, document_hash, signing_purpose):
+    """Request Aadhaar e-Sign for a document."""
+    from bizaxl.bizaxl.integrations.esign_digilocker import ESignConnector
+
+    investor_doc = frappe.get_doc("Investor Profile", investor)
+    connector = ESignConnector()
+    result = connector.request_esign(
+        f"{investor_doc.first_name} {investor_doc.last_name or ''}",
+        investor_doc.aadhaar_number,
+        document_hash,
+        signing_purpose,
+    )
+    return result
+
+
+@frappe.whitelist()
+def fetch_digilocker_document(investor, document_type):
+    """Fetch a verified document from DigiLocker."""
+    from bizaxl.bizaxl.integrations.esign_digilocker import ESignConnector
+
+    investor_doc = frappe.get_doc("Investor Profile", investor)
+    connector = ESignConnector()
+    return connector.fetch_digilocker_document(investor_doc.aadhaar_number, document_type)
+
+
+@frappe.whitelist()
+def get_digilocker_issued_docs(investor):
+    """Get list of all issued documents in DigiLocker."""
+    from bizaxl.bizaxl.integrations.esign_digilocker import ESignConnector
+
+    investor_doc = frappe.get_doc("Investor Profile", investor)
+    connector = ESignConnector()
+    return connector.get_digilocker_issued_docs(investor_doc.aadhaar_number)
+
+
+# =============================================================================
+# SECTION 15: GSTN / TAN / TDS Portal
+# =============================================================================
+
+@frappe.whitelist()
+def compute_tds(gross_amount, tds_rate, pan_number, section_code="194", **kwargs):
+    """Compute TDS with surcharge and education cess."""
+    from bizaxl.bizaxl.doctype.tds_filing_record.tds_filing_record import compute_tds as _compute
+    return _compute(gross_amount, tds_rate, pan_number, section_code, **kwargs)
+
+
+@frappe.whitelist()
+def file_tds_return(tan_number, return_type, financial_year, quarter, total_tds, **kwargs):
+    """File TDS return with Income Tax Department."""
+    from bizaxl.bizaxl.doctype.tds_filing_record.tds_filing_record import file_tds_return as _file
+    return _file(tan_number, return_type, financial_year, quarter, total_tds, **kwargs)
+
+
+@frappe.whitelist()
+def generate_form_16a(tan_number, deductee_pan, financial_year, quarter):
+    """Generate Form 16A TDS certificate via TRACES."""
+    from bizaxl.bizaxl.doctype.tds_filing_record.tds_filing_record import generate_form_16a as _form
+    return _form(tan_number, deductee_pan, financial_year, quarter)
+
+
+@frappe.whitelist()
+def verify_gstin(gstin):
+    """Verify GSTIN."""
+    from bizaxl.bizaxl.doctype.tds_filing_record.tds_filing_record import verify_gstin as _gst
+    return _gst(gstin)
+
+
+@frappe.whitelist()
+def verify_tan(tan_number):
+    """Verify TAN."""
+    from bizaxl.bizaxl.doctype.tds_filing_record.tds_filing_record import verify_tan as _tan
+    return _tan(tan_number)
+
+
+@frappe.whitelist()
+def list_tds_filings(tan_number=None):
+    """List TDS filing records."""
+    from bizaxl.bizaxl.doctype.tds_filing_record.tds_filing_record import list_tds_filings as _list
+    return _list(tan_number)

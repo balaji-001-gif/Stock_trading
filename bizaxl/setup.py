@@ -195,5 +195,7 @@ def get_workspace_cards():
         {"label": "MF Transaction Order", "type": "Link", "link_to": "MF Transaction Order", "doc_type": "MF Transaction Order"},
         {"label": "NPS CRA Request", "type": "Link", "link_to": "NPS CRA Request", "doc_type": "NPS CRA Request"},
         {"label": "Notification Log", "type": "Link", "link_to": "Notification Log", "doc_type": "Notification Log"},
+        {"label": "AML Screening Request", "type": "Link", "link_to": "AML Screening Request", "doc_type": "AML Screening Request"},
+        {"label": "TDS Filing Record", "type": "Link", "link_to": "TDS Filing Record", "doc_type": "TDS Filing Record"},
         {"label": "Integration Request Log", "type": "Link", "link_to": "Integration Request Log", "doc_type": "Integration Request Log"},
     ]

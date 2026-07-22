@@ -1,0 +1,266 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: TDSFIL-{return_type}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "filing_section",
+  "tan_number",
+  "return_type",
+  "financial_year",
+  "quarter",
+  "column_break_fil",
+  "filing_date",
+  "acknowledgment_no",
+  "token_number",
+  "status",
+  "tds_summary_section",
+  "total_deductees",
+  "total_tds_amount",
+  "total_surcharge",
+  "column_break_tds",
+  "total_cess",
+  "grand_total",
+  "connector_mode",
+  "form_section",
+  "form_16a_ref",
+  "deductee_pan",
+  "generated_at",
+  "column_break_form",
+  "challan_ref",
+  "bsr_code",
+  "challan_status",
+  "response_section",
+  "error_message",
+  "response_data",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "filing_section",
+   "fieldtype": "Section Break",
+   "label": "Filing Details"
+  },
+  {
+   "fieldname": "tan_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "TAN Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "return_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Return Type",
+   "options": "\nForm 24Q (Salaries)\nForm 26Q (Non-Salaries)\nForm 27Q (Non-Residents)\nForm 26QB (Property)\nForm 27EQ (TCS)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "financial_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Financial Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quarter",
+   "fieldtype": "Select",
+   "label": "Quarter",
+   "options": "\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "column_break_fil",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "filing_date",
+   "fieldtype": "Date",
+   "label": "Filing Date"
+  },
+  {
+   "fieldname": "acknowledgment_no",
+   "fieldtype": "Data",
+   "label": "Acknowledgment No.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "token_number",
+   "fieldtype": "Data",
+   "label": "Token Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nDraft\nFiled\nVerified\nDefective\nCorrected",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tds_summary_section",
+   "fieldtype": "Section Break",
+   "label": "TDS Summary"
+  },
+  {
+   "fieldname": "total_deductees",
+   "fieldtype": "Int",
+   "label": "Total Deductees"
+  },
+  {
+   "fieldname": "total_tds_amount",
+   "fieldtype": "Currency",
+   "label": "Total TDS Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "total_surcharge",
+   "fieldtype": "Currency",
+   "label": "Total Surcharge",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_tds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_cess",
+   "fieldtype": "Currency",
+   "label": "Total Cess",
+   "options": "currency"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "options": "currency"
+  },
+  {
+   "fieldname": "connector_mode",
+   "fieldtype": "Select",
+   "label": "Connector Mode",
+   "options": "\nstub\nlive",
+   "read_only": 1
+  },
+  {
+   "fieldname": "form_section",
+   "fieldtype": "Section Break",
+   "label": "Form 16A & Challan"
+  },
+  {
+   "fieldname": "form_16a_ref",
+   "fieldtype": "Data",
+   "label": "Form 16A Reference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deductee_pan",
+   "fieldtype": "Data",
+   "label": "Deductee PAN"
+  },
+  {
+   "fieldname": "generated_at",
+   "fieldtype": "Datetime",
+   "label": "Form 16A Generated At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_form",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "challan_ref",
+   "fieldtype": "Data",
+   "label": "Challan Reference / CIN"
+  },
+  {
+   "fieldname": "bsr_code",
+   "fieldtype": "Data",
+   "label": "BSR Code"
+  },
+  {
+   "fieldname": "challan_status",
+   "fieldtype": "Data",
+   "label": "Challan Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "response_section",
+   "fieldtype": "Section Break",
+   "label": "Response"
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Small Text",
+   "label": "Error Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "response_data",
+   "fieldtype": "Code",
+   "label": "Response Data (JSON)",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "TDS Filing Record",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "TDS Filing Record",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
