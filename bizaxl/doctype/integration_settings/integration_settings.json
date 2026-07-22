@@ -1,0 +1,182 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:connector_name",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_section",
+  "connector_name",
+  "integration_label",
+  "enabled",
+  "column_break_basic",
+  "environment",
+  "connector_status",
+  "credentials_section",
+  "api_key",
+  "api_secret",
+  "endpoint_url",
+  "column_break_cred",
+  "webhook_url",
+  "timeout_seconds",
+  "retry_attempts",
+  "status_section",
+  "last_ping_at",
+  "last_ping_status",
+  "column_break_sts",
+  "error_count",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_section",
+   "fieldtype": "Section Break",
+   "label": "Integration Details"
+  },
+  {
+   "fieldname": "connector_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Connector Name",
+   "reqd": 1,
+   "unique": 1,
+   "description": "Unique connector identifier, e.g., uidai_ekyc, nsdl_cdsl_demat"
+  },
+  {
+   "fieldname": "integration_label",
+   "fieldtype": "Data",
+   "label": "Integration Label",
+   "reqd": 1
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "default": 1
+  },
+  {
+   "fieldname": "column_break_basic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "environment",
+   "fieldtype": "Select",
+   "label": "Environment",
+   "options": "\nStub (Simulation)\nSandbox\nProduction"
+  },
+  {
+   "fieldname": "connector_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nNot Configured\nConfigured\nActive\nError",
+   "read_only": 1
+  },
+  {
+   "fieldname": "credentials_section",
+   "fieldtype": "Section Break",
+   "label": "API Credentials"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Data",
+   "label": "API Key / Client ID"
+  },
+  {
+   "fieldname": "api_secret",
+   "fieldtype": "Password",
+   "label": "API Secret / Client Secret"
+  },
+  {
+   "fieldname": "endpoint_url",
+   "fieldtype": "Data",
+   "label": "API Endpoint URL"
+  },
+  {
+   "fieldname": "column_break_cred",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "webhook_url",
+   "fieldtype": "Data",
+   "label": "Webhook / Callback URL"
+  },
+  {
+   "fieldname": "timeout_seconds",
+   "fieldtype": "Int",
+   "label": "Timeout (seconds)",
+   "default": 30
+  },
+  {
+   "fieldname": "retry_attempts",
+   "fieldtype": "Int",
+   "label": "Retry Attempts",
+   "default": 3
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Connection Status"
+  },
+  {
+   "fieldname": "last_ping_at",
+   "fieldtype": "Datetime",
+   "label": "Last Connectivity Check",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_ping_status",
+   "fieldtype": "Select",
+   "label": "Last Ping Status",
+   "options": "\nUnknown\nSuccess\nFailed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sts",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "error_count",
+   "fieldtype": "Int",
+   "label": "Error Count",
+   "default": 0,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Integration Settings",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Integration Settings",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

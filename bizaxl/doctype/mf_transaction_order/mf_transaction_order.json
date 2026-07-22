@@ -1,0 +1,317 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: MFORD-{transaction_type}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "order_section",
+  "investor",
+  "pan_number",
+  "transaction_type",
+  "order_type",
+  "folio_number",
+  "column_break_ord",
+  "platform",
+  "order_ref",
+  "transaction_id",
+  "status",
+  "order_date",
+  "scheme_section",
+  "amc_code",
+  "scheme_code",
+  "scheme_name",
+  "column_break_sch",
+  "amount",
+  "units",
+  "nav_applicable",
+  "order_details_section",
+  "from_scheme",
+  "to_scheme",
+  "sip_frequency",
+  "sip_date",
+  "column_break_det",
+  "mandate_ref",
+  "expected_settlement",
+  "settlement_date",
+  "allotment_date",
+  "response_section",
+  "brokerage",
+  "connector_mode",
+  "error_message",
+  "column_break_resp",
+  "response_data",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "order_section",
+   "fieldtype": "Section Break",
+   "label": "Order Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "search_index": 1
+  },
+  {
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PAN Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Transaction Type",
+   "options": "\nPurchase\nSIP Purchase\nRedemption\nSwitch In\nSwitch Out",
+   "reqd": 1
+  },
+  {
+   "fieldname": "order_type",
+   "fieldtype": "Select",
+   "label": "Order Type",
+   "options": "\nLumpsum\nSIP\nSTP\nSwitch"
+  },
+  {
+   "fieldname": "folio_number",
+   "fieldtype": "Data",
+   "label": "Folio Number"
+  },
+  {
+   "fieldname": "column_break_ord",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "platform",
+   "fieldtype": "Select",
+   "label": "Platform",
+   "options": "\nBSE StarMF\nNSE NMF II\nManual"
+  },
+  {
+   "fieldname": "order_ref",
+   "fieldtype": "Data",
+   "label": "Order Reference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transaction_id",
+   "fieldtype": "Data",
+   "label": "Transaction ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nPending\nConfirmed\nAllotted\nRejected\nSettled\nFailed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "order_date",
+   "fieldtype": "Date",
+   "label": "Order Date"
+  },
+  {
+   "fieldname": "scheme_section",
+   "fieldtype": "Section Break",
+   "label": "Scheme Details"
+  },
+  {
+   "fieldname": "amc_code",
+   "fieldtype": "Data",
+   "label": "AMC Code"
+  },
+  {
+   "fieldname": "scheme_code",
+   "fieldtype": "Data",
+   "label": "Scheme Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "scheme_name",
+   "fieldtype": "Data",
+   "label": "Scheme Name"
+  },
+  {
+   "fieldname": "column_break_sch",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "units",
+   "fieldtype": "Float",
+   "label": "Units Allotted",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fieldname": "nav_applicable",
+   "fieldtype": "Currency",
+   "label": "NAV Applicable",
+   "options": "currency",
+   "precision": 4,
+   "read_only": 1
+  },
+  {
+   "fieldname": "order_details_section",
+   "fieldtype": "Section Break",
+   "label": "Order Options"
+  },
+  {
+   "fieldname": "from_scheme",
+   "fieldtype": "Data",
+   "label": "From Scheme (Switch)"
+  },
+  {
+   "fieldname": "to_scheme",
+   "fieldtype": "Data",
+   "label": "To Scheme (Switch)"
+  },
+  {
+   "fieldname": "sip_frequency",
+   "fieldtype": "Select",
+   "label": "SIP Frequency",
+   "options": "\nMonthly\nQuarterly"
+  },
+  {
+   "fieldname": "sip_date",
+   "fieldtype": "Int",
+   "label": "SIP Date (1-28)"
+  },
+  {
+   "fieldname": "column_break_det",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mandate_ref",
+   "fieldtype": "Data",
+   "label": "SIP Mandate Ref",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expected_settlement",
+   "fieldtype": "Date",
+   "label": "Expected Settlement",
+   "read_only": 1
+  },
+  {
+   "fieldname": "settlement_date",
+   "fieldtype": "Date",
+   "label": "Settlement Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "allotment_date",
+   "fieldtype": "Date",
+   "label": "Allotment Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "response_section",
+   "fieldtype": "Section Break",
+   "label": "Connector Info"
+  },
+  {
+   "fieldname": "brokerage",
+   "fieldtype": "Currency",
+   "label": "Brokerage",
+   "options": "currency"
+  },
+  {
+   "fieldname": "connector_mode",
+   "fieldtype": "Select",
+   "label": "Connector Mode",
+   "options": "\nstub\nlive",
+   "read_only": 1
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Small Text",
+   "label": "Error Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_resp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "response_data",
+   "fieldtype": "Code",
+   "label": "Response Data (JSON)",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "MF Transaction Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "MF Transaction Order",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Advisor (RIA/MFD)",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

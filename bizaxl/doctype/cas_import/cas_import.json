@@ -1,0 +1,238 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: CAS-{investor}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "investor_section",
+  "investor",
+  "investor_name",
+  "pan_number",
+  "column_break_inv",
+  "source",
+  "reporting_from",
+  "reporting_to",
+  "status",
+  "folio_section",
+  "total_folios",
+  "column_break_fol",
+  "total_investment",
+  "total_current_value",
+  "folio_details_section",
+  "folio_data",
+  "summary_section",
+  "total_unrealized_gain",
+  "total_return_pct",
+  "column_break_sum",
+  "connector_mode",
+  "imported_at",
+  "error_message",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "investor_section",
+   "fieldtype": "Section Break",
+   "label": "Investor Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "search_index": 1
+  },
+  {
+   "fieldname": "investor_name",
+   "fieldtype": "Data",
+   "label": "Investor Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PAN Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_inv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "\nCAMS\nKarvy\nCAMS/Karvy CAS\nMF Central\nManual Upload"
+  },
+  {
+   "fieldname": "reporting_from",
+   "fieldtype": "Date",
+   "label": "Reporting From"
+  },
+  {
+   "fieldname": "reporting_to",
+   "fieldtype": "Date",
+   "label": "Reporting To"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nPending\nImported\nPartially Imported\nFailed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "folio_section",
+   "fieldtype": "Section Break",
+   "label": "Folio Summary"
+  },
+  {
+   "fieldname": "total_folios",
+   "fieldtype": "Int",
+   "label": "Total Folios",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fol",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_investment",
+   "fieldtype": "Currency",
+   "label": "Total Investment",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_current_value",
+   "fieldtype": "Currency",
+   "label": "Total Current Value",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "folio_details_section",
+   "fieldtype": "Section Break",
+   "label": "Folio Details"
+  },
+  {
+   "fieldname": "folio_data",
+   "fieldtype": "Code",
+   "label": "Folio Data (JSON)",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "total_unrealized_gain",
+   "fieldtype": "Currency",
+   "label": "Total Unrealized Gain/Loss",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_return_pct",
+   "fieldtype": "Float",
+   "label": "Total Return (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sum",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "connector_mode",
+   "fieldtype": "Select",
+   "label": "Connector Mode",
+   "options": "\nstub\nlive",
+   "read_only": 1
+  },
+  {
+   "fieldname": "imported_at",
+   "fieldtype": "Datetime",
+   "label": "Imported At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Small Text",
+   "label": "Error Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "CAS Import",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "CAS Import",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Advisor (RIA/MFD)",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,358 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: CKYC-{investor}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "investor_section",
+  "investor",
+  "investor_name",
+  "pan_number",
+  "column_break_inv",
+  "ckyc_number",
+  "operation_type",
+  "status",
+  "ckyc_details_section",
+  "source",
+  "kra_name",
+  "matched_name",
+  "column_break_ckyc",
+  "ckyc_status",
+  "is_valid",
+  "ckyc_last_updated",
+  "personal_section",
+  "full_name",
+  "father_name",
+  "mother_name",
+  "date_of_birth",
+  "gender",
+  "column_break_per",
+  "marital_status",
+  "occupation",
+  "nationality",
+  "residential_status",
+  "address_section",
+  "permanent_address",
+  "column_break_addr",
+  "correspondence_address",
+  "contact_section",
+  "email",
+  "mobile",
+  "column_break_con",
+  "photo_available",
+  "signature_available",
+  "response_section",
+  "connector_mode",
+  "error_message",
+  "column_break_resp",
+  "response_data",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "investor_section",
+   "fieldtype": "Section Break",
+   "label": "Investor"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "search_index": 1
+  },
+  {
+   "fieldname": "investor_name",
+   "fieldtype": "Data",
+   "label": "Investor Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PAN Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_inv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ckyc_number",
+   "fieldtype": "Data",
+   "label": "CKYC Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "operation_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Operation Type",
+   "options": "\nFetch Record\nUpload KYC\nVerify CKYC\nUpdate Record",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nSuccess\nNot Found\nFailed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ckyc_details_section",
+   "fieldtype": "Section Break",
+   "label": "CKYC Details"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Data",
+   "label": "Source",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kra_name",
+   "fieldtype": "Select",
+   "label": "KRA Name",
+   "options": "\nCAMS KRA\nKarvy KRA\nNDML KRA\nCDSL Ventures\nOthers"
+  },
+  {
+   "fieldname": "matched_name",
+   "fieldtype": "Data",
+   "label": "Matched Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ckyc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ckyc_status",
+   "fieldtype": "Select",
+   "label": "CKYC Status",
+   "options": "\nActive\nInactive\nNot Registered\nSuspended",
+   "read_only": 1
+  },
+  {
+   "fieldname": "is_valid",
+   "fieldtype": "Check",
+   "label": "Valid CKYC",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ckyc_last_updated",
+   "fieldtype": "Date",
+   "label": "CKYC Last Updated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "personal_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Details from CKYC"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "father_name",
+   "fieldtype": "Data",
+   "label": "Father's Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mother_name",
+   "fieldtype": "Data",
+   "label": "Mother's Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date of Birth",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_per",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Data",
+   "label": "Marital Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality",
+   "read_only": 1
+  },
+  {
+   "fieldname": "residential_status",
+   "fieldtype": "Data",
+   "label": "Residential Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address Details"
+  },
+  {
+   "fieldname": "permanent_address",
+   "fieldtype": "Small Text",
+   "label": "Permanent Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_addr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "correspondence_address",
+   "fieldtype": "Small Text",
+   "label": "Correspondence Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_con",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "photo_available",
+   "fieldtype": "Check",
+   "label": "Photo Available",
+   "read_only": 1
+  },
+  {
+   "fieldname": "signature_available",
+   "fieldtype": "Check",
+   "label": "Signature Available",
+   "read_only": 1
+  },
+  {
+   "fieldname": "response_section",
+   "fieldtype": "Section Break",
+   "label": "Connector Info"
+  },
+  {
+   "fieldname": "connector_mode",
+   "fieldtype": "Select",
+   "label": "Connector Mode",
+   "options": "\nstub\nlive",
+   "read_only": 1
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Small Text",
+   "label": "Error Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_resp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "response_data",
+   "fieldtype": "Code",
+   "label": "Response Data (JSON)",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "CKYC Record",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "CKYC Record",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

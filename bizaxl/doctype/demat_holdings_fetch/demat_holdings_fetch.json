@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: DEMAT-{trading_account}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "investor_details_section",
+  "trading_account",
+  "investor",
+  "bo_id",
+  "column_break_inv",
+  "depository",
+  "as_of_date",
+  "status",
+  "holdings_summary_section",
+  "total_securities",
+  "total_quantity",
+  "total_value",
+  "column_break_sum",
+  "fetched_at",
+  "connector_mode",
+  "holdings_data_section",
+  "holdings_data",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "investor_details_section",
+   "fieldtype": "Section Break",
+   "label": "Account Details"
+  },
+  {
+   "fieldname": "trading_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Trading Account",
+   "options": "Trading Account",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "label": "Investor",
+   "options": "Investor Profile",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bo_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "BO ID (Demat Account)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_inv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "depository",
+   "fieldtype": "Select",
+   "label": "Depository",
+   "options": "\nNSDL\nCDSL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "as_of_date",
+   "fieldtype": "Date",
+   "label": "As of Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nPending\nCompleted\nFailed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "holdings_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Holdings Summary"
+  },
+  {
+   "fieldname": "total_securities",
+   "fieldtype": "Int",
+   "label": "Total Securities",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_quantity",
+   "fieldtype": "Int",
+   "label": "Total Quantity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_value",
+   "fieldtype": "Currency",
+   "label": "Total Market Value",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sum",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fetched_at",
+   "fieldtype": "Datetime",
+   "label": "Fetched At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "connector_mode",
+   "fieldtype": "Select",
+   "label": "Connector Mode",
+   "options": "\nstub\nlive",
+   "read_only": 1
+  },
+  {
+   "fieldname": "holdings_data_section",
+   "fieldtype": "Section Break",
+   "label": "Holdings Data"
+  },
+  {
+   "fieldname": "holdings_data",
+   "fieldtype": "Code",
+   "label": "Holdings Data (JSON)",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Demat Holdings Fetch",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Demat Holdings Fetch",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dealer / Trader",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

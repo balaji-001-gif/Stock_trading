@@ -1,0 +1,292 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: EKYC-{investor}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "investor_details_section",
+  "investor",
+  "investor_name",
+  "aadhaar_number",
+  "column_break_inv",
+  "ekyc_mode",
+  "transaction_id",
+  "status",
+  "otp_section",
+  "otp_sent_at",
+  "otp_valid_until",
+  "otp_attempts",
+  "column_break_otp",
+  "otp_verified_at",
+  "verification_reference",
+  "kyc_data_section",
+  "kyc_name",
+  "kyc_dob",
+  "kyc_gender",
+  "kyc_phone",
+  "column_break_kyc",
+  "kyc_email",
+  "kyc_address_line1",
+  "kyc_address_line2",
+  "kyc_city",
+  "kyc_state",
+  "kyc_pincode",
+  "mode_section",
+  "connector_mode",
+  "error_message",
+  "column_break_mode",
+  "response_data",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "investor_details_section",
+   "fieldtype": "Section Break",
+   "label": "Investor Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "investor_name",
+   "fieldtype": "Data",
+   "label": "Investor Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "aadhaar_number",
+   "fieldtype": "Data",
+   "label": "Aadhaar Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_inv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ekyc_mode",
+   "fieldtype": "Select",
+   "label": "eKYC Mode",
+   "options": "\nAadhaar OTP\nOffline XML\nVideo KYC",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transaction_id",
+   "fieldtype": "Data",
+   "label": "Transaction ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nOTP Sent\nOTP Verified\neKYC Completed\nFailed\nExpired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "otp_section",
+   "fieldtype": "Section Break",
+   "label": "OTP Details"
+  },
+  {
+   "fieldname": "otp_sent_at",
+   "fieldtype": "Datetime",
+   "label": "OTP Sent At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "otp_valid_until",
+   "fieldtype": "Datetime",
+   "label": "OTP Valid Until",
+   "read_only": 1
+  },
+  {
+   "fieldname": "otp_attempts",
+   "fieldtype": "Int",
+   "label": "OTP Attempts",
+   "default": 0,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_otp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "otp_verified_at",
+   "fieldtype": "Datetime",
+   "label": "OTP Verified At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "verification_reference",
+   "fieldtype": "Data",
+   "label": "Verification Reference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kyc_data_section",
+   "fieldtype": "Section Break",
+   "label": "KYC Data Retrieved"
+  },
+  {
+   "fieldname": "kyc_name",
+   "fieldtype": "Data",
+   "label": "Name from Aadhaar",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kyc_dob",
+   "fieldtype": "Data",
+   "label": "Date of Birth",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kyc_gender",
+   "fieldtype": "Data",
+   "label": "Gender",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kyc_phone",
+   "fieldtype": "Data",
+   "label": "Phone (Masked)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_kyc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kyc_email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kyc_address_line1",
+   "fieldtype": "Data",
+   "label": "Address Line 1",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kyc_address_line2",
+   "fieldtype": "Data",
+   "label": "Address Line 2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kyc_city",
+   "fieldtype": "Data",
+   "label": "City",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kyc_state",
+   "fieldtype": "Data",
+   "label": "State",
+   "read_only": 1
+  },
+  {
+   "fieldname": "kyc_pincode",
+   "fieldtype": "Data",
+   "label": "Pincode",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mode_section",
+   "fieldtype": "Section Break",
+   "label": "Connector Info"
+  },
+  {
+   "fieldname": "connector_mode",
+   "fieldtype": "Select",
+   "label": "Connector Mode",
+   "options": "\nstub\nlive",
+   "read_only": 1
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Small Text",
+   "label": "Error Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mode",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "response_data",
+   "fieldtype": "Code",
+   "label": "Full Response Data",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "eKYC Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "eKYC Request",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

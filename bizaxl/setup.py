@@ -185,4 +185,13 @@ def get_workspace_cards():
         {"label": "Client Plan", "type": "Link", "link_to": "Client Plan", "doc_type": "Client Plan"},
         {"label": "Advisor Commission", "type": "Link", "link_to": "Advisor Commission", "doc_type": "Advisor Commission"},
         {"label": "Advisor Compliance", "type": "Link", "link_to": "Advisor Compliance", "doc_type": "Advisor Compliance"},
+        # Module 14: Integration Connectors (20 External APIs)
+        {"label": "Integration Settings", "type": "Link", "link_to": "Integration Settings", "doc_type": "Integration Settings"},
+        {"label": "eKYC Request", "type": "Link", "link_to": "eKYC Request", "doc_type": "eKYC Request"},
+        {"label": "Demat Holdings Fetch", "type": "Link", "link_to": "Demat Holdings Fetch", "doc_type": "Demat Holdings Fetch"},
+        {"label": "CKYC Record", "type": "Link", "link_to": "CKYC Record", "doc_type": "CKYC Record"},
+        {"label": "CAS Import", "type": "Link", "link_to": "CAS Import", "doc_type": "CAS Import"},
+        {"label": "Market Data Feed", "type": "Link", "link_to": "Market Data Feed", "doc_type": "Market Data Feed"},
+        {"label": "MF Transaction Order", "type": "Link", "link_to": "MF Transaction Order", "doc_type": "MF Transaction Order"},
+        {"label": "Integration Request Log", "type": "Link", "link_to": "Integration Request Log", "doc_type": "Integration Request Log"},
     ]
