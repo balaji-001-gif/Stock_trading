@@ -16,6 +16,9 @@ Connectors implemented in this file:
 5.  NSE / BSE Market Data — Equity quotes, EOD data, F&O chain, indices, ticker
 6.  AMFI NAV & MF Data — Daily NAV, scheme master, NAV history, filing
 7.  BSE StarMF / NSE NMF II — Purchase, redemption, switch, order tracking, SIP mandate
+8.  NSDL CRA (NPS) — PRAN registration, contribution upload, allocation, withdrawal
+9.  NACH / UPI AutoPay — eNACH mandate, UPI AutoPay, mandates, debit processing
+10. SMS / WhatsApp / Email — Templated notifications, OTP, bulk alerts
 """
 
 import frappe
@@ -434,3 +437,118 @@ def list_mf_orders(investor=None, status=None):
     """List MF transaction orders."""
     from bizaxl.bizaxl.doctype.mf_transaction_order.mf_transaction_order import list_mf_orders as _list
     return _list(investor, status)
+
+
+# =============================================================================
+# SECTION 10: NSDL CRA (NPS)
+# =============================================================================
+
+@frappe.whitelist()
+def register_nps_pran(subscriber_name, **kwargs):
+    """Register NPS subscriber via CRA and generate PRAN."""
+    from bizaxl.bizaxl.doctype.nps_cra_request.nps_cra_request import register_nps_pran as _reg
+    return _reg(subscriber_name, **kwargs)
+
+
+@frappe.whitelist()
+def upload_nps_contribution(nps_subscriber, contribution_amount, **kwargs):
+    """Upload NPS contribution to CRA."""
+    from bizaxl.bizaxl.doctype.nps_cra_request.nps_cra_request import upload_nps_contribution as _upload
+    return _upload(nps_subscriber, contribution_amount, **kwargs)
+
+
+@frappe.whitelist()
+def fetch_pfm_nav(pfm_code=None):
+    """Fetch latest Pension Fund Manager NAV data."""
+    from bizaxl.bizaxl.doctype.nps_cra_request.nps_cra_request import fetch_pfm_nav as _nav
+    return _nav(pfm_code)
+
+
+@frappe.whitelist()
+def process_nps_withdrawal(nps_annuity_request):
+    """Process NPS withdrawal via CRA."""
+    from bizaxl.bizaxl.doctype.nps_cra_request.nps_cra_request import process_nps_withdrawal as _wd
+    return _wd(nps_annuity_request)
+
+
+@frappe.whitelist()
+def list_nps_cra_requests(subscriber=None):
+    """List NPS CRA requests."""
+    from bizaxl.bizaxl.doctype.nps_cra_request.nps_cra_request import list_nps_cra_requests as _list
+    return _list(subscriber)
+
+
+# =============================================================================
+# SECTION 11: NACH / UPI AutoPay
+# =============================================================================
+
+@frappe.whitelist()
+def register_nach_mandate(bank_account, ifsc_code, amount, **kwargs):
+    """Register eNACH mandate for SIP auto-debit."""
+    from bizaxl.bizaxl.integrations.nach_upi_autopay import AutoPayConnector
+    connector = AutoPayConnector()
+    result = connector.register_nach_mandate({
+        "bank_account": bank_account,
+        "ifsc": ifsc_code,
+        "amount": amount,
+        "frequency": kwargs.get("frequency", "Monthly"),
+        "pan": kwargs.get("pan"),
+    })
+    return result
+
+
+@frappe.whitelist()
+def register_upi_autopay(vpa, amount, frequency="Monthly"):
+    """Register UPI AutoPay mandate."""
+    from bizaxl.bizaxl.integrations.nach_upi_autopay import AutoPayConnector
+    connector = AutoPayConnector()
+    return connector.register_upi_autopay(vpa, amount, frequency)
+
+
+@frappe.whitelist()
+def get_mandate_status(mandate_ref):
+    """Get mandate status."""
+    from bizaxl.bizaxl.integrations.nach_upi_autopay import AutoPayConnector
+    connector = AutoPayConnector()
+    return connector.get_mandate_status(mandate_ref)
+
+
+@frappe.whitelist()
+def process_auto_debit(mandate_ref, amount):
+    """Process automated debit against a mandate."""
+    from bizaxl.bizaxl.integrations.nach_upi_autopay import AutoPayConnector
+    connector = AutoPayConnector()
+    return connector.process_debit(mandate_ref, amount)
+
+
+@frappe.whitelist()
+def get_bounce_report(from_date=None, to_date=None):
+    """Get bounced debit report."""
+    from bizaxl.bizaxl.integrations.nach_upi_autopay import AutoPayConnector
+    connector = AutoPayConnector()
+    return connector.get_bounce_report(from_date, to_date)
+
+
+# =============================================================================
+# SECTION 12: SMS / WhatsApp / Email Notifications
+# =============================================================================
+
+@frappe.whitelist()
+def send_notification(channel, recipient, template_key, **kwargs):
+    """Send templated notification via SMS, WhatsApp, or Email."""
+    from bizaxl.bizaxl.doctype.notification_log.notification_log import send_notification as _send
+    return _send(channel, recipient, template_key, **kwargs)
+
+
+@frappe.whitelist()
+def send_bulk_notification(channel, recipients, template_key, template_vars, **kwargs):
+    """Send bulk notifications to multiple recipients."""
+    from bizaxl.bizaxl.doctype.notification_log.notification_log import send_bulk_notification as _bulk
+    return _bulk(channel, recipients, template_key, template_vars, **kwargs)
+
+
+@frappe.whitelist()
+def get_notification_logs(reference_doctype=None, reference_name=None, channel=None):
+    """Get notification logs with filters."""
+    from bizaxl.bizaxl.doctype.notification_log.notification_log import get_notification_logs as _logs
+    return _logs(reference_doctype, reference_name, channel)

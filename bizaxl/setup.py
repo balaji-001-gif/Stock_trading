@@ -193,5 +193,7 @@ def get_workspace_cards():
         {"label": "CAS Import", "type": "Link", "link_to": "CAS Import", "doc_type": "CAS Import"},
         {"label": "Market Data Feed", "type": "Link", "link_to": "Market Data Feed", "doc_type": "Market Data Feed"},
         {"label": "MF Transaction Order", "type": "Link", "link_to": "MF Transaction Order", "doc_type": "MF Transaction Order"},
+        {"label": "NPS CRA Request", "type": "Link", "link_to": "NPS CRA Request", "doc_type": "NPS CRA Request"},
+        {"label": "Notification Log", "type": "Link", "link_to": "Notification Log", "doc_type": "Notification Log"},
         {"label": "Integration Request Log", "type": "Link", "link_to": "Integration Request Log", "doc_type": "Integration Request Log"},
     ]
