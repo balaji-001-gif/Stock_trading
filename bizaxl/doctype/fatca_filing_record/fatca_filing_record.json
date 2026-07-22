@@ -1,0 +1,255 @@
+{
+ "autoname": "format:FATCA-FR-{YYYY}-{#####}",
+ "creation": "2026-07-22 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "filing_details_section",
+  "filing_type",
+  "filing_year",
+  "filing_period",
+  "reporting_year",
+  "jurisdiction",
+  "tax_identification_number",
+  "column_break_zfbz",
+  "status",
+  "submission_date",
+  "submission_method",
+  "submission_ref",
+  "acknowledgment_ref",
+  "filing_entity_section",
+  "filing_entity_type",
+  "entity_name",
+  "entity_pan",
+  "entity_address",
+  "column_break_2vdo",
+  "contact_person",
+  "contact_email",
+  "contact_phone",
+  "section_break_4wxq",
+  "total_accounts_reported",
+  "total_reportable_amount",
+  "column_break_nfqk",
+  "currency",
+  "exchange_rate",
+  "section_break_gbkc",
+  "filing_data",
+  "response_data"
+ ],
+ "fields": [
+  {
+   "fieldname": "filing_details_section",
+   "fieldtype": "Section Break",
+   "label": "Filing Details"
+  },
+  {
+   "fieldname": "filing_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Filing Type",
+   "options": "FATCA\nCRS\nFATCA + CRS (Form 61B)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "filing_year",
+   "fieldtype": "Data",
+   "label": "Filing Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "filing_period",
+   "fieldtype": "Select",
+   "label": "Filing Period",
+   "options": "Q1\nQ2\nQ3\nQ4\nAnnual"
+  },
+  {
+   "fieldname": "reporting_year",
+   "fieldtype": "Data",
+   "label": "Reporting Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jurisdiction",
+   "fieldtype": "Select",
+   "label": "Jurisdiction",
+   "options": "India\nUSA\nUK\nEU\nSingapore\nUAE\nHong Kong\nOther",
+   "default": "India"
+  },
+  {
+   "fieldname": "tax_identification_number",
+   "fieldtype": "Data",
+   "label": "Tax Identification Number"
+  },
+  {
+   "fieldname": "column_break_zfbz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nPending Submission\nSubmitted\nAcknowledged\nRejected\nAmended",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "submission_date",
+   "fieldtype": "Date",
+   "label": "Submission Date"
+  },
+  {
+   "fieldname": "submission_method",
+   "fieldtype": "Select",
+   "label": "Submission Method",
+   "options": "Online Portal\nFile Upload\nAPI\nManual"
+  },
+  {
+   "fieldname": "submission_ref",
+   "fieldtype": "Data",
+   "label": "Submission Reference"
+  },
+  {
+   "fieldname": "acknowledgment_ref",
+   "fieldtype": "Data",
+   "label": "Acknowledgment Reference"
+  },
+  {
+   "fieldname": "filing_entity_section",
+   "fieldtype": "Section Break",
+   "label": "Filing Entity"
+  },
+  {
+   "fieldname": "filing_entity_type",
+   "fieldtype": "Select",
+   "label": "Filing Entity Type",
+   "options": "Reporting FI\nSponsoring Entity\nHost Country FI\nTrust"
+  },
+  {
+   "fieldname": "entity_name",
+   "fieldtype": "Data",
+   "label": "Entity Name"
+  },
+  {
+   "fieldname": "entity_pan",
+   "fieldtype": "Data",
+   "label": "Entity PAN"
+  },
+  {
+   "fieldname": "entity_address",
+   "fieldtype": "Small Text",
+   "label": "Entity Address"
+  },
+  {
+   "fieldname": "column_break_2vdo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "section_break_4wxq",
+   "fieldtype": "Section Break",
+   "label": "Report Data"
+  },
+  {
+   "fieldname": "total_accounts_reported",
+   "fieldtype": "Int",
+   "label": "Total Accounts Reported"
+  },
+  {
+   "fieldname": "total_reportable_amount",
+   "fieldtype": "Currency",
+   "label": "Total Reportable Amount",
+   "options": "INR"
+  },
+  {
+   "fieldname": "column_break_nfqk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "default": "INR"
+  },
+  {
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate",
+   "default": 1.0
+  },
+  {
+   "fieldname": "section_break_gbkc",
+   "fieldtype": "Section Break",
+   "label": "Data"
+  },
+  {
+   "fieldname": "filing_data",
+   "fieldtype": "Code",
+   "label": "Filing Data (JSON)",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "response_data",
+   "fieldtype": "Code",
+   "label": "Response Data (JSON)",
+   "options": "JSON"
+  }
+ ],
+ "modified": "2026-07-22 12:00:00.000000",
+ "module": "bizaxl",
+ "name": "FATCA Filing Record",
+ "naming_series": "FATCA-FR-YYYY-####",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "set_user_permissions": 0,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "import": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "set_user_permissions": 0,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

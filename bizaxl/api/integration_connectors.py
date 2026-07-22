@@ -22,6 +22,9 @@ Connectors implemented in this file:
 11. AML / Sanctions Screening — PEP, OFAC, UN sanctions, adverse media, risk scoring
 12. e-Sign / DigiLocker — Aadhaar e-Sign, DigiLocker document fetch, agreement signing
 13. GSTN / TAN / TDS Portal — TDS computation, filing, Form 16A, GST/TAN verification
+14. SEBI Reporting Portal — AIF Annex VI, PMS quarterly, REIT/InvIT, SCORES
+15. Bloomberg / Refinitiv / ICRA — Bond pricing, credit ratings, fixed income analytics
+16. FATCA / CRS Filing — Form 61B, US FATCA XML, foreign investor reporting
 """
 
 import frappe
@@ -666,3 +669,234 @@ def list_tds_filings(tan_number=None):
     """List TDS filing records."""
     from bizaxl.bizaxl.doctype.tds_filing_record.tds_filing_record import list_tds_filings as _list
     return _list(tan_number)
+
+
+# =============================================================================
+# SECTION 16: SEBI Reporting Portal
+# =============================================================================
+
+@frappe.whitelist()
+def generate_sebi_report(report_type, fund, **kwargs):
+    """Generate SEBI compliance report (AIF Annex VI, PMS quarterly, REIT/InvIT, etc.)."""
+    from bizaxl.bizaxl.integrations.sebi_portal import SEBIConnector
+    connector = SEBIConnector()
+    result = connector.generate_report(report_type, fund, **kwargs)
+
+    # Create SEBI Report record
+    sebi_report = frappe.get_doc({
+        "doctype": "SEBI Report",
+        "report_type": report_type,
+        "fund": fund,
+        "report_data": frappe.as_json(result.get("report_data", {})),
+        "submission_status": "Generated",
+        "report_period": kwargs.get("period", "Quarterly"),
+        "financial_year": kwargs.get("financial_year"),
+    })
+    sebi_report.insert()
+    return {
+        "name": sebi_report.name,
+        "report_type": report_type,
+        "summary": result.get("summary"),
+        "period": result.get("period"),
+        "report_data": result.get("report_data"),
+        "submission_status": sebi_report.submission_status,
+    }
+
+
+@frappe.whitelist()
+def submit_sebi_report(report_name):
+    """Submit SEBI report to SEBI portal."""
+    from bizaxl.bizaxl.integrations.sebi_portal import SEBIConnector
+    doc = frappe.get_doc("SEBI Report", report_name)
+    connector = SEBIConnector()
+    result = connector.submit_report(doc)
+
+    doc.db_set("submission_status", "Submitted")
+    doc.db_set("submission_ref", result.get("submission_ref"))
+    doc.db_set("response_data", frappe.as_json(result))
+
+    return {
+        "name": doc.name,
+        "submission_status": "Submitted",
+        "submission_ref": result.get("submission_ref"),
+        "message": result.get("message"),
+    }
+
+
+@frappe.whitelist()
+def get_sebi_compliance_calendar(regulatory_category=None):
+    """Get SEBI compliance calendar with filing deadlines."""
+    from bizaxl.bizaxl.integrations.sebi_portal import SEBIConnector
+    connector = SEBIConnector()
+    return connector.get_compliance_calendar(regulatory_category)
+
+
+@frappe.whitelist()
+def get_sebi_annex_vi(report_name):
+    """Get SEBI AIF Annex VI report data."""
+    from bizaxl.bizaxl.integrations.sebi_portal import SEBIConnector
+    connector = SEBIConnector()
+    return connector.get_annex_vi(report_name)
+
+
+@frappe.whitelist()
+def list_sebi_reports(fund=None, report_type=None):
+    """List SEBI reports with optional filters."""
+    filters = {}
+    if fund:
+        filters["fund"] = fund
+    if report_type:
+        filters["report_type"] = report_type
+
+    return frappe.get_all(
+        "SEBI Report",
+        filters=filters,
+        fields=["name", "report_type", "fund", "submission_status",
+                "report_period", "financial_year", "submission_ref",
+                "creation", "modified"],
+        order_by="creation desc",
+        limit_page_length=50,
+    )
+
+
+# =============================================================================
+# SECTION 17: Bloomberg / Refinitiv / ICRA Bond Pricing
+# =============================================================================
+
+@frappe.whitelist()
+def get_bond_price(isin=None, instrument_type=None, pricing_source=None):
+    """Fetch latest bond pricing from Bloomberg/Refinitiv/ICRA."""
+    from bizaxl.bizaxl.doctype.bond_pricing_feed.bond_pricing_feed import get_bond_price as _price
+    return _price(isin, instrument_type, pricing_source)
+
+
+@frappe.whitelist()
+def get_bond_analytics(isin):
+    """Get analytics for a specific bond — YTM, duration, convexity, spreads."""
+    from bizaxl.bizaxl.doctype.bond_pricing_feed.bond_pricing_feed import get_bond_analytics as _analytics
+    return _analytics(isin)
+
+
+@frappe.whitelist()
+def get_credit_rating_history(isin, agency=None):
+    """Get credit rating history for a bond from rating agencies."""
+    from bizaxl.bizaxl.doctype.bond_pricing_feed.bond_pricing_feed import get_credit_rating_history as _rating
+    return _rating(isin, agency)
+
+
+@frappe.whitelist()
+def fetch_bond_pricing_from_source(isin, pricing_source="Bloomberg"):
+    """Fetch bond pricing directly from a pricing source and store in feed."""
+    from bizaxl.bizaxl.integrations.bloomberg_refinitiv import BondPricingConnector
+    from bizaxl.bizaxl.integrations.bloomberg_refinitiv import PRICING_SOURCES
+
+    connector = BondPricingConnector()
+    result = connector.get_bond_price(isin, pricing_source)
+
+    if result.get("success"):
+        feed = frappe.get_doc({
+            "doctype": "Bond Pricing Feed",
+            "isin": isin,
+            "instrument_name": result.get("instrument_name", ""),
+            "instrument_type": result.get("instrument_type", "Corporate Bond"),
+            "issuer": result.get("issuer", ""),
+            "credit_rating": result.get("credit_rating", ""),
+            "rating_agency": result.get("rating_agency", ""),
+            "coupon_rate": result.get("coupon_rate"),
+            "bid_price": result.get("bid_price"),
+            "ask_price": result.get("ask_price"),
+            "last_price": result.get("last_price"),
+            "ytm": result.get("ytm"),
+            "modified_duration": result.get("modified_duration"),
+            "convexity": result.get("convexity"),
+            "g_spread": result.get("g_spread"),
+            "z_spread": result.get("z_spread"),
+            "pricing_date": result.get("pricing_date", today()),
+            "pricing_source": pricing_source,
+            "status": "Active",
+        })
+        feed.insert()
+
+    return result
+
+
+@frappe.whitelist()
+def list_bond_pricing(isin=None, pricing_source=None):
+    """List bond pricing feed records."""
+    filters = {}
+    if isin:
+        filters["isin"] = isin
+    if pricing_source:
+        filters["pricing_source"] = pricing_source
+
+    return frappe.get_all(
+        "Bond Pricing Feed",
+        filters=filters,
+        fields=["name", "isin", "instrument_name", "instrument_type", "issuer",
+                "credit_rating", "coupon_rate", "bid_price", "ask_price",
+                "last_price", "ytm", "pricing_date", "pricing_source", "status"],
+        order_by="pricing_date desc",
+        limit_page_length=50,
+    )
+
+
+# =============================================================================
+# SECTION 18: FATCA / CRS Filing
+# =============================================================================
+
+@frappe.whitelist()
+def submit_fatca_filing(filing_type, filing_year, reporting_year, entity_name, entity_pan):
+    """Submit FATCA/CRS filing to Income Tax Department."""
+    from bizaxl.bizaxl.doctype.fatca_filing_record.fatca_filing_record import submit_fatca_filing as _submit
+    return _submit(filing_type, filing_year, reporting_year, entity_name, entity_pan)
+
+
+@frappe.whitelist()
+def generate_fatca_report(filing_type, reporting_year, **kwargs):
+    """Generate FATCA/CRS report with account data."""
+    from bizaxl.bizaxl.integrations.fatca_crs_filing import FATCAConnector
+    connector = FATCAConnector()
+    return connector.generate_report(filing_type, reporting_year, **kwargs)
+
+
+@frappe.whitelist()
+def submit_fatca_to_income_tax(filing_record_name):
+    """Submit FATCA/CRS filing to Income Tax Department portal."""
+    from bizaxl.bizaxl.integrations.fatca_crs_filing import FATCAConnector
+    doc = frappe.get_doc("FATCA Filing Record", filing_record_name)
+    connector = FATCAConnector()
+    result = connector.submit_filing(doc)
+
+    doc.db_set("status", "Submitted")
+    doc.db_set("submission_ref", result.get("submission_ref"))
+    doc.db_set("submission_date", today())
+    doc.db_set("response_data", frappe.as_json(result))
+
+    return {
+        "name": doc.name,
+        "status": "Submitted",
+        "submission_ref": result.get("submission_ref"),
+        "acknowledgment_ref": result.get("acknowledgment_ref"),
+    }
+
+
+@frappe.whitelist()
+def generate_fatca_xml(filing_type, reporting_year, **kwargs):
+    """Generate FATCA/CRS XML for filing."""
+    from bizaxl.bizaxl.integrations.fatca_crs_filing import FATCAConnector
+    connector = FATCAConnector()
+    return connector.generate_xml(filing_type, reporting_year, **kwargs)
+
+
+@frappe.whitelist()
+def get_filing_status(name):
+    """Get the status of a FATCA/CRS filing record."""
+    from bizaxl.bizaxl.doctype.fatca_filing_record.fatca_filing_record import get_filing_status as _status
+    return _status(name)
+
+
+@frappe.whitelist()
+def list_fatca_filings(filing_type=None, status=None, year=None):
+    """List FATCA/CRS filings."""
+    from bizaxl.bizaxl.doctype.fatca_filing_record.fatca_filing_record import list_fatca_filings as _list
+    return _list(filing_type, status, year)

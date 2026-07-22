@@ -1,0 +1,295 @@
+{
+ "autoname": "format:BPF-{YYYY}-{#####}",
+ "creation": "2026-07-22 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "instrument_details_section",
+  "isin",
+  "instrument_name",
+  "instrument_type",
+  "issuer",
+  "credit_rating",
+  "rating_agency",
+  "coupon_rate",
+  "tenure_years",
+  "maturity_date",
+  "column_break_nvsy",
+  "pricing_section",
+  "bid_price",
+  "ask_price",
+  "last_price",
+  "ytm",
+  "modified_duration",
+  "convexity",
+  "accrued_interest",
+  "pricing_date",
+  "pricing_source",
+  "column_break_bwaw",
+  "spread_section",
+  "g_spread",
+  "z_spread",
+  "oas",
+  "benchmark_benchmark",
+  "benchmark_ytm",
+  "data_section",
+  "pricing_frequency",
+  "valuation_date",
+  "currency",
+  "face_value",
+  "outstanding_amount",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "instrument_details_section",
+   "fieldtype": "Section Break",
+   "label": "Instrument Details"
+  },
+  {
+   "fieldname": "isin",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ISIN",
+   "reqd": 1
+  },
+  {
+   "fieldname": "instrument_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Instrument Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "instrument_type",
+   "fieldtype": "Select",
+   "label": "Instrument Type",
+   "options": "Government Bond\nCorporate Bond\nNCD\nT-Bill\nSDL\nPSU Bond\nMunicipal Bond\nCP\nCD\nFD",
+   "reqd": 1
+  },
+  {
+   "fieldname": "issuer",
+   "fieldtype": "Data",
+   "label": "Issuer"
+  },
+  {
+   "fieldname": "credit_rating",
+   "fieldtype": "Data",
+   "label": "Credit Rating"
+  },
+  {
+   "fieldname": "rating_agency",
+   "fieldtype": "Select",
+   "label": "Rating Agency",
+   "options": "CRISIL\nICRA\nCARE\nIndia Ratings\nBrickwork\nACUITE\nINFOMERICS"
+  },
+  {
+   "fieldname": "coupon_rate",
+   "fieldtype": "Percent",
+   "label": "Coupon Rate"
+  },
+  {
+   "fieldname": "tenure_years",
+   "fieldtype": "Float",
+   "label": "Tenure (Years)"
+  },
+  {
+   "fieldname": "maturity_date",
+   "fieldtype": "Date",
+   "label": "Maturity Date"
+  },
+  {
+   "fieldname": "column_break_nvsy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "bid_price",
+   "fieldtype": "Currency",
+   "label": "Bid Price",
+   "options": "INR"
+  },
+  {
+   "fieldname": "ask_price",
+   "fieldtype": "Currency",
+   "label": "Ask Price",
+   "options": "INR"
+  },
+  {
+   "fieldname": "last_price",
+   "fieldtype": "Currency",
+   "label": "Last Price",
+   "options": "INR"
+  },
+  {
+   "fieldname": "ytm",
+   "fieldtype": "Percent",
+   "label": "Yield to Maturity"
+  },
+  {
+   "fieldname": "modified_duration",
+   "fieldtype": "Float",
+   "label": "Modified Duration"
+  },
+  {
+   "fieldname": "convexity",
+   "fieldtype": "Float",
+   "label": "Convexity"
+  },
+  {
+   "fieldname": "accrued_interest",
+   "fieldtype": "Currency",
+   "label": "Accrued Interest",
+   "options": "INR"
+  },
+  {
+   "fieldname": "pricing_date",
+   "fieldtype": "Date",
+   "label": "Pricing Date"
+  },
+  {
+   "fieldname": "pricing_source",
+   "fieldtype": "Select",
+   "label": "Pricing Source",
+   "options": "Bloomberg\nRefinitiv (Reuters)\nICRA\nCRISIL\nFIMMDA\nNSE BOND\nBSE BOND\nManual"
+  },
+  {
+   "fieldname": "column_break_bwaw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "spread_section",
+   "fieldtype": "Section Break",
+   "label": "Spread Analytics"
+  },
+  {
+   "fieldname": "g_spread",
+   "fieldtype": "Percent",
+   "label": "G-Spread"
+  },
+  {
+   "fieldname": "z_spread",
+   "fieldtype": "Percent",
+   "label": "Z-Spread"
+  },
+  {
+   "fieldname": "oas",
+   "fieldtype": "Percent",
+   "label": "Option-Adjusted Spread"
+  },
+  {
+   "fieldname": "benchmark_benchmark",
+   "fieldtype": "Data",
+   "label": "Benchmark"
+  },
+  {
+   "fieldname": "benchmark_ytm",
+   "fieldtype": "Percent",
+   "label": "Benchmark YTM"
+  },
+  {
+   "fieldname": "data_section",
+   "fieldtype": "Section Break",
+   "label": "Data Metadata"
+  },
+  {
+   "fieldname": "pricing_frequency",
+   "fieldtype": "Select",
+   "label": "Pricing Frequency",
+   "options": "Daily\nWeekly\nMonthly\nQuarterly\nOn Demand"
+  },
+  {
+   "fieldname": "valuation_date",
+   "fieldtype": "Date",
+   "label": "Valuation Date"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "face_value",
+   "fieldtype": "Currency",
+   "label": "Face Value",
+   "options": "INR"
+  },
+  {
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Outstanding Amount",
+   "options": "INR"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nMatured\nCalled\nDefaulted\nSuspended",
+   "default": "Active"
+  }
+ ],
+ "modified": "2026-07-22 12:00:00.000000",
+ "module": "bizaxl",
+ "name": "Bond Pricing Feed",
+ "naming_series": "BPF-YYYY-####",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "set_user_permissions": 0,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "import": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "set_user_permissions": 0,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "import": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "set_user_permissions": 0,
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}
