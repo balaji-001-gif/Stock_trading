@@ -1,0 +1,196 @@
+{
+ "charts": [],
+ "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trading Account\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trade Order\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Contract Note\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Account Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Trading Operations\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Settlement & Reports\", \"col\": 4}}]",
+ "creation": "2024-07-01 12:00:00.000000",
+ "doctype": "Workspace",
+ "extends": "",
+ "extends_another_page": 0,
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "stock",
+ "is_hidden": 0,
+ "label": "Stock Broking & Trading",
+ "modified": "2024-07-01 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Stock Broking",
+ "name": "Stock Broking & Trading",
+ "onboarding": "",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "format": "",
+   "label": "Trading Account",
+   "link_to": "Trading Account",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "format": "",
+   "label": "Trade Order",
+   "link_to": "Trade Order",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "format": "",
+   "label": "Contract Note",
+   "link_to": "Contract Note",
+   "stats_filter": "",
+   "type": "DocType"
+  }
+ ],
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Account Management",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trading Account",
+   "link_count": 0,
+   "link_to": "Trading Account",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Margin Account",
+   "link_count": 0,
+   "link_to": "Margin Account",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Investor Profile",
+   "link_count": 0,
+   "link_to": "Investor Profile",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "KYC Document",
+   "link_count": 0,
+   "link_to": "KYC Document",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trading Operations",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trade Order",
+   "link_count": 0,
+   "link_to": "Trade Order",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contract Note",
+   "link_count": 0,
+   "link_to": "Contract Note",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Market Data Feed",
+   "link_count": 0,
+   "link_to": "Market Data Feed",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Holdings Register",
+   "link_count": 0,
+   "link_to": "Holdings Register",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settlement & Reports",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Capital Account Statement",
+   "link_count": 0,
+   "link_to": "Capital Account Statement",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "TDS Computation",
+   "link_count": 0,
+   "link_to": "TDS Computation",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "MIS Report",
+   "link_count": 0,
+   "link_to": "MIS Report",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "PNL Attribution",
+   "link_count": 0,
+   "link_to": "PNL Attribution",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "title": "Stock Broking & Trading Platform"
+}

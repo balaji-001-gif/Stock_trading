@@ -1,0 +1,284 @@
+{
+ "charts": [],
+ "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fund Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Investor Profile\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Holdings Register\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Client Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Portfolio Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Performance & Fees\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Compliance\", \"col\": 4}}]",
+ "creation": "2024-07-01 12:00:00.000000",
+ "doctype": "Workspace",
+ "extends": "",
+ "extends_another_page": 0,
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "folder",
+ "is_hidden": 0,
+ "label": "Portfolio Management Services",
+ "modified": "2024-07-01 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Portfolio Management Services",
+ "name": "Portfolio Management Services",
+ "onboarding": "",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "format": "",
+   "label": "Fund Master",
+   "link_to": "Fund Master",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "format": "",
+   "label": "Investor Profile",
+   "link_to": "Investor Profile",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "format": "",
+   "label": "Holdings Register",
+   "link_to": "Holdings Register",
+   "stats_filter": "",
+   "type": "DocType"
+  }
+ ],
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Client Management",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Investor Profile",
+   "link_count": 0,
+   "link_to": "Investor Profile",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "KYC Document",
+   "link_count": 0,
+   "link_to": "KYC Document",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Profile",
+   "link_count": 0,
+   "link_to": "Risk Profile",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "PMS Agreement",
+   "link_count": 0,
+   "link_to": "PMS Agreement",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Capital Account Statement",
+   "link_count": 0,
+   "link_to": "Capital Account Statement",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Portfolio Management",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Holdings Register",
+   "link_count": 0,
+   "link_to": "Holdings Register",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lot Tracking",
+   "link_count": 0,
+   "link_to": "Lot Tracking",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Corporate Actions",
+   "link_count": 0,
+   "link_to": "Corporate Actions",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "PNL Attribution",
+   "link_count": 0,
+   "link_to": "PNL Attribution",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Holding Valuation",
+   "link_count": 0,
+   "link_to": "Holding Valuation",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Market Data Feed",
+   "link_count": 0,
+   "link_to": "Market Data Feed",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Performance & Fees",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NAV History",
+   "link_count": 0,
+   "link_to": "NAV History",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fee Accrual",
+   "link_count": 0,
+   "link_to": "Fee Accrual",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "TDS Computation",
+   "link_count": 0,
+   "link_to": "TDS Computation",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Performance Fee Engine",
+   "link_count": 0,
+   "link_to": "Performance Fee Engine",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Performance Attribution",
+   "link_count": 0,
+   "link_to": "Performance Attribution",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Analytics",
+   "link_count": 0,
+   "link_to": "Risk Analytics",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compliance",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SEBI Report",
+   "link_count": 0,
+   "link_to": "SEBI Report",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "AML Compliance Register",
+   "link_count": 0,
+   "link_to": "AML Compliance Register",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Regulatory Calendar Entry",
+   "link_count": 0,
+   "link_to": "Regulatory Calendar Entry",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "title": "PMS Management"
+}

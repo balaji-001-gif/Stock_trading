@@ -124,10 +124,29 @@ after_install = "bizaxl.setup.after_install"
 # ----------------------------------------------------------------------------
 # Fixtures
 # ----------------------------------------------------------------------------
-# fixtures = [
-#     {"dt": "Role", "filters": [["name", "in", ["Fund Manager", "Fund Accountant", "Compliance Officer"]]]},
-#     {"dt": "Workflow"},
-# ]
+fixtures = [
+    {
+        "dt": "Workspace",
+        "filters": [
+            ["module", "in", [
+                "Investment Core",
+                "Mutual Funds",
+                "Portfolio Management Services",
+                "Alternative Investment Funds",
+                "Private Equity",
+                "Venture Capital",
+                "Bonds Fixed Deposits",
+                "Real Estate Funds",
+                "Stock Broking",
+                "Family Office",
+                "Pension Funds",
+                "Advisor Portal",
+                "Compliance Regulatory",
+                "Reports Analytics",
+            ]]
+        ]
+    },
+]
 
 # ----------------------------------------------------------------------------
 # Permissions

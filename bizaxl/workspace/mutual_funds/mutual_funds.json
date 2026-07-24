@@ -1,0 +1,362 @@
+{
+ "charts": [],
+ "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fund Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SIP Plan\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"NAV History\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Fund & Scheme Setup\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Subscriptions & SIP\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Redemption & Payout\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"NAV & Performance\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Compliance\", \"col\": 4}}]",
+ "creation": "2024-07-01 12:00:00.000000",
+ "doctype": "Workspace",
+ "extends": "",
+ "extends_another_page": 0,
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "chart",
+ "is_hidden": 0,
+ "label": "Mutual Funds",
+ "modified": "2024-07-01 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Mutual Funds",
+ "name": "Mutual Funds",
+ "onboarding": "",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "format": "",
+   "label": "Fund Master",
+   "link_to": "Fund Master",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "format": "",
+   "label": "SIP Plan",
+   "link_to": "SIP Plan",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "format": "",
+   "label": "NAV History",
+   "link_to": "NAV History",
+   "stats_filter": "",
+   "type": "DocType"
+  }
+ ],
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fund & Scheme Setup",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fund Configuration",
+   "link_count": 0,
+   "link_to": "Fund Configuration",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fund Master",
+   "link_count": 0,
+   "link_to": "Fund Master",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Share Class",
+   "link_count": 0,
+   "link_to": "Share Class",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fund Series",
+   "link_count": 0,
+   "link_to": "Fund Series",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fee Structure",
+   "link_count": 0,
+   "link_to": "Fee Structure",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Regulatory Category",
+   "link_count": 0,
+   "link_to": "Regulatory Category",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fund Config Fee",
+   "link_count": 0,
+   "link_to": "Fund Config Fee",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Subscriptions & SIP",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Subscription Request",
+   "link_count": 0,
+   "link_to": "Subscription Request",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SIP Plan",
+   "link_count": 0,
+   "link_to": "SIP Plan",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SWP Plan",
+   "link_count": 0,
+   "link_to": "SWP Plan",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "STP Plan",
+   "link_count": 0,
+   "link_to": "STP Plan",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Allotment Detail",
+   "link_count": 0,
+   "link_to": "Allotment Detail",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Exit Load Detail",
+   "link_count": 0,
+   "link_to": "Exit Load Detail",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Redemption & Payout",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Redemption Request",
+   "link_count": 0,
+   "link_to": "Redemption Request",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "TDS Computation",
+   "link_count": 0,
+   "link_to": "TDS Computation",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Capital Account Statement",
+   "link_count": 0,
+   "link_to": "Capital Account Statement",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Auto Correspondence",
+   "link_count": 0,
+   "link_to": "Auto Correspondence",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NAV & Performance",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NAV History",
+   "link_count": 0,
+   "link_to": "NAV History",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NAV Period",
+   "link_count": 0,
+   "link_to": "NAV Period",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "MTM Valuation",
+   "link_count": 0,
+   "link_to": "MTM Valuation",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Performance Attribution",
+   "link_count": 0,
+   "link_to": "Performance Attribution",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "PNL Attribution",
+   "link_count": 0,
+   "link_to": "PNL Attribution",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Market Data Feed",
+   "link_count": 0,
+   "link_to": "Market Data Feed",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compliance",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SEBI Report",
+   "link_count": 0,
+   "link_to": "SEBI Report",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "AML Compliance Register",
+   "link_count": 0,
+   "link_to": "AML Compliance Register",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "FATCA CRS Filing",
+   "link_count": 0,
+   "link_to": "FATCA CRS Filing",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Regulatory Calendar Entry",
+   "link_count": 0,
+   "link_to": "Regulatory Calendar Entry",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "title": "Mutual Funds Management"
+}

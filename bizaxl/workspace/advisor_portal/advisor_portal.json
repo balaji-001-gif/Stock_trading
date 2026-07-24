@@ -1,0 +1,208 @@
+{
+ "charts": [],
+ "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Advisor Profile\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Advisor Commission\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Advisor Setup\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Client Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Transactions & Reports\", \"col\": 4}}]",
+ "creation": "2024-07-01 12:00:00.000000",
+ "doctype": "Workspace",
+ "extends": "",
+ "extends_another_page": 0,
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "user",
+ "is_hidden": 0,
+ "label": "Advisor Portal",
+ "modified": "2024-07-01 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Advisor Portal",
+ "name": "Advisor Portal",
+ "onboarding": "",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "format": "",
+   "label": "Advisor Profile",
+   "link_to": "Advisor Profile",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "format": "",
+   "label": "Advisor Commission",
+   "link_to": "Advisor Commission",
+   "stats_filter": "",
+   "type": "DocType"
+  }
+ ],
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Advisor Setup",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Advisor Profile",
+   "link_count": 0,
+   "link_to": "Advisor Profile",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Advisor Commission",
+   "link_count": 0,
+   "link_to": "Advisor Commission",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Advisor Compliance",
+   "link_count": 0,
+   "link_to": "Advisor Compliance",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compliance Calendar",
+   "link_count": 0,
+   "link_to": "Compliance Calendar",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Client Management",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Investor Profile",
+   "link_count": 0,
+   "link_to": "Investor Profile",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Client Plan",
+   "link_count": 0,
+   "link_to": "Client Plan",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Profile",
+   "link_count": 0,
+   "link_to": "Risk Profile",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CAS Import",
+   "link_count": 0,
+   "link_to": "CAS Import",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Capital Account Statement",
+   "link_count": 0,
+   "link_to": "Capital Account Statement",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Transactions & Reports",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "MF Transaction Order",
+   "link_count": 0,
+   "link_to": "MF Transaction Order",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "MIS Report",
+   "link_count": 0,
+   "link_to": "MIS Report",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Auto Correspondence",
+   "link_count": 0,
+   "link_to": "Auto Correspondence",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Subscription Request",
+   "link_count": 0,
+   "link_to": "Subscription Request",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Redemption Request",
+   "link_count": 0,
+   "link_to": "Redemption Request",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "title": "Advisor Portal \u2014 RIA/MFD"
+}

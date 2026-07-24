@@ -1,0 +1,226 @@
+{
+ "charts": [],
+ "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SEBI Report\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"AML Compliance Register\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Board Pack\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Regulatory Reports\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Compliance Operations\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Audit & Board\", \"col\": 4}}]",
+ "creation": "2024-07-01 12:00:00.000000",
+ "doctype": "Workspace",
+ "extends": "",
+ "extends_another_page": 0,
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "check",
+ "is_hidden": 0,
+ "label": "Compliance & Regulatory",
+ "modified": "2024-07-01 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Compliance Regulatory",
+ "name": "Compliance & Regulatory",
+ "onboarding": "",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Red",
+   "format": "",
+   "label": "SEBI Report",
+   "link_to": "SEBI Report",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "format": "",
+   "label": "AML Compliance Register",
+   "link_to": "AML Compliance Register",
+   "stats_filter": "",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "format": "",
+   "label": "Board Pack",
+   "link_to": "Board Pack",
+   "stats_filter": "",
+   "type": "DocType"
+  }
+ ],
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Regulatory Reports",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SEBI Report",
+   "link_count": 0,
+   "link_to": "SEBI Report",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "FATCA CRS Filing",
+   "link_count": 0,
+   "link_to": "FATCA CRS Filing",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "FATCA Filing Record",
+   "link_count": 0,
+   "link_to": "FATCA Filing Record",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "TDS Filing Record",
+   "link_count": 0,
+   "link_to": "TDS Filing Record",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "AML Compliance Register",
+   "link_count": 0,
+   "link_to": "AML Compliance Register",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compliance Operations",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Board Pack",
+   "link_count": 0,
+   "link_to": "Board Pack",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compliance Checklist Item",
+   "link_count": 0,
+   "link_to": "Compliance Checklist Item",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Compliance Calendar",
+   "link_count": 0,
+   "link_to": "Compliance Calendar",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Regulatory Calendar Entry",
+   "link_count": 0,
+   "link_to": "Regulatory Calendar Entry",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "AML Screening Request",
+   "link_count": 0,
+   "link_to": "AML Screening Request",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "AML Screening Request",
+   "link_count": 0,
+   "link_to": "AML Screening Request",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Audit & Board",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Board Pack",
+   "link_count": 0,
+   "link_to": "Board Pack",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NAV Audit Trail",
+   "link_count": 0,
+   "link_to": "NAV Audit Trail",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Audit Log",
+   "link_count": 0,
+   "link_to": "Audit Log",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Regulatory Category",
+   "link_count": 0,
+   "link_to": "Regulatory Category",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "title": "Compliance & Regulatory Reporting"
+}
