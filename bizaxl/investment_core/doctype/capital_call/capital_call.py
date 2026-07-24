@@ -57,9 +57,10 @@ class CapitalCall(Document):
                 # Use db_set_value to avoid N+1 full document loads
                 commitment_doc = frappe.get_doc("Commitment", detail.commitment)
                 new_called = flt(commitment_doc.total_called) + flt(detail.call_amount)
-                new_paid = flt(commitment_doc.total_paid) + flt(detail.paid_amount)                    commitment_amount = flt(commitment_doc.commitment_amount)
-                    remaining = commitment_amount - new_called
-                    fulfilled_pct = (new_called / commitment_amount * 100) if commitment_amount else 0
+                new_paid = flt(commitment_doc.total_paid) + flt(detail.paid_amount)
+                commitment_amount = flt(commitment_doc.commitment_amount)
+                remaining = commitment_amount - new_called
+                fulfilled_pct = (new_called / commitment_amount * 100) if commitment_amount else 0
 
                     frappe.db.set_value(
                         "Commitment",
