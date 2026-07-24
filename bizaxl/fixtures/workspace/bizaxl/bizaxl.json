@@ -136,36 +136,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Fund Config Fee",
-   "link_count": 0,
-   "link_to": "Fund Config Fee",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Fund Config Series",
-   "link_count": 0,
-   "link_to": "Fund Config Series",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Fund Config Share Class",
-   "link_count": 0,
-   "link_to": "Fund Config Share Class",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Investor Management",
    "link_count": 0,
    "onboard": 0,
@@ -224,29 +194,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "AML Screening",
-   "link_count": 0,
-   "link_to": "AML Screening",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "AML Screening Request",
    "link_count": 0,
    "link_to": "AML Screening Request",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "AML Screening",
-   "link_count": 0,
-   "link_to": "AML Screening",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -305,16 +255,6 @@
    "label": "Commitment",
    "link_count": 0,
    "link_to": "Commitment",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Call Detail Item",
-   "link_count": 0,
-   "link_to": "Call Detail Item",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -443,16 +383,6 @@
    "label": "Carried Interest Waterfall",
    "link_count": 0,
    "link_to": "Carried Interest Waterfall",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Waterfall Tier",
-   "link_count": 0,
-   "link_to": "Waterfall Tier",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -614,16 +544,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "FATCA CRS Filing",
-   "link_count": 0,
-   "link_to": "FATCA CRS Filing",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "AML Compliance Register",
    "link_count": 0,
    "link_to": "AML Compliance Register",
@@ -637,16 +557,6 @@
    "label": "Board Pack",
    "link_count": 0,
    "link_to": "Board Pack",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Compliance Checklist Item",
-   "link_count": 0,
-   "link_to": "Compliance Checklist Item",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -684,16 +594,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Regulatory Calendar Entry",
-   "link_count": 0,
-   "link_to": "Regulatory Calendar Entry",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Analytics & Reports",
    "link_count": 0,
    "onboard": 0,
@@ -715,26 +615,6 @@
    "label": "Performance Attribution",
    "link_count": 0,
    "link_to": "Performance Attribution",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Risk Analytics",
-   "link_count": 0,
-   "link_to": "Risk Analytics",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "AI Insight",
-   "link_count": 0,
-   "link_to": "AI Insight",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"

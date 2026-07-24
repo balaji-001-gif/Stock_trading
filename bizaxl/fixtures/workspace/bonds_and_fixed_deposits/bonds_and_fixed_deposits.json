@@ -1,19 +1,19 @@
 {
  "charts": [],
- "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trading Account\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trade Order\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Contract Note\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Account Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Trading Operations\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Settlement & Reports\", \"col\": 4}}]",
+ "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fund Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Market Data Feed\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Instrument Setup\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Pricing & Valuation\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Subscription & Redemption\", \"col\": 4}}]",
  "creation": "2024-07-01 12:00:00.000000",
  "doctype": "Workspace",
  "extends": "",
  "extends_another_page": 0,
  "for_user": "",
  "hide_custom": 0,
- "icon": "stock",
+ "icon": "currency",
  "is_hidden": 0,
- "label": "Stock Broking & Trading",
+ "label": "Bonds & Fixed Deposits",
  "modified": "2024-07-01 12:00:00.000000",
  "modified_by": "Administrator",
- "module": "Stock Broking",
- "name": "Stock Broking & Trading",
+ "module": "Bonds Fixed Deposits",
+ "name": "Bonds & Fixed Deposits",
  "onboarding": "",
  "owner": "Administrator",
  "parent_page": "",
@@ -24,24 +24,16 @@
   {
    "color": "Blue",
    "format": "",
-   "label": "Trading Account",
-   "link_to": "Trading Account",
+   "label": "Fund Master",
+   "link_to": "Fund Master",
    "stats_filter": "",
    "type": "DocType"
   },
   {
    "color": "Green",
    "format": "",
-   "label": "Trade Order",
-   "link_to": "Trade Order",
-   "stats_filter": "",
-   "type": "DocType"
-  },
-  {
-   "color": "Orange",
-   "format": "",
-   "label": "Contract Note",
-   "link_to": "Contract Note",
+   "label": "Market Data Feed",
+   "link_to": "Market Data Feed",
    "stats_filter": "",
    "type": "DocType"
   }
@@ -50,7 +42,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Account Management",
+   "label": "Instrument Setup",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -58,9 +50,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Trading Account",
+   "label": "Fund Configuration",
    "link_count": 0,
-   "link_to": "Trading Account",
+   "link_to": "Fund Configuration",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -68,9 +60,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Margin Account",
+   "label": "Fund Master",
    "link_count": 0,
-   "link_to": "Margin Account",
+   "link_to": "Fund Master",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -78,9 +70,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Investor Profile",
+   "label": "Share Class",
    "link_count": 0,
-   "link_to": "Investor Profile",
+   "link_to": "Share Class",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -88,9 +80,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "KYC Document",
+   "label": "Fee Structure",
    "link_count": 0,
-   "link_to": "KYC Document",
+   "link_to": "Fee Structure",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -98,30 +90,10 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Trading Operations",
+   "label": "Pricing & Valuation",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Trade Order",
-   "link_count": 0,
-   "link_to": "Trade Order",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Contract Note",
-   "link_count": 0,
-   "link_to": "Contract Note",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
   },
   {
    "hidden": 0,
@@ -136,9 +108,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Holdings Register",
+   "label": "MTM Valuation",
    "link_count": 0,
-   "link_to": "Holdings Register",
+   "link_to": "MTM Valuation",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -146,7 +118,27 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Settlement & Reports",
+   "label": "NAV History",
+   "link_count": 0,
+   "link_to": "NAV History",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Holding Valuation",
+   "link_count": 0,
+   "link_to": "Holding Valuation",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Subscription & Redemption",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -154,9 +146,29 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Capital Account Statement",
+   "label": "Subscription Request",
    "link_count": 0,
-   "link_to": "Capital Account Statement",
+   "link_to": "Subscription Request",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Allotment Detail",
+   "link_count": 0,
+   "link_to": "Allotment Detail",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Redemption Request",
+   "link_count": 0,
+   "link_to": "Redemption Request",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -174,23 +186,13 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "MIS Report",
+   "label": "Capital Account Statement",
    "link_count": 0,
-   "link_to": "MIS Report",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "PNL Attribution",
-   "link_count": 0,
-   "link_to": "PNL Attribution",
+   "link_to": "Capital Account Statement",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
   }
  ],
- "title": "Stock Broking & Trading Platform"
+ "title": "Bonds & Fixed Deposits Management"
 }

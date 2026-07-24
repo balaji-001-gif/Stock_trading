@@ -1,19 +1,19 @@
 {
  "charts": [],
- "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fund Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Capital Call\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Holdings Register\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Fund & Deal Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Portfolio Companies\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Waterfall & Exit\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Compliance\", \"col\": 4}}]",
+ "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fund Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Investor Profile\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Holdings Register\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Client Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Portfolio Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Performance & Fees\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Compliance\", \"col\": 4}}]",
  "creation": "2024-07-01 12:00:00.000000",
  "doctype": "Workspace",
  "extends": "",
  "extends_another_page": 0,
  "for_user": "",
  "hide_custom": 0,
- "icon": "growth",
+ "icon": "folder",
  "is_hidden": 0,
- "label": "Private Equity",
+ "label": "Portfolio Management Services",
  "modified": "2024-07-01 12:00:00.000000",
  "modified_by": "Administrator",
- "module": "Private Equity",
- "name": "Private Equity",
+ "module": "Portfolio Management Services",
+ "name": "Portfolio Management Services",
  "onboarding": "",
  "owner": "Administrator",
  "parent_page": "",
@@ -32,8 +32,8 @@
   {
    "color": "Orange",
    "format": "",
-   "label": "Capital Call",
-   "link_to": "Capital Call",
+   "label": "Investor Profile",
+   "link_to": "Investor Profile",
    "stats_filter": "",
    "type": "DocType"
   },
@@ -50,7 +50,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Fund & Deal Management",
+   "label": "Client Management",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -58,9 +58,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Fund Configuration",
+   "label": "Investor Profile",
    "link_count": 0,
-   "link_to": "Fund Configuration",
+   "link_to": "Investor Profile",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -68,9 +68,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Fund Master",
+   "label": "KYC Document",
    "link_count": 0,
-   "link_to": "Fund Master",
+   "link_to": "KYC Document",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -78,9 +78,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Commitment",
+   "label": "Risk Profile",
    "link_count": 0,
-   "link_to": "Commitment",
+   "link_to": "Risk Profile",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -88,9 +88,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Capital Call",
+   "label": "Capital Account Statement",
    "link_count": 0,
-   "link_to": "Capital Call",
+   "link_to": "Capital Account Statement",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -98,7 +98,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Portfolio Companies",
+   "label": "Portfolio Management",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -126,16 +126,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Holding Valuation",
-   "link_count": 0,
-   "link_to": "Holding Valuation",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Corporate Actions",
    "link_count": 0,
    "link_to": "Corporate Actions",
@@ -146,17 +136,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Waterfall & Exit",
+   "label": "PNL Attribution",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Carried Interest Waterfall",
-   "link_count": 0,
-   "link_to": "Carried Interest Waterfall",
+   "link_to": "PNL Attribution",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -164,9 +146,37 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Waterfall Tier",
+   "label": "Holding Valuation",
    "link_count": 0,
-   "link_to": "Waterfall Tier",
+   "link_to": "Holding Valuation",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Market Data Feed",
+   "link_count": 0,
+   "link_to": "Market Data Feed",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Performance & Fees",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NAV History",
+   "link_count": 0,
+   "link_to": "NAV History",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -187,6 +197,36 @@
    "label": "TDS Computation",
    "link_count": 0,
    "link_to": "TDS Computation",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Performance Fee Engine",
+   "link_count": 0,
+   "link_to": "Performance Fee Engine",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Performance Attribution",
+   "link_count": 0,
+   "link_to": "Performance Attribution",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Risk Analytics",
+   "link_count": 0,
+   "link_to": "Risk Analytics",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -222,23 +262,13 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "FATCA CRS Filing",
+   "label": "Regulatory Calendar Entry",
    "link_count": 0,
-   "link_to": "FATCA CRS Filing",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Board Pack",
-   "link_count": 0,
-   "link_to": "Board Pack",
+   "link_to": "Regulatory Calendar Entry",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
   }
  ],
- "title": "Private Equity Management"
+ "title": "PMS Management"
 }

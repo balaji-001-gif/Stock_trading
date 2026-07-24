@@ -1,19 +1,19 @@
 {
  "charts": [],
- "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fund Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Investor Profile\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Holdings Register\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Client Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Portfolio Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Performance & Fees\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Compliance\", \"col\": 4}}]",
+ "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Family Office Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Family Member\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Family Structure\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Consolidated Portfolio\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Tax & Optimization\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Performance Reports\", \"col\": 4}}]",
  "creation": "2024-07-01 12:00:00.000000",
  "doctype": "Workspace",
  "extends": "",
  "extends_another_page": 0,
  "for_user": "",
  "hide_custom": 0,
- "icon": "folder",
+ "icon": "people",
  "is_hidden": 0,
- "label": "Portfolio Management Services",
+ "label": "Family Office",
  "modified": "2024-07-01 12:00:00.000000",
  "modified_by": "Administrator",
- "module": "Portfolio Management Services",
- "name": "Portfolio Management Services",
+ "module": "Family Office",
+ "name": "Family Office",
  "onboarding": "",
  "owner": "Administrator",
  "parent_page": "",
@@ -24,24 +24,16 @@
   {
    "color": "Blue",
    "format": "",
-   "label": "Fund Master",
-   "link_to": "Fund Master",
-   "stats_filter": "",
-   "type": "DocType"
-  },
-  {
-   "color": "Orange",
-   "format": "",
-   "label": "Investor Profile",
-   "link_to": "Investor Profile",
+   "label": "Family Office Master",
+   "link_to": "Family Office Master",
    "stats_filter": "",
    "type": "DocType"
   },
   {
    "color": "Green",
    "format": "",
-   "label": "Holdings Register",
-   "link_to": "Holdings Register",
+   "label": "Family Member",
+   "link_to": "Family Member",
    "stats_filter": "",
    "type": "DocType"
   }
@@ -50,7 +42,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Client Management",
+   "label": "Family Structure",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -58,9 +50,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Investor Profile",
+   "label": "Family Office Master",
    "link_count": 0,
-   "link_to": "Investor Profile",
+   "link_to": "Family Office Master",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -68,9 +60,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "KYC Document",
+   "label": "Family Member",
    "link_count": 0,
-   "link_to": "KYC Document",
+   "link_to": "Family Member",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -78,9 +70,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Risk Profile",
+   "label": "Succession Plan",
    "link_count": 0,
-   "link_to": "Risk Profile",
+   "link_to": "Succession Plan",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -88,30 +80,20 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "PMS Agreement",
-   "link_count": 0,
-   "link_to": "PMS Agreement",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Capital Account Statement",
-   "link_count": 0,
-   "link_to": "Capital Account Statement",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Portfolio Management",
+   "label": "Consolidated Portfolio",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Consolidated Portfolio",
+   "link_count": 0,
+   "link_to": "Consolidated Portfolio",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
   },
   {
    "hidden": 0,
@@ -126,29 +108,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Lot Tracking",
+   "label": "CAS Import",
    "link_count": 0,
-   "link_to": "Lot Tracking",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Corporate Actions",
-   "link_count": 0,
-   "link_to": "Corporate Actions",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "PNL Attribution",
-   "link_count": 0,
-   "link_to": "PNL Attribution",
+   "link_to": "CAS Import",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -166,9 +128,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Market Data Feed",
+   "label": "Capital Account Statement",
    "link_count": 0,
-   "link_to": "Market Data Feed",
+   "link_to": "Capital Account Statement",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -176,7 +138,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Performance & Fees",
+   "label": "Tax & Optimization",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -184,19 +146,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "NAV History",
+   "label": "Tax Optimization Plan",
    "link_count": 0,
-   "link_to": "NAV History",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Fee Accrual",
-   "link_count": 0,
-   "link_to": "Fee Accrual",
+   "link_to": "Tax Optimization Plan",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -214,9 +166,27 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Performance Fee Engine",
+   "label": "Fee Accrual",
    "link_count": 0,
-   "link_to": "Performance Fee Engine",
+   "link_to": "Fee Accrual",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Performance Reports",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "MIS Report",
+   "link_count": 0,
+   "link_to": "MIS Report",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -244,17 +214,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Compliance",
+   "label": "PNL Attribution",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "SEBI Report",
-   "link_count": 0,
-   "link_to": "SEBI Report",
+   "link_to": "PNL Attribution",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -262,9 +224,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "AML Compliance Register",
+   "label": "AI Analytics Result",
    "link_count": 0,
-   "link_to": "AML Compliance Register",
+   "link_to": "AI Analytics Result",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -272,13 +234,13 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Regulatory Calendar Entry",
+   "label": "AI Insight",
    "link_count": 0,
-   "link_to": "Regulatory Calendar Entry",
+   "link_to": "AI Insight",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
   }
  ],
- "title": "PMS Management"
+ "title": "Family Office & Wealth Management"
 }

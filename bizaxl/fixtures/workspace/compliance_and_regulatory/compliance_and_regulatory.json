@@ -68,9 +68,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "FATCA CRS Filing",
+   "label": "AML Compliance Register",
    "link_count": 0,
-   "link_to": "FATCA CRS Filing",
+   "link_to": "AML Compliance Register",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -91,16 +91,6 @@
    "label": "TDS Filing Record",
    "link_count": 0,
    "link_to": "TDS Filing Record",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "AML Compliance Register",
-   "link_count": 0,
-   "link_to": "AML Compliance Register",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -136,29 +126,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Compliance Calendar",
-   "link_count": 0,
-   "link_to": "Compliance Calendar",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Regulatory Calendar Entry",
    "link_count": 0,
    "link_to": "Regulatory Calendar Entry",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "AML Screening Request",
-   "link_count": 0,
-   "link_to": "AML Screening Request",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -197,16 +167,6 @@
    "label": "NAV Audit Trail",
    "link_count": 0,
    "link_to": "NAV Audit Trail",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Audit Log",
-   "link_count": 0,
-   "link_to": "Audit Log",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"

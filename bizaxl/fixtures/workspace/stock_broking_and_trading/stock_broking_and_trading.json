@@ -1,19 +1,19 @@
 {
  "charts": [],
- "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"MIS Report\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Performance Attribution\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Risk Analytics\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"MIS Reports\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Risk Analytics\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Strategy & Planning\", \"col\": 4}}]",
+ "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trading Account\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trade Order\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Account Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Trading Operations\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Settlement & Reports\", \"col\": 4}}]",
  "creation": "2024-07-01 12:00:00.000000",
  "doctype": "Workspace",
  "extends": "",
  "extends_another_page": 0,
  "for_user": "",
  "hide_custom": 0,
- "icon": "dashboard",
+ "icon": "stock",
  "is_hidden": 0,
- "label": "Reports & Analytics",
+ "label": "Stock Broking & Trading",
  "modified": "2024-07-01 12:00:00.000000",
  "modified_by": "Administrator",
- "module": "Reports Analytics",
- "name": "Reports & Analytics",
+ "module": "Stock Broking",
+ "name": "Stock Broking & Trading",
  "onboarding": "",
  "owner": "Administrator",
  "parent_page": "",
@@ -24,24 +24,16 @@
   {
    "color": "Blue",
    "format": "",
-   "label": "MIS Report",
-   "link_to": "MIS Report",
+   "label": "Trading Account",
+   "link_to": "Trading Account",
    "stats_filter": "",
    "type": "DocType"
   },
   {
    "color": "Green",
    "format": "",
-   "label": "Performance Attribution",
-   "link_to": "Performance Attribution",
-   "stats_filter": "",
-   "type": "DocType"
-  },
-  {
-   "color": "Orange",
-   "format": "",
-   "label": "Risk Analytics",
-   "link_to": "Risk Analytics",
+   "label": "Trade Order",
+   "link_to": "Trade Order",
    "stats_filter": "",
    "type": "DocType"
   }
@@ -50,7 +42,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "MIS Reports",
+   "label": "Account Management",
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
@@ -58,9 +50,115 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "MIS Report",
+   "label": "Trading Account",
    "link_count": 0,
-   "link_to": "MIS Report",
+   "link_to": "Trading Account",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Margin Account",
+   "link_count": 0,
+   "link_to": "Margin Account",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Investor Profile",
+   "link_count": 0,
+   "link_to": "Investor Profile",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "KYC Document",
+   "link_count": 0,
+   "link_to": "KYC Document",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trading Operations",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trade Order",
+   "link_count": 0,
+   "link_to": "Trade Order",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contract Note",
+   "link_count": 0,
+   "link_to": "Contract Note",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Market Data Feed",
+   "link_count": 0,
+   "link_to": "Market Data Feed",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Holdings Register",
+   "link_count": 0,
+   "link_to": "Holdings Register",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settlement & Reports",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Capital Account Statement",
+   "link_count": 0,
+   "link_to": "Capital Account Statement",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "TDS Computation",
+   "link_count": 0,
+   "link_to": "TDS Computation",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -71,16 +169,6 @@
    "label": "MIS Report",
    "link_count": 0,
    "link_to": "MIS Report",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Performance Attribution",
-   "link_count": 0,
-   "link_to": "Performance Attribution",
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
@@ -94,103 +182,7 @@
    "link_type": "DocType",
    "onboard": 1,
    "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Risk Analytics",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Risk Analytics",
-   "link_count": 0,
-   "link_to": "Risk Analytics",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Risk Analytics",
-   "link_count": 0,
-   "link_to": "Risk Analytics",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "AI Analytics Result",
-   "link_count": 0,
-   "link_to": "AI Analytics Result",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "AI Insight",
-   "link_count": 0,
-   "link_to": "AI Insight",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Strategy & Planning",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Tax Optimization Plan",
-   "link_count": 0,
-   "link_to": "Tax Optimization Plan",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Succession Plan",
-   "link_count": 0,
-   "link_to": "Succession Plan",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Investment Strategy",
-   "link_count": 0,
-   "link_to": "Investment Strategy",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Asset Allocation",
-   "link_count": 0,
-   "link_to": "Asset Allocation",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
   }
  ],
- "title": "MIS, Analytics & AI Insights"
+ "title": "Stock Broking & Trading Platform"
 }
