@@ -5,7 +5,7 @@ import frappe
 from frappe.model.document import Document
 
 
-class FATCCRSFiling(Document):
+class FATCACRSFiling(Document):
     """FATCA/CRS tax reporting for foreign investors."""
 
     def validate(self):
@@ -22,7 +22,7 @@ class FATCCRSFiling(Document):
 def get_fatca_status(fund_master):
     """API: Get FATCA/CRS filing status for a fund."""
     filings = frappe.get_all(
-        "FATCA/CRS Filing",
+        "FATCA CRS Filing",
         filters={"fund_master": fund_master},
         fields=[
             "name", "filing_type", "fiscal_year", "status",

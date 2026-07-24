@@ -34,7 +34,7 @@ def get_pnl_summary(fund_master, from_date=None, to_date=None):
         filters["pnl_date"] = ["<=", to_date]
 
     realized = frappe.get_all(
-        "P&L Attribution",
+        "PNL Attribution",
         filters={"fund_master": fund_master, "pnl_type": ["in", ("Realized", "Both")]},
         fields=["sum(gross_realized_pnl) as total_realized", "sum(net_realized_pnl) as total_net"],
     )

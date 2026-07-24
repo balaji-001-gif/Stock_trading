@@ -45,7 +45,7 @@ class ESignRequest(Document):
 @frappe.whitelist()
 def verify_esign(esign_name):
     """API: Mark an e-Sign request as verified."""
-    doc = frappe.get_doc("e-Sign Request", esign_name)
+    doc = frappe.get_doc("eSign Request", esign_name)
     if doc.status != "Signed":
         frappe.throw(f"Cannot verify e-Sign request in status: {doc.status}. Must be 'Signed'.")
 
@@ -61,7 +61,7 @@ def verify_esign(esign_name):
 @frappe.whitelist()
 def complete_esign(esign_name, signed_document=None):
     """API: Mark an e-Sign request as completed/signed."""
-    doc = frappe.get_doc("e-Sign Request", esign_name)
+    doc = frappe.get_doc("eSign Request", esign_name)
     if doc.status not in ("Sent for Signing",):
         frappe.throw(f"Cannot complete e-Sign request in status: {doc.status}")
 
@@ -83,7 +83,7 @@ def get_pending_esign_requests(investor=None):
         filters["investor"] = investor
 
     return frappe.get_all(
-        "e-Sign Request",
+        "eSign Request",
         filters=filters,
         fields=[
             "name", "investor", "document_type", "document_reference",

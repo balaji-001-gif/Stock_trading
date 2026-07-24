@@ -157,7 +157,7 @@
   {
    "fieldname": "pnl_section",
    "fieldtype": "Section Break",
-   "label": "P&L Attribution"
+   "label": "PNL Attribution"
   },
   {
    "fieldname": "market_value",

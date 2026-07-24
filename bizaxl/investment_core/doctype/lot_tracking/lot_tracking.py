@@ -77,7 +77,7 @@ class LotTracking(Document):
 
         # Create P&L attribution record
         pnl_data = {
-            "doctype": "P&L Attribution",
+            "doctype": "PNL Attribution",
             "holding": self.holding,
             "lot": self.name,
             "fund_master": self.fund_master or frappe.db.get_value("Holdings Register", self.holding, "fund_master"),

@@ -335,7 +335,7 @@
    "link_fieldname": "holding"
   },
   {
-   "link_doctype": "P&L Attribution",
+   "link_doctype": "PNL Attribution",
    "link_fieldname": "holding"
   }
  ],

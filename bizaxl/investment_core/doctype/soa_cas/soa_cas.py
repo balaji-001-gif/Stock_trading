@@ -14,7 +14,7 @@ class SOACAS(Document):
 def get_investor_soa_statements(investor):
     """API: Get SOA/CAS statements for an investor."""
     return frappe.get_all(
-        "SOA/CAS",
+        "SOA CAS",
         filters={"investor": investor},
         fields=[
             "name", "statement_type", "statement_date", "period_from",

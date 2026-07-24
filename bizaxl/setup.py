@@ -149,17 +149,17 @@ def get_workspace_cards():
         {"label": "Holdings Register", "type": "Link", "link_to": "Holdings Register", "doc_type": "Holdings Register"},
         {"label": "Lot Tracking", "type": "Link", "link_to": "Lot Tracking", "doc_type": "Lot Tracking"},
         {"label": "Corporate Actions", "type": "Link", "link_to": "Corporate Actions", "doc_type": "Corporate Actions"},
-        {"label": "P&L Attribution", "type": "Link", "link_to": "P&L Attribution", "doc_type": "P&L Attribution"},
+        {"label": "PNL Attribution", "type": "Link", "link_to": "PNL Attribution", "doc_type": "PNL Attribution"},
         # Module 7: Compliance & Regulatory Reporting
         {"label": "SEBI Report", "type": "Link", "link_to": "SEBI Report", "doc_type": "SEBI Report"},
-        {"label": "FATCA/CRS Filing", "type": "Link", "link_to": "FATCA/CRS Filing", "doc_type": "FATCA/CRS Filing"},
+        {"label": "FATCA CRS Filing", "type": "Link", "link_to": "FATCA CRS Filing", "doc_type": "FATCA CRS Filing"},
         {"label": "AML Compliance Register", "type": "Link", "link_to": "AML Compliance Register", "doc_type": "AML Compliance Register"},
         {"label": "Board Pack", "type": "Link", "link_to": "Board Pack", "doc_type": "Board Pack"},
         # Module 8: Investor Portal & Communications
         {"label": "Capital Account Statement", "type": "Link", "link_to": "Capital Account Statement", "doc_type": "Capital Account Statement"},
-        {"label": "SOA/CAS", "type": "Link", "link_to": "SOA/CAS", "doc_type": "SOA/CAS"},
+        {"label": "SOA CAS", "type": "Link", "link_to": "SOA CAS", "doc_type": "SOA CAS"},
         {"label": "Auto Correspondence", "type": "Link", "link_to": "Auto Correspondence", "doc_type": "Auto Correspondence"},
-        {"label": "e-Sign Request", "type": "Link", "link_to": "e-Sign Request", "doc_type": "e-Sign Request"},
+        {"label": "eSign Request", "type": "Link", "link_to": "eSign Request", "doc_type": "eSign Request"},
         # Module 9: MIS, Analytics & Mobile
         {"label": "MIS Report", "type": "Link", "link_to": "MIS Report", "doc_type": "MIS Report"},
         {"label": "Performance Attribution", "type": "Link", "link_to": "Performance Attribution", "doc_type": "Performance Attribution"},

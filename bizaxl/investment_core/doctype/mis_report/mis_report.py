@@ -85,7 +85,7 @@ class MISReport(Document):
             limit=30,
         )
         pnl = frappe.get_all(
-            "P&L Attribution",
+            "PNL Attribution",
             filters={"fund_master": fund},
             fields=["pnl_type", "sum(gross_realized_pnl) as total"],
             group_by="pnl_type",

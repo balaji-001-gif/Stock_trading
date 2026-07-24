@@ -59,7 +59,7 @@ def get_investor_soa(investor):
 def generate_soa(investor, fund_master, statement_type="SOA", **kwargs):
     """Generate a Statement of Account / CAS for an investor."""
     doc = frappe.get_doc({
-        "doctype": "SOA/CAS",
+        "doctype": "SOA CAS",
         "investor": investor,
         "fund_master": fund_master,
         "statement_type": statement_type,
@@ -180,7 +180,7 @@ def send_investor_notification(investor, correspondence_type, subject, body_text
 def request_esign(investor, document_type, **kwargs):
     """Create a new e-Sign request for an investor."""
     doc = frappe.get_doc({
-        "doctype": "e-Sign Request",
+        "doctype": "eSign Request",
         "investor": investor,
         "document_type": document_type,
         "document_reference": kwargs.get("document_reference"),
@@ -276,7 +276,7 @@ def get_investor_activity_feed(investor, limit=20):
     )
 
     esigns = frappe.get_all(
-        "e-Sign Request",
+        "eSign Request",
         filters={"investor": investor},
         fields=[
             "'esign' as activity_type", "name as reference",

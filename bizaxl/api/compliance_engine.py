@@ -75,7 +75,7 @@ def get_fatca_crs_status(fund_master):
 def record_fatca_filing(fund_master, filing_type, fiscal_year, **kwargs):
     """Record a new FATCA/CRS filing."""
     doc = frappe.get_doc({
-        "doctype": "FATCA/CRS Filing",
+        "doctype": "FATCA CRS Filing",
         "fund_master": fund_master,
         "filing_type": filing_type,
         "fiscal_year": fiscal_year,

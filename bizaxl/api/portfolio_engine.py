@@ -38,7 +38,7 @@ def get_holding_detail(holding_name):
     lots = holding.get_lot_summary()
 
     pnl = frappe.get_all(
-        "P&L Attribution",
+        "PNL Attribution",
         filters={"holding": holding_name},
         fields=[
             "sum(gross_realized_pnl) as total_realized",
@@ -166,7 +166,7 @@ def get_pnl_transactions(fund_master, from_date=None, to_date=None, limit=100):
         filters["pnl_date"] = ["<=", to_date]
 
     return frappe.get_all(
-        "P&L Attribution",
+        "PNL Attribution",
         filters=filters,
         fields=[
             "name", "pnl_date", "holding", "lot", "security_id",

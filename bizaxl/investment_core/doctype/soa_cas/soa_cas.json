@@ -183,7 +183,7 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "SOA/CAS",
+   "options": "SOA CAS",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
@@ -195,7 +195,7 @@
  "modified": "2026-01-01 00:00:00.000000",
  "modified_by": "Administrator",
  "module": "Investment Core",
- "name": "SOA/CAS",
+ "name": "SOA CAS",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
