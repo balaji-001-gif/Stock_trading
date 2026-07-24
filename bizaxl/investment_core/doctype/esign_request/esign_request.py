@@ -6,7 +6,7 @@ from frappe.model.document import Document
 from frappe.utils import today, now_datetime
 
 
-class ESignRequest(Document):
+class eSignRequest(Document):
     """Aadhaar e-Sign / DigiLocker document signing request."""
 
     def validate(self):
