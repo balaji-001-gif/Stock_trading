@@ -26,14 +26,14 @@ app_modules = [
     "Alternative Investment Funds",
     "Private Equity",
     "Venture Capital",
-    "Bonds and Fixed Deposits",
+    "Bonds Fixed Deposits",
     "Real Estate Funds",
     "Stock Broking",
     "Family Office",
     "Pension Funds",
     "Advisor Portal",
-    "Compliance and Regulatory",
-    "Reports and Analytics",
+    "Compliance Regulatory",
+    "Reports Analytics",
 ]
 
 # ----------------------------------------------------------------------------
