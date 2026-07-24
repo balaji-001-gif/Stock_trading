@@ -25,6 +25,10 @@ Connectors implemented in this file:
 14. SEBI Reporting Portal — AIF Annex VI, PMS quarterly, REIT/InvIT, SCORES
 15. Bloomberg / Refinitiv / ICRA — Bond pricing, credit ratings, fixed income analytics
 16. FATCA / CRS Filing — Form 61B, US FATCA XML, foreign investor reporting
+17. Video KYC — Agent queue, session recording, frame capture, liveness detection
+18. AI / ML Analytics Engine — Risk analytics, tax harvesting, rebalancing, attribution
+19. MCA21 / RoC — Company filings, director verification, cap table compliance
+20. SWIFT / SFTP Custodian — MT940/MT950, position/cash reconciliation, file exchange
 """
 
 import frappe
@@ -686,11 +690,13 @@ def generate_sebi_report(report_type, fund, **kwargs):
     sebi_report = frappe.get_doc({
         "doctype": "SEBI Report",
         "report_type": report_type,
-        "fund": fund,
-        "report_data": frappe.as_json(result.get("report_data", {})),
-        "submission_status": "Generated",
-        "report_period": kwargs.get("period", "Quarterly"),
-        "financial_year": kwargs.get("financial_year"),
+        "fund_master": fund,
+        "period_covered": kwargs.get("period", "Quarterly"),
+        "status": "Draft",
+        "regulatory_body": "SEBI",
+        "report_data_json": frappe.as_json(result.get("report_data", {})),
+        "report_summary": result.get("summary", ""),
+        "report_date": today(),
     })
     sebi_report.insert()
     return {
@@ -699,7 +705,7 @@ def generate_sebi_report(report_type, fund, **kwargs):
         "summary": result.get("summary"),
         "period": result.get("period"),
         "report_data": result.get("report_data"),
-        "submission_status": sebi_report.submission_status,
+        "submission_status": sebi_report.status,
     }
 
 
@@ -711,14 +717,15 @@ def submit_sebi_report(report_name):
     connector = SEBIConnector()
     result = connector.submit_report(doc)
 
-    doc.db_set("submission_status", "Submitted")
-    doc.db_set("submission_ref", result.get("submission_ref"))
-    doc.db_set("response_data", frappe.as_json(result))
+    doc.db_set("status", "Filed")
+    doc.db_set("filing_reference", result.get("submission_ref"))
+    doc.db_set("acknowledgment_number", result.get("acknowledgment_number", ""))
+    doc.db_set("filing_date", today())
 
     return {
         "name": doc.name,
-        "submission_status": "Submitted",
-        "submission_ref": result.get("submission_ref"),
+        "status": "Filed",
+        "filing_reference": result.get("submission_ref"),
         "message": result.get("message"),
     }
 
@@ -744,15 +751,15 @@ def list_sebi_reports(fund=None, report_type=None):
     """List SEBI reports with optional filters."""
     filters = {}
     if fund:
-        filters["fund"] = fund
+        filters["fund_master"] = fund
     if report_type:
         filters["report_type"] = report_type
 
     return frappe.get_all(
         "SEBI Report",
         filters=filters,
-        fields=["name", "report_type", "fund", "submission_status",
-                "report_period", "financial_year", "submission_ref",
+        fields=["name", "report_type", "fund_master", "status",
+                "period_covered", "filing_reference", "acknowledgment_number",
                 "creation", "modified"],
         order_by="creation desc",
         limit_page_length=50,
@@ -788,7 +795,6 @@ def get_credit_rating_history(isin, agency=None):
 def fetch_bond_pricing_from_source(isin, pricing_source="Bloomberg"):
     """Fetch bond pricing directly from a pricing source and store in feed."""
     from bizaxl.bizaxl.integrations.bloomberg_refinitiv import BondPricingConnector
-    from bizaxl.bizaxl.integrations.bloomberg_refinitiv import PRICING_SOURCES
 
     connector = BondPricingConnector()
     result = connector.get_bond_price(isin, pricing_source)
@@ -900,3 +906,172 @@ def list_fatca_filings(filing_type=None, status=None, year=None):
     """List FATCA/CRS filings."""
     from bizaxl.bizaxl.doctype.fatca_filing_record.fatca_filing_record import list_fatca_filings as _list
     return _list(filing_type, status, year)
+
+
+# =============================================================================
+# SECTION 19: Video KYC
+# =============================================================================
+
+@frappe.whitelist()
+def start_video_kyc(investor, pan_number, preferred_language="English", investor_type="Individual"):
+    """Start a video KYC session for remote investor onboarding."""
+    from bizaxl.bizaxl.doctype.video_kyc_session.video_kyc_session import start_video_kyc as _start
+    return _start(investor, pan_number, preferred_language, investor_type)
+
+
+@frappe.whitelist()
+def complete_video_kyc(vkyc_session, agent_notes=None):
+    """Complete a video KYC session with verification result."""
+    from bizaxl.bizaxl.doctype.video_kyc_session.video_kyc_session import complete_video_kyc as _complete
+    return _complete(vkyc_session, agent_notes)
+
+
+@frappe.whitelist()
+def get_agent_queue(status=None):
+    """Get available KYC agents and queue status."""
+    from bizaxl.bizaxl.doctype.video_kyc_session.video_kyc_session import get_agent_queue as _queue
+    return _queue(status)
+
+
+@frappe.whitelist()
+def list_vkyc_sessions(investor=None, status=None):
+    """List video KYC sessions."""
+    from bizaxl.bizaxl.doctype.video_kyc_session.video_kyc_session import list_vkyc_sessions as _list
+    return _list(investor, status)
+
+
+# =============================================================================
+# SECTION 20: AI / ML Analytics Engine
+# =============================================================================
+
+@frappe.whitelist()
+def run_risk_analysis(fund_master=None, investor=None, lookback_months=12, risk_free_rate=6.5):
+    """Run comprehensive risk metrics analysis (Sharpe, Alpha, Beta, VaR)."""
+    from bizaxl.bizaxl.doctype.ai_analytics_result.ai_analytics_result import run_risk_analysis as _run
+    return _run(fund_master, investor, lookback_months, risk_free_rate)
+
+
+@frappe.whitelist()
+def run_tax_harvest_analysis(investor, portfolio_value=None, tax_slab="30%"):
+    """Find tax-loss harvesting opportunities across holdings."""
+    from bizaxl.bizaxl.doctype.ai_analytics_result.ai_analytics_result import run_tax_harvest_analysis as _run
+    return _run(investor, portfolio_value, tax_slab)
+
+
+@frappe.whitelist()
+def run_rebalancing_analysis(fund_master=None, investor=None, drift_threshold=5.0):
+    """Run portfolio rebalancing analysis."""
+    from bizaxl.bizaxl.doctype.ai_analytics_result.ai_analytics_result import run_rebalancing_analysis as _run
+    return _run(fund_master, investor, drift_threshold)
+
+
+@frappe.whitelist()
+def run_performance_attribution(fund_master, sectors=None):
+    """Run performance attribution analysis (Brinson)."""
+    from bizaxl.bizaxl.doctype.ai_analytics_result.ai_analytics_result import run_performance_attribution as _run
+    return _run(fund_master, sectors)
+
+
+@frappe.whitelist()
+def run_market_regime_analysis():
+    """Detect current market regime (bull/bear/sideways)."""
+    from bizaxl.bizaxl.doctype.ai_analytics_result.ai_analytics_result import run_market_regime_analysis as _run
+    return _run()
+
+
+@frappe.whitelist()
+def list_ai_analyses(analysis_type=None):
+    """List AI analytics results."""
+    from bizaxl.bizaxl.doctype.ai_analytics_result.ai_analytics_result import list_ai_analyses as _list
+    return _list(analysis_type)
+
+
+# =============================================================================
+# SECTION 21: MCA21 / RoC
+# =============================================================================
+
+@frappe.whitelist()
+def search_mca_company(cin=None, pan=None, name=None):
+    """Search for a company on MCA21 by CIN, PAN, or name."""
+    from bizaxl.bizaxl.integrations.mca21_roc import MCA21Connector
+    connector = MCA21Connector()
+    return connector.search_company(cin, pan, name)
+
+
+@frappe.whitelist()
+def verify_din(din, pan=None):
+    """Verify Director Identification Number (DIN)."""
+    from bizaxl.bizaxl.integrations.mca21_roc import MCA21Connector
+    connector = MCA21Connector()
+    return connector.verify_director(din, pan)
+
+
+@frappe.whitelist()
+def file_mca_form(form_type, company_cin, form_data):
+    """File MCA21 form (SH-7, PAS-3, MGT-14, CHG-1, etc.)."""
+    from bizaxl.bizaxl.integrations.mca21_roc import MCA21Connector
+    connector = MCA21Connector()
+    return connector.file_mca_form(form_type, company_cin, form_data)
+
+
+@frappe.whitelist()
+def get_mca_filing_status(srn):
+    """Get MCA21 filing status by SRN."""
+    from bizaxl.bizaxl.integrations.mca21_roc import MCA21Connector
+    connector = MCA21Connector()
+    return connector.get_filing_status(srn)
+
+
+@frappe.whitelist()
+def get_mca_company_master(cin):
+    """Get full company master data from MCA21."""
+    from bizaxl.bizaxl.integrations.mca21_roc import MCA21Connector
+    connector = MCA21Connector()
+    return connector.get_company_master_data(cin)
+
+
+@frappe.whitelist()
+def get_shareholding_pattern(cin):
+    """Get shareholding pattern from MCA21."""
+    from bizaxl.bizaxl.integrations.mca21_roc import MCA21Connector
+    connector = MCA21Connector()
+    return connector.get_shareholding_pattern(cin)
+
+
+# =============================================================================
+# SECTION 22: SWIFT / SFTP Custodian
+# =============================================================================
+
+@frappe.whitelist()
+def fetch_custodian_positions(portfolio_code, as_of_date=None):
+    """Fetch position statement (MT950) from custodian."""
+    from bizaxl.bizaxl.doctype.custodian_statement.custodian_statement import fetch_custodian_positions as _fetch
+    return _fetch(portfolio_code, as_of_date)
+
+
+@frappe.whitelist()
+def fetch_custodian_transactions(portfolio_code, from_date, to_date):
+    """Fetch transaction statement (MT940) from custodian."""
+    from bizaxl.bizaxl.doctype.custodian_statement.custodian_statement import fetch_custodian_transactions as _fetch
+    return _fetch(portfolio_code, from_date, to_date)
+
+
+@frappe.whitelist()
+def reconcile_custodian_positions(portfolio_code, as_of_date=None):
+    """Reconcile custodian positions against internal holdings."""
+    from bizaxl.bizaxl.doctype.custodian_statement.custodian_statement import reconcile_custodian_positions as _recon
+    return _recon(portfolio_code, as_of_date)
+
+
+@frappe.whitelist()
+def fetch_custodian_cash(portfolio_code, as_of_date=None):
+    """Fetch cash balance from custodian."""
+    from bizaxl.bizaxl.doctype.custodian_statement.custodian_statement import fetch_custodian_cash as _cash
+    return _cash(portfolio_code, as_of_date)
+
+
+@frappe.whitelist()
+def list_custodian_statements(portfolio_code=None, statement_type=None):
+    """List custodian statements."""
+    from bizaxl.bizaxl.doctype.custodian_statement.custodian_statement import list_custodian_statements as _list
+    return _list(portfolio_code, statement_type)

@@ -199,4 +199,8 @@ def get_workspace_cards():
         {"label": "Bond Pricing Feed", "type": "Link", "link_to": "Bond Pricing Feed", "doc_type": "Bond Pricing Feed"},
         {"label": "FATCA Filing Record", "type": "Link", "link_to": "FATCA Filing Record", "doc_type": "FATCA Filing Record"},
         {"label": "Integration Request Log", "type": "Link", "link_to": "Integration Request Log", "doc_type": "Integration Request Log"},
+        # Connectors 17-20: Final 4 External APIs
+        {"label": "Video KYC Session", "type": "Link", "link_to": "Video KYC Session", "doc_type": "Video KYC Session"},
+        {"label": "AI Analytics Result", "type": "Link", "link_to": "AI Analytics Result", "doc_type": "AI Analytics Result"},
+        {"label": "Custodian Statement", "type": "Link", "link_to": "Custodian Statement", "doc_type": "Custodian Statement"},
     ]

@@ -69,21 +69,23 @@ def get_bond_price(isin=None, instrument_type=None, pricing_source=None):
 @frappe.whitelist()
 def get_bond_analytics(isin):
     """Get analytics for a specific bond — spread history, duration, convexity"""
-    bond = frappe.get_value(
+    records = frappe.get_all(
         "Bond Pricing Feed",
-        {"isin": isin, "status": "Active"},
-        [
+        filters={"isin": isin, "status": "Active"},
+        fields=[
             "name", "isin", "instrument_name", "issuer", "credit_rating",
             "coupon_rate", "ytm", "modified_duration", "convexity",
             "g_spread", "z_spread", "oas", "bid_price", "ask_price",
             "last_price", "pricing_date", "pricing_source", "maturity_date",
             "face_value", "outstanding_amount", "accrued_interest"
         ],
-        as_dict=1
+        order_by="pricing_date desc",
+        limit=1
     )
-    if not bond:
+    if not records:
         frappe.msgprint(f"No bond found with ISIN: {isin}")
-    return bond
+        return None
+    return records[0]
 
 
 @frappe.whitelist()

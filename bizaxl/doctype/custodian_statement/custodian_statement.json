@@ -1,0 +1,296 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: CUST-{statement_type}-{portfolio_code}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "statement_section",
+  "portfolio_code",
+  "custodian_name",
+  "statement_type",
+  "message_type",
+  "column_break_hdr",
+  "statement_date",
+  "as_of_date",
+  "status",
+  "connector_mode",
+  "cash_section",
+  "opening_balance",
+  "closing_balance",
+  "total_credits",
+  "total_debits",
+  "column_break_cash",
+  "available_balance",
+  "pending_settlements",
+  "currency",
+  "positions_section",
+  "total_securities",
+  "total_market_value",
+  "matched_positions",
+  "break_positions",
+  "column_break_pos",
+  "total_difference_value",
+  "reconciliation_status",
+  "data_section",
+  "statement_data_json",
+  "reconciliation_notes",
+  "column_break_data",
+  "custodian_ref",
+  "sftp_file_name",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "statement_section",
+   "fieldtype": "Section Break",
+   "label": "Statement Details"
+  },
+  {
+   "fieldname": "portfolio_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Portfolio Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "custodian_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Custodian Name"
+  },
+  {
+   "fieldname": "statement_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Statement Type",
+   "options": "\nPosition Statement\nCash Statement\nTransaction Statement\nReconciliation Report\nMT940 Message\nMT950 Message\nSFTP File Feed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "message_type",
+   "fieldtype": "Select",
+   "label": "Message Type",
+   "options": "\nMT940\nMT950\nCSV\nXML\nPDF\nCustom"
+  },
+  {
+   "fieldname": "column_break_hdr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "statement_date",
+   "fieldtype": "Date",
+   "label": "Statement Date"
+  },
+  {
+   "fieldname": "as_of_date",
+   "fieldtype": "Date",
+   "label": "As of Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nReceived\nProcessed\nPartially Reconciled\nFully Reconciled\nFailed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "connector_mode",
+   "fieldtype": "Select",
+   "label": "Connector Mode",
+   "options": "\nstub\nlive",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cash_section",
+   "fieldtype": "Section Break",
+   "label": "Cash Summary"
+  },
+  {
+   "fieldname": "opening_balance",
+   "fieldtype": "Currency",
+   "label": "Opening Balance",
+   "options": "currency"
+  },
+  {
+   "fieldname": "closing_balance",
+   "fieldtype": "Currency",
+   "label": "Closing Balance",
+   "options": "currency"
+  },
+  {
+   "fieldname": "total_credits",
+   "fieldtype": "Currency",
+   "label": "Total Credits",
+   "options": "currency"
+  },
+  {
+   "fieldname": "total_debits",
+   "fieldtype": "Currency",
+   "label": "Total Debits",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_cash",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "available_balance",
+   "fieldtype": "Currency",
+   "label": "Available Balance",
+   "options": "currency"
+  },
+  {
+   "fieldname": "pending_settlements",
+   "fieldtype": "Currency",
+   "label": "Pending Settlements",
+   "options": "currency"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Select",
+   "label": "Currency",
+   "options": "\nINR\nUSD\nEUR\nGBP\nSGD"
+  },
+  {
+   "fieldname": "positions_section",
+   "fieldtype": "Section Break",
+   "label": "Positions Summary"
+  },
+  {
+   "fieldname": "total_securities",
+   "fieldtype": "Int",
+   "label": "Total Securities"
+  },
+  {
+   "fieldname": "total_market_value",
+   "fieldtype": "Currency",
+   "label": "Total Market Value",
+   "options": "currency"
+  },
+  {
+   "fieldname": "matched_positions",
+   "fieldtype": "Int",
+   "label": "Matched Positions"
+  },
+  {
+   "fieldname": "break_positions",
+   "fieldtype": "Int",
+   "label": "Break Positions"
+  },
+  {
+   "fieldname": "column_break_pos",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_difference_value",
+   "fieldtype": "Currency",
+   "label": "Total Difference Value",
+   "options": "currency"
+  },
+  {
+   "fieldname": "reconciliation_status",
+   "fieldtype": "Select",
+   "label": "Reconciliation Status",
+   "options": "\nNot Reconciled\nIn Progress\nMatched\nBreaks Found"
+  },
+  {
+   "fieldname": "data_section",
+   "fieldtype": "Section Break",
+   "label": "Data"
+  },
+  {
+   "fieldname": "statement_data_json",
+   "fieldtype": "Text Editor",
+   "label": "Statement Data"
+  },
+  {
+   "fieldname": "reconciliation_notes",
+   "fieldtype": "Small Text",
+   "label": "Reconciliation Notes"
+  },
+  {
+   "fieldname": "column_break_data",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "custodian_ref",
+   "fieldtype": "Data",
+   "label": "Custodian Reference"
+  },
+  {
+   "fieldname": "sftp_file_name",
+   "fieldtype": "Data",
+   "label": "SFTP File Name"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Custodian Statement",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Custodian Statement",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fund Accountant",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Risk Officer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

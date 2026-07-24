@@ -1,0 +1,241 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: VKYC-{investor}-{####}",
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "session_section",
+  "investor",
+  "session_id",
+  "agent_name",
+  "agent_id",
+  "column_break_hdr",
+  "status",
+  "verification_result",
+  "session_started_at",
+  "session_ended_at",
+  "details_section",
+  "pan_number",
+  "investor_type",
+  "preferred_language",
+  "column_break_det",
+  "liveness_score",
+  "face_match_score",
+  "document_match_score",
+  "recording_section",
+  "recording_url",
+  "frame_count",
+  "recording_duration",
+  "column_break_rec",
+  "agent_notes",
+  "connector_mode",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "session_section",
+   "fieldtype": "Section Break",
+   "label": "Session Details"
+  },
+  {
+   "fieldname": "investor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Investor",
+   "options": "Investor Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "session_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Session ID"
+  },
+  {
+   "fieldname": "agent_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Agent Name"
+  },
+  {
+   "fieldname": "agent_id",
+   "fieldtype": "Data",
+   "label": "Agent ID"
+  },
+  {
+   "fieldname": "column_break_hdr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nInitiated\nActive\nCompleted\nVerified\nFailed\nExpired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "verification_result",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Verification Result",
+   "options": "\nPending\nVerified\nNot Verified\nRejected"
+  },
+  {
+   "fieldname": "session_started_at",
+   "fieldtype": "Datetime",
+   "label": "Session Started At"
+  },
+  {
+   "fieldname": "session_ended_at",
+   "fieldtype": "Datetime",
+   "label": "Session Ended At"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Investor Details"
+  },
+  {
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "label": "PAN Number"
+  },
+  {
+   "fieldname": "investor_type",
+   "fieldtype": "Select",
+   "label": "Investor Type",
+   "options": "\nIndividual\nHUF\nNRI\nForeign National\nCorporate\nTrust\nPartnership Firm"
+  },
+  {
+   "fieldname": "preferred_language",
+   "fieldtype": "Select",
+   "label": "Preferred Language",
+   "options": "\nEnglish\nHindi\nTamil\nTelugu\nKannada\nMalayalam\nMarathi\nGujarati\nPunjabi\nBengali"
+  },
+  {
+   "fieldname": "column_break_det",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "liveness_score",
+   "fieldtype": "Percent",
+   "label": "Liveness Score"
+  },
+  {
+   "fieldname": "face_match_score",
+   "fieldtype": "Percent",
+   "label": "Face Match Score"
+  },
+  {
+   "fieldname": "document_match_score",
+   "fieldtype": "Percent",
+   "label": "Document Match Score"
+  },
+  {
+   "fieldname": "recording_section",
+   "fieldtype": "Section Break",
+   "label": "Recording"
+  },
+  {
+   "fieldname": "recording_url",
+   "fieldtype": "Data",
+   "label": "Recording URL"
+  },
+  {
+   "fieldname": "frame_count",
+   "fieldtype": "Int",
+   "label": "Frame Count"
+  },
+  {
+   "fieldname": "recording_duration",
+   "fieldtype": "Int",
+   "label": "Recording Duration (seconds)"
+  },
+  {
+   "fieldname": "column_break_rec",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "agent_notes",
+   "fieldtype": "Small Text",
+   "label": "Agent Notes"
+  },
+  {
+   "fieldname": "connector_mode",
+   "fieldtype": "Select",
+   "label": "Connector Mode",
+   "options": "\nstub\nlive",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Video KYC Session",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Investment Core",
+ "name": "Video KYC Session",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investor Relations",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Compliance Officer",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
