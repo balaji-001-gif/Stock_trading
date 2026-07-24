@@ -62,18 +62,18 @@ class CapitalCall(Document):
                 remaining = commitment_amount - new_called
                 fulfilled_pct = (new_called / commitment_amount * 100) if commitment_amount else 0
 
-                    frappe.db.set_value(
-                        "Commitment",
-                        detail.commitment,
-                        {
-                            "total_called": new_called,
-                            "total_paid": new_paid,
-                            "last_drawdown_date": self.call_date,
-                            "total_outstanding": new_called - new_paid,
-                            "remaining_commitment": max(remaining, 0),
-                            "commitment_fulfilled_percentage": fulfilled_pct,
-                        },
-                    )
+                frappe.db.set_value(
+                    "Commitment",
+                    detail.commitment,
+                    {
+                        "total_called": new_called,
+                        "total_paid": new_paid,
+                        "last_drawdown_date": self.call_date,
+                        "total_outstanding": new_called - new_paid,
+                        "remaining_commitment": max(remaining, 0),
+                        "commitment_fulfilled_percentage": fulfilled_pct,
+                    },
+                )
 
 
 @frappe.whitelist()
