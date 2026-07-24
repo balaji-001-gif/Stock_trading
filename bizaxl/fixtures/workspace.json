@@ -1,0 +1,3484 @@
+[
+ {
+  "charts": [],
+  "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fund Configuration\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fund Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Investor Profile\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"NAV History\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Fund Configuration\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Investor Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Subscription & Redemption\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"NAV & Fees\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Portfolio & Holdings\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Statements & Communication\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Compliance & Risk\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Analytics & Reports\", \"col\": 4}}]",
+  "creation": "2024-07-01 12:00:00.000000",
+  "doctype": "Workspace",
+  "extends": "",
+  "extends_another_page": 0,
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "graph",
+  "is_hidden": 0,
+  "label": "BIZAXL",
+  "modified": "2024-07-01 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Investment Core",
+  "name": "BIZAXL",
+  "onboarding": "",
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "roles": [],
+  "sequence_id": 1.0,
+  "shortcuts": [
+   {
+    "color": "Green",
+    "format": "",
+    "label": "Fund Configuration",
+    "link_to": "Fund Configuration",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Blue",
+    "format": "",
+    "label": "Fund Master",
+    "link_to": "Fund Master",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Orange",
+    "format": "",
+    "label": "Investor Profile",
+    "link_to": "Investor Profile",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Purple",
+    "format": "",
+    "label": "NAV History",
+    "link_to": "NAV History",
+    "stats_filter": "",
+    "type": "DocType"
+   }
+  ],
+  "links": [
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Configuration",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Configuration",
+    "link_count": 0,
+    "link_to": "Fund Configuration",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Master",
+    "link_count": 0,
+    "link_to": "Fund Master",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Share Class",
+    "link_count": 0,
+    "link_to": "Share Class",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Series",
+    "link_count": 0,
+    "link_to": "Fund Series",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fee Structure",
+    "link_count": 0,
+    "link_to": "Fee Structure",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Currency Settings",
+    "link_count": 0,
+    "link_to": "Currency Settings",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Regulatory Category",
+    "link_count": 0,
+    "link_to": "Regulatory Category",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Investor Management",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Investor Profile",
+    "link_count": 0,
+    "link_to": "Investor Profile",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "KYC Document",
+    "link_count": 0,
+    "link_to": "KYC Document",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Risk Profile",
+    "link_count": 0,
+    "link_to": "Risk Profile",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "eKYC Request",
+    "link_count": 0,
+    "link_to": "eKYC Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "CKYC Record",
+    "link_count": 0,
+    "link_to": "CKYC Record",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "AML Screening Request",
+    "link_count": 0,
+    "link_to": "AML Screening Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Subscription & Redemption",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Subscription Request",
+    "link_count": 0,
+    "link_to": "Subscription Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Allotment Detail",
+    "link_count": 0,
+    "link_to": "Allotment Detail",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Redemption Request",
+    "link_count": 0,
+    "link_to": "Redemption Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Capital Call",
+    "link_count": 0,
+    "link_to": "Capital Call",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Commitment",
+    "link_count": 0,
+    "link_to": "Commitment",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "SIP Plan",
+    "link_count": 0,
+    "link_to": "SIP Plan",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "SWP Plan",
+    "link_count": 0,
+    "link_to": "SWP Plan",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "STP Plan",
+    "link_count": 0,
+    "link_to": "STP Plan",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "NAV & Fees",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "NAV History",
+    "link_count": 0,
+    "link_to": "NAV History",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "NAV Period",
+    "link_count": 0,
+    "link_to": "NAV Period",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "MTM Valuation",
+    "link_count": 0,
+    "link_to": "MTM Valuation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Dynamic Ratios",
+    "link_count": 0,
+    "link_to": "Dynamic Ratios",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "NAV Audit Trail",
+    "link_count": 0,
+    "link_to": "NAV Audit Trail",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fee Accrual",
+    "link_count": 0,
+    "link_to": "Fee Accrual",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "TDS Computation",
+    "link_count": 0,
+    "link_to": "TDS Computation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Performance Fee Engine",
+    "link_count": 0,
+    "link_to": "Performance Fee Engine",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Carried Interest Waterfall",
+    "link_count": 0,
+    "link_to": "Carried Interest Waterfall",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Portfolio & Holdings",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Holdings Register",
+    "link_count": 0,
+    "link_to": "Holdings Register",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Lot Tracking",
+    "link_count": 0,
+    "link_to": "Lot Tracking",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Corporate Actions",
+    "link_count": 0,
+    "link_to": "Corporate Actions",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "PNL Attribution",
+    "link_count": 0,
+    "link_to": "PNL Attribution",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Holding Valuation",
+    "link_count": 0,
+    "link_to": "Holding Valuation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Market Data Feed",
+    "link_count": 0,
+    "link_to": "Market Data Feed",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Statements & Communication",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Capital Account Statement",
+    "link_count": 0,
+    "link_to": "Capital Account Statement",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "SOA CAS",
+    "link_count": 0,
+    "link_to": "SOA CAS",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Auto Correspondence",
+    "link_count": 0,
+    "link_to": "Auto Correspondence",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "eSign Request",
+    "link_count": 0,
+    "link_to": "eSign Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Notification Log",
+    "link_count": 0,
+    "link_to": "Notification Log",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "CAS Import",
+    "link_count": 0,
+    "link_to": "CAS Import",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Compliance & Risk",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "SEBI Report",
+    "link_count": 0,
+    "link_to": "SEBI Report",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "AML Compliance Register",
+    "link_count": 0,
+    "link_to": "AML Compliance Register",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Board Pack",
+    "link_count": 0,
+    "link_to": "Board Pack",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Risk Analytics",
+    "link_count": 0,
+    "link_to": "Risk Analytics",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "AI Analytics Result",
+    "link_count": 0,
+    "link_to": "AI Analytics Result",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "AI Insight",
+    "link_count": 0,
+    "link_to": "AI Insight",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Analytics & Reports",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "MIS Report",
+    "link_count": 0,
+    "link_to": "MIS Report",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Performance Attribution",
+    "link_count": 0,
+    "link_to": "Performance Attribution",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Tax Optimization Plan",
+    "link_count": 0,
+    "link_to": "Tax Optimization Plan",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   }
+  ],
+  "title": "BIZAXL Investment Platform"
+ },
+ {
+  "charts": [],
+  "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fund Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SIP Plan\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"NAV History\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Fund & Scheme Setup\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Subscriptions & SIP\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Redemption & Payout\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"NAV & Performance\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Compliance\", \"col\": 4}}]",
+  "creation": "2024-07-01 12:00:00.000000",
+  "doctype": "Workspace",
+  "extends": "",
+  "extends_another_page": 0,
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "chart",
+  "is_hidden": 0,
+  "label": "Mutual Funds",
+  "modified": "2024-07-01 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mutual Funds",
+  "name": "Mutual Funds",
+  "onboarding": "",
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "roles": [],
+  "sequence_id": 2.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "format": "",
+    "label": "Fund Master",
+    "link_to": "Fund Master",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Green",
+    "format": "",
+    "label": "SIP Plan",
+    "link_to": "SIP Plan",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Purple",
+    "format": "",
+    "label": "NAV History",
+    "link_to": "NAV History",
+    "stats_filter": "",
+    "type": "DocType"
+   }
+  ],
+  "links": [
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund & Scheme Setup",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Configuration",
+    "link_count": 0,
+    "link_to": "Fund Configuration",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Master",
+    "link_count": 0,
+    "link_to": "Fund Master",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Share Class",
+    "link_count": 0,
+    "link_to": "Share Class",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Series",
+    "link_count": 0,
+    "link_to": "Fund Series",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fee Structure",
+    "link_count": 0,
+    "link_to": "Fee Structure",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Regulatory Category",
+    "link_count": 0,
+    "link_to": "Regulatory Category",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Subscriptions & SIP",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Subscription Request",
+    "link_count": 0,
+    "link_to": "Subscription Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "SIP Plan",
+    "link_count": 0,
+    "link_to": "SIP Plan",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "SWP Plan",
+    "link_count": 0,
+    "link_to": "SWP Plan",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "STP Plan",
+    "link_count": 0,
+    "link_to": "STP Plan",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Allotment Detail",
+    "link_count": 0,
+    "link_to": "Allotment Detail",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Redemption & Payout",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Redemption Request",
+    "link_count": 0,
+    "link_to": "Redemption Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "TDS Computation",
+    "link_count": 0,
+    "link_to": "TDS Computation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Capital Account Statement",
+    "link_count": 0,
+    "link_to": "Capital Account Statement",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Auto Correspondence",
+    "link_count": 0,
+    "link_to": "Auto Correspondence",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "NAV & Performance",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "NAV History",
+    "link_count": 0,
+    "link_to": "NAV History",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "NAV Period",
+    "link_count": 0,
+    "link_to": "NAV Period",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "MTM Valuation",
+    "link_count": 0,
+    "link_to": "MTM Valuation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Performance Attribution",
+    "link_count": 0,
+    "link_to": "Performance Attribution",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "PNL Attribution",
+    "link_count": 0,
+    "link_to": "PNL Attribution",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Market Data Feed",
+    "link_count": 0,
+    "link_to": "Market Data Feed",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Compliance",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "SEBI Report",
+    "link_count": 0,
+    "link_to": "SEBI Report",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "AML Compliance Register",
+    "link_count": 0,
+    "link_to": "AML Compliance Register",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Regulatory Calendar Entry",
+    "link_count": 0,
+    "link_to": "Regulatory Calendar Entry",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   }
+  ],
+  "title": "Mutual Funds Management"
+ },
+ {
+  "charts": [],
+  "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fund Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Investor Profile\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Holdings Register\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Client Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Portfolio Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Performance & Fees\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Compliance\", \"col\": 4}}]",
+  "creation": "2024-07-01 12:00:00.000000",
+  "doctype": "Workspace",
+  "extends": "",
+  "extends_another_page": 0,
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "folder",
+  "is_hidden": 0,
+  "label": "Portfolio Management Services",
+  "modified": "2024-07-01 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Portfolio Management Services",
+  "name": "Portfolio Management Services",
+  "onboarding": "",
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "roles": [],
+  "sequence_id": 3.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "format": "",
+    "label": "Fund Master",
+    "link_to": "Fund Master",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Orange",
+    "format": "",
+    "label": "Investor Profile",
+    "link_to": "Investor Profile",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Green",
+    "format": "",
+    "label": "Holdings Register",
+    "link_to": "Holdings Register",
+    "stats_filter": "",
+    "type": "DocType"
+   }
+  ],
+  "links": [
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Client Management",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Investor Profile",
+    "link_count": 0,
+    "link_to": "Investor Profile",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "KYC Document",
+    "link_count": 0,
+    "link_to": "KYC Document",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Risk Profile",
+    "link_count": 0,
+    "link_to": "Risk Profile",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Capital Account Statement",
+    "link_count": 0,
+    "link_to": "Capital Account Statement",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Portfolio Management",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Holdings Register",
+    "link_count": 0,
+    "link_to": "Holdings Register",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Lot Tracking",
+    "link_count": 0,
+    "link_to": "Lot Tracking",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Corporate Actions",
+    "link_count": 0,
+    "link_to": "Corporate Actions",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "PNL Attribution",
+    "link_count": 0,
+    "link_to": "PNL Attribution",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Holding Valuation",
+    "link_count": 0,
+    "link_to": "Holding Valuation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Market Data Feed",
+    "link_count": 0,
+    "link_to": "Market Data Feed",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Performance & Fees",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "NAV History",
+    "link_count": 0,
+    "link_to": "NAV History",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fee Accrual",
+    "link_count": 0,
+    "link_to": "Fee Accrual",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "TDS Computation",
+    "link_count": 0,
+    "link_to": "TDS Computation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Performance Fee Engine",
+    "link_count": 0,
+    "link_to": "Performance Fee Engine",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Performance Attribution",
+    "link_count": 0,
+    "link_to": "Performance Attribution",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Risk Analytics",
+    "link_count": 0,
+    "link_to": "Risk Analytics",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Compliance",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "SEBI Report",
+    "link_count": 0,
+    "link_to": "SEBI Report",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "AML Compliance Register",
+    "link_count": 0,
+    "link_to": "AML Compliance Register",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Regulatory Calendar Entry",
+    "link_count": 0,
+    "link_to": "Regulatory Calendar Entry",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   }
+  ],
+  "title": "PMS Management"
+ },
+ {
+  "charts": [],
+  "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fund Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Capital Call\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Carried Interest Waterfall\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Fund Setup\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Capital Calls & Drawdowns\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Waterfall & Carry\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Compliance\", \"col\": 4}}]",
+  "creation": "2024-07-01 12:00:00.000000",
+  "doctype": "Workspace",
+  "extends": "",
+  "extends_another_page": 0,
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "briefcase",
+  "is_hidden": 0,
+  "label": "Alternative Investment Funds",
+  "modified": "2024-07-01 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Alternative Investment Funds",
+  "name": "Alternative Investment Funds",
+  "onboarding": "",
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "roles": [],
+  "sequence_id": 4.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "format": "",
+    "label": "Fund Master",
+    "link_to": "Fund Master",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Orange",
+    "format": "",
+    "label": "Capital Call",
+    "link_to": "Capital Call",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Green",
+    "format": "",
+    "label": "Carried Interest Waterfall",
+    "link_to": "Carried Interest Waterfall",
+    "stats_filter": "",
+    "type": "DocType"
+   }
+  ],
+  "links": [
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Setup",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Configuration",
+    "link_count": 0,
+    "link_to": "Fund Configuration",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Master",
+    "link_count": 0,
+    "link_to": "Fund Master",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Share Class",
+    "link_count": 0,
+    "link_to": "Share Class",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Series",
+    "link_count": 0,
+    "link_to": "Fund Series",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fee Structure",
+    "link_count": 0,
+    "link_to": "Fee Structure",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Regulatory Category",
+    "link_count": 0,
+    "link_to": "Regulatory Category",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Commitment",
+    "link_count": 0,
+    "link_to": "Commitment",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Capital Calls & Drawdowns",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Capital Call",
+    "link_count": 0,
+    "link_to": "Capital Call",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Call Detail Item",
+    "link_count": 0,
+    "link_to": "Call Detail Item",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Subscription Request",
+    "link_count": 0,
+    "link_to": "Subscription Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Allotment Detail",
+    "link_count": 0,
+    "link_to": "Allotment Detail",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Waterfall & Carry",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Carried Interest Waterfall",
+    "link_count": 0,
+    "link_to": "Carried Interest Waterfall",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fee Accrual",
+    "link_count": 0,
+    "link_to": "Fee Accrual",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "TDS Computation",
+    "link_count": 0,
+    "link_to": "TDS Computation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Performance Fee Engine",
+    "link_count": 0,
+    "link_to": "Performance Fee Engine",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Compliance",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "SEBI Report",
+    "link_count": 0,
+    "link_to": "SEBI Report",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "AML Compliance Register",
+    "link_count": 0,
+    "link_to": "AML Compliance Register",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Regulatory Calendar Entry",
+    "link_count": 0,
+    "link_to": "Regulatory Calendar Entry",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Board Pack",
+    "link_count": 0,
+    "link_to": "Board Pack",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   }
+  ],
+  "title": "AIF Management"
+ },
+ {
+  "charts": [],
+  "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fund Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Capital Call\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Holdings Register\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Fund & Deal Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Portfolio Companies\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Waterfall & Exit\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Compliance\", \"col\": 4}}]",
+  "creation": "2024-07-01 12:00:00.000000",
+  "doctype": "Workspace",
+  "extends": "",
+  "extends_another_page": 0,
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "growth",
+  "is_hidden": 0,
+  "label": "Private Equity",
+  "modified": "2024-07-01 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Private Equity",
+  "name": "Private Equity",
+  "onboarding": "",
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "roles": [],
+  "sequence_id": 5.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "format": "",
+    "label": "Fund Master",
+    "link_to": "Fund Master",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Orange",
+    "format": "",
+    "label": "Capital Call",
+    "link_to": "Capital Call",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Green",
+    "format": "",
+    "label": "Holdings Register",
+    "link_to": "Holdings Register",
+    "stats_filter": "",
+    "type": "DocType"
+   }
+  ],
+  "links": [
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund & Deal Management",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Configuration",
+    "link_count": 0,
+    "link_to": "Fund Configuration",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Master",
+    "link_count": 0,
+    "link_to": "Fund Master",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Commitment",
+    "link_count": 0,
+    "link_to": "Commitment",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Capital Call",
+    "link_count": 0,
+    "link_to": "Capital Call",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Portfolio Companies",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Holdings Register",
+    "link_count": 0,
+    "link_to": "Holdings Register",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Lot Tracking",
+    "link_count": 0,
+    "link_to": "Lot Tracking",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Holding Valuation",
+    "link_count": 0,
+    "link_to": "Holding Valuation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Corporate Actions",
+    "link_count": 0,
+    "link_to": "Corporate Actions",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Waterfall & Exit",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Carried Interest Waterfall",
+    "link_count": 0,
+    "link_to": "Carried Interest Waterfall",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fee Accrual",
+    "link_count": 0,
+    "link_to": "Fee Accrual",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "TDS Computation",
+    "link_count": 0,
+    "link_to": "TDS Computation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Compliance",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "SEBI Report",
+    "link_count": 0,
+    "link_to": "SEBI Report",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "AML Compliance Register",
+    "link_count": 0,
+    "link_to": "AML Compliance Register",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Board Pack",
+    "link_count": 0,
+    "link_to": "Board Pack",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   }
+  ],
+  "title": "Private Equity Management"
+ },
+ {
+  "charts": [],
+  "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fund Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Capital Call\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Fund Setup\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Capital Calls\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Portfolio\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Compliance\", \"col\": 4}}]",
+  "creation": "2024-07-01 12:00:00.000000",
+  "doctype": "Workspace",
+  "extends": "",
+  "extends_another_page": 0,
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "rocket",
+  "is_hidden": 0,
+  "label": "Venture Capital",
+  "modified": "2024-07-01 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Venture Capital",
+  "name": "Venture Capital",
+  "onboarding": "",
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "roles": [],
+  "sequence_id": 6.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "format": "",
+    "label": "Fund Master",
+    "link_to": "Fund Master",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Orange",
+    "format": "",
+    "label": "Capital Call",
+    "link_to": "Capital Call",
+    "stats_filter": "",
+    "type": "DocType"
+   }
+  ],
+  "links": [
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Setup",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Configuration",
+    "link_count": 0,
+    "link_to": "Fund Configuration",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Master",
+    "link_count": 0,
+    "link_to": "Fund Master",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Commitment",
+    "link_count": 0,
+    "link_to": "Commitment",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Share Class",
+    "link_count": 0,
+    "link_to": "Share Class",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Capital Calls",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Capital Call",
+    "link_count": 0,
+    "link_to": "Capital Call",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Call Detail Item",
+    "link_count": 0,
+    "link_to": "Call Detail Item",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Subscription Request",
+    "link_count": 0,
+    "link_to": "Subscription Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Allotment Detail",
+    "link_count": 0,
+    "link_to": "Allotment Detail",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Portfolio",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Holdings Register",
+    "link_count": 0,
+    "link_to": "Holdings Register",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Holding Valuation",
+    "link_count": 0,
+    "link_to": "Holding Valuation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Corporate Actions",
+    "link_count": 0,
+    "link_to": "Corporate Actions",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Compliance",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "SEBI Report",
+    "link_count": 0,
+    "link_to": "SEBI Report",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "AML Compliance Register",
+    "link_count": 0,
+    "link_to": "AML Compliance Register",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   }
+  ],
+  "title": "Venture Capital Management"
+ },
+ {
+  "charts": [],
+  "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fund Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Market Data Feed\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Instrument Setup\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Pricing & Valuation\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Subscription & Redemption\", \"col\": 4}}]",
+  "creation": "2024-07-01 12:00:00.000000",
+  "doctype": "Workspace",
+  "extends": "",
+  "extends_another_page": 0,
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "currency",
+  "is_hidden": 0,
+  "label": "Bonds & Fixed Deposits",
+  "modified": "2024-07-01 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Bonds Fixed Deposits",
+  "name": "Bonds & Fixed Deposits",
+  "onboarding": "",
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "roles": [],
+  "sequence_id": 7.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "format": "",
+    "label": "Fund Master",
+    "link_to": "Fund Master",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Green",
+    "format": "",
+    "label": "Market Data Feed",
+    "link_to": "Market Data Feed",
+    "stats_filter": "",
+    "type": "DocType"
+   }
+  ],
+  "links": [
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Instrument Setup",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Configuration",
+    "link_count": 0,
+    "link_to": "Fund Configuration",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Master",
+    "link_count": 0,
+    "link_to": "Fund Master",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Share Class",
+    "link_count": 0,
+    "link_to": "Share Class",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fee Structure",
+    "link_count": 0,
+    "link_to": "Fee Structure",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Pricing & Valuation",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Market Data Feed",
+    "link_count": 0,
+    "link_to": "Market Data Feed",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "MTM Valuation",
+    "link_count": 0,
+    "link_to": "MTM Valuation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "NAV History",
+    "link_count": 0,
+    "link_to": "NAV History",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Holding Valuation",
+    "link_count": 0,
+    "link_to": "Holding Valuation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Subscription & Redemption",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Subscription Request",
+    "link_count": 0,
+    "link_to": "Subscription Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Allotment Detail",
+    "link_count": 0,
+    "link_to": "Allotment Detail",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Redemption Request",
+    "link_count": 0,
+    "link_to": "Redemption Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "TDS Computation",
+    "link_count": 0,
+    "link_to": "TDS Computation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Capital Account Statement",
+    "link_count": 0,
+    "link_to": "Capital Account Statement",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   }
+  ],
+  "title": "Bonds & Fixed Deposits Management"
+ },
+ {
+  "charts": [],
+  "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fund Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Holdings Register\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Fund & Property Setup\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Property Holdings\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Income & Distribution\", \"col\": 4}}]",
+  "creation": "2024-07-01 12:00:00.000000",
+  "doctype": "Workspace",
+  "extends": "",
+  "extends_another_page": 0,
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "building",
+  "is_hidden": 0,
+  "label": "Real Estate Funds",
+  "modified": "2024-07-01 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Real Estate Funds",
+  "name": "Real Estate Funds",
+  "onboarding": "",
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "roles": [],
+  "sequence_id": 8.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "format": "",
+    "label": "Fund Master",
+    "link_to": "Fund Master",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Green",
+    "format": "",
+    "label": "Holdings Register",
+    "link_to": "Holdings Register",
+    "stats_filter": "",
+    "type": "DocType"
+   }
+  ],
+  "links": [
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund & Property Setup",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Configuration",
+    "link_count": 0,
+    "link_to": "Fund Configuration",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fund Master",
+    "link_count": 0,
+    "link_to": "Fund Master",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Share Class",
+    "link_count": 0,
+    "link_to": "Share Class",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fee Structure",
+    "link_count": 0,
+    "link_to": "Fee Structure",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Commitment",
+    "link_count": 0,
+    "link_to": "Commitment",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Property Holdings",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Holdings Register",
+    "link_count": 0,
+    "link_to": "Holdings Register",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Holding Valuation",
+    "link_count": 0,
+    "link_to": "Holding Valuation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Corporate Actions",
+    "link_count": 0,
+    "link_to": "Corporate Actions",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Lot Tracking",
+    "link_count": 0,
+    "link_to": "Lot Tracking",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Income & Distribution",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Capital Account Statement",
+    "link_count": 0,
+    "link_to": "Capital Account Statement",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "TDS Computation",
+    "link_count": 0,
+    "link_to": "TDS Computation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fee Accrual",
+    "link_count": 0,
+    "link_to": "Fee Accrual",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   }
+  ],
+  "title": "Real Estate Funds & REITs Management"
+ },
+ {
+  "charts": [],
+  "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trading Account\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Trade Order\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Account Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Trading Operations\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Settlement & Reports\", \"col\": 4}}]",
+  "creation": "2024-07-01 12:00:00.000000",
+  "doctype": "Workspace",
+  "extends": "",
+  "extends_another_page": 0,
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "stock",
+  "is_hidden": 0,
+  "label": "Stock Broking & Trading",
+  "modified": "2024-07-01 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Stock Broking",
+  "name": "Stock Broking & Trading",
+  "onboarding": "",
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "roles": [],
+  "sequence_id": 9.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "format": "",
+    "label": "Trading Account",
+    "link_to": "Trading Account",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Green",
+    "format": "",
+    "label": "Trade Order",
+    "link_to": "Trade Order",
+    "stats_filter": "",
+    "type": "DocType"
+   }
+  ],
+  "links": [
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Account Management",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Trading Account",
+    "link_count": 0,
+    "link_to": "Trading Account",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Margin Account",
+    "link_count": 0,
+    "link_to": "Margin Account",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Investor Profile",
+    "link_count": 0,
+    "link_to": "Investor Profile",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "KYC Document",
+    "link_count": 0,
+    "link_to": "KYC Document",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Trading Operations",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Trade Order",
+    "link_count": 0,
+    "link_to": "Trade Order",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Contract Note",
+    "link_count": 0,
+    "link_to": "Contract Note",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Market Data Feed",
+    "link_count": 0,
+    "link_to": "Market Data Feed",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Holdings Register",
+    "link_count": 0,
+    "link_to": "Holdings Register",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Settlement & Reports",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Capital Account Statement",
+    "link_count": 0,
+    "link_to": "Capital Account Statement",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "TDS Computation",
+    "link_count": 0,
+    "link_to": "TDS Computation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "MIS Report",
+    "link_count": 0,
+    "link_to": "MIS Report",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "PNL Attribution",
+    "link_count": 0,
+    "link_to": "PNL Attribution",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   }
+  ],
+  "title": "Stock Broking & Trading Platform"
+ },
+ {
+  "charts": [],
+  "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Family Office Master\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Family Member\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Family Structure\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Consolidated Portfolio\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Tax & Optimization\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Performance Reports\", \"col\": 4}}]",
+  "creation": "2024-07-01 12:00:00.000000",
+  "doctype": "Workspace",
+  "extends": "",
+  "extends_another_page": 0,
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "people",
+  "is_hidden": 0,
+  "label": "Family Office",
+  "modified": "2024-07-01 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Family Office",
+  "name": "Family Office",
+  "onboarding": "",
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "roles": [],
+  "sequence_id": 10.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "format": "",
+    "label": "Family Office Master",
+    "link_to": "Family Office Master",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Green",
+    "format": "",
+    "label": "Family Member",
+    "link_to": "Family Member",
+    "stats_filter": "",
+    "type": "DocType"
+   }
+  ],
+  "links": [
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Family Structure",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Family Office Master",
+    "link_count": 0,
+    "link_to": "Family Office Master",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Family Member",
+    "link_count": 0,
+    "link_to": "Family Member",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Succession Plan",
+    "link_count": 0,
+    "link_to": "Succession Plan",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Consolidated Portfolio",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Consolidated Portfolio",
+    "link_count": 0,
+    "link_to": "Consolidated Portfolio",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Holdings Register",
+    "link_count": 0,
+    "link_to": "Holdings Register",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "CAS Import",
+    "link_count": 0,
+    "link_to": "CAS Import",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Holding Valuation",
+    "link_count": 0,
+    "link_to": "Holding Valuation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Capital Account Statement",
+    "link_count": 0,
+    "link_to": "Capital Account Statement",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Tax & Optimization",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Tax Optimization Plan",
+    "link_count": 0,
+    "link_to": "Tax Optimization Plan",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "TDS Computation",
+    "link_count": 0,
+    "link_to": "TDS Computation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Fee Accrual",
+    "link_count": 0,
+    "link_to": "Fee Accrual",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Performance Reports",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "MIS Report",
+    "link_count": 0,
+    "link_to": "MIS Report",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Performance Attribution",
+    "link_count": 0,
+    "link_to": "Performance Attribution",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Risk Analytics",
+    "link_count": 0,
+    "link_to": "Risk Analytics",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "PNL Attribution",
+    "link_count": 0,
+    "link_to": "PNL Attribution",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "AI Analytics Result",
+    "link_count": 0,
+    "link_to": "AI Analytics Result",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "AI Insight",
+    "link_count": 0,
+    "link_to": "AI Insight",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   }
+  ],
+  "title": "Family Office & Wealth Management"
+ },
+ {
+  "charts": [],
+  "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"NPS Subscriber\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"NPS Contribution\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Subscriber Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Contributions & NAV\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Withdrawals & Annuity\", \"col\": 4}}]",
+  "creation": "2024-07-01 12:00:00.000000",
+  "doctype": "Workspace",
+  "extends": "",
+  "extends_another_page": 0,
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "shield",
+  "is_hidden": 0,
+  "label": "Pension Funds",
+  "modified": "2024-07-01 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Pension Funds",
+  "name": "Pension Funds",
+  "onboarding": "",
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "roles": [],
+  "sequence_id": 11.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "format": "",
+    "label": "NPS Subscriber",
+    "link_to": "NPS Subscriber",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Green",
+    "format": "",
+    "label": "NPS Contribution",
+    "link_to": "NPS Contribution",
+    "stats_filter": "",
+    "type": "DocType"
+   }
+  ],
+  "links": [
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Subscriber Management",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "NPS Subscriber",
+    "link_count": 0,
+    "link_to": "NPS Subscriber",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Investor Profile",
+    "link_count": 0,
+    "link_to": "Investor Profile",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "KYC Document",
+    "link_count": 0,
+    "link_to": "KYC Document",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Risk Profile",
+    "link_count": 0,
+    "link_to": "Risk Profile",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Contributions & NAV",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "NPS Contribution",
+    "link_count": 0,
+    "link_to": "NPS Contribution",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "NAV History",
+    "link_count": 0,
+    "link_to": "NAV History",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "NPS CRA Request",
+    "link_count": 0,
+    "link_to": "NPS CRA Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Pension Fund Manager",
+    "link_count": 0,
+    "link_to": "Pension Fund Manager",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Withdrawals & Annuity",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "NPS Annuity Request",
+    "link_count": 0,
+    "link_to": "NPS Annuity Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "TDS Computation",
+    "link_count": 0,
+    "link_to": "TDS Computation",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Capital Account Statement",
+    "link_count": 0,
+    "link_to": "Capital Account Statement",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   }
+  ],
+  "title": "Pension Funds & NPS Management"
+ },
+ {
+  "charts": [],
+  "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Advisor Profile\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Advisor Commission\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Advisor Setup\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Client Management\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Transactions & Reports\", \"col\": 4}}]",
+  "creation": "2024-07-01 12:00:00.000000",
+  "doctype": "Workspace",
+  "extends": "",
+  "extends_another_page": 0,
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "user",
+  "is_hidden": 0,
+  "label": "Advisor Portal",
+  "modified": "2024-07-01 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Advisor Portal",
+  "name": "Advisor Portal",
+  "onboarding": "",
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "roles": [],
+  "sequence_id": 12.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "format": "",
+    "label": "Advisor Profile",
+    "link_to": "Advisor Profile",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Green",
+    "format": "",
+    "label": "Advisor Commission",
+    "link_to": "Advisor Commission",
+    "stats_filter": "",
+    "type": "DocType"
+   }
+  ],
+  "links": [
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Advisor Setup",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Advisor Profile",
+    "link_count": 0,
+    "link_to": "Advisor Profile",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Advisor Commission",
+    "link_count": 0,
+    "link_to": "Advisor Commission",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Advisor Compliance",
+    "link_count": 0,
+    "link_to": "Advisor Compliance",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Compliance Calendar",
+    "link_count": 0,
+    "link_to": "Compliance Calendar",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Client Management",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Investor Profile",
+    "link_count": 0,
+    "link_to": "Investor Profile",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Client Plan",
+    "link_count": 0,
+    "link_to": "Client Plan",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Risk Profile",
+    "link_count": 0,
+    "link_to": "Risk Profile",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "CAS Import",
+    "link_count": 0,
+    "link_to": "CAS Import",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Capital Account Statement",
+    "link_count": 0,
+    "link_to": "Capital Account Statement",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Transactions & Reports",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "MF Transaction Order",
+    "link_count": 0,
+    "link_to": "MF Transaction Order",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "MIS Report",
+    "link_count": 0,
+    "link_to": "MIS Report",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Auto Correspondence",
+    "link_count": 0,
+    "link_to": "Auto Correspondence",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Subscription Request",
+    "link_count": 0,
+    "link_to": "Subscription Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Redemption Request",
+    "link_count": 0,
+    "link_to": "Redemption Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   }
+  ],
+  "title": "Advisor Portal \u2014 RIA/MFD"
+ },
+ {
+  "charts": [],
+  "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SEBI Report\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"AML Compliance Register\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Board Pack\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Regulatory Reports\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Compliance Operations\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Audit & Board\", \"col\": 4}}]",
+  "creation": "2024-07-01 12:00:00.000000",
+  "doctype": "Workspace",
+  "extends": "",
+  "extends_another_page": 0,
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "check",
+  "is_hidden": 0,
+  "label": "Compliance & Regulatory",
+  "modified": "2024-07-01 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Compliance Regulatory",
+  "name": "Compliance & Regulatory",
+  "onboarding": "",
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "roles": [],
+  "sequence_id": 13.0,
+  "shortcuts": [
+   {
+    "color": "Red",
+    "format": "",
+    "label": "SEBI Report",
+    "link_to": "SEBI Report",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Orange",
+    "format": "",
+    "label": "AML Compliance Register",
+    "link_to": "AML Compliance Register",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Purple",
+    "format": "",
+    "label": "Board Pack",
+    "link_to": "Board Pack",
+    "stats_filter": "",
+    "type": "DocType"
+   }
+  ],
+  "links": [
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Regulatory Reports",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "SEBI Report",
+    "link_count": 0,
+    "link_to": "SEBI Report",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "AML Compliance Register",
+    "link_count": 0,
+    "link_to": "AML Compliance Register",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "FATCA Filing Record",
+    "link_count": 0,
+    "link_to": "FATCA Filing Record",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "TDS Filing Record",
+    "link_count": 0,
+    "link_to": "TDS Filing Record",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Compliance Operations",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Board Pack",
+    "link_count": 0,
+    "link_to": "Board Pack",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Compliance Checklist Item",
+    "link_count": 0,
+    "link_to": "Compliance Checklist Item",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Regulatory Calendar Entry",
+    "link_count": 0,
+    "link_to": "Regulatory Calendar Entry",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "AML Screening Request",
+    "link_count": 0,
+    "link_to": "AML Screening Request",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Audit & Board",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "NAV Audit Trail",
+    "link_count": 0,
+    "link_to": "NAV Audit Trail",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Regulatory Category",
+    "link_count": 0,
+    "link_to": "Regulatory Category",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   }
+  ],
+  "title": "Compliance & Regulatory Reporting"
+ },
+ {
+  "charts": [],
+  "content": "[{\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"MIS Report\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Performance Attribution\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Risk Analytics\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"MIS Reports\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Risk Analytics\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Strategy & Planning\", \"col\": 4}}]",
+  "creation": "2024-07-01 12:00:00.000000",
+  "doctype": "Workspace",
+  "extends": "",
+  "extends_another_page": 0,
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "dashboard",
+  "is_hidden": 0,
+  "label": "Reports & Analytics",
+  "modified": "2024-07-01 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Reports Analytics",
+  "name": "Reports & Analytics",
+  "onboarding": "",
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "roles": [],
+  "sequence_id": 14.0,
+  "shortcuts": [
+   {
+    "color": "Blue",
+    "format": "",
+    "label": "MIS Report",
+    "link_to": "MIS Report",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Green",
+    "format": "",
+    "label": "Performance Attribution",
+    "link_to": "Performance Attribution",
+    "stats_filter": "",
+    "type": "DocType"
+   },
+   {
+    "color": "Orange",
+    "format": "",
+    "label": "Risk Analytics",
+    "link_to": "Risk Analytics",
+    "stats_filter": "",
+    "type": "DocType"
+   }
+  ],
+  "links": [
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "MIS Reports",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "MIS Report",
+    "link_count": 0,
+    "link_to": "MIS Report",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Performance Attribution",
+    "link_count": 0,
+    "link_to": "Performance Attribution",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "PNL Attribution",
+    "link_count": 0,
+    "link_to": "PNL Attribution",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Risk Analytics",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Risk Analytics",
+    "link_count": 0,
+    "link_to": "Risk Analytics",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "AI Analytics Result",
+    "link_count": 0,
+    "link_to": "AI Analytics Result",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "AI Insight",
+    "link_count": 0,
+    "link_to": "AI Insight",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Strategy & Planning",
+    "link_count": 0,
+    "onboard": 0,
+    "type": "Card Break"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Tax Optimization Plan",
+    "link_count": 0,
+    "link_to": "Tax Optimization Plan",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   },
+   {
+    "hidden": 0,
+    "is_query_report": 0,
+    "label": "Succession Plan",
+    "link_count": 0,
+    "link_to": "Succession Plan",
+    "link_type": "DocType",
+    "onboard": 1,
+    "type": "Link"
+   }
+  ],
+  "title": "MIS, Analytics & AI Insights"
+ }
+]
