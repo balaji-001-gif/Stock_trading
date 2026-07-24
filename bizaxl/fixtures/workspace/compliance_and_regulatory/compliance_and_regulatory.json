@@ -19,7 +19,7 @@
  "parent_page": "",
  "public": 1,
  "roles": [],
- "sequence_id": 1.0,
+ "sequence_id": 13.0,
  "shortcuts": [
   {
    "color": "Red",
@@ -150,16 +150,6 @@
    "link_count": 0,
    "onboard": 0,
    "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Board Pack",
-   "link_count": 0,
-   "link_to": "Board Pack",
-   "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
   },
   {
    "hidden": 0,
